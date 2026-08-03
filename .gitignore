@@ -179,3 +179,19 @@ id_rsa
 id_rsa.*
 id_ed25519
 id_ed25519.*
+
+# Project-level skills and agents ARE tracked, so Claude Code sessions working in
+# this repo auto-discover them. This re-includes them from the blanket `.claude/`
+# rule above, which still hides local settings.json / settings.local.json.
+!.claude/
+!.claude/skills/
+!.claude/skills/**
+!.claude/agents/
+!.claude/agents/**
+
+# ...but never the runtime it generates (`.claude/skills/seo/bin/claude-seo setup`)
+.claude/skills/seo/.venv/
+.claude/skills/seo/ms-playwright/
+.claude/skills/seo/runtime-state.json
+.claude/settings.json
+.claude/settings.local.json
