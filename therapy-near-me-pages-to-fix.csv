@@ -1,0 +1,34 @@
+priority,item,action,url,wordpress_object,issue,http_response_after,impressions_15mo,clicks_15mo,avg_position,confirmed_by,needs_live_check
+1,3-authors,DELETE USER,https://therapynearme.com.au/author/franklinwee79gmail-com/,"User account (slug: franklinwee79gmail-com)","Personal Gmail address exposed in public indexed URL path. Reassign all posts to a named author before deleting.",410,,,,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/11,Author archive page,Email-address author archive indexed,410,1,0,85,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/12,Author archive page,Email-address author archive indexed,410,3,0,21.67,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/13,Author archive page,Email-address author archive indexed,410,1,0,4,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/16,Author archive page,Email-address author archive indexed,410,11,0,5.27,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/19,Author archive page,Email-address author archive indexed,410,1,0,5,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/22,Author archive page,Email-address author archive indexed,410,2,0,4,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/86,Author archive page,Email-address author archive indexed,410,1,0,4,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/87,Author archive page,Email-address author archive indexed,410,23,0,7,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/90,Author archive page,Email-address author archive indexed,410,1,0,9,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/92,Author archive page,Email-address author archive indexed,410,1,0,4,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/96,Author archive page,Email-address author archive indexed,410,3,0,4,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/97,Author archive page,Email-address author archive indexed,410,1,0,11,GSC,no
+1,3-authors,DELETE URL,https://therapynearme.com.au/author/franklinwee79gmail-com/page/98,Author archive page,Email-address author archive indexed,410,2,0,23.5,GSC,no
+1,3-authors,GSC REMOVAL REQUEST,https://therapynearme.com.au/author/franklinwee79gmail-com/,Search Console prefix removal,Pull the email address out of the SERP without waiting for recrawl,n/a,,,,GSC,no
+2,1-airvolt,DELETE PAGE,https://therapynearme.com.au/airvolt/,"Page (title: AirVolt | Sustainable Energy Powering AI Mental Health Support)","Remove AirVolt from the domain. Ranks position 6.5 for brand query 'airvolt'. Do NOT redirect to airvolt.energy - unrelated third-party company.",410,374,3,8.3,GSC,no
+2,1-airvolt,EDIT,https://therapynearme.com.au/psaich/,Page body + schema,"Strip in-body AirVolt block: 'powered by AirVolt', 'actively offsets the computing power used by psAIch', 'every chat and insight powered by renewable energy'",200,883,13,6.11,search snippet,yes
+2,1-airvolt,EDIT,https://therapynearme.com.au/about-us,Page body + schema,"Strip AirVolt claims: 'holds the patents behind AirVolt', 'converting kinetic and thermal energy using a dual-turbine mechanism', 'atmospheric energy conversion that does not rely on wind, solar or grid infrastructure'",200,629,4,21.13,search snippet,yes
+3,2-psaich,EDIT,https://therapynearme.com.au/psaich/,"Page body, title, meta description, OG tags, FAQ/Product schema","Remove September 2025 launch promise, change to 2026. Also resolve contradiction: page says both 'preparing to launch' and 'currently in beta'. Update dateModified.",200,883,13,6.11,search snippet,yes
+3,2-psaich,EDIT,https://therapynearme.com.au/about-us,Page body,"Remove September 2025 / 'preparing to launch psAIch' framing, change to 2026",200,629,4,21.13,search snippet,yes
+4,3-authors,DELETE USER,https://therapynearme.com.au/author/therapynearme/,"User account (slug: therapynearme)","Generic non-person attributed ~1000 posts (archive paginates to page/106). Reassign to named authors before deleting.",410,,,,GSC,no
+4,3-authors,DELETE URL,https://therapynearme.com.au/author/therapynearme/page/29,Author archive page,Obsolete generic author archive indexed,410,11,0,12.82,GSC,no
+4,3-authors,DELETE URL,https://therapynearme.com.au/author/therapynearme/page/30,Author archive page,Obsolete generic author archive indexed,410,1,0,1,GSC,no
+4,3-authors,DELETE URL,https://therapynearme.com.au/author/therapynearme/page/31,Author archive page,Obsolete generic author archive indexed,410,2,0,18.5,GSC,no
+4,3-authors,DELETE URL,https://therapynearme.com.au/author/therapynearme/page/106,Author archive page,Obsolete generic author archive indexed,410,4,0,3.75,GSC,no
+4,3-authors,DELETE USER,https://therapynearme.com.au/author/fantasive/,"User account (slug: fantasive)","Anonymous handle, no real identity. Reassign posts before deleting.",410,7,0,14.14,GSC,no
+5,3-authors,DISABLE GLOBALLY,https://therapynearme.com.au/author/*,"Yoast: Search Appearance > Archives > Author archives > Disabled. RankMath: Titles & Meta > Authors > Off.","Kills every current and future /author/ archive in one setting. GSC only lists pages that got impressions - the full archive set is larger than the rows above (therapynearme alone paginates to page/106).",410,,,,inferred,no
+5,3-authors,AUDIT SCHEMA,https://therapynearme.com.au/*,Article JSON-LD author.name field,"Deleting archives does not fix per-post schema. Find author.name values containing '@', 'fantasive', or 'therapynearme' and repoint at named humans.",200,,,,inferred,yes
+5,all,RESUBMIT,https://therapynearme.com.au/sitemap_index.xml,Sitemap index,"Remove all 410'd URLs and resubmit. Submitted count should drop from 1179 (last downloaded 2026-07-30).",200,,,,GSC,no
+KEEP,3-authors,NO CHANGE,https://therapynearme.com.au/authors,Author index,"Legitimate curated author system - leave intact",200,7,0,3.14,GSC,no
+KEEP,3-authors,NO CHANGE,https://therapynearme.com.au/authors/julia-tilling-phd,Author profile,"Real named credentialed person - E-E-A-T asset, do not touch",200,89,2,12.54,GSC,no
+KEEP,3-authors,NO CHANGE,https://therapynearme.com.au/authors/rona-castaneda,Author profile,"Real named credentialed person - E-E-A-T asset, do not touch",200,88,3,14.81,GSC,no
+KEEP,3-authors,NO CHANGE,https://therapynearme.com.au/authors/chantal-santacaterina,Author profile,"Real named credentialed person - E-E-A-T asset, do not touch",200,57,10,5.88,GSC,no
