@@ -1,7 +1,8 @@
 <!--
   Public resources — download cards (Modern UI)
-  Buttons are placeholders: fill data-download-url on each button when the files go live.
-  Until a URL is set, a button reports "Link coming soon" instead of doing nothing silently.
+  Live files: URL set in data-download-url on the button.
+  BibTeX / RIS: generated in-browser from the text embedded in the script below — no hosting needed.
+  Still pending: the main report PDF (data-download-url is empty; the button says "Link coming soon").
 -->
 <section id="public-resources" style="margin: 0 0 40px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #111827; background-color: #ffffff;">
 
@@ -17,74 +18,74 @@
 
   <div class="res-grid">
 
-    <!-- 1. Main PDF -->
+    <!-- 1. Main PDF — awaiting URL -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #b91c1c;">PDF</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">Main PDF</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download the full GMHCAAB 2027 report</button>
+      <button type="button" class="res-btn" data-download-url="" data-filename="GMHCAAB_2027_Report.pdf" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download the full GMHCAAB 2027 report</button>
     </article>
 
     <!-- 2. MHAOG methodological note -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #b91c1c;">PDF</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">MHAOG methodological note</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download the MHAOG methodological note</button>
+      <button type="button" class="res-btn" data-download-url="https://therapynearme.com.au/wp-content/uploads/2026/08/GMHCAAB_2027_MHAOG_Methodological_Note_v1.0.pdf" data-filename="GMHCAAB_2027_MHAOG_Methodological_Note_v1.0.pdf" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download the MHAOG methodological note</button>
     </article>
 
     <!-- 3. 420-row publication dataset -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">420-row publication dataset</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download publication dataset (CSV)</button>
+      <button type="button" class="res-btn" data-download-url="https://therapynearme.com.au/wp-content/uploads/2026/08/GMHCAAB_2027_Publication_Dataset_420_Rows.csv" data-filename="GMHCAAB_2027_Publication_Dataset_420_Rows.csv" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download publication dataset (CSV)</button>
     </article>
 
     <!-- 4. MHAOG country measures -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">MHAOG country measures</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download MHAOG country measures (CSV)</button>
+      <button type="button" class="res-btn" data-download-url="https://therapynearme.com.au/wp-content/uploads/2026/08/GMHCAAB_2027_MHAOG_Country_Measures.csv" data-filename="GMHCAAB_2027_MHAOG_Country_Measures.csv" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download MHAOG country measures (CSV)</button>
     </article>
 
     <!-- 5. MHAOG sensitivity analysis -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">MHAOG sensitivity analysis</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download MHAOG sensitivity analysis (CSV)</button>
+      <button type="button" class="res-btn" data-download-url="https://therapynearme.com.au/wp-content/uploads/2026/08/GMHCAAB_2027_MHAOG_Sensitivity_Analysis.csv" data-filename="GMHCAAB_2027_MHAOG_Sensitivity_Analysis.csv" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download MHAOG sensitivity analysis (CSV)</button>
     </article>
 
     <!-- 6. Relative Fee Dispersion results -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">Relative Fee Dispersion results</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download RFD results (CSV)</button>
+      <button type="button" class="res-btn" data-download-url="https://therapynearme.com.au/wp-content/uploads/2026/08/GMHCAAB_2027_Relative_Fee_Dispersion_Results.csv" data-filename="GMHCAAB_2027_Relative_Fee_Dispersion_Results.csv" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download RFD results (CSV)</button>
     </article>
 
     <!-- 7. Citation crosswalk -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">Citation crosswalk</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download citation crosswalk (CSV)</button>
+      <button type="button" class="res-btn" data-download-url="https://therapynearme.com.au/wp-content/uploads/2026/08/GMHCAAB_2027_Citation_Crosswalk.csv" data-filename="GMHCAAB_2027_Citation_Crosswalk.csv" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download citation crosswalk (CSV)</button>
     </article>
 
     <!-- 8. Publication source index -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">Publication source index</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download publication source index (CSV)</button>
+      <button type="button" class="res-btn" data-download-url="https://therapynearme.com.au/wp-content/uploads/2026/08/GMHCAAB_2027_Publication_Source_Index.csv" data-filename="GMHCAAB_2027_Publication_Source_Index.csv" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download publication source index (CSV)</button>
     </article>
 
-    <!-- 9. BibTeX -->
+    <!-- 9. BibTeX — generated in-browser -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #6d28d9;">BIB</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">BibTeX</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download BibTeX citation</button>
+      <button type="button" class="res-btn" data-inline-file="bibtex" data-filename="GMHCAAB_2027_Citation.bib" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download BibTeX citation</button>
     </article>
 
-    <!-- 10. RIS -->
+    <!-- 10. RIS — generated in-browser -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #6d28d9;">RIS</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">RIS</h3>
-      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download RIS citation</button>
+      <button type="button" class="res-btn" data-inline-file="ris" data-filename="GMHCAAB_2027_Citation.ris" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download RIS citation</button>
     </article>
 
   </div>
@@ -100,28 +101,92 @@
 
   var status = document.getElementById('resources-status');
 
+  /* Citation files, served from the page itself so they need no hosting.
+     Keep in sync with GMHCAAB_2027_Citation.bib / .ris. */
+  var INLINE_FILES = {
+    bibtex: {
+      type: 'application/x-bibtex;charset=utf-8',
+      text: [
+        '@techreport{therapynearme2027gmhcaab,',
+        '  author      = {{Therapy Near Me Pty Ltd}},',
+        '  title       = {Global Mental Health Care Access and Affordability Benchmark 2027 (GMHCAAB 2027)},',
+        '  institution = {AIHEM},',
+        '  publisher   = {AIHEM},',
+        '  year        = {2027},',
+        '  type        = {Research report},',
+        '  edition     = {Public Release Edition, Version 1.1},',
+        '  isbn        = {978-0-9806811-1-6},',
+        '  url         = {https://therapynearme.com.au/global-mental-health-care-access-and-affordability-benchmark-2027/}',
+        '}',
+        ''
+      ].join('\n')
+    },
+    ris: {
+      type: 'application/x-research-info-systems;charset=utf-8',
+      text: [
+        'TY  - RPRT',
+        'AU  - Therapy Near Me Pty Ltd',
+        'TI  - Global Mental Health Care Access and Affordability Benchmark 2027 (GMHCAAB 2027)',
+        'PY  - 2027',
+        'PB  - AIHEM',
+        'ET  - Public Release Edition, Version 1.1',
+        'SN  - 978-0-9806811-1-6',
+        'UR  - https://therapynearme.com.au/global-mental-health-care-access-and-affordability-benchmark-2027/',
+        'ER  - ',
+        ''
+      ].join('\n')
+    }
+  };
+
+  function triggerDownload(href, filename, revoke) {
+    var a = document.createElement('a');
+    a.href = href;
+    if (filename) a.download = filename;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    if (revoke) setTimeout(function () { URL.revokeObjectURL(href); }, 1000);
+  }
+
+  function flash(button, message, colour) {
+    var label = button.getAttribute('data-label') || button.innerText;
+    button.setAttribute('data-label', label);
+    button.innerText = message;
+    button.style.background = colour;
+    if (status) status.textContent = label + ': ' + message;
+    setTimeout(function () {
+      button.innerText = label;
+      button.style.background = '#0d9be2';
+    }, 2000);
+  }
+
   container.querySelectorAll('.res-btn').forEach(function (button) {
     button.addEventListener('click', function () {
-      var url = (this.getAttribute('data-download-url') || '').trim();
+      var filename = this.getAttribute('data-filename') || '';
+      var inline = this.getAttribute('data-inline-file');
 
-      // Live file: hand off to the browser's download handling.
+      // BibTeX / RIS: build the file client-side.
+      if (inline && INLINE_FILES[inline]) {
+        var file = INLINE_FILES[inline];
+        try {
+          var blob = new Blob([file.text], { type: file.type });
+          triggerDownload(URL.createObjectURL(blob), filename, true);
+        } catch (e) {
+          triggerDownload('data:' + file.type + ',' + encodeURIComponent(file.text), filename, false);
+        }
+        return;
+      }
+
+      // Hosted file.
+      var url = (this.getAttribute('data-download-url') || '').trim();
       if (url) {
-        window.location.href = url;
+        triggerDownload(url, filename, false);
         return;
       }
 
       // No URL wired up yet — say so rather than failing silently.
-      var self = this;
-      var label = self.getAttribute('data-label') || self.innerText;
-      self.setAttribute('data-label', label);
-      self.innerText = 'Link coming soon';
-      self.style.background = '#64748b';
-      if (status) status.textContent = label + ' is not available yet.';
-
-      setTimeout(function () {
-        self.innerText = label;
-        self.style.background = '#0d9be2';
-      }, 2000);
+      flash(this, 'Link coming soon', '#64748b');
     });
   });
 })();
