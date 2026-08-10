@@ -2,7 +2,7 @@
   Public resources — download cards (Modern UI)
   Live files: URL set in data-download-url on the button.
   BibTeX / RIS: generated in-browser from the text embedded in the script below — no hosting needed.
-  Still pending: the main report PDF (data-download-url is empty; the button says "Link coming soon").
+  An empty data-download-url makes that button report "Link coming soon" instead of failing silently.
 -->
 <section id="public-resources" style="margin: 0 0 40px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #111827; background-color: #ffffff;">
 
@@ -18,11 +18,11 @@
 
   <div class="res-grid">
 
-    <!-- 1. Main PDF — awaiting URL -->
+    <!-- 1. Main PDF -->
     <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
       <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #b91c1c;">PDF</span>
       <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">Main PDF</h3>
-      <button type="button" class="res-btn" data-download-url="" data-filename="GMHCAAB_2027_Report.pdf" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download the full GMHCAAB 2027 report</button>
+      <button type="button" class="res-btn" data-download-url="https://therapynearme.com.au/wp-content/uploads/2026/08/GMHCAAB_2027-v1.1-TNM.pdf" data-filename="GMHCAAB_2027-v1.1-TNM.pdf" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download the full GMHCAAB 2027 report</button>
     </article>
 
     <!-- 2. MHAOG methodological note -->
