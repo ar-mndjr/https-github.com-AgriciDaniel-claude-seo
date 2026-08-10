@@ -1,5 +1,12 @@
 {
-  "_readme": "Single source of truth for every business-specific value in the generated JSON-LD. Fill in verified values only. Any field left as an empty string or empty array is OMITTED from the generated markup (never emitted as a placeholder), and is listed in output/VALIDATION-REPORT.md so you can see what is still missing.",
+  "_readme": "Single source of truth for every business-specific value in the generated JSON-LD. Values below were taken from the BINM project docs in Google Drive (page copy docs, service streams brief, contractor/invoice records, June 2026 keyword map). Any field left as an empty string or empty array is OMITTED from the generated markup (never emitted as a placeholder) and is listed in output/VALIDATION-REPORT.md.",
+
+  "_sources": {
+    "nap": "ZSJ ENGINEERING SOLUTIONS PTY LTD entity details (ABN, registered address) per contractor agreement and INV-001.",
+    "phone_and_price": "'EXISTING BUILDINGS | BINM', 'RENOVATIONS AND EXTENSIONS | BINM' and 'BUILDING INSPECTIONS MELBOURNE | BINM' page copy docs (June 2026).",
+    "area_served": "Four metro location pages live (Melbourne, Sydney, Brisbane, Adelaide); service area widened to Australia-wide per INV-001 line item dated 2 June 2026.",
+    "still_empty": "logo, image, email, opening hours and sameAs are empty because no source in Drive records them. Per 'BINM - Strategy Plan', the Google Business Profile and social profiles were still to be created, so these values may not exist yet."
+  },
 
   "site": {
     "url": "https://buildinginspectionsnearme.com.au",
@@ -14,27 +21,28 @@
   "business": {
     "types": ["HomeAndConstructionBusiness", "ProfessionalService"],
     "name": "Building Inspections Near Me",
-    "legalName": "",
-    "description": "",
-    "slogan": "",
+    "alternateName": "BINM",
+    "legalName": "ZSJ Engineering Solutions Pty Ltd",
+    "slogan": "Inspect Once. Upgrade Report Anytime.",
+    "description": "Building Inspections Near Me (BINM) is an engineer-led building inspection service operating across Australia. Every inspection is conducted by a Chartered Engineer or Licensed Builder at standard inspection rates, so the same site data can be escalated to a formal engineering report or a tribunal-ready expert report without a second inspection.",
     "url": "https://buildinginspectionsnearme.com.au/",
     "logo": "",
     "image": "",
-    "telephone": "",
+    "telephone": "+61-1800-796-776",
     "email": "",
-    "priceRange": "",
+    "priceRange": "From $495 inc. GST",
     "currenciesAccepted": "AUD",
     "paymentAccepted": "",
     "foundingDate": "",
     "identifier": {
       "propertyID": "ABN",
-      "value": ""
+      "value": "86 660 453 092"
     },
     "address": {
-      "streetAddress": "",
-      "addressLocality": "",
-      "addressRegion": "",
-      "postalCode": "",
+      "streetAddress": "Level 8, Chadstone Tower 1, 1341 Dandenong Road",
+      "addressLocality": "Chadstone",
+      "addressRegion": "VIC",
+      "postalCode": "3148",
       "addressCountry": "AU"
     },
     "geo": {
@@ -51,28 +59,49 @@
       "worstRating": "1"
     },
     "knowsAbout": [
+      "Engineer-led building inspections",
       "Pre-purchase building inspections",
-      "Timber pest and termite inspections",
-      "Construction stage inspections",
-      "Building defect and warranty reporting",
-      "Dilapidation reporting",
-      "Strata inspection reports",
-      "AS 4349.1 property inspections",
+      "AS 4349.1 standard property inspections",
       "AS 4349.3 timber pest inspections",
-      "National Construction Code compliance"
+      "AS 2870 residential slabs and footings",
+      "National Construction Code compliance",
+      "Construction stage inspections",
+      "Dilapidation surveys and adjoining property protection",
+      "Strata and common property inspections",
+      "Building defect and causation investigation",
+      "Floor level surveys and movement monitoring",
+      "VCAT and DBDRV expert reports"
     ],
     "areaServed": [
       {
         "type": "Country",
         "name": "Australia",
         "sameAs": "https://www.wikidata.org/wiki/Q408"
+      },
+      {
+        "type": "City",
+        "name": "Melbourne",
+        "sameAs": "https://www.wikidata.org/wiki/Q3141"
+      },
+      {
+        "type": "City",
+        "name": "Sydney",
+        "sameAs": "https://www.wikidata.org/wiki/Q3130"
+      },
+      {
+        "type": "City",
+        "name": "Brisbane",
+        "sameAs": "https://www.wikidata.org/wiki/Q34932"
+      },
+      {
+        "type": "City",
+        "name": "Adelaide",
+        "sameAs": "https://www.wikidata.org/wiki/Q5112"
       }
     ]
   },
 
-  "_areaServedHelp": "Replace business.areaServed with the real coverage. For a service-area business, list the actual cities/regions, e.g. { \"type\": \"City\", \"name\": \"Sydney\", \"sameAs\": \"https://www.wikidata.org/wiki/Q3130\" }. Supported 'type' values: Country, State, City, AdministrativeArea, Place. Each service in services.json may override this with its own areaServed.",
+  "_openingHoursHelp": "Add entries shaped like { \"dayOfWeek\": [\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"], \"opens\": \"08:00\", \"closes\": \"17:00\" }. Left empty deliberately: no source records BINM's trading hours. Do not guess; hours in markup must match the website and Google Business Profile.",
 
-  "_openingHoursHelp": "Add entries shaped like { \"dayOfWeek\": [\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"], \"opens\": \"07:00\", \"closes\": \"17:00\" }. Leave the array empty rather than guessing; hours in markup must match the website and Google Business Profile.",
-
-  "_aggregateRatingHelp": "Only fill this in if genuine, first-party review data is visible on the page itself. Google's review snippet policy prohibits marking up ratings that a visitor cannot see on that page, and self-serving LocalBusiness ratings are ignored. Leave empty otherwise."
+  "_aggregateRatingHelp": "Only fill this in if genuine, first-party review data is visible on the page itself. Google's review snippet policy prohibits marking up ratings that a visitor cannot see on that page, and self-serving LocalBusiness ratings are ignored."
 }

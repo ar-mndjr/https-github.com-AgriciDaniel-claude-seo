@@ -6,13 +6,13 @@
       "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/",
       "name": "Commercial Building Inspection",
-      "description": "Inspections of commercial, industrial and retail property covering building condition, defects and the building fabric, for purchasers, tenants, landlords and asset owners making acquisition, leasing or maintenance decisions.",
+      "description": "Engineer-led inspections of commercial, industrial and retail property for purchasers, tenants, landlords and asset owners. Covers building condition, structural assessment, defect identification and retrospective compliance against the National Construction Code and relevant Australian Standards.",
       "inLanguage": "en-AU",
       "isPartOf": {
         "@id": "https://buildinginspectionsnearme.com.au/#website"
       },
       "about": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#breadcrumb"
@@ -42,10 +42,10 @@
       "name": "Commercial Building Inspection",
       "alternateName": "Commercial property inspection",
       "serviceType": "Commercial building inspection",
-      "description": "Inspections of commercial, industrial and retail property covering building condition, defects and the building fabric, for purchasers, tenants, landlords and asset owners making acquisition, leasing or maintenance decisions.",
+      "description": "Engineer-led inspections of commercial, industrial and retail property for purchasers, tenants, landlords and asset owners. Covers building condition, structural assessment, defect identification and retrospective compliance against the National Construction Code and relevant Australian Standards.",
       "url": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/",
       "provider": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "providerMobility": "dynamic",
       "areaServed": [
@@ -53,6 +53,26 @@
           "@type": "Country",
           "name": "Australia",
           "sameAs": "https://www.wikidata.org/wiki/Q408"
+        },
+        {
+          "@type": "City",
+          "name": "Melbourne",
+          "sameAs": "https://www.wikidata.org/wiki/Q3141"
+        },
+        {
+          "@type": "City",
+          "name": "Sydney",
+          "sameAs": "https://www.wikidata.org/wiki/Q3130"
+        },
+        {
+          "@type": "City",
+          "name": "Brisbane",
+          "sameAs": "https://www.wikidata.org/wiki/Q34932"
+        },
+        {
+          "@type": "City",
+          "name": "Adelaide",
+          "sameAs": "https://www.wikidata.org/wiki/Q5112"
         }
       ],
       "audience": {
@@ -61,11 +81,16 @@
       },
       "serviceOutput": {
         "@type": "Thing",
-        "name": "Commercial building condition and defect report."
+        "name": "Commercial building condition and defect report, with engineering assessment where structural issues are identified."
       },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/"
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+61-1800-796-776",
+          "contactType": "customer service"
+        }
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -85,7 +110,7 @@
             "position": 2,
             "itemOffered": {
               "@type": "Service",
-              "name": "Pre-lease and make good inspection"
+              "name": "Pre-lease and make-good inspection"
             }
           },
           {
@@ -117,12 +142,20 @@
             "position": 6,
             "itemOffered": {
               "@type": "Service",
-              "name": "Maintenance and capital expenditure planning input"
+              "name": "Retrospective compliance assessment against the National Construction Code"
             }
           },
           {
             "@type": "Offer",
             "position": 7,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Maintenance and capital expenditure planning input"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 8,
             "itemOffered": {
               "@type": "Service",
               "name": "Industrial and retail premises inspections"
@@ -134,20 +167,20 @@
         {
           "@type": "Service",
           "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
-          "name": "Existing Building Inspection",
+          "name": "Existing Building Inspections",
           "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
-        },
-        {
-          "@type": "Service",
-          "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
-          "name": "Building Warranty and Defect Inspection",
-          "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
         },
         {
           "@type": "Service",
           "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#service",
           "name": "Building Insurance Assessment",
           "url": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+          "name": "Building Warranty and Defect Inspection",
+          "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
         }
       ],
       "mainEntityOfPage": {

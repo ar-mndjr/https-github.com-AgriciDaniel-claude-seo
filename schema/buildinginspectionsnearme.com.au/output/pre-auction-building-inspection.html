@@ -7,13 +7,13 @@
       "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/",
       "name": "Pre-Auction Building Inspection",
-      "description": "Fast turnaround building inspection before auction day, so you can bid knowing the property's defects and repair exposure. Auction purchases are unconditional, which makes inspecting beforehand the only opportunity to find problems.",
+      "description": "Building inspection carried out before auction day, with same-week availability, so you can bid knowing the property's defects and repair exposure. Auction purchases are unconditional, which makes inspecting beforehand the only opportunity to find problems.",
       "inLanguage": "en-AU",
       "isPartOf": {
         "@id": "https://buildinginspectionsnearme.com.au/#website"
       },
       "about": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#breadcrumb"
@@ -41,12 +41,12 @@
       "@type": "Service",
       "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#service",
       "name": "Pre-Auction Building Inspection",
-      "alternateName": "Pre-auction property inspection",
+      "alternateName": "Building inspection before auction",
       "serviceType": "Pre-auction building inspection",
-      "description": "Fast turnaround building inspection before auction day, so you can bid knowing the property's defects and repair exposure. Auction purchases are unconditional, which makes inspecting beforehand the only opportunity to find problems.",
+      "description": "Building inspection carried out before auction day, with same-week availability, so you can bid knowing the property's defects and repair exposure. Auction purchases are unconditional, which makes inspecting beforehand the only opportunity to find problems.",
       "url": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/",
       "provider": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "providerMobility": "dynamic",
       "areaServed": [
@@ -54,6 +54,26 @@
           "@type": "Country",
           "name": "Australia",
           "sameAs": "https://www.wikidata.org/wiki/Q408"
+        },
+        {
+          "@type": "City",
+          "name": "Melbourne",
+          "sameAs": "https://www.wikidata.org/wiki/Q3141"
+        },
+        {
+          "@type": "City",
+          "name": "Sydney",
+          "sameAs": "https://www.wikidata.org/wiki/Q3130"
+        },
+        {
+          "@type": "City",
+          "name": "Brisbane",
+          "sameAs": "https://www.wikidata.org/wiki/Q34932"
+        },
+        {
+          "@type": "City",
+          "name": "Adelaide",
+          "sameAs": "https://www.wikidata.org/wiki/Q5112"
         }
       ],
       "audience": {
@@ -62,11 +82,27 @@
       },
       "serviceOutput": {
         "@type": "Thing",
-        "name": "Pre-auction inspection report delivered ahead of auction day."
+        "name": "Pre-auction inspection report delivered ahead of auction day, with a verbal summary available on site."
       },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/"
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+61-1800-796-776",
+          "contactType": "customer service"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 495,
+          "priceCurrency": "AUD",
+          "valueAddedTaxIncluded": true
+        }
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -78,7 +114,7 @@
             "position": 1,
             "itemOffered": {
               "@type": "Service",
-              "name": "Pre-auction defect inspection"
+              "name": "Same-week pre-auction inspection"
             }
           },
           {
@@ -86,7 +122,7 @@
             "position": 2,
             "itemOffered": {
               "@type": "Service",
-              "name": "Priority and next day bookings"
+              "name": "Structural element and major defect assessment"
             }
           },
           {
@@ -110,7 +146,7 @@
             "position": 5,
             "itemOffered": {
               "@type": "Service",
-              "name": "Major structural defect assessment"
+              "name": "Optional combined timber pest inspection"
             }
           },
           {
@@ -118,7 +154,7 @@
             "position": 6,
             "itemOffered": {
               "@type": "Service",
-              "name": "Optional combined timber pest inspection"
+              "name": "Repair priority guidance to inform bidding"
             }
           },
           {
@@ -126,7 +162,7 @@
             "position": 7,
             "itemOffered": {
               "@type": "Service",
-              "name": "Repair priority guidance for bidding"
+              "name": "Engineering-level report upgrade with no second inspection fee"
             }
           }
         ]
@@ -146,9 +182,9 @@
         },
         {
           "@type": "Service",
-          "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#service",
-          "name": "Strata Inspection Report",
-          "url": "https://buildinginspectionsnearme.com.au/strata-inspection/"
+          "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
+          "name": "Existing Building Inspections",
+          "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
         }
       ],
       "mainEntityOfPage": {

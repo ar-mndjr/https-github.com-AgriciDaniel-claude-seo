@@ -6,13 +6,13 @@
       "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/",
       "name": "Adjoining Works Protection and Dilapidation Reporting",
-      "description": "Protection of adjoining property inspections and dilapidation reports that record and photograph the condition of neighbouring buildings before, during and after excavation, demolition or construction works, so any damage claim can be settled on documented evidence.",
+      "description": "Condition surveys, protection works assessment and construction monitoring for properties adjoining excavation, demolition or construction works. Documented before, during and after the works, so any damage claim is settled against an engineer-recorded baseline rather than recollection.",
       "inLanguage": "en-AU",
       "isPartOf": {
         "@id": "https://buildinginspectionsnearme.com.au/#website"
       },
       "about": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#breadcrumb"
@@ -41,11 +41,11 @@
       "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#service",
       "name": "Adjoining Works Protection and Dilapidation Reporting",
       "alternateName": "Dilapidation report",
-      "serviceType": "Dilapidation and adjoining property protection inspection",
-      "description": "Protection of adjoining property inspections and dilapidation reports that record and photograph the condition of neighbouring buildings before, during and after excavation, demolition or construction works, so any damage claim can be settled on documented evidence.",
+      "serviceType": "Dilapidation survey and adjoining property protection",
+      "description": "Condition surveys, protection works assessment and construction monitoring for properties adjoining excavation, demolition or construction works. Documented before, during and after the works, so any damage claim is settled against an engineer-recorded baseline rather than recollection.",
       "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/",
       "provider": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "providerMobility": "dynamic",
       "areaServed": [
@@ -53,19 +53,44 @@
           "@type": "Country",
           "name": "Australia",
           "sameAs": "https://www.wikidata.org/wiki/Q408"
+        },
+        {
+          "@type": "City",
+          "name": "Melbourne",
+          "sameAs": "https://www.wikidata.org/wiki/Q3141"
+        },
+        {
+          "@type": "City",
+          "name": "Sydney",
+          "sameAs": "https://www.wikidata.org/wiki/Q3130"
+        },
+        {
+          "@type": "City",
+          "name": "Brisbane",
+          "sameAs": "https://www.wikidata.org/wiki/Q34932"
+        },
+        {
+          "@type": "City",
+          "name": "Adelaide",
+          "sameAs": "https://www.wikidata.org/wiki/Q5112"
         }
       ],
       "audience": {
         "@type": "Audience",
-        "audienceType": "Builders, developers, owners and neighbouring property owners"
+        "audienceType": "Owners and builders undertaking boundary-adjacent works, adjoining neighbours, and building surveyors"
       },
       "serviceOutput": {
         "@type": "Thing",
-        "name": "Photographic dilapidation report recording the pre-existing and post-works condition of adjoining property."
+        "name": "Pre-works and post-works dilapidation surveys, monitoring records and, where required, an engineering causation report."
       },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/"
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+61-1800-796-776",
+          "contactType": "customer service"
+        }
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -77,7 +102,7 @@
             "position": 1,
             "itemOffered": {
               "@type": "Service",
-              "name": "Pre-construction dilapidation report"
+              "name": "Adjoining property condition (dilapidation) survey"
             }
           },
           {
@@ -85,7 +110,7 @@
             "position": 2,
             "itemOffered": {
               "@type": "Service",
-              "name": "Neighbouring property condition survey"
+              "name": "Protection works assessment of proposed methodology, drawings, services and drainage"
             }
           },
           {
@@ -93,7 +118,7 @@
             "position": 3,
             "itemOffered": {
               "@type": "Service",
-              "name": "Excavation, piling and shoring impact assessment"
+              "name": "Protection works documentation support for permit and notice readiness"
             }
           },
           {
@@ -101,7 +126,7 @@
             "position": 4,
             "itemOffered": {
               "@type": "Service",
-              "name": "Party wall and boundary structure inspection"
+              "name": "Construction monitoring, milestone-based or periodic"
             }
           },
           {
@@ -109,7 +134,7 @@
             "position": 5,
             "itemOffered": {
               "@type": "Service",
-              "name": "Crack monitoring and progressive inspections"
+              "name": "Crack monitoring using tell-tales"
             }
           },
           {
@@ -117,7 +142,7 @@
             "position": 6,
             "itemOffered": {
               "@type": "Service",
-              "name": "Post-construction dilapidation report"
+              "name": "Level survey and contour baseline with repeat surveys"
             }
           },
           {
@@ -125,7 +150,39 @@
             "position": 7,
             "itemOffered": {
               "@type": "Service",
-              "name": "Damage dispute documentation"
+              "name": "Instrumentation coordination"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 8,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Post-works comparison condition survey"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 9,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Damage triage and make-safe advice"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 10,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Engineering inspection and causation report"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 11,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "VCAT-compliant expert report"
             }
           }
         ]
@@ -133,15 +190,15 @@
       "isRelatedTo": [
         {
           "@type": "Service",
-          "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
-          "name": "New Building Inspection",
-          "url": "https://buildinginspectionsnearme.com.au/new-buildings/"
+          "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
+          "name": "Renovation and Extension Inspections",
+          "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
         },
         {
           "@type": "Service",
-          "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
-          "name": "Renovation and Extension Inspection",
-          "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
+          "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
+          "name": "New Building Inspections",
+          "url": "https://buildinginspectionsnearme.com.au/new-buildings/"
         },
         {
           "@type": "Service",

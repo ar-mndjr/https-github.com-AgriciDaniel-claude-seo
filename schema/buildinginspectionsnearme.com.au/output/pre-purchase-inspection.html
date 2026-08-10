@@ -7,13 +7,13 @@
       "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/",
       "name": "Pre-Purchase Building Inspection",
-      "description": "Pre-purchase standard property inspection carried out in line with AS 4349.1, identifying major and minor defects, structural movement, safety hazards and signs of unapproved work before you commit to buying.",
+      "description": "Pre-purchase inspection of all accessible areas of the property, reported in line with AS 4349.1 and conducted by a Chartered Engineer rather than a trade-qualified generalist. Covers structure, roof space and covering, subfloor, walls, wet areas, drainage and safety hazards, fully photographed.",
       "inLanguage": "en-AU",
       "isPartOf": {
         "@id": "https://buildinginspectionsnearme.com.au/#website"
       },
       "about": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#breadcrumb"
@@ -43,10 +43,10 @@
       "name": "Pre-Purchase Building Inspection",
       "alternateName": "Pre-purchase property inspection report",
       "serviceType": "Pre-purchase building inspection",
-      "description": "Pre-purchase standard property inspection carried out in line with AS 4349.1, identifying major and minor defects, structural movement, safety hazards and signs of unapproved work before you commit to buying.",
+      "description": "Pre-purchase inspection of all accessible areas of the property, reported in line with AS 4349.1 and conducted by a Chartered Engineer rather than a trade-qualified generalist. Covers structure, roof space and covering, subfloor, walls, wet areas, drainage and safety hazards, fully photographed.",
       "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/",
       "provider": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "providerMobility": "dynamic",
       "areaServed": [
@@ -54,6 +54,26 @@
           "@type": "Country",
           "name": "Australia",
           "sameAs": "https://www.wikidata.org/wiki/Q408"
+        },
+        {
+          "@type": "City",
+          "name": "Melbourne",
+          "sameAs": "https://www.wikidata.org/wiki/Q3141"
+        },
+        {
+          "@type": "City",
+          "name": "Sydney",
+          "sameAs": "https://www.wikidata.org/wiki/Q3130"
+        },
+        {
+          "@type": "City",
+          "name": "Brisbane",
+          "sameAs": "https://www.wikidata.org/wiki/Q34932"
+        },
+        {
+          "@type": "City",
+          "name": "Adelaide",
+          "sameAs": "https://www.wikidata.org/wiki/Q5112"
         }
       ],
       "audience": {
@@ -62,11 +82,27 @@
       },
       "serviceOutput": {
         "@type": "Thing",
-        "name": "Standard property inspection report to AS 4349.1, delivered in writing before exchange."
+        "name": "AS 4349.1 standard property inspection report with a full photographic record, delivered before exchange."
       },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/"
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+61-1800-796-776",
+          "contactType": "customer service"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 495,
+          "priceCurrency": "AUD",
+          "valueAddedTaxIncluded": true
+        }
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -78,7 +114,7 @@
             "position": 1,
             "itemOffered": {
               "@type": "Service",
-              "name": "Major and minor defect identification"
+              "name": "Structural element inspection"
             }
           },
           {
@@ -86,7 +122,7 @@
             "position": 2,
             "itemOffered": {
               "@type": "Service",
-              "name": "Structural movement and cracking assessment"
+              "name": "Roof covering and roof space inspection"
             }
           },
           {
@@ -94,7 +130,7 @@
             "position": 3,
             "itemOffered": {
               "@type": "Service",
-              "name": "Roof, ceiling and roof void inspection"
+              "name": "Subfloor inspection where accessible"
             }
           },
           {
@@ -102,7 +138,7 @@
             "position": 4,
             "itemOffered": {
               "@type": "Service",
-              "name": "Subfloor, drainage and site inspection"
+              "name": "External walls and cladding assessment"
             }
           },
           {
@@ -110,7 +146,7 @@
             "position": 5,
             "itemOffered": {
               "@type": "Service",
-              "name": "Moisture testing to bathrooms and wet areas"
+              "name": "Internal walls, ceilings, windows and doors"
             }
           },
           {
@@ -118,7 +154,7 @@
             "position": 6,
             "itemOffered": {
               "@type": "Service",
-              "name": "Safety hazard reporting"
+              "name": "Wet area and moisture assessment"
             }
           },
           {
@@ -126,7 +162,31 @@
             "position": 7,
             "itemOffered": {
               "@type": "Service",
-              "name": "Written report with photographs"
+              "name": "Site drainage and site condition assessment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 8,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Safety hazard identification"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 9,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Full photographic record"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 10,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Engineering-level report upgrade with no second inspection fee"
             }
           }
         ]
@@ -146,9 +206,9 @@
         },
         {
           "@type": "Service",
-          "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#service",
-          "name": "Strata Inspection Report",
-          "url": "https://buildinginspectionsnearme.com.au/strata-inspection/"
+          "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
+          "name": "Existing Building Inspections",
+          "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
         }
       ],
       "mainEntityOfPage": {

@@ -86,10 +86,15 @@ def build_area_served(entries):
     return areas
 
 
-def build_business(cfg):
+def business_id(cfg):
+    """The site-wide business node id. `#organization` matches the house
+    convention and the id Yoast uses, so the two can be reconciled."""
+    return f"{cfg['site']['url'].rstrip('/')}/#organization"
+
+
+def build_business(cfg, services):
     business = cfg["business"]
     site = cfg["site"]
-    business_id = f"{site['url'].rstrip('/')}/#business"
 
     address = dict(business.get("address", {}))
     address["@type"] = "PostalAddress"
@@ -118,12 +123,33 @@ def build_business(cfg):
             "value": identifier["value"],
         }
 
+    # Links the business entity to every service it offers.
+    service_catalog = {
+        "@type": "OfferCatalog",
+        "@id": f"{site['url'].rstrip('/')}/#service-catalog",
+        "name": "Building inspection services",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "position": position,
+                "itemOffered": {
+                    "@type": "Service",
+                    "@id": f"{page_url(site['url'], svc['slug'])}#service",
+                    "name": svc["name"],
+                    "url": page_url(site["url"], svc["slug"]),
+                },
+            }
+            for position, svc in enumerate(services, start=1)
+        ],
+    }
+
     node = {
         "@type": business.get("types", ["LocalBusiness"]),
-        "@id": business_id,
+        "@id": business_id(cfg),
         "name": business.get("name", ""),
         "legalName": business.get("legalName", ""),
-        "alternateName": business.get("slogan", ""),
+        "alternateName": business.get("alternateName", ""),
+        "slogan": business.get("slogan", ""),
         "description": business.get("description", ""),
         "url": business.get("url", "") or site["url"],
         "logo": business.get("logo", ""),
@@ -144,6 +170,7 @@ def build_business(cfg):
         "hasMap": business.get("hasMap", ""),
         "areaServed": build_area_served(business.get("areaServed")),
         "knowsAbout": business.get("knowsAbout", []),
+        "hasOfferCatalog": service_catalog,
         "sameAs": business.get("sameAs", []),
         "openingHoursSpecification": hours,
         "aggregateRating": {
@@ -169,7 +196,7 @@ def build_website(cfg):
         "url": f"{base}/",
         "name": site.get("name", ""),
         "inLanguage": site.get("inLanguage", ""),
-        "publisher": {"@id": f"{base}/#business"},
+        "publisher": {"@id": business_id(cfg)},
     }
 
 
@@ -214,16 +241,13 @@ def build_webpage(cfg, service, url):
         "description": service.get("description", ""),
         "inLanguage": cfg["site"].get("inLanguage", ""),
         "isPartOf": {"@id": f"{base}/#website"},
-        "about": {"@id": f"{base}/#business"},
+        "about": {"@id": business_id(cfg)},
         "primaryImageOfPage": service.get("image", ""),
         "breadcrumb": {"@id": f"{url}#breadcrumb"},
     }
 
 
 def build_service(cfg, service, url, by_slug):
-    base = cfg["site"]["url"].rstrip("/")
-    business_id = f"{base}/#business"
-
     catalog_items = []
     for position, item in enumerate(service.get("items", []), start=1):
         catalog_items.append({
@@ -257,17 +281,17 @@ def build_service(cfg, service, url, by_slug):
             "contactType": "customer service",
         }
 
+    # "From $X inc. GST" is a minimum, not a fixed price, so it is modelled as
+    # minPrice rather than price. Asserting a flat `price` would be wrong.
     offers = ""
-    if service.get("price"):
+    if service.get("priceFrom"):
         offers = {
             "@type": "Offer",
-            "price": service["price"],
-            "priceCurrency": service.get("priceCurrency", "AUD"),
-            "availability": "https://schema.org/InStock",
             "url": url,
+            "availability": "https://schema.org/InStock",
             "priceSpecification": {
                 "@type": "PriceSpecification",
-                "price": service["price"],
+                "minPrice": service["priceFrom"],
                 "priceCurrency": service.get("priceCurrency", "AUD"),
                 "valueAddedTaxIncluded": True,
             },
@@ -282,7 +306,7 @@ def build_service(cfg, service, url, by_slug):
         "description": service.get("description", ""),
         "url": url,
         "image": service.get("image", ""),
-        "provider": {"@id": business_id},
+        "provider": {"@id": business_id(cfg)},
         "providerMobility": "dynamic",
         "areaServed": areas,
         "audience": {
@@ -351,16 +375,13 @@ def collect_warnings(cfg):
             "reviews are visible on the page itself."
         )
 
-    areas = business.get("areaServed", [])
-    if len(areas) == 1 and areas[0].get("name") == "Australia":
+    missing_images = [s["slug"] for s in cfg["_services"] if not s.get("image")]
+    if missing_images:
         warnings.append(
-            "`business.areaServed` is still the default (Australia). Replace it with the "
-            "cities and regions actually serviced."
+            "`image` is empty and was omitted for these services: "
+            + ", ".join(missing_images)
+            + ". Add the hero image URL from each page."
         )
-
-    for service in cfg["_services"]:
-        if not service.get("image"):
-            warnings.append(f"`services[{service['slug']}].image` is empty and was omitted.")
     return warnings
 
 
@@ -375,7 +396,7 @@ def main():
 
     OUT.mkdir(exist_ok=True)
 
-    business_node = build_business(profile)
+    business_node = build_business(profile, services)
     website_node = build_website(profile)
 
     sitewide = prune({

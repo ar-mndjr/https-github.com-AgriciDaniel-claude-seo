@@ -7,13 +7,13 @@
       "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/",
       "name": "Building Warranty and Defect Inspection",
-      "description": "Defect inspections and reports for owners within the statutory warranty period, documenting defective and incomplete building work with the evidence needed to have the builder rectify it or to support a warranty claim.",
+      "description": "Defect inspections for owners inside the statutory warranty period, including the 12-month and 18-month warranty milestones when most defects and structural movement first become apparent. Engineer-prepared documentation for builder rectification, insurance claims or tribunal proceedings.",
       "inLanguage": "en-AU",
       "isPartOf": {
         "@id": "https://buildinginspectionsnearme.com.au/#website"
       },
       "about": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#breadcrumb"
@@ -41,12 +41,12 @@
       "@type": "Service",
       "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
       "name": "Building Warranty and Defect Inspection",
-      "alternateName": "Building defect report",
-      "serviceType": "Building defect and statutory warranty inspection",
-      "description": "Defect inspections and reports for owners within the statutory warranty period, documenting defective and incomplete building work with the evidence needed to have the builder rectify it or to support a warranty claim.",
+      "alternateName": "Warranty defect report",
+      "serviceType": "Building warranty and defect inspection",
+      "description": "Defect inspections for owners inside the statutory warranty period, including the 12-month and 18-month warranty milestones when most defects and structural movement first become apparent. Engineer-prepared documentation for builder rectification, insurance claims or tribunal proceedings.",
       "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/",
       "provider": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "providerMobility": "dynamic",
       "areaServed": [
@@ -54,6 +54,26 @@
           "@type": "Country",
           "name": "Australia",
           "sameAs": "https://www.wikidata.org/wiki/Q408"
+        },
+        {
+          "@type": "City",
+          "name": "Melbourne",
+          "sameAs": "https://www.wikidata.org/wiki/Q3141"
+        },
+        {
+          "@type": "City",
+          "name": "Sydney",
+          "sameAs": "https://www.wikidata.org/wiki/Q3130"
+        },
+        {
+          "@type": "City",
+          "name": "Brisbane",
+          "sameAs": "https://www.wikidata.org/wiki/Q34932"
+        },
+        {
+          "@type": "City",
+          "name": "Adelaide",
+          "sameAs": "https://www.wikidata.org/wiki/Q5112"
         }
       ],
       "audience": {
@@ -62,11 +82,16 @@
       },
       "serviceOutput": {
         "@type": "Thing",
-        "name": "Itemised defect report and rectification schedule for builder or warranty claim use."
+        "name": "Itemised defect report with causation findings and a rectification scope, escalatable to a VCAT-compliant expert report."
       },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+61-1800-796-776",
+          "contactType": "customer service"
+        }
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -78,7 +103,7 @@
             "position": 1,
             "itemOffered": {
               "@type": "Service",
-              "name": "Statutory warranty defect inspection"
+              "name": "Handover and practical completion defect inspection"
             }
           },
           {
@@ -86,7 +111,7 @@
             "position": 2,
             "itemOffered": {
               "@type": "Service",
-              "name": "Major and structural defect identification"
+              "name": "12-month warranty defect inspection"
             }
           },
           {
@@ -94,7 +119,7 @@
             "position": 3,
             "itemOffered": {
               "@type": "Service",
-              "name": "Non-structural defect schedule"
+              "name": "18-month warranty movement and defects review"
             }
           },
           {
@@ -102,7 +127,7 @@
             "position": 4,
             "itemOffered": {
               "@type": "Service",
-              "name": "Waterproofing and moisture defect reporting"
+              "name": "Structural defect identification and causation analysis"
             }
           },
           {
@@ -110,7 +135,7 @@
             "position": 5,
             "itemOffered": {
               "@type": "Service",
-              "name": "Workmanship and non-compliance assessment"
+              "name": "Non-structural defect schedule"
             }
           },
           {
@@ -118,7 +143,7 @@
             "position": 6,
             "itemOffered": {
               "@type": "Service",
-              "name": "Rectification schedule preparation"
+              "name": "Waterproofing and moisture defect reporting"
             }
           },
           {
@@ -126,7 +151,31 @@
             "position": 7,
             "itemOffered": {
               "@type": "Service",
-              "name": "Re-inspection after rectification works"
+              "name": "Comparison against recorded slab and finished-floor baselines"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 8,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rectification scope of works and cost estimates"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 9,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "VCAT and DBDRV-ready expert report"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 10,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Post-rectification verification inspection"
             }
           }
         ]
@@ -135,13 +184,13 @@
         {
           "@type": "Service",
           "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
-          "name": "New Building Inspection",
+          "name": "New Building Inspections",
           "url": "https://buildinginspectionsnearme.com.au/new-buildings/"
         },
         {
           "@type": "Service",
           "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
-          "name": "Renovation and Extension Inspection",
+          "name": "Renovation and Extension Inspections",
           "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
         },
         {

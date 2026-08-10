@@ -5,14 +5,14 @@
       "@type": "WebPage",
       "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/existing-buildings/",
-      "name": "Existing Building Inspection",
-      "description": "Independent inspection of an established residential or commercial building, reporting on structural condition, defects, moisture and safety hazards so owners and buyers know the true condition of the property.",
+      "name": "Existing Building Inspections",
+      "description": "Engineer-led inspections of existing homes, strata properties and commercial buildings, covering general condition, defect and movement investigation, and causation analysis. One inspection by a Chartered Engineer at a standard inspection price, escalatable to an engineering-level or tribunal-ready expert report without a second site visit.",
       "inLanguage": "en-AU",
       "isPartOf": {
         "@id": "https://buildinginspectionsnearme.com.au/#website"
       },
       "about": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#breadcrumb"
@@ -31,7 +31,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Existing Building Inspection",
+          "name": "Existing Building Inspections",
           "item": "https://buildinginspectionsnearme.com.au/existing-buildings/"
         }
       ]
@@ -39,13 +39,13 @@
     {
       "@type": "Service",
       "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
-      "name": "Existing Building Inspection",
-      "alternateName": "Building condition inspection",
+      "name": "Existing Building Inspections",
+      "alternateName": "Building defect and condition inspection",
       "serviceType": "Existing building inspection",
-      "description": "Independent inspection of an established residential or commercial building, reporting on structural condition, defects, moisture and safety hazards so owners and buyers know the true condition of the property.",
+      "description": "Engineer-led inspections of existing homes, strata properties and commercial buildings, covering general condition, defect and movement investigation, and causation analysis. One inspection by a Chartered Engineer at a standard inspection price, escalatable to an engineering-level or tribunal-ready expert report without a second site visit.",
       "url": "https://buildinginspectionsnearme.com.au/existing-buildings/",
       "provider": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "providerMobility": "dynamic",
       "areaServed": [
@@ -53,31 +53,67 @@
           "@type": "Country",
           "name": "Australia",
           "sameAs": "https://www.wikidata.org/wiki/Q408"
+        },
+        {
+          "@type": "City",
+          "name": "Melbourne",
+          "sameAs": "https://www.wikidata.org/wiki/Q3141"
+        },
+        {
+          "@type": "City",
+          "name": "Sydney",
+          "sameAs": "https://www.wikidata.org/wiki/Q3130"
+        },
+        {
+          "@type": "City",
+          "name": "Brisbane",
+          "sameAs": "https://www.wikidata.org/wiki/Q34932"
+        },
+        {
+          "@type": "City",
+          "name": "Adelaide",
+          "sameAs": "https://www.wikidata.org/wiki/Q5112"
         }
       ],
       "audience": {
         "@type": "Audience",
-        "audienceType": "Property owners, buyers and investors of established buildings"
+        "audienceType": "Homeowners, buyers and sellers, strata committees and owners corporations, landlords and investors"
       },
       "serviceOutput": {
         "@type": "Thing",
-        "name": "Written building condition report covering defects, structural condition and recommended rectification."
+        "name": "Engineer-led building inspection report, upgradeable to an engineering-level or VCAT-compliant expert report with no second inspection fee."
       },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/existing-buildings/",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+61-1800-796-776",
+          "contactType": "customer service"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://buildinginspectionsnearme.com.au/existing-buildings/",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 495,
+          "priceCurrency": "AUD",
+          "valueAddedTaxIncluded": true
+        }
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#offer-catalog",
-        "name": "Existing Building Inspection inclusions",
+        "name": "Existing Building Inspections inclusions",
         "itemListElement": [
           {
             "@type": "Offer",
             "position": 1,
             "itemOffered": {
               "@type": "Service",
-              "name": "Structural condition assessment"
+              "name": "General building inspection (engineer-led)"
             }
           },
           {
@@ -85,7 +121,7 @@
             "position": 2,
             "itemOffered": {
               "@type": "Service",
-              "name": "Roof covering and roof space inspection"
+              "name": "Pre-purchase and pre-sale inspection"
             }
           },
           {
@@ -93,7 +129,7 @@
             "position": 3,
             "itemOffered": {
               "@type": "Service",
-              "name": "Subfloor, footing and foundation inspection"
+              "name": "Strata and body corporate common property inspection"
             }
           },
           {
@@ -101,7 +137,7 @@
             "position": 4,
             "itemOffered": {
               "@type": "Service",
-              "name": "Moisture and water ingress assessment"
+              "name": "Defect and movement investigation"
             }
           },
           {
@@ -109,7 +145,7 @@
             "position": 5,
             "itemOffered": {
               "@type": "Service",
-              "name": "Wet area and waterproofing checks"
+              "name": "Drone roof video and images"
             }
           },
           {
@@ -117,7 +153,7 @@
             "position": 6,
             "itemOffered": {
               "@type": "Service",
-              "name": "Safety hazard identification"
+              "name": "Floor level survey and contour map"
             }
           },
           {
@@ -125,7 +161,39 @@
             "position": 7,
             "itemOffered": {
               "@type": "Service",
-              "name": "Maintenance and rectification recommendations"
+              "name": "Targeted investigation of cracking, water ingress, balconies and retaining walls"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 8,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Architectural and structural drawing review"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 9,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Engineering-level report upgrade"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 10,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "VCAT-compliant expert report upgrade"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 11,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rectification scope of works, cost estimates and post-rectification verification"
             }
           }
         ]
@@ -139,9 +207,9 @@
         },
         {
           "@type": "Service",
-          "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#service",
-          "name": "Building and Pest Inspection",
-          "url": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/"
+          "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#service",
+          "name": "Strata Inspection Report",
+          "url": "https://buildinginspectionsnearme.com.au/strata-inspection/"
         },
         {
           "@type": "Service",

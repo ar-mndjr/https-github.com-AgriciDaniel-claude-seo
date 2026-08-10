@@ -6,14 +6,14 @@
       "@type": "WebPage",
       "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/new-buildings/",
-      "name": "New Building Inspection",
-      "description": "Independent construction stage inspections for new homes and buildings, from footings through to handover, verifying that completed work matches the approved plans, the National Construction Code and relevant Australian Standards.",
+      "name": "New Building Inspections",
+      "description": "Independent engineer-led inspections across the construction of a new home or building, covering the core stage spine from footing pre-pour to practical completion, with optional pre-plaster, waterproofing, lock-up and drone roof checks, movement baselines and an 18-month warranty review.",
       "inLanguage": "en-AU",
       "isPartOf": {
         "@id": "https://buildinginspectionsnearme.com.au/#website"
       },
       "about": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#breadcrumb"
@@ -32,7 +32,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "New Building Inspection",
+          "name": "New Building Inspections",
           "item": "https://buildinginspectionsnearme.com.au/new-buildings/"
         }
       ]
@@ -40,13 +40,13 @@
     {
       "@type": "Service",
       "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
-      "name": "New Building Inspection",
-      "alternateName": "Construction stage inspections",
+      "name": "New Building Inspections",
+      "alternateName": "New home construction stage inspections",
       "serviceType": "New construction stage inspection",
-      "description": "Independent construction stage inspections for new homes and buildings, from footings through to handover, verifying that completed work matches the approved plans, the National Construction Code and relevant Australian Standards.",
+      "description": "Independent engineer-led inspections across the construction of a new home or building, covering the core stage spine from footing pre-pour to practical completion, with optional pre-plaster, waterproofing, lock-up and drone roof checks, movement baselines and an 18-month warranty review.",
       "url": "https://buildinginspectionsnearme.com.au/new-buildings/",
       "provider": {
-        "@id": "https://buildinginspectionsnearme.com.au/#business"
+        "@id": "https://buildinginspectionsnearme.com.au/#organization"
       },
       "providerMobility": "dynamic",
       "areaServed": [
@@ -54,31 +54,56 @@
           "@type": "Country",
           "name": "Australia",
           "sameAs": "https://www.wikidata.org/wiki/Q408"
+        },
+        {
+          "@type": "City",
+          "name": "Melbourne",
+          "sameAs": "https://www.wikidata.org/wiki/Q3141"
+        },
+        {
+          "@type": "City",
+          "name": "Sydney",
+          "sameAs": "https://www.wikidata.org/wiki/Q3130"
+        },
+        {
+          "@type": "City",
+          "name": "Brisbane",
+          "sameAs": "https://www.wikidata.org/wiki/Q34932"
+        },
+        {
+          "@type": "City",
+          "name": "Adelaide",
+          "sameAs": "https://www.wikidata.org/wiki/Q5112"
         }
       ],
       "audience": {
         "@type": "Audience",
-        "audienceType": "Owners building a new home or building"
+        "audienceType": "Homeowners building a new house, owner-builders and small residential developers"
       },
       "serviceOutput": {
         "@type": "Thing",
-        "name": "Stage inspection reports and a practical completion defect list for the builder to rectify."
+        "name": "Stage inspection reports, recorded movement baselines and a practical completion defect list for builder rectification."
       },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://buildinginspectionsnearme.com.au/new-buildings/"
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/new-buildings/",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+61-1800-796-776",
+          "contactType": "customer service"
+        }
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#offer-catalog",
-        "name": "New Building Inspection inclusions",
+        "name": "New Building Inspections inclusions",
         "itemListElement": [
           {
             "@type": "Offer",
             "position": 1,
             "itemOffered": {
               "@type": "Service",
-              "name": "Base, slab and footing stage inspection"
+              "name": "Footing and foundation pre-pour inspection"
             }
           },
           {
@@ -86,7 +111,7 @@
             "position": 2,
             "itemOffered": {
               "@type": "Service",
-              "name": "Frame stage inspection"
+              "name": "Post-pour slab check"
             }
           },
           {
@@ -94,7 +119,7 @@
             "position": 3,
             "itemOffered": {
               "@type": "Service",
-              "name": "Pre-lining and lock-up stage inspection"
+              "name": "Structural frame inspection"
             }
           },
           {
@@ -102,7 +127,7 @@
             "position": 4,
             "itemOffered": {
               "@type": "Service",
-              "name": "Waterproofing stage inspection"
+              "name": "Pre-plaster inspection"
             }
           },
           {
@@ -110,7 +135,7 @@
             "position": 5,
             "itemOffered": {
               "@type": "Service",
-              "name": "Fixing stage inspection"
+              "name": "Waterproofing checkpoint"
             }
           },
           {
@@ -118,7 +143,7 @@
             "position": 6,
             "itemOffered": {
               "@type": "Service",
-              "name": "Practical completion and handover inspection"
+              "name": "Fix and lock-up inspection"
             }
           },
           {
@@ -126,7 +151,39 @@
             "position": 7,
             "itemOffered": {
               "@type": "Service",
-              "name": "Re-inspection after defect rectification"
+              "name": "Drone roof inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 8,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pre-handover practical completion (PCI) inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 9,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Slab baseline level survey and finished-floor baseline"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 10,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Movement monitoring packs (baseline and re-check)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 11,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "18-month warranty movement and defects review"
             }
           }
         ]
@@ -135,7 +192,7 @@
         {
           "@type": "Service",
           "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
-          "name": "Renovation and Extension Inspection",
+          "name": "Renovation and Extension Inspections",
           "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
         },
         {
@@ -146,9 +203,9 @@
         },
         {
           "@type": "Service",
-          "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
-          "name": "Existing Building Inspection",
-          "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+          "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#service",
+          "name": "Adjoining Works Protection and Dilapidation Reporting",
+          "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/"
         }
       ],
       "mainEntityOfPage": {
