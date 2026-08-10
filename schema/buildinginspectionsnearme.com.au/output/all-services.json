@@ -1,0 +1,1765 @@
+[
+  {
+    "url": "https://buildinginspectionsnearme.com.au/existing-buildings/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/existing-buildings/",
+          "name": "Existing Building Inspection",
+          "description": "Independent inspection of an established residential or commercial building, reporting on structural condition, defects, moisture and safety hazards so owners and buyers know the true condition of the property.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Existing Building Inspection",
+              "item": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
+          "name": "Existing Building Inspection",
+          "alternateName": "Building condition inspection",
+          "serviceType": "Existing building inspection",
+          "description": "Independent inspection of an established residential or commercial building, reporting on structural condition, defects, moisture and safety hazards so owners and buyers know the true condition of the property.",
+          "url": "https://buildinginspectionsnearme.com.au/existing-buildings/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Property owners, buyers and investors of established buildings"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Written building condition report covering defects, structural condition and recommended rectification."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#offer-catalog",
+            "name": "Existing Building Inspection inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structural condition assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Roof covering and roof space inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Subfloor, footing and foundation inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Moisture and water ingress assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Wet area and waterproofing checks"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Safety hazard identification"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Maintenance and rectification recommendations"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#service",
+              "name": "Pre-Purchase Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#service",
+              "name": "Building and Pest Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+              "name": "Building Warranty and Defect Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/",
+          "name": "Renovation and Extension Inspection",
+          "description": "Staged inspections across renovation and extension projects, checking workmanship and compliance with the approved plans, the National Construction Code and relevant Australian Standards before each progress payment is released.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Renovation and Extension Inspection",
+              "item": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
+          "name": "Renovation and Extension Inspection",
+          "alternateName": "Renovation stage inspection",
+          "serviceType": "Renovation and extension inspection",
+          "description": "Staged inspections across renovation and extension projects, checking workmanship and compliance with the approved plans, the National Construction Code and relevant Australian Standards before each progress payment is released.",
+          "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Homeowners and investors renovating or extending a property"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Stage-by-stage inspection reports supporting progress claims and final handover."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#offer-catalog",
+            "name": "Renovation and Extension Inspection inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pre-renovation condition record"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Demolition and make-good inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structural alteration and support beam inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Waterproofing inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Progress payment stage inspections"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Final completion and defect inspection"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
+              "name": "New Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/new-buildings/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+              "name": "Building Warranty and Defect Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#service",
+              "name": "Adjoining Works Protection and Dilapidation Reporting",
+              "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/new-buildings/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/new-buildings/",
+          "name": "New Building Inspection",
+          "description": "Independent construction stage inspections for new homes and buildings, from footings through to handover, verifying that completed work matches the approved plans, the National Construction Code and relevant Australian Standards.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "New Building Inspection",
+              "item": "https://buildinginspectionsnearme.com.au/new-buildings/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
+          "name": "New Building Inspection",
+          "alternateName": "Construction stage inspections",
+          "serviceType": "New construction stage inspection",
+          "description": "Independent construction stage inspections for new homes and buildings, from footings through to handover, verifying that completed work matches the approved plans, the National Construction Code and relevant Australian Standards.",
+          "url": "https://buildinginspectionsnearme.com.au/new-buildings/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Owners building a new home or building"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Stage inspection reports and a practical completion defect list for the builder to rectify."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/new-buildings/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#offer-catalog",
+            "name": "New Building Inspection inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Base, slab and footing stage inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Frame stage inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pre-lining and lock-up stage inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Waterproofing stage inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Fixing stage inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Practical completion and handover inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Re-inspection after defect rectification"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
+              "name": "Renovation and Extension Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+              "name": "Building Warranty and Defect Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
+              "name": "Existing Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/",
+          "name": "Adjoining Works Protection and Dilapidation Reporting",
+          "description": "Protection of adjoining property inspections and dilapidation reports that record and photograph the condition of neighbouring buildings before, during and after excavation, demolition or construction works, so any damage claim can be settled on documented evidence.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Adjoining Works Protection and Dilapidation Reporting",
+              "item": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#service",
+          "name": "Adjoining Works Protection and Dilapidation Reporting",
+          "alternateName": "Dilapidation report",
+          "serviceType": "Dilapidation and adjoining property protection inspection",
+          "description": "Protection of adjoining property inspections and dilapidation reports that record and photograph the condition of neighbouring buildings before, during and after excavation, demolition or construction works, so any damage claim can be settled on documented evidence.",
+          "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Builders, developers, owners and neighbouring property owners"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Photographic dilapidation report recording the pre-existing and post-works condition of adjoining property."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#offer-catalog",
+            "name": "Adjoining Works Protection and Dilapidation Reporting inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pre-construction dilapidation report"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Neighbouring property condition survey"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Excavation, piling and shoring impact assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Party wall and boundary structure inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Crack monitoring and progressive inspections"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Post-construction dilapidation report"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Damage dispute documentation"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
+              "name": "New Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/new-buildings/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
+              "name": "Renovation and Extension Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#service",
+              "name": "Building Insurance Assessment",
+              "url": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/",
+          "name": "Pre-Purchase Building Inspection",
+          "description": "Pre-purchase standard property inspection carried out in line with AS 4349.1, identifying major and minor defects, structural movement, safety hazards and signs of unapproved work before you commit to buying.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Pre-Purchase Building Inspection",
+              "item": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#service",
+          "name": "Pre-Purchase Building Inspection",
+          "alternateName": "Pre-purchase property inspection report",
+          "serviceType": "Pre-purchase building inspection",
+          "description": "Pre-purchase standard property inspection carried out in line with AS 4349.1, identifying major and minor defects, structural movement, safety hazards and signs of unapproved work before you commit to buying.",
+          "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Home buyers and property investors"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Standard property inspection report to AS 4349.1, delivered in writing before exchange."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#offer-catalog",
+            "name": "Pre-Purchase Building Inspection inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Major and minor defect identification"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structural movement and cracking assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Roof, ceiling and roof void inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Subfloor, drainage and site inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Moisture testing to bathrooms and wet areas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Safety hazard reporting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Written report with photographs"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#service",
+              "name": "Building and Pest Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#service",
+              "name": "Pre-Auction Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#service",
+              "name": "Strata Inspection Report",
+              "url": "https://buildinginspectionsnearme.com.au/strata-inspection/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/strata-inspection/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/strata-inspection/",
+          "name": "Strata Inspection Report",
+          "description": "Strata inspection report for buyers of a unit, apartment or townhouse, reviewing the owners corporation books and records alongside the condition of common property so you understand the building's finances, defects and disputes before exchange.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Strata Inspection Report",
+              "item": "https://buildinginspectionsnearme.com.au/strata-inspection/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#service",
+          "name": "Strata Inspection Report",
+          "alternateName": "Strata report",
+          "serviceType": "Strata inspection report",
+          "description": "Strata inspection report for buyers of a unit, apartment or townhouse, reviewing the owners corporation books and records alongside the condition of common property so you understand the building's finances, defects and disputes before exchange.",
+          "url": "https://buildinginspectionsnearme.com.au/strata-inspection/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Buyers of strata titled units, apartments and townhouses"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Strata inspection report summarising records, levies, capital works funding, defects and disputes."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/strata-inspection/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#offer-catalog",
+            "name": "Strata Inspection Report inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Owners corporation books and records inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Levies, arrears and special levy review"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Capital works (sinking) fund analysis"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Building defect and rectification history"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Insurance currency check"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Meeting minutes, by-laws and dispute review"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Common property condition observations"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#service",
+              "name": "Pre-Purchase Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+              "name": "Building Warranty and Defect Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
+              "name": "Existing Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/",
+          "name": "Building Insurance Assessment",
+          "description": "Independent assessment of building damage for insurance purposes, documenting the cause and extent of the damage and the scope of works required to reinstate the building, so a claim can be lodged or disputed on technical evidence.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Building Insurance Assessment",
+              "item": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#service",
+          "name": "Building Insurance Assessment",
+          "alternateName": "Insurance damage assessment report",
+          "serviceType": "Building insurance damage assessment",
+          "description": "Independent assessment of building damage for insurance purposes, documenting the cause and extent of the damage and the scope of works required to reinstate the building, so a claim can be lodged or disputed on technical evidence.",
+          "url": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Property owners, landlords and strata managers making an insurance claim"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Independent damage assessment report with cause of damage findings and a scope of reinstatement works."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#offer-catalog",
+            "name": "Building Insurance Assessment inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Storm and water damage assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Fire and impact damage assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Cause of damage determination"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structural damage assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Scope of reinstatement works"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Make safe recommendations"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Independent reporting for disputed claims"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#service",
+              "name": "Adjoining Works Protection and Dilapidation Reporting",
+              "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+              "name": "Building Warranty and Defect Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
+              "name": "Existing Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/",
+          "name": "Building Warranty and Defect Inspection",
+          "description": "Defect inspections and reports for owners within the statutory warranty period, documenting defective and incomplete building work with the evidence needed to have the builder rectify it or to support a warranty claim.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Building Warranty and Defect Inspection",
+              "item": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+          "name": "Building Warranty and Defect Inspection",
+          "alternateName": "Building defect report",
+          "serviceType": "Building defect and statutory warranty inspection",
+          "description": "Defect inspections and reports for owners within the statutory warranty period, documenting defective and incomplete building work with the evidence needed to have the builder rectify it or to support a warranty claim.",
+          "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Home owners, owners corporations and investors inside the statutory warranty period"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Itemised defect report and rectification schedule for builder or warranty claim use."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#offer-catalog",
+            "name": "Building Warranty and Defect Inspection inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Statutory warranty defect inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Major and structural defect identification"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Non-structural defect schedule"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Waterproofing and moisture defect reporting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Workmanship and non-compliance assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Rectification schedule preparation"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Re-inspection after rectification works"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
+              "name": "New Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/new-buildings/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
+              "name": "Renovation and Extension Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#service",
+              "name": "Strata Inspection Report",
+              "url": "https://buildinginspectionsnearme.com.au/strata-inspection/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/",
+          "name": "Building and Pest Inspection",
+          "description": "Combined building and timber pest inspection carried out in line with AS 4349.1 and AS 4349.3, covering building defects together with termite activity, timber pest damage and the conditions conducive to attack, in one written report.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Building and Pest Inspection",
+              "item": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#service",
+          "name": "Building and Pest Inspection",
+          "alternateName": "Building and termite inspection",
+          "serviceType": "Building and timber pest inspection",
+          "description": "Combined building and timber pest inspection carried out in line with AS 4349.1 and AS 4349.3, covering building defects together with termite activity, timber pest damage and the conditions conducive to attack, in one written report.",
+          "url": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Home buyers, owners and investors"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Combined building and timber pest report to AS 4349.1 and AS 4349.3."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#offer-catalog",
+            "name": "Building and Pest Inspection inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Standard building inspection to AS 4349.1"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Timber pest inspection to AS 4349.3"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Termite activity and damage detection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Moisture meter and thermal assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Conducive conditions reporting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Treatment and management recommendations"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Single combined written report"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#service",
+              "name": "Pre-Purchase Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#service",
+              "name": "Pre-Auction Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
+              "name": "Existing Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/",
+          "name": "Commercial Building Inspection",
+          "description": "Inspections of commercial, industrial and retail property covering building condition, defects and the building fabric, for purchasers, tenants, landlords and asset owners making acquisition, leasing or maintenance decisions.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Commercial Building Inspection",
+              "item": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#service",
+          "name": "Commercial Building Inspection",
+          "alternateName": "Commercial property inspection",
+          "serviceType": "Commercial building inspection",
+          "description": "Inspections of commercial, industrial and retail property covering building condition, defects and the building fabric, for purchasers, tenants, landlords and asset owners making acquisition, leasing or maintenance decisions.",
+          "url": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Commercial purchasers, tenants, landlords and asset managers"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Commercial building condition and defect report."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#offer-catalog",
+            "name": "Commercial Building Inspection inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pre-purchase commercial building inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pre-lease and make good inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Building condition and defect report"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structural and building fabric assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Roof, facade and external envelope inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Maintenance and capital expenditure planning input"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Industrial and retail premises inspections"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
+              "name": "Existing Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+              "name": "Building Warranty and Defect Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#service",
+              "name": "Building Insurance Assessment",
+              "url": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#webpage"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#webpage",
+          "url": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/",
+          "name": "Pre-Auction Building Inspection",
+          "description": "Fast turnaround building inspection before auction day, so you can bid knowing the property's defects and repair exposure. Auction purchases are unconditional, which makes inspecting beforehand the only opportunity to find problems.",
+          "inLanguage": "en-AU",
+          "isPartOf": {
+            "@id": "https://buildinginspectionsnearme.com.au/#website"
+          },
+          "about": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "breadcrumb": {
+            "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://buildinginspectionsnearme.com.au/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Pre-Auction Building Inspection",
+              "item": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/"
+            }
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#service",
+          "name": "Pre-Auction Building Inspection",
+          "alternateName": "Pre-auction property inspection",
+          "serviceType": "Pre-auction building inspection",
+          "description": "Fast turnaround building inspection before auction day, so you can bid knowing the property's defects and repair exposure. Auction purchases are unconditional, which makes inspecting beforehand the only opportunity to find problems.",
+          "url": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/",
+          "provider": {
+            "@id": "https://buildinginspectionsnearme.com.au/#business"
+          },
+          "providerMobility": "dynamic",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Australia",
+              "sameAs": "https://www.wikidata.org/wiki/Q408"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Buyers bidding at auction"
+          },
+          "serviceOutput": {
+            "@type": "Thing",
+            "name": "Pre-auction inspection report delivered ahead of auction day."
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#offer-catalog",
+            "name": "Pre-Auction Building Inspection inclusions",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "position": 1,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pre-auction defect inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 2,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Priority and next day bookings"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 3,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Verbal summary on site"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 4,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Written report before auction day"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 5,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Major structural defect assessment"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 6,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Optional combined timber pest inspection"
+                }
+              },
+              {
+                "@type": "Offer",
+                "position": 7,
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Repair priority guidance for bidding"
+                }
+              }
+            ]
+          },
+          "isRelatedTo": [
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#service",
+              "name": "Pre-Purchase Building Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#service",
+              "name": "Building and Pest Inspection",
+              "url": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/"
+            },
+            {
+              "@type": "Service",
+              "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#service",
+              "name": "Strata Inspection Report",
+              "url": "https://buildinginspectionsnearme.com.au/strata-inspection/"
+            }
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#webpage"
+          }
+        }
+      ]
+    }
+  }
+]

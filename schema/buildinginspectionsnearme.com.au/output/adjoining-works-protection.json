@@ -1,0 +1,158 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#webpage",
+      "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/",
+      "name": "Adjoining Works Protection and Dilapidation Reporting",
+      "description": "Protection of adjoining property inspections and dilapidation reports that record and photograph the condition of neighbouring buildings before, during and after excavation, demolition or construction works, so any damage claim can be settled on documented evidence.",
+      "inLanguage": "en-AU",
+      "isPartOf": {
+        "@id": "https://buildinginspectionsnearme.com.au/#website"
+      },
+      "about": {
+        "@id": "https://buildinginspectionsnearme.com.au/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://buildinginspectionsnearme.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Adjoining Works Protection and Dilapidation Reporting",
+          "item": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#service",
+      "name": "Adjoining Works Protection and Dilapidation Reporting",
+      "alternateName": "Dilapidation report",
+      "serviceType": "Dilapidation and adjoining property protection inspection",
+      "description": "Protection of adjoining property inspections and dilapidation reports that record and photograph the condition of neighbouring buildings before, during and after excavation, demolition or construction works, so any damage claim can be settled on documented evidence.",
+      "url": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/",
+      "provider": {
+        "@id": "https://buildinginspectionsnearme.com.au/#business"
+      },
+      "providerMobility": "dynamic",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Australia",
+          "sameAs": "https://www.wikidata.org/wiki/Q408"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Builders, developers, owners and neighbouring property owners"
+      },
+      "serviceOutput": {
+        "@type": "Thing",
+        "name": "Photographic dilapidation report recording the pre-existing and post-works condition of adjoining property."
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#offer-catalog",
+        "name": "Adjoining Works Protection and Dilapidation Reporting inclusions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "position": 1,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pre-construction dilapidation report"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 2,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Neighbouring property condition survey"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 3,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Excavation, piling and shoring impact assessment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 4,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Party wall and boundary structure inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 5,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Crack monitoring and progressive inspections"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 6,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Post-construction dilapidation report"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 7,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Damage dispute documentation"
+            }
+          }
+        ]
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
+          "name": "New Building Inspection",
+          "url": "https://buildinginspectionsnearme.com.au/new-buildings/"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
+          "name": "Renovation and Extension Inspection",
+          "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#service",
+          "name": "Building Insurance Assessment",
+          "url": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@id": "https://buildinginspectionsnearme.com.au/adjoining-works-protection/#webpage"
+      }
+    }
+  ]
+}

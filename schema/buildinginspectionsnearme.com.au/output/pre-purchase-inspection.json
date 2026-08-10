@@ -1,0 +1,158 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#webpage",
+      "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/",
+      "name": "Pre-Purchase Building Inspection",
+      "description": "Pre-purchase standard property inspection carried out in line with AS 4349.1, identifying major and minor defects, structural movement, safety hazards and signs of unapproved work before you commit to buying.",
+      "inLanguage": "en-AU",
+      "isPartOf": {
+        "@id": "https://buildinginspectionsnearme.com.au/#website"
+      },
+      "about": {
+        "@id": "https://buildinginspectionsnearme.com.au/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://buildinginspectionsnearme.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pre-Purchase Building Inspection",
+          "item": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#service",
+      "name": "Pre-Purchase Building Inspection",
+      "alternateName": "Pre-purchase property inspection report",
+      "serviceType": "Pre-purchase building inspection",
+      "description": "Pre-purchase standard property inspection carried out in line with AS 4349.1, identifying major and minor defects, structural movement, safety hazards and signs of unapproved work before you commit to buying.",
+      "url": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/",
+      "provider": {
+        "@id": "https://buildinginspectionsnearme.com.au/#business"
+      },
+      "providerMobility": "dynamic",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Australia",
+          "sameAs": "https://www.wikidata.org/wiki/Q408"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Home buyers and property investors"
+      },
+      "serviceOutput": {
+        "@type": "Thing",
+        "name": "Standard property inspection report to AS 4349.1, delivered in writing before exchange."
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#offer-catalog",
+        "name": "Pre-Purchase Building Inspection inclusions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "position": 1,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Major and minor defect identification"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 2,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Structural movement and cracking assessment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 3,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof, ceiling and roof void inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 4,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Subfloor, drainage and site inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 5,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Moisture testing to bathrooms and wet areas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 6,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Safety hazard reporting"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 7,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Written report with photographs"
+            }
+          }
+        ]
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/#service",
+          "name": "Building and Pest Inspection",
+          "url": "https://buildinginspectionsnearme.com.au/building-and-pest-inspections/"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/#service",
+          "name": "Pre-Auction Building Inspection",
+          "url": "https://buildinginspectionsnearme.com.au/pre-auction-building-inspection/"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#service",
+          "name": "Strata Inspection Report",
+          "url": "https://buildinginspectionsnearme.com.au/strata-inspection/"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@id": "https://buildinginspectionsnearme.com.au/pre-purchase-inspection/#webpage"
+      }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#webpage",
+      "url": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/",
+      "name": "Commercial Building Inspection",
+      "description": "Inspections of commercial, industrial and retail property covering building condition, defects and the building fabric, for purchasers, tenants, landlords and asset owners making acquisition, leasing or maintenance decisions.",
+      "inLanguage": "en-AU",
+      "isPartOf": {
+        "@id": "https://buildinginspectionsnearme.com.au/#website"
+      },
+      "about": {
+        "@id": "https://buildinginspectionsnearme.com.au/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://buildinginspectionsnearme.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Commercial Building Inspection",
+          "item": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#service",
+      "name": "Commercial Building Inspection",
+      "alternateName": "Commercial property inspection",
+      "serviceType": "Commercial building inspection",
+      "description": "Inspections of commercial, industrial and retail property covering building condition, defects and the building fabric, for purchasers, tenants, landlords and asset owners making acquisition, leasing or maintenance decisions.",
+      "url": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/",
+      "provider": {
+        "@id": "https://buildinginspectionsnearme.com.au/#business"
+      },
+      "providerMobility": "dynamic",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Australia",
+          "sameAs": "https://www.wikidata.org/wiki/Q408"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Commercial purchasers, tenants, landlords and asset managers"
+      },
+      "serviceOutput": {
+        "@type": "Thing",
+        "name": "Commercial building condition and defect report."
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#offer-catalog",
+        "name": "Commercial Building Inspection inclusions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "position": 1,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pre-purchase commercial building inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 2,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pre-lease and make good inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 3,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Building condition and defect report"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 4,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Structural and building fabric assessment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 5,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof, facade and external envelope inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 6,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Maintenance and capital expenditure planning input"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 7,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial and retail premises inspections"
+            }
+          }
+        ]
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/existing-buildings/#service",
+          "name": "Existing Building Inspection",
+          "url": "https://buildinginspectionsnearme.com.au/existing-buildings/"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+          "name": "Building Warranty and Defect Inspection",
+          "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/#service",
+          "name": "Building Insurance Assessment",
+          "url": "https://buildinginspectionsnearme.com.au/building-insurance-assessment/"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@id": "https://buildinginspectionsnearme.com.au/commercial-building-inspections/#webpage"
+      }
+    }
+  ]
+}

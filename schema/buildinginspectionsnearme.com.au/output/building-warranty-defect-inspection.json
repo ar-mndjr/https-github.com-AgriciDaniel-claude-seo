@@ -1,0 +1,158 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#webpage",
+      "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/",
+      "name": "Building Warranty and Defect Inspection",
+      "description": "Defect inspections and reports for owners within the statutory warranty period, documenting defective and incomplete building work with the evidence needed to have the builder rectify it or to support a warranty claim.",
+      "inLanguage": "en-AU",
+      "isPartOf": {
+        "@id": "https://buildinginspectionsnearme.com.au/#website"
+      },
+      "about": {
+        "@id": "https://buildinginspectionsnearme.com.au/#business"
+      },
+      "breadcrumb": {
+        "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://buildinginspectionsnearme.com.au/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Building Warranty and Defect Inspection",
+          "item": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#service",
+      "name": "Building Warranty and Defect Inspection",
+      "alternateName": "Building defect report",
+      "serviceType": "Building defect and statutory warranty inspection",
+      "description": "Defect inspections and reports for owners within the statutory warranty period, documenting defective and incomplete building work with the evidence needed to have the builder rectify it or to support a warranty claim.",
+      "url": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/",
+      "provider": {
+        "@id": "https://buildinginspectionsnearme.com.au/#business"
+      },
+      "providerMobility": "dynamic",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Australia",
+          "sameAs": "https://www.wikidata.org/wiki/Q408"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Home owners, owners corporations and investors inside the statutory warranty period"
+      },
+      "serviceOutput": {
+        "@type": "Thing",
+        "name": "Itemised defect report and rectification schedule for builder or warranty claim use."
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#offer-catalog",
+        "name": "Building Warranty and Defect Inspection inclusions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "position": 1,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Statutory warranty defect inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 2,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Major and structural defect identification"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 3,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Non-structural defect schedule"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 4,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Waterproofing and moisture defect reporting"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 5,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Workmanship and non-compliance assessment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 6,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rectification schedule preparation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "position": 7,
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Re-inspection after rectification works"
+            }
+          }
+        ]
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/new-buildings/#service",
+          "name": "New Building Inspection",
+          "url": "https://buildinginspectionsnearme.com.au/new-buildings/"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/#service",
+          "name": "Renovation and Extension Inspection",
+          "url": "https://buildinginspectionsnearme.com.au/renovations-and-extensions/"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://buildinginspectionsnearme.com.au/strata-inspection/#service",
+          "name": "Strata Inspection Report",
+          "url": "https://buildinginspectionsnearme.com.au/strata-inspection/"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@id": "https://buildinginspectionsnearme.com.au/building-warranty-defect-inspection/#webpage"
+      }
+    }
+  ]
+}

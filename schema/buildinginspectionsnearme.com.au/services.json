@@ -1,0 +1,258 @@
+{
+  "_readme": "One entry per service page. 'description' should be aligned with the copy actually published on that page before you ship the markup: structured data must describe what the page says. 'price' is optional; leave empty and no Offer is emitted.",
+
+  "services": [
+    {
+      "slug": "existing-buildings",
+      "name": "Existing Building Inspection",
+      "serviceType": "Existing building inspection",
+      "alternateName": "Building condition inspection",
+      "description": "Independent inspection of an established residential or commercial building, reporting on structural condition, defects, moisture and safety hazards so owners and buyers know the true condition of the property.",
+      "serviceOutput": "Written building condition report covering defects, structural condition and recommended rectification.",
+      "audience": "Property owners, buyers and investors of established buildings",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Structural condition assessment",
+        "Roof covering and roof space inspection",
+        "Subfloor, footing and foundation inspection",
+        "Moisture and water ingress assessment",
+        "Wet area and waterproofing checks",
+        "Safety hazard identification",
+        "Maintenance and rectification recommendations"
+      ],
+      "related": ["pre-purchase-inspection", "building-and-pest-inspections", "building-warranty-defect-inspection"]
+    },
+    {
+      "slug": "renovations-and-extensions",
+      "name": "Renovation and Extension Inspection",
+      "serviceType": "Renovation and extension inspection",
+      "alternateName": "Renovation stage inspection",
+      "description": "Staged inspections across renovation and extension projects, checking workmanship and compliance with the approved plans, the National Construction Code and relevant Australian Standards before each progress payment is released.",
+      "serviceOutput": "Stage-by-stage inspection reports supporting progress claims and final handover.",
+      "audience": "Homeowners and investors renovating or extending a property",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Pre-renovation condition record",
+        "Demolition and make-good inspection",
+        "Structural alteration and support beam inspection",
+        "Waterproofing inspection",
+        "Progress payment stage inspections",
+        "Final completion and defect inspection"
+      ],
+      "related": ["new-buildings", "building-warranty-defect-inspection", "adjoining-works-protection"]
+    },
+    {
+      "slug": "new-buildings",
+      "name": "New Building Inspection",
+      "serviceType": "New construction stage inspection",
+      "alternateName": "Construction stage inspections",
+      "description": "Independent construction stage inspections for new homes and buildings, from footings through to handover, verifying that completed work matches the approved plans, the National Construction Code and relevant Australian Standards.",
+      "serviceOutput": "Stage inspection reports and a practical completion defect list for the builder to rectify.",
+      "audience": "Owners building a new home or building",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Base, slab and footing stage inspection",
+        "Frame stage inspection",
+        "Pre-lining and lock-up stage inspection",
+        "Waterproofing stage inspection",
+        "Fixing stage inspection",
+        "Practical completion and handover inspection",
+        "Re-inspection after defect rectification"
+      ],
+      "related": ["renovations-and-extensions", "building-warranty-defect-inspection", "existing-buildings"]
+    },
+    {
+      "slug": "adjoining-works-protection",
+      "name": "Adjoining Works Protection and Dilapidation Reporting",
+      "serviceType": "Dilapidation and adjoining property protection inspection",
+      "alternateName": "Dilapidation report",
+      "description": "Protection of adjoining property inspections and dilapidation reports that record and photograph the condition of neighbouring buildings before, during and after excavation, demolition or construction works, so any damage claim can be settled on documented evidence.",
+      "serviceOutput": "Photographic dilapidation report recording the pre-existing and post-works condition of adjoining property.",
+      "audience": "Builders, developers, owners and neighbouring property owners",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Pre-construction dilapidation report",
+        "Neighbouring property condition survey",
+        "Excavation, piling and shoring impact assessment",
+        "Party wall and boundary structure inspection",
+        "Crack monitoring and progressive inspections",
+        "Post-construction dilapidation report",
+        "Damage dispute documentation"
+      ],
+      "related": ["new-buildings", "renovations-and-extensions", "building-insurance-assessment"]
+    },
+    {
+      "slug": "pre-purchase-inspection",
+      "name": "Pre-Purchase Building Inspection",
+      "serviceType": "Pre-purchase building inspection",
+      "alternateName": "Pre-purchase property inspection report",
+      "description": "Pre-purchase standard property inspection carried out in line with AS 4349.1, identifying major and minor defects, structural movement, safety hazards and signs of unapproved work before you commit to buying.",
+      "serviceOutput": "Standard property inspection report to AS 4349.1, delivered in writing before exchange.",
+      "audience": "Home buyers and property investors",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Major and minor defect identification",
+        "Structural movement and cracking assessment",
+        "Roof, ceiling and roof void inspection",
+        "Subfloor, drainage and site inspection",
+        "Moisture testing to bathrooms and wet areas",
+        "Safety hazard reporting",
+        "Written report with photographs"
+      ],
+      "related": ["building-and-pest-inspections", "pre-auction-building-inspection", "strata-inspection"]
+    },
+    {
+      "slug": "strata-inspection",
+      "name": "Strata Inspection Report",
+      "serviceType": "Strata inspection report",
+      "alternateName": "Strata report",
+      "description": "Strata inspection report for buyers of a unit, apartment or townhouse, reviewing the owners corporation books and records alongside the condition of common property so you understand the building's finances, defects and disputes before exchange.",
+      "serviceOutput": "Strata inspection report summarising records, levies, capital works funding, defects and disputes.",
+      "audience": "Buyers of strata titled units, apartments and townhouses",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Owners corporation books and records inspection",
+        "Levies, arrears and special levy review",
+        "Capital works (sinking) fund analysis",
+        "Building defect and rectification history",
+        "Insurance currency check",
+        "Meeting minutes, by-laws and dispute review",
+        "Common property condition observations"
+      ],
+      "related": ["pre-purchase-inspection", "building-warranty-defect-inspection", "existing-buildings"]
+    },
+    {
+      "slug": "building-insurance-assessment",
+      "name": "Building Insurance Assessment",
+      "serviceType": "Building insurance damage assessment",
+      "alternateName": "Insurance damage assessment report",
+      "description": "Independent assessment of building damage for insurance purposes, documenting the cause and extent of the damage and the scope of works required to reinstate the building, so a claim can be lodged or disputed on technical evidence.",
+      "serviceOutput": "Independent damage assessment report with cause of damage findings and a scope of reinstatement works.",
+      "audience": "Property owners, landlords and strata managers making an insurance claim",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Storm and water damage assessment",
+        "Fire and impact damage assessment",
+        "Cause of damage determination",
+        "Structural damage assessment",
+        "Scope of reinstatement works",
+        "Make safe recommendations",
+        "Independent reporting for disputed claims"
+      ],
+      "related": ["adjoining-works-protection", "building-warranty-defect-inspection", "existing-buildings"]
+    },
+    {
+      "slug": "building-warranty-defect-inspection",
+      "name": "Building Warranty and Defect Inspection",
+      "serviceType": "Building defect and statutory warranty inspection",
+      "alternateName": "Building defect report",
+      "description": "Defect inspections and reports for owners within the statutory warranty period, documenting defective and incomplete building work with the evidence needed to have the builder rectify it or to support a warranty claim.",
+      "serviceOutput": "Itemised defect report and rectification schedule for builder or warranty claim use.",
+      "audience": "Home owners, owners corporations and investors inside the statutory warranty period",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Statutory warranty defect inspection",
+        "Major and structural defect identification",
+        "Non-structural defect schedule",
+        "Waterproofing and moisture defect reporting",
+        "Workmanship and non-compliance assessment",
+        "Rectification schedule preparation",
+        "Re-inspection after rectification works"
+      ],
+      "related": ["new-buildings", "renovations-and-extensions", "strata-inspection"]
+    },
+    {
+      "slug": "building-and-pest-inspections",
+      "name": "Building and Pest Inspection",
+      "serviceType": "Building and timber pest inspection",
+      "alternateName": "Building and termite inspection",
+      "description": "Combined building and timber pest inspection carried out in line with AS 4349.1 and AS 4349.3, covering building defects together with termite activity, timber pest damage and the conditions conducive to attack, in one written report.",
+      "serviceOutput": "Combined building and timber pest report to AS 4349.1 and AS 4349.3.",
+      "audience": "Home buyers, owners and investors",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Standard building inspection to AS 4349.1",
+        "Timber pest inspection to AS 4349.3",
+        "Termite activity and damage detection",
+        "Moisture meter and thermal assessment",
+        "Conducive conditions reporting",
+        "Treatment and management recommendations",
+        "Single combined written report"
+      ],
+      "related": ["pre-purchase-inspection", "pre-auction-building-inspection", "existing-buildings"]
+    },
+    {
+      "slug": "commercial-building-inspections",
+      "name": "Commercial Building Inspection",
+      "serviceType": "Commercial building inspection",
+      "alternateName": "Commercial property inspection",
+      "description": "Inspections of commercial, industrial and retail property covering building condition, defects and the building fabric, for purchasers, tenants, landlords and asset owners making acquisition, leasing or maintenance decisions.",
+      "serviceOutput": "Commercial building condition and defect report.",
+      "audience": "Commercial purchasers, tenants, landlords and asset managers",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Pre-purchase commercial building inspection",
+        "Pre-lease and make good inspection",
+        "Building condition and defect report",
+        "Structural and building fabric assessment",
+        "Roof, facade and external envelope inspection",
+        "Maintenance and capital expenditure planning input",
+        "Industrial and retail premises inspections"
+      ],
+      "related": ["existing-buildings", "building-warranty-defect-inspection", "building-insurance-assessment"]
+    },
+    {
+      "slug": "pre-auction-building-inspection",
+      "name": "Pre-Auction Building Inspection",
+      "serviceType": "Pre-auction building inspection",
+      "alternateName": "Pre-auction property inspection",
+      "description": "Fast turnaround building inspection before auction day, so you can bid knowing the property's defects and repair exposure. Auction purchases are unconditional, which makes inspecting beforehand the only opportunity to find problems.",
+      "serviceOutput": "Pre-auction inspection report delivered ahead of auction day.",
+      "audience": "Buyers bidding at auction",
+      "image": "",
+      "price": "",
+      "priceCurrency": "AUD",
+      "areaServed": [],
+      "items": [
+        "Pre-auction defect inspection",
+        "Priority and next day bookings",
+        "Verbal summary on site",
+        "Written report before auction day",
+        "Major structural defect assessment",
+        "Optional combined timber pest inspection",
+        "Repair priority guidance for bidding"
+      ],
+      "related": ["pre-purchase-inspection", "building-and-pest-inspections", "strata-inspection"]
+    }
+  ]
+}

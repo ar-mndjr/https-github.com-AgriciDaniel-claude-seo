@@ -1,0 +1,78 @@
+{
+  "_readme": "Single source of truth for every business-specific value in the generated JSON-LD. Fill in verified values only. Any field left as an empty string or empty array is OMITTED from the generated markup (never emitted as a placeholder), and is listed in output/VALIDATION-REPORT.md so you can see what is still missing.",
+
+  "site": {
+    "url": "https://buildinginspectionsnearme.com.au",
+    "name": "Building Inspections Near Me",
+    "inLanguage": "en-AU",
+    "breadcrumbHub": {
+      "name": "",
+      "url": ""
+    }
+  },
+
+  "business": {
+    "types": ["HomeAndConstructionBusiness", "ProfessionalService"],
+    "name": "Building Inspections Near Me",
+    "legalName": "",
+    "description": "",
+    "slogan": "",
+    "url": "https://buildinginspectionsnearme.com.au/",
+    "logo": "",
+    "image": "",
+    "telephone": "",
+    "email": "",
+    "priceRange": "",
+    "currenciesAccepted": "AUD",
+    "paymentAccepted": "",
+    "foundingDate": "",
+    "identifier": {
+      "propertyID": "ABN",
+      "value": ""
+    },
+    "address": {
+      "streetAddress": "",
+      "addressLocality": "",
+      "addressRegion": "",
+      "postalCode": "",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "latitude": "",
+      "longitude": ""
+    },
+    "hasMap": "",
+    "sameAs": [],
+    "openingHoursSpecification": [],
+    "aggregateRating": {
+      "ratingValue": "",
+      "reviewCount": "",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "knowsAbout": [
+      "Pre-purchase building inspections",
+      "Timber pest and termite inspections",
+      "Construction stage inspections",
+      "Building defect and warranty reporting",
+      "Dilapidation reporting",
+      "Strata inspection reports",
+      "AS 4349.1 property inspections",
+      "AS 4349.3 timber pest inspections",
+      "National Construction Code compliance"
+    ],
+    "areaServed": [
+      {
+        "type": "Country",
+        "name": "Australia",
+        "sameAs": "https://www.wikidata.org/wiki/Q408"
+      }
+    ]
+  },
+
+  "_areaServedHelp": "Replace business.areaServed with the real coverage. For a service-area business, list the actual cities/regions, e.g. { \"type\": \"City\", \"name\": \"Sydney\", \"sameAs\": \"https://www.wikidata.org/wiki/Q3130\" }. Supported 'type' values: Country, State, City, AdministrativeArea, Place. Each service in services.json may override this with its own areaServed.",
+
+  "_openingHoursHelp": "Add entries shaped like { \"dayOfWeek\": [\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"], \"opens\": \"07:00\", \"closes\": \"17:00\" }. Leave the array empty rather than guessing; hours in markup must match the website and Google Business Profile.",
+
+  "_aggregateRatingHelp": "Only fill this in if genuine, first-party review data is visible on the page itself. Google's review snippet policy prohibits marking up ratings that a visitor cannot see on that page, and self-serving LocalBusiness ratings are ignored. Leave empty otherwise."
+}
