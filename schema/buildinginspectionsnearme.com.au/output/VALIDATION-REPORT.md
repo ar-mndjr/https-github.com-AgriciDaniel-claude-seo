@@ -9,6 +9,7 @@ generated; filling these in makes it complete.
 - `business.logo` is empty and was omitted. Absolute URL to the logo image.
 - `business.image` is empty and was omitted. Absolute URL to a business photo.
 - `business.email` is empty and was omitted. Public contact email address.
+- `business.address` is incomplete and the whole address node was omitted. Missing: streetAddress, addressLocality, addressRegion, postalCode. LocalBusiness types require an address; add the registered or trading address, or drop the LocalBusiness subtype and keep Organization only.
 - `business.geo` is empty and was omitted. Use at least 5 decimal places.
 - `business.openingHoursSpecification` is empty and was omitted. Add real hours that match the website and Google Business Profile.
 - `business.sameAs` is empty and was omitted. Add the Google Business Profile, Facebook, LinkedIn and any directory profiles that confirm the entity.

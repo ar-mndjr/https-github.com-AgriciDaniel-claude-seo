@@ -2,7 +2,7 @@
   "_readme": "Single source of truth for every business-specific value in the generated JSON-LD. Values below were taken from the BINM project docs in Google Drive (page copy docs, service streams brief, contractor/invoice records, June 2026 keyword map). Any field left as an empty string or empty array is OMITTED from the generated markup (never emitted as a placeholder) and is listed in output/VALIDATION-REPORT.md.",
 
   "_sources": {
-    "nap": "ZSJ ENGINEERING SOLUTIONS PTY LTD entity details (ABN, registered address) per contractor agreement and INV-001.",
+    "identity": "The business is marked up as the brand, Building Inspections Near Me, only. The operating company's legal name, ABN and registered office are deliberately NOT included: they identify a different named entity, and schema NAP should match the contact details the site itself publishes. Re-add legalName, identifier.value and address only if BINM publishes them on the site under its own name.",
     "phone_and_price": "'EXISTING BUILDINGS | BINM', 'RENOVATIONS AND EXTENSIONS | BINM' and 'BUILDING INSPECTIONS MELBOURNE | BINM' page copy docs (June 2026).",
     "area_served": "Four metro location pages live (Melbourne, Sydney, Brisbane, Adelaide); service area widened to Australia-wide per INV-001 line item dated 2 June 2026.",
     "still_empty": "logo, image, email, opening hours and sameAs are empty because no source in Drive records them. Per 'BINM - Strategy Plan', the Google Business Profile and social profiles were still to be created, so these values may not exist yet."
@@ -22,7 +22,7 @@
     "types": ["HomeAndConstructionBusiness", "ProfessionalService"],
     "name": "Building Inspections Near Me",
     "alternateName": "BINM",
-    "legalName": "ZSJ Engineering Solutions Pty Ltd",
+    "legalName": "",
     "slogan": "Inspect Once. Upgrade Report Anytime.",
     "description": "Building Inspections Near Me (BINM) is an engineer-led building inspection service operating across Australia. Every inspection is conducted by a Chartered Engineer or Licensed Builder at standard inspection rates, so the same site data can be escalated to a formal engineering report or a tribunal-ready expert report without a second inspection.",
     "url": "https://buildinginspectionsnearme.com.au/",
@@ -36,13 +36,13 @@
     "foundingDate": "",
     "identifier": {
       "propertyID": "ABN",
-      "value": "86 660 453 092"
+      "value": ""
     },
     "address": {
-      "streetAddress": "Level 8, Chadstone Tower 1, 1341 Dandenong Road",
-      "addressLocality": "Chadstone",
-      "addressRegion": "VIC",
-      "postalCode": "3148",
+      "streetAddress": "",
+      "addressLocality": "",
+      "addressRegion": "",
+      "postalCode": "",
       "addressCountry": "AU"
     },
     "geo": {

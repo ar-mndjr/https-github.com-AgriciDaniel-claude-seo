@@ -11,19 +11,30 @@ in Google Drive rather than from the published HTML:
 
 | Value | Source |
 |-------|--------|
-| Legal entity, ABN, registered address | ZSJ Engineering Solutions Pty Ltd contractor agreement and INV-001 |
 | Phone `1800 796 776`, `$495 inc. GST` entry price | `EXISTING BUILDINGS \| BINM`, `RENOVATIONS AND EXTENSIONS \| BINM`, `BUILDING INSPECTIONS MELBOURNE \| BINM` page copy docs |
 | Service inclusions per stream | `BINM Website – Service Streams Structure & Targeting Logic` |
 | Page URLs, primary keywords | `BINM_Keyword_Mapping` (June 2026) + the client-supplied live URLs |
 | Service area | Four metro location pages live; widened to Australia-wide per the 2 June 2026 INV-001 line item |
 | Positioning, standards, report tiers | About page copy, metro page copy, content map |
 
-**Still empty, deliberately:** `logo`, `image`, `email`, `openingHoursSpecification`
-and `sameAs`. No source records them, and `BINM - Strategy Plan` lists "create and
+**Brand only, by instruction.** The business is marked up as *Building Inspections
+Near Me*. The operating company's legal name, ABN and registered office are
+deliberately excluded — they identify a separately named entity, and schema NAP
+should mirror the contact details the site publishes under its own brand. If BINM
+ever publishes a trading address or ABN on the site, fill `legalName`,
+`identifier.value` and `address` in `business-profile.json` and regenerate.
+
+**Consequence to be aware of:** with no address, this graph is not a complete
+Google *LocalBusiness* entry, which wants `address` and `geo`. That is the right
+trade for now — a service-area business with no published address should not
+invent one — and nothing else in the markup depends on it. Adding a real address
+later upgrades it with no restructuring.
+
+**Also still empty:** `logo`, `image`, `email`, `openingHoursSpecification` and
+`sameAs`. No source records them, and `BINM - Strategy Plan` lists "create and
 verify Google Business Profile" and "create and optimise social profiles" as
 outstanding tasks — so these values may not exist yet. They are omitted from the
-markup rather than guessed. `geo` is likewise empty: the Chadstone Tower
-coordinates were not on file and Google wants 5+ decimal places.
+markup rather than guessed.
 
 **One description to verify:** `building-insurance-assessment`. The June keyword
 map targets that page at *insurance valuation / reinstatement cost assessment*,
@@ -133,7 +144,7 @@ instead of shipping both.
 
 ## Before you publish
 
-1. **Fill the remaining gaps** in `business-profile.json`: `logo`, `image`, `email`, `openingHoursSpecification`, `sameAs`, `geo`. `output/VALIDATION-REPORT.md` lists them. `sameAs` matters most — it is what ties the entity to the Google Business Profile once that exists.
+1. **Fill the remaining gaps** in `business-profile.json`: `logo`, `image`, `email`, `openingHoursSpecification`, `sameAs`. `output/VALIDATION-REPORT.md` lists them. `sameAs` matters most — it is what ties the entity to the Google Business Profile once that exists. Add `address` and `geo` only if BINM publishes an address on the site under its own brand.
 2. **Verify the `building-insurance-assessment` description** against the live page (see above).
 3. **Reconcile each description with the live page.** Structured data must describe what is actually on the page; where the published wording differs, the page wins — edit `services.json` and regenerate.
 4. **Confirm the $495 entry price** is still current and still shown on those three pages. A price in markup that is not on the page is a mismatch.
