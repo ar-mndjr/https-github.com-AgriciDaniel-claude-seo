@@ -1,0 +1,128 @@
+<!--
+  Public resources — download cards (Modern UI)
+  Buttons are placeholders: fill data-download-url on each button when the files go live.
+  Until a URL is set, a button reports "Link coming soon" instead of doing nothing silently.
+-->
+<section id="public-resources" style="margin: 0 0 40px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #111827; background-color: #ffffff;">
+
+  <style>
+    /* Progressive enhancement only — cards still stack and read correctly if this is stripped. */
+    #public-resources .res-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    #public-resources .res-card { display: flex; flex-direction: column; transition: box-shadow .15s ease, border-color .15s ease; }
+    #public-resources .res-card:hover { border-color: #cbd5e1; box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .12); }
+    #public-resources .res-btn { margin-top: auto; }
+    #public-resources .res-btn:hover { background: #0b87c6; }
+    #public-resources .res-btn:focus-visible { outline: 2px solid #0d9be2; outline-offset: 2px; }
+  </style>
+
+  <div class="res-grid">
+
+    <!-- 1. Main PDF -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #b91c1c;">PDF</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">Main PDF</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download the full GMHCAAB 2027 report</button>
+    </article>
+
+    <!-- 2. MHAOG methodological note -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #b91c1c;">PDF</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">MHAOG methodological note</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download the MHAOG methodological note</button>
+    </article>
+
+    <!-- 3. 420-row publication dataset -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">420-row publication dataset</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download publication dataset (CSV)</button>
+    </article>
+
+    <!-- 4. MHAOG country measures -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">MHAOG country measures</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download MHAOG country measures (CSV)</button>
+    </article>
+
+    <!-- 5. MHAOG sensitivity analysis -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">MHAOG sensitivity analysis</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download MHAOG sensitivity analysis (CSV)</button>
+    </article>
+
+    <!-- 6. Relative Fee Dispersion results -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">Relative Fee Dispersion results</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download RFD results (CSV)</button>
+    </article>
+
+    <!-- 7. Citation crosswalk -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">Citation crosswalk</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download citation crosswalk (CSV)</button>
+    </article>
+
+    <!-- 8. Publication source index -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #1d4ed8;">CSV</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">Publication source index</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download publication source index (CSV)</button>
+    </article>
+
+    <!-- 9. BibTeX -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #6d28d9;">BIB</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">BibTeX</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download BibTeX citation</button>
+    </article>
+
+    <!-- 10. RIS -->
+    <article class="res-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);">
+      <span style="display: inline-block; align-self: flex-start; padding: 3px 8px; background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: #6d28d9;">RIS</span>
+      <h3 style="margin: 12px 0 16px; font-size: 15px; font-weight: 600; line-height: 1.45; color: #0f172a;">RIS</h3>
+      <button type="button" class="res-btn" data-download-url="" style="width: 100%; background: #0d9be2; color: #ffffff; border: none; padding: 10px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; line-height: 1.4; cursor: pointer; text-align: center;">Download RIS citation</button>
+    </article>
+
+  </div>
+
+  <p aria-live="polite" id="resources-status" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;"></p>
+
+</section>
+
+<script>
+(function () {
+  var container = document.getElementById('public-resources');
+  if (!container) return;
+
+  var status = document.getElementById('resources-status');
+
+  container.querySelectorAll('.res-btn').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var url = (this.getAttribute('data-download-url') || '').trim();
+
+      // Live file: hand off to the browser's download handling.
+      if (url) {
+        window.location.href = url;
+        return;
+      }
+
+      // No URL wired up yet — say so rather than failing silently.
+      var self = this;
+      var label = self.getAttribute('data-label') || self.innerText;
+      self.setAttribute('data-label', label);
+      self.innerText = 'Link coming soon';
+      self.style.background = '#64748b';
+      if (status) status.textContent = label + ' is not available yet.';
+
+      setTimeout(function () {
+        self.innerText = label;
+        self.style.background = '#0d9be2';
+      }, 2000);
+    });
+  });
+})();
+</script>
