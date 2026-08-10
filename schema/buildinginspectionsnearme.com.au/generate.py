@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Generate Service JSON-LD for buildinginspectionsnearme.com.au service pages.
 
-Reads business-profile.json + services.json and writes, per service page, a
-JSON-LD @graph containing WebPage, BreadcrumbList and Service nodes, plus one
-site-wide LocalBusiness/WebSite graph.
+Reads business-profile.json + services.json and writes one self-contained
+JSON-LD @graph per service page, containing the LocalBusiness, WebSite, WebPage,
+BreadcrumbList and Service nodes. There is no separate site-wide block.
 
 Design rules:
   * Empty config values are omitted, never emitted as placeholder text. Missing
@@ -87,8 +87,9 @@ def build_area_served(entries):
 
 
 def business_id(cfg):
-    """The site-wide business node id. `#organization` matches the house
-    convention and the id Yoast uses, so the two can be reconciled."""
+    """The business node id, identical on every page. `#organization` matches
+    the house convention and the id Yoast uses, so the two can be reconciled.
+    Keeping it stable is what lets the per-page copies resolve to one entity."""
     return f"{cfg['site']['url'].rstrip('/')}/#organization"
 
 
@@ -396,17 +397,12 @@ def main():
 
     OUT.mkdir(exist_ok=True)
 
+    # The local business and website nodes are repeated in full on every page
+    # rather than published once site-wide. Each page therefore carries one
+    # self-contained block. The @id values stay identical across pages, so the
+    # repeated definitions still resolve to a single entity rather than eleven.
     business_node = build_business(profile, services)
     website_node = build_website(profile)
-
-    sitewide = prune({
-        "@context": "https://schema.org",
-        "@graph": [business_node, website_node],
-    })
-    (OUT / "_sitewide-business.json").write_text(
-        json.dumps(sitewide, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
-    )
-    (OUT / "_sitewide-business.html").write_text(as_script_tag(sitewide), encoding="utf-8")
 
     combined = []
     for service in services:
@@ -414,6 +410,8 @@ def main():
         graph = prune({
             "@context": "https://schema.org",
             "@graph": [
+                business_node,
+                website_node,
                 build_webpage(profile, service, url),
                 build_breadcrumb(profile, service, url),
                 build_service(profile, service, url, by_slug),
@@ -433,7 +431,7 @@ def main():
     report = [
         "# Schema validation report",
         "",
-        f"Generated files: {len(services)} service pages + 1 site-wide graph.",
+        f"Generated files: {len(services)} self-contained service page graphs.",
         "",
         "Every value below was left empty in the config and was therefore omitted from the",
         "generated JSON-LD rather than shipped as placeholder text. The markup is valid as",
@@ -456,7 +454,7 @@ def main():
     ]
     (OUT / "VALIDATION-REPORT.md").write_text("\n".join(report), encoding="utf-8")
 
-    print(f"Wrote {len(services) * 2 + 4} files to {OUT}")
+    print(f"Wrote {len(services) * 2 + 2} files to {OUT}")
     for warning in warnings:
         print(f"  ! {warning}")
 

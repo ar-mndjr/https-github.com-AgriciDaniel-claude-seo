@@ -1,7 +1,7 @@
 # Service schema — buildinginspectionsnearme.com.au
 
-JSON-LD `Service` markup for the 11 BINM service pages, plus one site-wide
-business graph the service pages reference.
+JSON-LD markup for the 11 BINM service pages. Each page gets one self-contained
+block carrying the local business, the page, its breadcrumb and the service.
 
 ## Where the data came from
 
@@ -59,7 +59,6 @@ the keyword map so internal links and tracking do not point at the older slugs.
 | `output/docx/*.docx` | One Word document per page: the JSON-LD plus paste instructions. |
 | `output/*.json` | Generated JSON-LD graph per page. |
 | `output/*.html` | The same graph wrapped in a `<script type="application/ld+json">` tag, ready to paste. |
-| `output/_sitewide-business.*` | The business + `WebSite` graph for the site-wide header. |
 | `output/all-services.json` | All 11 graphs in one file, keyed by URL, for bulk import. |
 | `output/VALIDATION-REPORT.md` | What is still missing from the config and why it matters. |
 
@@ -75,27 +74,35 @@ verbatim, so the Word files cannot drift from the markup they document.
 
 ## Graph design
 
-The business is defined once, at `#organization` — the same id Yoast uses and the
-convention already used on other client builds, so the two reconcile instead of
-colliding. Every service page *references* that node rather than repeating it, so
-Google resolves one business entity across the site instead of 11 near-duplicates.
+There is no site-wide block. Each page carries the local business in full, so a
+page can be shipped on its own with nothing else to install. Every copy uses the
+same `@id`, `#organization` — the id Yoast also uses — so the 11 repetitions
+resolve to **one** business entity rather than 11 near-duplicates. That is what
+makes repeating it safe: the `@id` does the consolidating, not the placement.
+
+Each page emits this graph:
 
 ```
-https://buildinginspectionsnearme.com.au/#organization  (HomeAndConstructionBusiness, ProfessionalService)
+<page>/#organization  LocalBusiness   HomeAndConstructionBusiness + ProfessionalService
    └── hasOfferCatalog → all 11 services by @id
-https://buildinginspectionsnearme.com.au/#website       (WebSite, publisher → #organization)
-
-  └── <page>/#webpage    WebPage        isPartOf → #website, about → #organization
-  └── <page>/#breadcrumb BreadcrumbList
-  └── <page>/#service    Service        provider → #organization, mainEntityOfPage → #webpage
-        ├── hasOfferCatalog → OfferCatalog of that page's inclusions
-        └── isRelatedTo    → the sibling service pages
+<page>/#website       WebSite         publisher → #organization
+<page>/#webpage       WebPage         isPartOf → #website, about → #organization
+<page>/#breadcrumb    BreadcrumbList
+<page>/#service       Service         provider → #organization, mainEntityOfPage → #webpage
+     ├── hasOfferCatalog → OfferCatalog of that page's inclusions
+     └── isRelatedTo    → the sibling service pages
 ```
+
+(The business and website `@id`s are absolute and identical across pages —
+`https://buildinginspectionsnearme.com.au/#organization` — not per-page.)
+
+Keep the business `@id` identical on every page. Changing it per page is what
+would actually create 11 competing entities.
 
 Per-service properties used, and why:
 
 - `serviceType` — the plain-language category Google reads for service classification.
-- `provider` — an `@id` reference, so the business entity is stated once.
+- `provider` — an `@id` reference to the business node in the same block.
 - `areaServed` + `providerMobility: "dynamic"` — a service-area business that travels to the customer. Australia plus the four metros with live location pages, each linked to Wikidata.
 - `serviceOutput` — the report the client actually receives. This is BINM's differentiator (one inspection, upgradeable report) and the part AI answer engines can quote.
 - `audience` — separates pre-purchase (buyers) from warranty defect (owners inside warranty) from strata (owners corporations).
@@ -128,17 +135,13 @@ Add a `priceFrom` in `services.json` if that changes.
 
 ## Implementation
 
-**Site-wide (once):** paste `output/_sitewide-business.html` into the global
-`<head>` — every page, including the service pages.
-
-**Per page:** paste the matching `output/<slug>.html` into that page's `<head>`.
-Both blocks coexist on a service page; that is the intent, since the page block
-references the site-wide one by `@id`.
+Paste the matching `output/<slug>.html` into that page's `<head>`. That is the
+whole install — nothing global to add.
 
 The site runs WordPress + Elementor with Yoast/RankMath in play, so:
 
 - **Rank Math** — Page → Rank Math → Schema → Custom Schema (Code Validation tab), paste the `@graph` array contents. Turn off its auto-generated `WebPage`/`Article` schema for these pages so nodes are not duplicated.
-- **Yoast** — Yoast already outputs `WebPage`, `WebSite`, `BreadcrumbList` and an `Organization` at `#organization`. In that case drop the `WebPage` and `BreadcrumbList` nodes from these files and keep only the `Service` node: its `provider` already points at `#organization`, so it will attach to Yoast's existing organisation node with no further edits. That is why this id was chosen.
+- **Yoast** — Yoast already outputs `WebPage`, `WebSite`, `BreadcrumbList` and an `Organization` at `#organization`. In that case drop those four nodes from these files and keep only the `Service` node: its `provider` already points at `#organization`, so it attaches to Yoast's existing organisation node with no further edits. That is why this id was chosen.
 - **No SEO plugin** — a `wp_head` hook or a per-page custom HTML block.
 
 Render the JSON-LD server-side, in the initial HTML. Structured data injected

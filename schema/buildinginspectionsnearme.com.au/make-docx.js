@@ -172,12 +172,43 @@ function buildDoc(sections) {
   });
 }
 
+/** Summarises the business node so the reader can check it without parsing JSON. */
+function localBusinessFacts() {
+  const b = profile.business;
+  const facts = [
+    `Name: ${b.name}${b.alternateName ? ` (${b.alternateName})` : ""}`,
+    `Type: ${b.types.join(", ")} — both LocalBusiness subtypes`,
+    `@id: ${siteUrl}/#organization (identical on every page)`,
+  ];
+  if (b.telephone) facts.push(`Phone: ${b.telephone}`);
+  if (b.priceRange) facts.push(`Price range: ${b.priceRange}`);
+  if (b.areaServed && b.areaServed.length) {
+    facts.push(`Area served: ${b.areaServed.map((a) => a.name).join(", ")}`);
+  }
+  facts.push("Also lists all 11 services via hasOfferCatalog.");
+
+  const missing = ["address", "geo", "logo", "image", "email", "openingHoursSpecification", "sameAs"]
+    .filter((k) => {
+      const v = b[k];
+      if (Array.isArray(v)) return v.length === 0;
+      if (v && typeof v === "object") return !Object.values(v).some(Boolean);
+      return !v;
+    });
+  if (missing.length) {
+    facts.push(
+      `Not included (no published source): ${missing.join(", ")}. Without an address this is not a complete Google LocalBusiness entry; add them to business-profile.json and regenerate once they exist.`
+    );
+  }
+  return facts;
+}
+
 const IMPLEMENTATION = [
   "Paste the block above into the <head> of this page, server-side, so it is present in the initial HTML.",
-  "The sitewide block (see _sitewide-business.docx) must also be present on this page. This page's Service node references it by @id, so the two work together.",
+  "This block is self-contained. It carries the local business details itself, so nothing else needs to be added to the page.",
+  "The business @id is identical on every page, so the eleven copies resolve to one business entity rather than eleven separate ones. Do not change it per page.",
   "Rank Math: Page > Rank Math > Schema > Custom Schema (Code Validation tab). Disable its auto-generated WebPage schema for this page so nodes are not duplicated.",
-  "Yoast: Yoast already emits WebPage, BreadcrumbList and an Organization at #organization. In that case delete the WebPage and BreadcrumbList nodes from this block and keep only the Service node; its provider already points at #organization.",
-  "Do not ship two of the same node type on one page. If the theme or plugin already outputs BreadcrumbList, drop the one here.",
+  "Yoast: Yoast already emits WebPage, WebSite, BreadcrumbList and an Organization at #organization. In that case delete those four nodes from this block and keep only the Service node; its provider already points at #organization, so it attaches to Yoast's organisation automatically.",
+  "Do not ship two of the same node type on one page. If the theme or plugin already outputs BreadcrumbList or an organisation node, drop the duplicate here.",
   "Validate at validator.schema.org and in Google's Rich Results Test after publishing.",
 ];
 
@@ -197,7 +228,10 @@ for (const service of services) {
     subtitle("Service schema | Building Inspections Near Me"),
     factsTable([
       ["Page URL", url],
-      ["Schema nodes", "WebPage, BreadcrumbList, Service"],
+      [
+        "Schema nodes",
+        "LocalBusiness (HomeAndConstructionBusiness / ProfessionalService), WebSite, WebPage, BreadcrumbList, Service",
+      ],
       ["Service type", service.serviceType],
       ["Primary keyword", service.primaryKeyword || "-"],
       ["Pricing", priceNote],
@@ -213,6 +247,12 @@ for (const service of services) {
     body(service.description),
     body(`Report delivered: ${service.serviceOutput}`),
     body(`Intended audience: ${service.audience}`),
+    h2("Local business details carried on this page"),
+    body(
+      "This block includes the business itself, so the page stands alone. The same details appear on all eleven service pages under one shared @id.",
+      { color: GREY }
+    ),
+    ...bullets(localBusinessFacts()),
     h2("Inclusions listed in the markup"),
     body(
       "These appear as the page's OfferCatalog. They should match the inclusions published on the page.",
@@ -225,35 +265,6 @@ for (const service of services) {
 
   const file = path.join(DOCX_DIR, `${service.slug}.docx`);
   written.push({ file, doc: buildDoc(children) });
-}
-
-// The sitewide business block.
-{
-  const code = fs.readFileSync(path.join(OUT, "_sitewide-business.html"), "utf8");
-  const children = [
-    h1("Sitewide Business Schema"),
-    subtitle("Building Inspections Near Me | paste on every page"),
-    factsTable([
-      ["Applies to", "Every page on the site, including the 11 service pages"],
-      ["Schema nodes", "HomeAndConstructionBusiness / ProfessionalService, WebSite"],
-      ["Business @id", `${siteUrl}/#organization`],
-      ["Paste into", "Global <head> (header template)"],
-    ]),
-    h2("JSON-LD"),
-    body(
-      "This block defines the business once. Every service page references it by @id rather than repeating it, so Google resolves one business entity across the site instead of eleven near-duplicates.",
-      { color: GREY }
-    ),
-    ...codeBlock(code),
-    h2("Implementation notes"),
-    ...bullets([
-      "Paste once into the global header so it appears on every page.",
-      "If Yoast is active it already emits an Organization at this same @id. Do not add a second one; keep Yoast's and skip this block, since the Service nodes will attach to it automatically.",
-      "logo, image, email, opening hours, sameAs, address and geo are intentionally absent: no published source records them. Add them to business-profile.json and regenerate once they exist.",
-      "sameAs is the highest-value addition once the Google Business Profile is live, as it ties this entity to that listing.",
-    ]),
-  ];
-  written.push({ file: path.join(DOCX_DIR, "_sitewide-business.docx"), doc: buildDoc(children) });
 }
 
 (async () => {

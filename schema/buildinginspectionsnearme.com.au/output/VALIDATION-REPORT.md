@@ -1,6 +1,6 @@
 # Schema validation report
 
-Generated files: 11 service pages + 1 site-wide graph.
+Generated files: 11 self-contained service page graphs.
 
 Every value below was left empty in the config and was therefore omitted from the
 generated JSON-LD rather than shipped as placeholder text. The markup is valid as
