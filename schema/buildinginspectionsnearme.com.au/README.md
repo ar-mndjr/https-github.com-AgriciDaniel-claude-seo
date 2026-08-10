@@ -55,6 +55,8 @@ the keyword map so internal links and tracking do not point at the older slugs.
 | `business-profile.json` | Every business-specific value, in one place. **Edit this.** |
 | `services.json` | The 11 service definitions: name, description, inclusions, related services. |
 | `generate.py` | Renders the config into JSON-LD. No dependencies, Python 3. |
+| `make-docx.js` | Builds the Word hand-off files from `output/`. Needs the `docx` npm package. |
+| `output/docx/*.docx` | One Word document per page: the JSON-LD plus paste instructions. |
 | `output/*.json` | Generated JSON-LD graph per page. |
 | `output/*.html` | The same graph wrapped in a `<script type="application/ld+json">` tag, ready to paste. |
 | `output/_sitewide-business.*` | The business + `WebSite` graph for the site-wide header. |
@@ -64,8 +66,12 @@ the keyword map so internal links and tracking do not point at the older slugs.
 Regenerate after any config edit:
 
 ```bash
-python3 generate.py
+python3 generate.py     # rebuilds output/*.json and output/*.html
+node make-docx.js       # rebuilds the Word files from that output
 ```
+
+Always run `generate.py` first. `make-docx.js` reads the generated `output/*.html`
+verbatim, so the Word files cannot drift from the markup they document.
 
 ## Graph design
 
