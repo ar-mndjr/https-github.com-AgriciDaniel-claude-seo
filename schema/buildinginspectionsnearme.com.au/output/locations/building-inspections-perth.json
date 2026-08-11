@@ -185,10 +185,7 @@
       }
     },
     {
-      "@type": [
-        "WebPage",
-        "FAQPage"
-      ],
+      "@type": "WebPage",
       "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/building-inspections-perth/",
       "name": "Building Inspections in Perth",
@@ -202,72 +199,7 @@
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#breadcrumb"
-      },
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-1",
-          "name": "Are your Perth building inspectors qualified?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every Perth inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Western Australia is administered by Building and Energy, part of the Department of Energy, Mines, Industry Regulation and Safety. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-2",
-          "name": "How quickly can I get a building inspection in Perth?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Same-week availability is standard in Perth. Call 1800 796 776 or book online and we will confirm your inspection time."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-3",
-          "name": "How much does a building inspection cost in Perth?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-4",
-          "name": "What does a pre-purchase building inspection cover in Perth?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-5",
-          "name": "Can your report be used in the State Administrative Tribunal proceedings?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the State Administrative Tribunal (SAT) of Western Australia. Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-6",
-          "name": "Which suburbs and areas around Perth do you cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We cover Perth and the surrounding area, including Fremantle, Joondalup, Rockingham, Armadale, Midland, Cockburn and the Perth metropolitan area. If you are outside that area, call 1800 796 776 and we will confirm availability."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-7",
-          "name": "What are the common building problems in Perth homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Perth's double brick construction and sandy soil profile produce a different defect pattern to the eastern states. Footing settlement on sand, cracking through double brick walls, salt damp at the base of masonry, and roof plumbing and flashing failures are the recurring findings. Diagnosing whether a crack reflects settlement, reactive movement or a structural fault is an engineering assessment, and it is included in the standard inspection."
-          }
-        }
-      ]
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -317,17 +249,6 @@
           "@type": "ContactPoint",
           "telephone": "+61-1800-796-776",
           "contactType": "customer service"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://buildinginspectionsnearme.com.au/building-inspections-perth/",
-        "availability": "https://schema.org/InStock",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": 495,
-          "priceCurrency": "AUD",
-          "valueAddedTaxIncluded": true
         }
       },
       "hasOfferCatalog": {

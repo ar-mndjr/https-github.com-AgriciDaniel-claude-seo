@@ -188,10 +188,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/",
           "name": "Building Inspections in Gold Coast",
@@ -205,72 +202,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/#faq-1",
-              "name": "Are your Gold Coast building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Gold Coast inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Queensland is administered by the Queensland Building and Construction Commission (QBCC). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/#faq-2",
-              "name": "How quickly can I get a building inspection in Gold Coast?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Gold Coast. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/#faq-3",
-              "name": "How much does a building inspection cost in Gold Coast?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Gold Coast?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/#faq-5",
-              "name": "Can your report be used in QCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the Queensland Civil and Administrative Tribunal (QCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/#faq-6",
-              "name": "Which suburbs and areas around Gold Coast do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Gold Coast and the surrounding area, including Southport, Surfers Paradise, Broadbeach, Robina, Burleigh Heads, Coolangatta, Nerang and Hope Island. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/#faq-7",
-              "name": "What should a building inspection look for in Gold Coast coastal and high-rise property?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Coastal Gold Coast property carries risks that inland inspections rarely deal with: concrete spalling and reinforcement corrosion in older high-rise, balcony and balustrade waterproofing failure, and salt-driven corrosion of fixings and framing. Canal-front homes add retaining and revetment wall condition to the list. These are structural questions, which is why the inspection is carried out by a Chartered Engineer rather than referred on to one."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -320,17 +252,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-gold-coast/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -646,10 +567,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-perth/",
           "name": "Building Inspections in Perth",
@@ -663,72 +581,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-1",
-              "name": "Are your Perth building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Perth inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Western Australia is administered by Building and Energy, part of the Department of Energy, Mines, Industry Regulation and Safety. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-2",
-              "name": "How quickly can I get a building inspection in Perth?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Perth. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-3",
-              "name": "How much does a building inspection cost in Perth?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Perth?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-5",
-              "name": "Can your report be used in the State Administrative Tribunal proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the State Administrative Tribunal (SAT) of Western Australia. Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-6",
-              "name": "Which suburbs and areas around Perth do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Perth and the surrounding area, including Fremantle, Joondalup, Rockingham, Armadale, Midland, Cockburn and the Perth metropolitan area. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-perth/#faq-7",
-              "name": "What are the common building problems in Perth homes?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Perth's double brick construction and sandy soil profile produce a different defect pattern to the eastern states. Footing settlement on sand, cracking through double brick walls, salt damp at the base of masonry, and roof plumbing and flashing failures are the recurring findings. Diagnosing whether a crack reflects settlement, reactive movement or a structural fault is an engineering assessment, and it is included in the standard inspection."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -778,17 +631,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-perth/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -1104,10 +946,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/",
           "name": "Building Inspections in Canberra",
@@ -1121,72 +960,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-1",
-              "name": "Are your Canberra building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Canberra inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in the Australian Capital Territory is administered by Access Canberra, which administers the ACT construction occupations licensing scheme. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-2",
-              "name": "How quickly can I get a building inspection in Canberra?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Canberra. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-3",
-              "name": "How much does a building inspection cost in Canberra?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Canberra?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-5",
-              "name": "Can your report be used in ACAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the ACT Civil and Administrative Tribunal (ACAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-6",
-              "name": "Which suburbs and areas around Canberra do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Canberra and the surrounding area, including Belconnen, Gungahlin, Woden, Tuggeranong, Weston Creek and Queanbeyan. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-7",
-              "name": "What should a Canberra building inspection pay attention to?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Canberra's housing stock is dominated by 1960s and 1970s ex-government homes alongside recent apartment development in Gungahlin and the town centres. The recurring findings are cold-climate condensation and inadequate subfloor ventilation, ageing services in mid-century homes, and structural movement on the region's clay soils. Where a property's history suggests loose-fill asbestos insulation may be present, we flag it for specialist assessment rather than assessing it ourselves."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -1236,17 +1010,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -1562,10 +1325,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/",
           "name": "Building Inspections in Darwin",
@@ -1579,72 +1339,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-1",
-              "name": "Are your Darwin building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Darwin inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in the Northern Territory is administered by the Northern Territory Building Practitioners Board. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-2",
-              "name": "How quickly can I get a building inspection in Darwin?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Darwin. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-3",
-              "name": "How much does a building inspection cost in Darwin?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Darwin?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-5",
-              "name": "Can your report be used in NTCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the Northern Territory Civil and Administrative Tribunal (NTCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-6",
-              "name": "Which suburbs and areas around Darwin do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Darwin and the surrounding area, including Palmerston, Casuarina, Nightcliff, Marrara, Howard Springs and Humpty Doo. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-7",
-              "name": "Does a Darwin building inspection check cyclone compliance?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Darwin sits in a cyclonic wind region, so structural tie-down continuity from roof sheeting through to footings is central to any inspection here, particularly on homes built before the post-Tracy code changes. Alongside that, the tropical climate drives accelerated corrosion of fixings and framing connections, high termite pressure, and moisture ingress through failed seals. A Chartered Engineer can assess whether a tie-down or bracing deficiency is structurally significant, which a visual-only inspection cannot."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -1694,17 +1389,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -2020,10 +1704,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/",
           "name": "Building Inspections in Hobart",
@@ -2037,72 +1718,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/#faq-1",
-              "name": "Are your Hobart building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Hobart inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Tasmania is administered by Consumer, Building and Occupational Services (CBOS). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/#faq-2",
-              "name": "How quickly can I get a building inspection in Hobart?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Hobart. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/#faq-3",
-              "name": "How much does a building inspection cost in Hobart?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Hobart?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/#faq-5",
-              "name": "Can your report be used in TASCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the Tasmanian Civil and Administrative Tribunal (TASCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/#faq-6",
-              "name": "Which suburbs and areas around Hobart do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Hobart and the surrounding area, including Glenorchy, Moonah, Sandy Bay, Kingston, Bellerive and the greater Hobart area. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/#faq-7",
-              "name": "What do Hobart's older homes and sloping sites mean for an inspection?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Hobart combines a large stock of Georgian, Federation and weatherboard housing with steeply sloping sites. That produces a specific set of findings: rising damp in solid masonry, poor subfloor ventilation, cold-climate condensation and mould, and retaining wall and site drainage problems on sloping blocks. Retaining structures and slope stability are engineering questions, and are assessed as part of the inspection rather than referred out."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -2152,17 +1768,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-hobart/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -2478,10 +2083,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/",
           "name": "Building Inspections in Geelong",
@@ -2495,72 +2097,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/#faq-1",
-              "name": "Are your Geelong building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Geelong inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Victoria is administered by the Victorian Building Authority (VBA). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/#faq-2",
-              "name": "How quickly can I get a building inspection in Geelong?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Geelong. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/#faq-3",
-              "name": "How much does a building inspection cost in Geelong?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Geelong?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/#faq-5",
-              "name": "Can your report be used in VCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process. Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/#faq-6",
-              "name": "Which suburbs and areas around Geelong do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Geelong and the surrounding area, including Newtown, Belmont, Corio, Armstrong Creek, Ocean Grove and Torquay. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/#faq-7",
-              "name": "What should I check on a new build in Geelong's growth estates?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The growth corridors around Armstrong Creek and Torquay are built at volume and at speed, on reactive clay soils. The findings that matter are slab and footing performance against the site classification, frame and bracing compliance, and waterproofing at wet areas. These are best caught at stage inspections rather than after handover, which is why the new build stage inspection package covers footing pre-pour through to practical completion."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -2610,17 +2147,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-geelong/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -2936,10 +2462,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/",
           "name": "Building Inspections in Ballarat",
@@ -2953,72 +2476,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/#faq-1",
-              "name": "Are your Ballarat building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Ballarat inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Victoria is administered by the Victorian Building Authority (VBA). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/#faq-2",
-              "name": "How quickly can I get a building inspection in Ballarat?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Ballarat. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/#faq-3",
-              "name": "How much does a building inspection cost in Ballarat?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Ballarat?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/#faq-5",
-              "name": "Can your report be used in VCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process. Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/#faq-6",
-              "name": "Which suburbs and areas around Ballarat do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Ballarat and the surrounding area, including Sebastopol, Wendouree, Alfredton, Buninyong, Delacombe and the surrounding district. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/#faq-7",
-              "name": "What are the common issues in Ballarat's period homes?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ballarat's goldfields-era housing brings recurring problems that newer stock does not: single-skin solid brick walls with no cavity, rising damp, original footings that predate any modern standard, and cold-climate condensation. Cracking in a period brick wall may be historic and stable or active and structural, and telling those apart is an engineering judgement rather than a visual one."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -3068,17 +2526,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-ballarat/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -3394,10 +2841,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/",
           "name": "Building Inspections in Newcastle",
@@ -3411,72 +2855,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/#faq-1",
-              "name": "Are your Newcastle building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Newcastle inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in New South Wales is administered by NSW Fair Trading. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/#faq-2",
-              "name": "How quickly can I get a building inspection in Newcastle?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Newcastle. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/#faq-3",
-              "name": "How much does a building inspection cost in Newcastle?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Newcastle?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/#faq-5",
-              "name": "Can your report be used in NCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the NSW Civil and Administrative Tribunal (NCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/#faq-6",
-              "name": "Which suburbs and areas around Newcastle do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Newcastle and the surrounding area, including Hamilton, Merewether, Charlestown, Lake Macquarie, Maitland and the Hunter. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/#faq-7",
-              "name": "Does a Newcastle building inspection consider mine subsidence?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Parts of Newcastle and the Hunter sit within declared Mine Subsidence Districts, and subsidence-related movement presents differently to ordinary footing settlement or reactive clay movement. Distinguishing between them matters, because it changes both the rectification approach and where a claim is directed. That assessment is structural, and an engineer-led inspection can make it on the first visit. Coastal suburbs add salt exposure and corrosion of fixings to the picture."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -3526,17 +2905,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-newcastle/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -3852,10 +3220,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/",
           "name": "Building Inspections in Bendigo",
@@ -3869,72 +3234,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/#faq-1",
-              "name": "Are your Bendigo building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Bendigo inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Victoria is administered by the Victorian Building Authority (VBA). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/#faq-2",
-              "name": "How quickly can I get a building inspection in Bendigo?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Bendigo. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/#faq-3",
-              "name": "How much does a building inspection cost in Bendigo?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Bendigo?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/#faq-5",
-              "name": "Can your report be used in VCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process. Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/#faq-6",
-              "name": "Which suburbs and areas around Bendigo do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Bendigo and the surrounding area, including Eaglehawk, Kangaroo Flat, Strathfieldsaye, Epsom and the greater Bendigo area. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/#faq-7",
-              "name": "What should a building inspection look for in Bendigo?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Bendigo pairs a substantial stock of Victorian-era brick and weatherboard housing with newer estates on reactive clay. In the period stock the recurring findings are rising damp, deteriorated mortar, and footings that were never designed for current loads. In the newer stock it is movement-related cracking driven by soil reactivity and site drainage. Establishing whether movement is ongoing usually calls for a floor level survey, which can be added to any inspection as a monitoring baseline."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -3984,17 +3284,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-bendigo/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -4310,10 +3599,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/",
           "name": "Building Inspections in Shepparton",
@@ -4327,72 +3613,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/#faq-1",
-              "name": "Are your Shepparton building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Shepparton inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Victoria is administered by the Victorian Building Authority (VBA). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/#faq-2",
-              "name": "How quickly can I get a building inspection in Shepparton?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Shepparton. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/#faq-3",
-              "name": "How much does a building inspection cost in Shepparton?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Shepparton?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/#faq-5",
-              "name": "Can your report be used in VCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process. Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/#faq-6",
-              "name": "Which suburbs and areas around Shepparton do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Shepparton and the surrounding area, including Mooroopna, Kialla, Tatura, Numurkah and the Goulburn Valley. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/#faq-7",
-              "name": "Can you assess flood-affected property around Shepparton?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Flood exposure in the Goulburn Valley leaves findings that a standard visual inspection can easily understate: retained moisture in wall cavities and subfloors, degraded plasterboard and insulation, corrosion of fixings and services, and movement where footings were undermined by saturated ground. An engineer-led inspection can assess whether the structure was affected and document cause and extent to the standard an insurer or tribunal expects."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -4442,17 +3663,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-shepparton/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -4768,10 +3978,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/",
           "name": "Building Inspections in Townsville",
@@ -4785,72 +3992,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/#faq-1",
-              "name": "Are your Townsville building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Townsville inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Queensland is administered by the Queensland Building and Construction Commission (QBCC). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/#faq-2",
-              "name": "How quickly can I get a building inspection in Townsville?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Townsville. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/#faq-3",
-              "name": "How much does a building inspection cost in Townsville?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Townsville?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/#faq-5",
-              "name": "Can your report be used in QCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the Queensland Civil and Administrative Tribunal (QCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/#faq-6",
-              "name": "Which suburbs and areas around Townsville do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Townsville and the surrounding area, including Kirwan, Aitkenvale, Douglas, Idalia, Deeragun and Magnetic Island. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/#faq-7",
-              "name": "What does a Townsville building inspection cover for cyclone and flood risk?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Townsville is a cyclonic wind region with a recent major flood history, and both leave structural questions behind. Roof-to-wall-to-footing tie-down continuity, bracing adequacy and roof sheeting fixing are central, particularly in older elevated homes. Where a property was flood-affected, retained moisture, corrosion and footing disturbance need assessing rather than assuming. Termite pressure in the region is high, so a combined building and timber pest inspection is usually the right scope."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -4900,17 +4042,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-townsville/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -5226,10 +4357,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/",
           "name": "Building Inspections in Toowoomba",
@@ -5243,72 +4371,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/#faq-1",
-              "name": "Are your Toowoomba building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Toowoomba inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Queensland is administered by the Queensland Building and Construction Commission (QBCC). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/#faq-2",
-              "name": "How quickly can I get a building inspection in Toowoomba?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Toowoomba. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/#faq-3",
-              "name": "How much does a building inspection cost in Toowoomba?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Toowoomba?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/#faq-5",
-              "name": "Can your report be used in QCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the Queensland Civil and Administrative Tribunal (QCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/#faq-6",
-              "name": "Which suburbs and areas around Toowoomba do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Toowoomba and the surrounding area, including Highfields, Kearneys Spring, Middle Ridge, Wilsonton, Glenvale and the Darling Downs. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/#faq-7",
-              "name": "Why does Toowoomba's soil matter for a building inspection?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Toowoomba and the Darling Downs sit on highly reactive black soils, which swell and shrink with moisture change far more than most Australian sites. The result is footing and slab movement, and cracking that recurs seasonally. The question that matters is whether the movement is within what the site classification and slab design allow, or whether the footing system is failing. That is an engineering assessment, and it is what separates a report that names the cause from one that just records the crack."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -5358,17 +4421,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-toowoomba/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -5684,10 +4736,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-orange/",
           "name": "Building Inspections in Orange",
@@ -5701,72 +4750,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-1",
-              "name": "Are your Orange building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Orange inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in New South Wales is administered by NSW Fair Trading. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-2",
-              "name": "How quickly can I get a building inspection in Orange?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Orange. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-3",
-              "name": "How much does a building inspection cost in Orange?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Orange?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-5",
-              "name": "Can your report be used in NCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the NSW Civil and Administrative Tribunal (NCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-6",
-              "name": "Which suburbs and areas around Orange do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Orange and the surrounding area, including Blayney, Millthorpe, Molong, Lucknow and the Central West. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-7",
-              "name": "What should a building inspection look for in Orange?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Orange combines Victorian and Federation housing with a cold-climate exposure that most coastal NSW stock does not face. The recurring findings are rising damp and deteriorated mortar in solid masonry, condensation and inadequate ventilation, roof plumbing failures under freeze conditions, and heating flue and combustion safety. Older footings on the district's basalt-derived soils also warrant assessment where cracking is present."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -5816,17 +4800,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-orange/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -6142,10 +5115,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/",
           "name": "Building Inspections in Warrnambool",
@@ -6159,72 +5129,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/#faq-1",
-              "name": "Are your Warrnambool building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Warrnambool inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Victoria is administered by the Victorian Building Authority (VBA). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/#faq-2",
-              "name": "How quickly can I get a building inspection in Warrnambool?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Warrnambool. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/#faq-3",
-              "name": "How much does a building inspection cost in Warrnambool?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Warrnambool?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/#faq-5",
-              "name": "Can your report be used in VCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process. Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/#faq-6",
-              "name": "Which suburbs and areas around Warrnambool do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Warrnambool and the surrounding area, including Dennington, Port Fairy, Koroit, Allansford and the south-west coast. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/#faq-7",
-              "name": "How does the coastal exposure at Warrnambool affect a building inspection?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Warrnambool's exposure to salt-laden south-westerlies accelerates deterioration that inland property does not see at the same rate: corrosion of roof sheeting, fixings and structural connections, degradation of external cladding and joinery, and weathering of period limestone and bluestone masonry. Wind-driven rain also finds envelope defects that would not leak in a sheltered location, so external envelope and flashing detail get particular attention here."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -6274,17 +5179,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-warrnambool/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -6600,10 +5494,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/",
           "name": "Building Inspections in Sunshine Coast",
@@ -6617,72 +5508,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/#faq-1",
-              "name": "Are your Sunshine Coast building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Sunshine Coast inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Queensland is administered by the Queensland Building and Construction Commission (QBCC). Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/#faq-2",
-              "name": "How quickly can I get a building inspection in Sunshine Coast?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Sunshine Coast. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/#faq-3",
-              "name": "How much does a building inspection cost in Sunshine Coast?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Sunshine Coast?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/#faq-5",
-              "name": "Can your report be used in QCAT proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the Queensland Civil and Administrative Tribunal (QCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/#faq-6",
-              "name": "Which suburbs and areas around Sunshine Coast do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Sunshine Coast and the surrounding area, including Maroochydore, Caloundra, Buderim, Noosa, Nambour and Kawana. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/#faq-7",
-              "name": "What should a Sunshine Coast building inspection cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Coastal Sunshine Coast property is exposed to salt corrosion, high termite pressure and heavy seasonal rainfall, and the defects follow from that: balcony and wet area waterproofing failure, corrosion of fixings and structural connections, and moisture ingress through failed seals and flashings. In unit and townhouse stock, common property balcony and balustrade condition is a frequent finding, and it is a structural question rather than a cosmetic one."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -6732,17 +5558,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-sunshine-coast/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {
@@ -7058,10 +5873,7 @@
           }
         },
         {
-          "@type": [
-            "WebPage",
-            "FAQPage"
-          ],
+          "@type": "WebPage",
           "@id": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/#webpage",
           "url": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/",
           "name": "Building Inspections in Mandurah",
@@ -7075,72 +5887,7 @@
           },
           "breadcrumb": {
             "@id": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/#breadcrumb"
-          },
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/#faq-1",
-              "name": "Are your Mandurah building inspectors qualified?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Every Mandurah inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in Western Australia is administered by Building and Energy, part of the Department of Energy, Mines, Industry Regulation and Safety. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/#faq-2",
-              "name": "How quickly can I get a building inspection in Mandurah?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Same-week availability is standard in Mandurah. Call 1800 796 776 or book online and we will confirm your inspection time."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/#faq-3",
-              "name": "How much does a building inspection cost in Mandurah?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/#faq-4",
-              "name": "What does a pre-purchase building inspection cover in Mandurah?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/#faq-5",
-              "name": "Can your report be used in the State Administrative Tribunal proceedings?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the State Administrative Tribunal (SAT) of Western Australia. Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/#faq-6",
-              "name": "Which suburbs and areas around Mandurah do you cover?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We cover Mandurah and the surrounding area, including Halls Head, Falcon, Dawesville, Greenfields, Pinjarra and the Peel region. If you are outside that area, call 1800 796 776 and we will confirm availability."
-              }
-            },
-            {
-              "@type": "Question",
-              "@id": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/#faq-7",
-              "name": "What should a building inspection check on Mandurah waterfront property?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Mandurah's canal and waterfront housing carries risks that inland Perth stock does not: corrosion of fixings and reinforcement in a salt-laden environment, retaining and revetment wall condition, and footing performance on sand near water. Double brick construction can mask movement until cracking is well advanced. Whether that cracking is settlement, reactive movement or structural failure is an engineering assessment, and it forms part of the standard inspection."
-              }
-            }
-          ]
+          }
         },
         {
           "@type": "BreadcrumbList",
@@ -7190,17 +5937,6 @@
               "@type": "ContactPoint",
               "telephone": "+61-1800-796-776",
               "contactType": "customer service"
-            }
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://buildinginspectionsnearme.com.au/building-inspections-mandurah/",
-            "availability": "https://schema.org/InStock",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "minPrice": 495,
-              "priceCurrency": "AUD",
-              "valueAddedTaxIncluded": true
             }
           },
           "hasOfferCatalog": {

@@ -185,10 +185,7 @@
       }
     },
     {
-      "@type": [
-        "WebPage",
-        "FAQPage"
-      ],
+      "@type": "WebPage",
       "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/",
       "name": "Building Inspections in Canberra",
@@ -202,72 +199,7 @@
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#breadcrumb"
-      },
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-1",
-          "name": "Are your Canberra building inspectors qualified?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every Canberra inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in the Australian Capital Territory is administered by Access Canberra, which administers the ACT construction occupations licensing scheme. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-2",
-          "name": "How quickly can I get a building inspection in Canberra?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Same-week availability is standard in Canberra. Call 1800 796 776 or book online and we will confirm your inspection time."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-3",
-          "name": "How much does a building inspection cost in Canberra?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-4",
-          "name": "What does a pre-purchase building inspection cover in Canberra?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-5",
-          "name": "Can your report be used in ACAT proceedings?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the ACT Civil and Administrative Tribunal (ACAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-6",
-          "name": "Which suburbs and areas around Canberra do you cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We cover Canberra and the surrounding area, including Belconnen, Gungahlin, Woden, Tuggeranong, Weston Creek and Queanbeyan. If you are outside that area, call 1800 796 776 and we will confirm availability."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/#faq-7",
-          "name": "What should a Canberra building inspection pay attention to?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Canberra's housing stock is dominated by 1960s and 1970s ex-government homes alongside recent apartment development in Gungahlin and the town centres. The recurring findings are cold-climate condensation and inadequate subfloor ventilation, ageing services in mid-century homes, and structural movement on the region's clay soils. Where a property's history suggests loose-fill asbestos insulation may be present, we flag it for specialist assessment rather than assessing it ourselves."
-          }
-        }
-      ]
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -317,17 +249,6 @@
           "@type": "ContactPoint",
           "telephone": "+61-1800-796-776",
           "contactType": "customer service"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://buildinginspectionsnearme.com.au/building-inspections-canberra/",
-        "availability": "https://schema.org/InStock",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": 495,
-          "priceCurrency": "AUD",
-          "valueAddedTaxIncluded": true
         }
       },
       "hasOfferCatalog": {

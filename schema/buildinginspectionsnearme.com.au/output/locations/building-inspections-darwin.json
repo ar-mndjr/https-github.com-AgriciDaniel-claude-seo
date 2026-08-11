@@ -185,10 +185,7 @@
       }
     },
     {
-      "@type": [
-        "WebPage",
-        "FAQPage"
-      ],
+      "@type": "WebPage",
       "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/",
       "name": "Building Inspections in Darwin",
@@ -202,72 +199,7 @@
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#breadcrumb"
-      },
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-1",
-          "name": "Are your Darwin building inspectors qualified?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every Darwin inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in the Northern Territory is administered by the Northern Territory Building Practitioners Board. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-2",
-          "name": "How quickly can I get a building inspection in Darwin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Same-week availability is standard in Darwin. Call 1800 796 776 or book online and we will confirm your inspection time."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-3",
-          "name": "How much does a building inspection cost in Darwin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-4",
-          "name": "What does a pre-purchase building inspection cover in Darwin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-5",
-          "name": "Can your report be used in NTCAT proceedings?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the Northern Territory Civil and Administrative Tribunal (NTCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-6",
-          "name": "Which suburbs and areas around Darwin do you cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We cover Darwin and the surrounding area, including Palmerston, Casuarina, Nightcliff, Marrara, Howard Springs and Humpty Doo. If you are outside that area, call 1800 796 776 and we will confirm availability."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/#faq-7",
-          "name": "Does a Darwin building inspection check cyclone compliance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Darwin sits in a cyclonic wind region, so structural tie-down continuity from roof sheeting through to footings is central to any inspection here, particularly on homes built before the post-Tracy code changes. Alongside that, the tropical climate drives accelerated corrosion of fixings and framing connections, high termite pressure, and moisture ingress through failed seals. A Chartered Engineer can assess whether a tie-down or bracing deficiency is structurally significant, which a visual-only inspection cannot."
-          }
-        }
-      ]
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -317,17 +249,6 @@
           "@type": "ContactPoint",
           "telephone": "+61-1800-796-776",
           "contactType": "customer service"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://buildinginspectionsnearme.com.au/building-inspections-darwin/",
-        "availability": "https://schema.org/InStock",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": 495,
-          "priceCurrency": "AUD",
-          "valueAddedTaxIncluded": true
         }
       },
       "hasOfferCatalog": {

@@ -185,10 +185,7 @@
       }
     },
     {
-      "@type": [
-        "WebPage",
-        "FAQPage"
-      ],
+      "@type": "WebPage",
       "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#webpage",
       "url": "https://buildinginspectionsnearme.com.au/building-inspections-orange/",
       "name": "Building Inspections in Orange",
@@ -202,72 +199,7 @@
       },
       "breadcrumb": {
         "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#breadcrumb"
-      },
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-1",
-          "name": "Are your Orange building inspectors qualified?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every Orange inspection is carried out by a state-registered expert: a Chartered Engineer, a Licensed Builder, or both. Practitioner registration in New South Wales is administered by NSW Fair Trading. Because the inspection starts at engineer level, structural concerns can be assessed on the spot rather than referred to a separate engineering firm."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-2",
-          "name": "How quickly can I get a building inspection in Orange?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Same-week availability is standard in Orange. Call 1800 796 776 or book online and we will confirm your inspection time."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-3",
-          "name": "How much does a building inspection cost in Orange?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "From $495 inc. GST for a three-bedroom home. Pricing depends on property size, type and the report level selected, and is confirmed before booking. Because every inspection starts at engineer level, there is no second inspection fee if you later need an engineering or dispute-level report."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-4",
-          "name": "What does a pre-purchase building inspection cover in Orange?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "All accessible areas of the property: structural elements, roof space and roof covering, subfloor where accessible, external walls and cladding, internal walls and ceilings, windows and doors, wet areas, drainage and site conditions. Observations are documented with photographs and the report follows AS 4349.1."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-5",
-          "name": "Can your report be used in NCAT proceedings?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required for the NSW Civil and Administrative Tribunal (NCAT). Because the inspection data is captured at engineer level on the first visit, a standard report can be escalated to a dispute-ready expert report without a second inspection."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-6",
-          "name": "Which suburbs and areas around Orange do you cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We cover Orange and the surrounding area, including Blayney, Millthorpe, Molong, Lucknow and the Central West. If you are outside that area, call 1800 796 776 and we will confirm availability."
-          }
-        },
-        {
-          "@type": "Question",
-          "@id": "https://buildinginspectionsnearme.com.au/building-inspections-orange/#faq-7",
-          "name": "What should a building inspection look for in Orange?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Orange combines Victorian and Federation housing with a cold-climate exposure that most coastal NSW stock does not face. The recurring findings are rising damp and deteriorated mortar in solid masonry, condensation and inadequate ventilation, roof plumbing failures under freeze conditions, and heating flue and combustion safety. Older footings on the district's basalt-derived soils also warrant assessment where cracking is present."
-          }
-        }
-      ]
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -317,17 +249,6 @@
           "@type": "ContactPoint",
           "telephone": "+61-1800-796-776",
           "contactType": "customer service"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://buildinginspectionsnearme.com.au/building-inspections-orange/",
-        "availability": "https://schema.org/InStock",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": 495,
-          "priceCurrency": "AUD",
-          "valueAddedTaxIncluded": true
         }
       },
       "hasOfferCatalog": {

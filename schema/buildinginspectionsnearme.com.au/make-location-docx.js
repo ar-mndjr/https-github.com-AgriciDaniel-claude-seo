@@ -197,8 +197,8 @@ const IMPLEMENTATION = [
   "This block is self-contained. It carries the local business details itself, so nothing else needs to be added to the page.",
   "The business @id is identical on every page across the site, so all copies resolve to one business entity. Do not change it per page.",
   "The Service node's OfferCatalog links the eleven service pages by @id, which connects this location page into the service cluster.",
-  "Rank Math: Page > Rank Math > Schema > Custom Schema (Code Validation tab). Disable its auto-generated WebPage and FAQ schema for this page so nodes are not duplicated.",
-  "Yoast: Yoast already emits WebPage, WebSite, BreadcrumbList and an Organization at #organization. In that case delete those four nodes and keep only the Service node, and add the FAQ through Yoast's own FAQ block instead.",
+  "Rank Math: Page > Rank Math > Schema > Custom Schema (Code Validation tab). Disable its auto-generated WebPage schema for this page so nodes are not duplicated.",
+  "Yoast: Yoast already emits WebPage, WebSite, BreadcrumbList and an Organization at #organization. In that case delete those four nodes and keep only the Service node.",
   "Validate at validator.schema.org and in Google's Rich Results Test after publishing.",
 ];
 
@@ -210,37 +210,57 @@ for (const raw of config.locations) {
   const url = `${siteUrl}/${loc.slug}/`;
   const code = fs.readFileSync(path.join(SRC, `${loc.slug}.html`), "utf8");
   const graph = JSON.parse(fs.readFileSync(path.join(SRC, `${loc.slug}.json`), "utf8"))["@graph"];
-  const page = graph.find((n) => Array.isArray(n["@type"]) && n["@type"].includes("FAQPage"));
+  const page = graph[2];
+  const faq = page.mainEntity || [];
+
+  const nodeList = faq.length
+    ? "LocalBusiness (HomeAndConstructionBusiness / ProfessionalService), WebSite, WebPage + FAQPage, BreadcrumbList, Service"
+    : "LocalBusiness (HomeAndConstructionBusiness / ProfessionalService), WebSite, WebPage, BreadcrumbList, Service";
+
+  const faqSection = faq.length
+    ? [
+        h2("FAQ in this markup"),
+        body(
+          "Transcribed from the live page. If the page copy changes, update locations.json and regenerate so the two stay identical.",
+          { color: GREY }
+        ),
+        ...faqBlock(faq),
+      ]
+    : [
+        h2("FAQ — not included"),
+        ...callout([
+          "No FAQ schema is included for this page, and that is deliberate.",
+          "FAQPage markup must mirror Q&A that a visitor can actually see on the page. The live page could not be read when this was generated, so no questions were written. Inventing plausible questions would put text in the markup that does not exist on the page, which breaches Google's structured data guidelines.",
+          "To add it: copy the page's published questions and answers word for word into the `faq` array for this location in locations.json, then re-run generate-locations.py and node make-location-docx.js. The page node becomes WebPage + FAQPage automatically.",
+          "Note: Google retired FAQ rich results for all sites on 7 May 2026, so FAQ markup earns no SERP snippet either way. Its value is entity clarity and extraction by AI answer engines.",
+        ]),
+      ];
 
   const children = [
     h1(`Building Inspections in ${loc.city}`),
     subtitle("Location page schema | Building Inspections Near Me"),
     factsTable([
       ["Page URL", url],
-      [
-        "Schema nodes",
-        "LocalBusiness (HomeAndConstructionBusiness / ProfessionalService), WebSite, WebPage + FAQPage, BreadcrumbList, Service",
-      ],
+      ["Schema nodes", nodeList],
       ["Area served", `${loc.city}, ${loc.state}`],
-      ["FAQ questions", String(page.mainEntity.length)],
-      ["Pricing", `from $${loc.priceFrom} ${loc.priceCurrency} (minPrice, GST inclusive)`],
+      ["FAQ questions", faq.length ? String(faq.length) : "none — see below"],
+      [
+        "Pricing",
+        loc.priceFrom
+          ? `from $${loc.priceFrom} ${loc.priceCurrency} (minPrice, GST inclusive)`
+          : "no Offer emitted — no price confirmed for this page",
+      ],
       ["Paste into", "<head> of this page"],
     ]),
 
     h2("Check before publishing"),
     ...callout([
-      "The FAQ below must be published on the page as visible content.",
-      "FAQPage markup has to mirror Q&A a visitor can actually see. Publish the FAQ copy on the page first, then ship this schema. If the page carries different questions, edit locations.json and regenerate so the two match.",
-      `Confirm BINM services ${loc.city} with practitioners registered in ${loc.stateAbbr}, and that same-week availability and the $${loc.priceFrom} entry price hold here. Both are asserted in the markup and both were sourced from the metro pages.`,
-      "Note: Google retired FAQ rich results for all sites on 7 May 2026, so this earns no SERP snippet. It is included for entity clarity and for extraction by AI answer engines.",
+      "Two things in this markup were generated rather than read off the page.",
+      "The WebPage and Service descriptions are built from the city, the state and BINM's verified positioning. Check them against the copy actually published on this page and edit generate-locations.py if they differ.",
+      `Confirm BINM services ${loc.city}, ${loc.state} with practitioners registered in that jurisdiction. The markup asserts coverage here.`,
     ]),
 
-    h2("FAQ copy for the page"),
-    body(
-      "Publish these on the page. The wording below is exactly what the markup asserts.",
-      { color: GREY }
-    ),
-    ...faqBlock(page.mainEntity),
+    ...faqSection,
 
     h2("JSON-LD"),
     body("Copy everything between the script tags below, including the tags themselves.", {

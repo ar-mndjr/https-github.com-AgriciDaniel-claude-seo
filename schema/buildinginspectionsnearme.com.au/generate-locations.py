@@ -23,70 +23,31 @@ import generate as base
 
 OUT = base.BASE / "output" / "locations"
 
-# The Melbourne page's published question set, used as the template.
-FAQ_TEMPLATES = [
-    (
-        "Are your {city} building inspectors qualified?",
-        "Every {city} inspection is carried out by a state-registered expert: a Chartered "
-        "Engineer, a Licensed Builder, or both. Practitioner registration in {state} is "
-        "administered by {regulator}. Because the inspection starts at engineer level, "
-        "structural concerns can be assessed on the spot rather than referred to a separate "
-        "engineering firm.",
-    ),
-    (
-        "How quickly can I get a building inspection in {city}?",
-        "{availability} in {city}. Call 1800 796 776 or book online and we will confirm your "
-        "inspection time.",
-    ),
-    (
-        "How much does a building inspection cost in {city}?",
-        "From ${priceFrom} inc. GST for a three-bedroom home. Pricing depends on property size, "
-        "type and the report level selected, and is confirmed before booking. Because every "
-        "inspection starts at engineer level, there is no second inspection fee if you later "
-        "need an engineering or dispute-level report.",
-    ),
-    (
-        "What does a pre-purchase building inspection cover in {city}?",
-        "All accessible areas of the property: structural elements, roof space and roof "
-        "covering, subfloor where accessible, external walls and cladding, internal walls and "
-        "ceilings, windows and doors, wet areas, drainage and site conditions. Observations are "
-        "documented with photographs and the report follows AS 4349.1.",
-    ),
-    (
-        "Can your report be used in {tribunalShort} proceedings?",
-        "Yes. Reports are prepared by a Chartered Engineer to the evidentiary standard required "
-        "for {tribunalLong}. Because the inspection data is captured at engineer level on the "
-        "first visit, a standard report can be escalated to a dispute-ready expert report "
-        "without a second inspection.",
-    ),
-    (
-        "Which suburbs and areas around {city} do you cover?",
-        "We cover {city} and the surrounding area, including {surrounds}. If you are outside "
-        "that area, call 1800 796 776 and we will confirm availability.",
-    ),
-]
-
-
-def fill(text, loc):
-    return text.format(**loc)
-
-
 def build_faq(loc, url):
-    """FAQPage mainEntity. Must mirror Q&A published on the page itself."""
-    questions = [(fill(q, loc), fill(a, loc)) for q, a in FAQ_TEMPLATES]
-    local = loc.get("localRisk")
-    if local:
-        questions.append((local["question"], local["answer"]))
+    """FAQPage mainEntity, built only from Q&A transcribed off the live page.
 
-    return [
-        {
+    There is no template and no fallback: whatever is in the `faq` array is what
+    ships. An empty array yields no questions, and the caller then leaves the
+    page as a plain WebPage. Generating plausible-sounding questions here would
+    put text in the markup that no visitor can see on the page, which breaches
+    Google's structured data guidelines.
+    """
+    questions = []
+    for i, entry in enumerate(loc.get("faq", []), start=1):
+        question = (entry.get("question") or "").strip()
+        answer = (entry.get("answer") or "").strip()
+        if not question or not answer:
+            sys.exit(
+                f"{loc['slug']}: FAQ entry {i} is missing a question or an answer. "
+                "Transcribe both from the live page or remove the entry."
+            )
+        questions.append({
             "@type": "Question",
             "@id": f"{url}#faq-{i}",
             "name": question,
             "acceptedAnswer": {"@type": "Answer", "text": answer},
-        }
-        for i, (question, answer) in enumerate(questions, start=1)
-    ]
+        })
+    return questions
 
 
 def build_area(loc):
@@ -103,10 +64,12 @@ def build_area(loc):
 
 
 def build_page(cfg, loc, url):
-    """WebPage and FAQPage are the same node: one URL, one page entity."""
+    """The page node. Dual-typed WebPage + FAQPage only when real Q&A exists,
+    so one URL stays one page entity rather than two."""
     site = cfg["site"]["url"].rstrip("/")
+    faq = build_faq(loc, url)
     return {
-        "@type": ["WebPage", "FAQPage"],
+        "@type": ["WebPage", "FAQPage"] if faq else "WebPage",
         "@id": f"{url}#webpage",
         "url": url,
         "name": f"Building Inspections in {loc['city']}",
@@ -120,7 +83,7 @@ def build_page(cfg, loc, url):
         "about": {"@id": base.business_id(cfg)},
         "breadcrumb": {"@id": f"{url}#breadcrumb"},
         "primaryImageOfPage": loc.get("image", ""),
-        "mainEntity": build_faq(loc, url),
+        "mainEntity": faq,
     }
 
 
@@ -258,13 +221,33 @@ def main():
         json.dumps(combined, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
-    faq_count = sum(len(build_faq({**defaults, **l}, "x")) for l in locations)
+    with_faq = [l["slug"] for l in locations if l.get("faq")]
+    without_faq = [l["slug"] for l in locations if not l.get("faq")]
+    priced = [l["slug"] for l in locations if {**defaults, **l}.get("priceFrom")]
+
     print(f"Wrote {len(locations) * 2 + 1} files to {OUT}")
-    print(f"{len(locations)} location pages, {faq_count} FAQ questions total")
+    print(f"{len(locations)} location pages; {len(with_faq)} carry FAQPage, {len(without_faq)} do not")
+
+    if without_faq:
+        print(
+            "\nNo FAQ transcribed for these pages, so they emit a plain WebPage with no\n"
+            "FAQPage type. That is correct until the real page Q&A is available. To add it,\n"
+            "copy each page's published questions and answers verbatim into its `faq` array\n"
+            "in locations.json and re-run this script:"
+        )
+        for slug in without_faq:
+            print(f"  - {slug}")
+
+    if len(priced) < len(locations):
+        print(
+            f"\n{len(locations) - len(priced)} pages emit no Offer, because `priceFrom` is "
+            "empty. Set it only where the page publishes a price."
+        )
+
     print(
-        "\nBefore publishing: every FAQ answer must also be visible on the page.\n"
-        "Confirm coverage in WA, ACT, NT and TAS, and that same-week availability\n"
-        "and the $495 entry price hold for the regional towns."
+        "\nAlso confirm: BINM services WA, ACT, NT and TAS with practitioners registered\n"
+        "there, and that the generated page and service descriptions match the copy\n"
+        "actually published on each page."
     )
 
 
