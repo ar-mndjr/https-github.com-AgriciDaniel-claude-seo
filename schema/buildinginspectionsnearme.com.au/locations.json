@@ -1,0 +1,244 @@
+{
+  "_readme": "One entry per location page. The FAQ questions and answers are built from these fields by generate-locations.py, using the question set already published on the BINM Melbourne page as the template. Every answer must also appear on the page itself.",
+
+  "_faqWarning": "FAQPage markup must mirror Q&A that is visibly published on the page. Marking up questions a visitor cannot see breaches Google's structured data guidelines. Treat the generated FAQ as draft page copy first: publish it, then ship the schema. Note also that Google retired FAQ rich results for all sites on 7 May 2026, so this earns no SERP snippet — its value is entity clarity and extractability by AI answer engines.",
+
+  "_coverageWarning": "The About page copy states BINM serves VIC, NSW, QLD and SA; coverage was later described as Australia-wide. Five of these pages sit outside those four states: Perth and Mandurah (WA), Canberra (ACT), Darwin (NT) and Hobart (TAS). Confirm BINM genuinely services them, with inspectors registered in those jurisdictions, before publishing.",
+
+  "_availabilityWarning": "Same-week availability and the $495 entry price are sourced from the four metro pages. Both are asserted here for every location. Confirm they hold for the regional towns (Warrnambool, Shepparton, Orange, Ballarat, Bendigo, Mandurah, Toowoomba) before publishing, and set `availability` or `priceFrom` per location if they do not.",
+
+  "_sameAsNote": "areaServed uses named City nodes with containedInPlace State, and no Wikidata sameAs links. The Wikidata IDs for these 16 places could not be verified from this environment, and a wrong sameAs points the entity at the wrong place. Add verified IDs to each entry as `sameAs` if you want them.",
+
+  "defaults": {
+    "priceFrom": 495,
+    "priceCurrency": "AUD",
+    "availability": "Same-week availability is standard"
+  },
+
+  "locations": [
+    {
+      "slug": "building-inspections-gold-coast",
+      "city": "Gold Coast",
+      "state": "Queensland",
+      "stateAbbr": "QLD",
+      "regulator": "the Queensland Building and Construction Commission (QBCC)",
+      "tribunalShort": "QCAT",
+      "tribunalLong": "the Queensland Civil and Administrative Tribunal (QCAT)",
+      "surrounds": "Southport, Surfers Paradise, Broadbeach, Robina, Burleigh Heads, Coolangatta, Nerang and Hope Island",
+      "localRisk": {
+        "question": "What should a building inspection look for in Gold Coast coastal and high-rise property?",
+        "answer": "Coastal Gold Coast property carries risks that inland inspections rarely deal with: concrete spalling and reinforcement corrosion in older high-rise, balcony and balustrade waterproofing failure, and salt-driven corrosion of fixings and framing. Canal-front homes add retaining and revetment wall condition to the list. These are structural questions, which is why the inspection is carried out by a Chartered Engineer rather than referred on to one."
+      }
+    },
+    {
+      "slug": "building-inspections-perth",
+      "city": "Perth",
+      "state": "Western Australia",
+      "stateAbbr": "WA",
+      "regulator": "Building and Energy, part of the Department of Energy, Mines, Industry Regulation and Safety",
+      "tribunalShort": "the State Administrative Tribunal",
+      "tribunalLong": "the State Administrative Tribunal (SAT) of Western Australia",
+      "surrounds": "Fremantle, Joondalup, Rockingham, Armadale, Midland, Cockburn and the Perth metropolitan area",
+      "localRisk": {
+        "question": "What are the common building problems in Perth homes?",
+        "answer": "Perth's double brick construction and sandy soil profile produce a different defect pattern to the eastern states. Footing settlement on sand, cracking through double brick walls, salt damp at the base of masonry, and roof plumbing and flashing failures are the recurring findings. Diagnosing whether a crack reflects settlement, reactive movement or a structural fault is an engineering assessment, and it is included in the standard inspection."
+      }
+    },
+    {
+      "slug": "building-inspections-canberra",
+      "city": "Canberra",
+      "state": "the Australian Capital Territory",
+      "stateAbbr": "ACT",
+      "regulator": "Access Canberra, which administers the ACT construction occupations licensing scheme",
+      "tribunalShort": "ACAT",
+      "tribunalLong": "the ACT Civil and Administrative Tribunal (ACAT)",
+      "surrounds": "Belconnen, Gungahlin, Woden, Tuggeranong, Weston Creek and Queanbeyan",
+      "localRisk": {
+        "question": "What should a Canberra building inspection pay attention to?",
+        "answer": "Canberra's housing stock is dominated by 1960s and 1970s ex-government homes alongside recent apartment development in Gungahlin and the town centres. The recurring findings are cold-climate condensation and inadequate subfloor ventilation, ageing services in mid-century homes, and structural movement on the region's clay soils. Where a property's history suggests loose-fill asbestos insulation may be present, we flag it for specialist assessment rather than assessing it ourselves."
+      }
+    },
+    {
+      "slug": "building-inspections-darwin",
+      "city": "Darwin",
+      "state": "the Northern Territory",
+      "stateAbbr": "NT",
+      "regulator": "the Northern Territory Building Practitioners Board",
+      "tribunalShort": "NTCAT",
+      "tribunalLong": "the Northern Territory Civil and Administrative Tribunal (NTCAT)",
+      "surrounds": "Palmerston, Casuarina, Nightcliff, Marrara, Howard Springs and Humpty Doo",
+      "localRisk": {
+        "question": "Does a Darwin building inspection check cyclone compliance?",
+        "answer": "Darwin sits in a cyclonic wind region, so structural tie-down continuity from roof sheeting through to footings is central to any inspection here, particularly on homes built before the post-Tracy code changes. Alongside that, the tropical climate drives accelerated corrosion of fixings and framing connections, high termite pressure, and moisture ingress through failed seals. A Chartered Engineer can assess whether a tie-down or bracing deficiency is structurally significant, which a visual-only inspection cannot."
+      }
+    },
+    {
+      "slug": "building-inspections-hobart",
+      "city": "Hobart",
+      "state": "Tasmania",
+      "stateAbbr": "TAS",
+      "regulator": "Consumer, Building and Occupational Services (CBOS)",
+      "tribunalShort": "TASCAT",
+      "tribunalLong": "the Tasmanian Civil and Administrative Tribunal (TASCAT)",
+      "surrounds": "Glenorchy, Moonah, Sandy Bay, Kingston, Bellerive and the greater Hobart area",
+      "localRisk": {
+        "question": "What do Hobart's older homes and sloping sites mean for an inspection?",
+        "answer": "Hobart combines a large stock of Georgian, Federation and weatherboard housing with steeply sloping sites. That produces a specific set of findings: rising damp in solid masonry, poor subfloor ventilation, cold-climate condensation and mould, and retaining wall and site drainage problems on sloping blocks. Retaining structures and slope stability are engineering questions, and are assessed as part of the inspection rather than referred out."
+      }
+    },
+    {
+      "slug": "building-inspections-geelong",
+      "city": "Geelong",
+      "state": "Victoria",
+      "stateAbbr": "VIC",
+      "regulator": "the Victorian Building Authority (VBA)",
+      "tribunalShort": "VCAT",
+      "tribunalLong": "VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process",
+      "surrounds": "Newtown, Belmont, Corio, Armstrong Creek, Ocean Grove and Torquay",
+      "localRisk": {
+        "question": "What should I check on a new build in Geelong's growth estates?",
+        "answer": "The growth corridors around Armstrong Creek and Torquay are built at volume and at speed, on reactive clay soils. The findings that matter are slab and footing performance against the site classification, frame and bracing compliance, and waterproofing at wet areas. These are best caught at stage inspections rather than after handover, which is why the new build stage inspection package covers footing pre-pour through to practical completion."
+      }
+    },
+    {
+      "slug": "building-inspections-ballarat",
+      "city": "Ballarat",
+      "state": "Victoria",
+      "stateAbbr": "VIC",
+      "regulator": "the Victorian Building Authority (VBA)",
+      "tribunalShort": "VCAT",
+      "tribunalLong": "VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process",
+      "surrounds": "Sebastopol, Wendouree, Alfredton, Buninyong, Delacombe and the surrounding district",
+      "localRisk": {
+        "question": "What are the common issues in Ballarat's period homes?",
+        "answer": "Ballarat's goldfields-era housing brings recurring problems that newer stock does not: single-skin solid brick walls with no cavity, rising damp, original footings that predate any modern standard, and cold-climate condensation. Cracking in a period brick wall may be historic and stable or active and structural, and telling those apart is an engineering judgement rather than a visual one."
+      }
+    },
+    {
+      "slug": "building-inspections-newcastle",
+      "city": "Newcastle",
+      "state": "New South Wales",
+      "stateAbbr": "NSW",
+      "regulator": "NSW Fair Trading",
+      "tribunalShort": "NCAT",
+      "tribunalLong": "the NSW Civil and Administrative Tribunal (NCAT)",
+      "surrounds": "Hamilton, Merewether, Charlestown, Lake Macquarie, Maitland and the Hunter",
+      "localRisk": {
+        "question": "Does a Newcastle building inspection consider mine subsidence?",
+        "answer": "Parts of Newcastle and the Hunter sit within declared Mine Subsidence Districts, and subsidence-related movement presents differently to ordinary footing settlement or reactive clay movement. Distinguishing between them matters, because it changes both the rectification approach and where a claim is directed. That assessment is structural, and an engineer-led inspection can make it on the first visit. Coastal suburbs add salt exposure and corrosion of fixings to the picture."
+      }
+    },
+    {
+      "slug": "building-inspections-bendigo",
+      "city": "Bendigo",
+      "state": "Victoria",
+      "stateAbbr": "VIC",
+      "regulator": "the Victorian Building Authority (VBA)",
+      "tribunalShort": "VCAT",
+      "tribunalLong": "VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process",
+      "surrounds": "Eaglehawk, Kangaroo Flat, Strathfieldsaye, Epsom and the greater Bendigo area",
+      "localRisk": {
+        "question": "What should a building inspection look for in Bendigo?",
+        "answer": "Bendigo pairs a substantial stock of Victorian-era brick and weatherboard housing with newer estates on reactive clay. In the period stock the recurring findings are rising damp, deteriorated mortar, and footings that were never designed for current loads. In the newer stock it is movement-related cracking driven by soil reactivity and site drainage. Establishing whether movement is ongoing usually calls for a floor level survey, which can be added to any inspection as a monitoring baseline."
+      }
+    },
+    {
+      "slug": "building-inspections-shepparton",
+      "city": "Shepparton",
+      "state": "Victoria",
+      "stateAbbr": "VIC",
+      "regulator": "the Victorian Building Authority (VBA)",
+      "tribunalShort": "VCAT",
+      "tribunalLong": "VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process",
+      "surrounds": "Mooroopna, Kialla, Tatura, Numurkah and the Goulburn Valley",
+      "localRisk": {
+        "question": "Can you assess flood-affected property around Shepparton?",
+        "answer": "Yes. Flood exposure in the Goulburn Valley leaves findings that a standard visual inspection can easily understate: retained moisture in wall cavities and subfloors, degraded plasterboard and insulation, corrosion of fixings and services, and movement where footings were undermined by saturated ground. An engineer-led inspection can assess whether the structure was affected and document cause and extent to the standard an insurer or tribunal expects."
+      }
+    },
+    {
+      "slug": "building-inspections-townsville",
+      "city": "Townsville",
+      "state": "Queensland",
+      "stateAbbr": "QLD",
+      "regulator": "the Queensland Building and Construction Commission (QBCC)",
+      "tribunalShort": "QCAT",
+      "tribunalLong": "the Queensland Civil and Administrative Tribunal (QCAT)",
+      "surrounds": "Kirwan, Aitkenvale, Douglas, Idalia, Deeragun and Magnetic Island",
+      "localRisk": {
+        "question": "What does a Townsville building inspection cover for cyclone and flood risk?",
+        "answer": "Townsville is a cyclonic wind region with a recent major flood history, and both leave structural questions behind. Roof-to-wall-to-footing tie-down continuity, bracing adequacy and roof sheeting fixing are central, particularly in older elevated homes. Where a property was flood-affected, retained moisture, corrosion and footing disturbance need assessing rather than assuming. Termite pressure in the region is high, so a combined building and timber pest inspection is usually the right scope."
+      }
+    },
+    {
+      "slug": "building-inspections-toowoomba",
+      "city": "Toowoomba",
+      "state": "Queensland",
+      "stateAbbr": "QLD",
+      "regulator": "the Queensland Building and Construction Commission (QBCC)",
+      "tribunalShort": "QCAT",
+      "tribunalLong": "the Queensland Civil and Administrative Tribunal (QCAT)",
+      "surrounds": "Highfields, Kearneys Spring, Middle Ridge, Wilsonton, Glenvale and the Darling Downs",
+      "localRisk": {
+        "question": "Why does Toowoomba's soil matter for a building inspection?",
+        "answer": "Toowoomba and the Darling Downs sit on highly reactive black soils, which swell and shrink with moisture change far more than most Australian sites. The result is footing and slab movement, and cracking that recurs seasonally. The question that matters is whether the movement is within what the site classification and slab design allow, or whether the footing system is failing. That is an engineering assessment, and it is what separates a report that names the cause from one that just records the crack."
+      }
+    },
+    {
+      "slug": "building-inspections-orange",
+      "city": "Orange",
+      "state": "New South Wales",
+      "stateAbbr": "NSW",
+      "regulator": "NSW Fair Trading",
+      "tribunalShort": "NCAT",
+      "tribunalLong": "the NSW Civil and Administrative Tribunal (NCAT)",
+      "surrounds": "Blayney, Millthorpe, Molong, Lucknow and the Central West",
+      "localRisk": {
+        "question": "What should a building inspection look for in Orange?",
+        "answer": "Orange combines Victorian and Federation housing with a cold-climate exposure that most coastal NSW stock does not face. The recurring findings are rising damp and deteriorated mortar in solid masonry, condensation and inadequate ventilation, roof plumbing failures under freeze conditions, and heating flue and combustion safety. Older footings on the district's basalt-derived soils also warrant assessment where cracking is present."
+      }
+    },
+    {
+      "slug": "building-inspections-warrnambool",
+      "city": "Warrnambool",
+      "state": "Victoria",
+      "stateAbbr": "VIC",
+      "regulator": "the Victorian Building Authority (VBA)",
+      "tribunalShort": "VCAT",
+      "tribunalLong": "VCAT and the Domestic Building Dispute Resolution Victoria (DBDRV) process",
+      "surrounds": "Dennington, Port Fairy, Koroit, Allansford and the south-west coast",
+      "localRisk": {
+        "question": "How does the coastal exposure at Warrnambool affect a building inspection?",
+        "answer": "Warrnambool's exposure to salt-laden south-westerlies accelerates deterioration that inland property does not see at the same rate: corrosion of roof sheeting, fixings and structural connections, degradation of external cladding and joinery, and weathering of period limestone and bluestone masonry. Wind-driven rain also finds envelope defects that would not leak in a sheltered location, so external envelope and flashing detail get particular attention here."
+      }
+    },
+    {
+      "slug": "building-inspections-sunshine-coast",
+      "city": "Sunshine Coast",
+      "state": "Queensland",
+      "stateAbbr": "QLD",
+      "regulator": "the Queensland Building and Construction Commission (QBCC)",
+      "tribunalShort": "QCAT",
+      "tribunalLong": "the Queensland Civil and Administrative Tribunal (QCAT)",
+      "surrounds": "Maroochydore, Caloundra, Buderim, Noosa, Nambour and Kawana",
+      "localRisk": {
+        "question": "What should a Sunshine Coast building inspection cover?",
+        "answer": "Coastal Sunshine Coast property is exposed to salt corrosion, high termite pressure and heavy seasonal rainfall, and the defects follow from that: balcony and wet area waterproofing failure, corrosion of fixings and structural connections, and moisture ingress through failed seals and flashings. In unit and townhouse stock, common property balcony and balustrade condition is a frequent finding, and it is a structural question rather than a cosmetic one."
+      }
+    },
+    {
+      "slug": "building-inspections-mandurah",
+      "city": "Mandurah",
+      "state": "Western Australia",
+      "stateAbbr": "WA",
+      "regulator": "Building and Energy, part of the Department of Energy, Mines, Industry Regulation and Safety",
+      "tribunalShort": "the State Administrative Tribunal",
+      "tribunalLong": "the State Administrative Tribunal (SAT) of Western Australia",
+      "surrounds": "Halls Head, Falcon, Dawesville, Greenfields, Pinjarra and the Peel region",
+      "localRisk": {
+        "question": "What should a building inspection check on Mandurah waterfront property?",
+        "answer": "Mandurah's canal and waterfront housing carries risks that inland Perth stock does not: corrosion of fixings and reinforcement in a salt-laden environment, retaining and revetment wall condition, and footing performance on sand near water. Double brick construction can mask movement until cracking is well advanced. Whether that cracking is settlement, reactive movement or structural failure is an engineering assessment, and it forms part of the standard inspection."
+      }
+    }
+  ]
+}
