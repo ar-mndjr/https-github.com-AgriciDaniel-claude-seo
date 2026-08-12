@@ -580,17 +580,25 @@ TEMPLATE = """<!-- Therapy Near Me - HTML sitemap
      Paste this whole block into a WordPress "Custom HTML" block. -->
 <div class="tnm-sitemap">
   <style>
-    /* Every font, colour and heading style here is inherited from the theme:
-       no font-family, text colour or heading size is set anywhere in this
-       block. The greys below are mixed from the theme's own text colour
-       (currentColor) rather than being fixed hex values, so the palette is
-       the site's palette. The first declaration of each pair is a neutral
-       fallback for browsers without color-mix(). To tint links on hover with
-       a brand colour, set --tnm-accent. */
-    .tnm-sitemap{{--tnm-accent:currentColor;--tnm-gap:48px;line-height:1.5;
-      --tnm-muted:#8a8a8a;--tnm-muted:color-mix(in srgb,currentColor 58%,transparent);
-      --tnm-line:rgba(128,128,128,.25);--tnm-line:color-mix(in srgb,currentColor 22%,transparent);
-      --tnm-surface:rgba(128,128,128,.06);--tnm-surface:color-mix(in srgb,currentColor 5%,transparent);}}
+    /* Body typography, taken from the site's own text styles. Change these
+       six values here and the whole block follows.
+       Headings are left alone so they keep the theme's heading styles. The
+       greys below are mixed from the text colour rather than being separate
+       fixed values, so the palette stays consistent with it; the first
+       declaration of each pair is a fallback for browsers without
+       color-mix(). To tint links on hover, set --tnm-accent. */
+    .tnm-sitemap{{--tnm-accent:currentColor;--tnm-gap:48px;
+      font-family:"Helvetica",Sans-serif;
+      font-size:16px;
+      font-weight:400;
+      font-style:italic;   /* delete this line for upright link text */
+      line-height:28px;
+      color:#7A7A7A;
+      --tnm-muted:#a5a5a5;--tnm-muted:color-mix(in srgb,currentColor 68%,transparent);
+      --tnm-line:rgba(122,122,122,.3);--tnm-line:color-mix(in srgb,currentColor 28%,transparent);
+      --tnm-surface:rgba(122,122,122,.06);--tnm-surface:color-mix(in srgb,currentColor 6%,transparent);}}
+    /* Headings and form controls stay upright; only running text is italic. */
+    .tnm-sitemap h2,.tnm-sitemap h3,.tnm-search{{font-style:normal;}}
     .tnm-sitemap *{{box-sizing:border-box;}}
     .tnm-toolbar{{position:sticky;top:0;z-index:5;background:var(--tnm-surface);backdrop-filter:blur(6px);border:1px solid var(--tnm-line);border-radius:8px;padding:16px;margin-bottom:36px;}}
     .tnm-search{{display:block;width:100%;padding:11px 14px;font-size:16px;font-family:inherit;color:inherit;background:transparent;border:1px solid var(--tnm-line);border-radius:6px;}}
@@ -610,7 +618,7 @@ TEMPLATE = """<!-- Therapy Near Me - HTML sitemap
     .tnm-group-title{{margin:0 0 16px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tnm-muted);display:flex;align-items:baseline;gap:8px;}}
     .tnm-group-count{{font-size:12px;font-weight:400;text-transform:none;letter-spacing:0;opacity:.8;}}
     .tnm-links{{list-style:none;margin:0;padding:0;columns:3;column-gap:var(--tnm-gap);}}
-    .tnm-item{{break-inside:avoid;margin:0 0 18px;}}
+    .tnm-item{{break-inside:avoid;margin:0 0 16px;}}
     .tnm-item a{{color:inherit;text-decoration:none;}}
     .tnm-item a:hover,.tnm-item a:focus{{color:var(--tnm-accent);text-decoration:underline;text-underline-offset:3px;}}
     /* Blog titles are long and often wrap, so tighten their rhythm a little. */

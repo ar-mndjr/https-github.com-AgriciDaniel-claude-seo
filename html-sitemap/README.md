@@ -36,37 +36,49 @@ rest of the page.
 
 ## Styling
 
-The block sets **no font-family, text colour or heading size anywhere** — it
-inherits every one of them from the theme, so it renders in the site's own
-typography and palette by construction, and keeps matching if the theme ever
-changes.
-
-The secondary greys (counts, dates, blurbs, group headings, borders, the
-toolbar background) are not fixed hex values either. They are mixed from the
-theme's own text colour:
+Body typography is set explicitly from the site's own text styles, at the top
+of the `<style>` block:
 
 ```css
---tnm-muted: #8a8a8a;                                        /* fallback */
---tnm-muted: color-mix(in srgb, currentColor 58%, transparent);
+font-family: "Helvetica", Sans-serif;
+font-size: 16px;
+font-weight: 400;
+font-style: italic;   /* delete this line for upright link text */
+line-height: 28px;
+color: #7A7A7A;
 ```
 
-The first declaration is a neutral fallback for browsers without `color-mix()`;
-modern browsers use the second, so the whole block is tinted by the site's text
-colour. Because everything derives from `currentColor`, dark themes work with
-no extra rules.
+Everything else follows from those six values. **Headings are deliberately not
+styled** — `h2`/`h3` keep the theme's own heading font, size and colour, and are
+forced upright so the italic applies to running text only. The search input is
+upright too.
 
-Verified by rendering the block inside a deliberately mismatched host page
-(Georgia body text in dark green, Trebuchet headings in brown): headings, links
-and muted text all took the host's fonts and colours exactly.
+The secondary greys (counts, dates, blurbs, group headings, borders, the
+toolbar background) are not separate fixed values. They are mixed from the text
+colour above, so changing `color` re-tints the whole block:
 
-Two knobs at the top of the `<style>` block:
+```css
+--tnm-muted: #a5a5a5;                                        /* fallback */
+--tnm-muted: color-mix(in srgb, currentColor 68%, transparent);
+```
+
+The first declaration is a fallback for browsers without `color-mix()`; modern
+browsers use the second.
+
+Note that `#7A7A7A` on white is about 4.3:1 contrast, marginally under the
+WCAG AA threshold of 4.5:1 for body text. That is the site's existing body
+colour, so the sitemap is no worse than the rest of the site — but a slightly
+darker value here would clear it if you want the fix.
+
+Two further knobs:
 
 - `--tnm-accent` — hover/focus colour for links, `currentColor` by default.
   Set it to the brand colour for a tinted hover.
 - `--tnm-gap` — column gutter, `48px` on desktop.
 
 Layout follows the Services section on the site: three columns, no bullets,
-generous row spacing. Columns drop to two below 900px and one below 600px.
+28px line-height plus 16px row spacing. Columns drop to two below 900px and one
+below 600px.
 
 ## Regenerating after publishing new pages
 
