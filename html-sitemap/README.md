@@ -1,15 +1,18 @@
 # Therapy Near Me — categorised HTML sitemap
 
-A single, self-contained HTML block that lists all 995 indexable URLs from
-`post-sitemap.xml` and `page-sitemap.xml`, organised into five categories:
+A single, self-contained HTML block listing 990 URLs from `post-sitemap.xml`
+and `page-sitemap.xml`, organised into seven categories. Sections render in
+this order, with Blogs last:
 
 | Category | Count | Grouping |
 | --- | ---: | --- |
-| Services | 29 | the site's 24-item Services menu in its own order, then 5 related pages |
+| Services | 24 | the site's Services menu, in the site's own order |
 | Locations | 115 | by state / territory |
 | Practitioners | 14 | flat, with role labels |
+| Referrals | 2 | NDIS, then GP |
+| Resources | 9 | Guides & Information, About & Policies |
+| Reports | 4 | flat, A–Z |
 | Blogs | 822 | A–Z letter groups, with last-modified dates |
-| Resources | 15 | Guides & Reports, About & Policies |
 
 ## Files
 
@@ -74,31 +77,35 @@ next run.
   `alyson-dunn-psychologist` renders as **Alyson Dunn** · Psychologist.
 - **Services** — `SERVICE_ORDER` holds the 24 pages in the site's Services
   menu, in the site's own order (not alphabetical); reorder that list to
-  reorder the section. `SERVICE_RELATED` holds five service pages that are not
-  in that menu (`/therapy/`, `/therapy-near-me/`, `/therapist-near-me/`,
-  `/mental-health-support-after-hospital-discharge/`,
-  `/neurodiversity-affirming-mental-health-support-in-australia/`); they render
-  in a second group headed *Related service pages* so nothing is dropped. Move
-  a slug between the two lists to promote or demote it.
-
-  Both lists are explicit because service slugs and practitioner slugs are
-  otherwise indistinguishable (`child-psychologist` is a service,
-  `ana-turino-psychologist` is a person).
+  reorder the section. It is an explicit list because service slugs and
+  practitioner slugs are otherwise indistinguishable (`child-psychologist` is
+  a service, `ana-turino-psychologist` is a person).
+- **Referrals** — `REFERRAL_ORDER`, rendered in list order rather than
+  alphabetically.
+- **Reports** — `REPORT_SLUGS`: the three research reports plus the
+  `/mental-health-research-and-resources/` hub.
 - **Blogs** — everything in `post-sitemap.xml`. This mirrors the site's own
   post/page split. A handful of posts read like service pages
   (`adhd-assessment`, `couples-therapy`, `mental-health-treatment`); if you
   want those under Services, add their slugs to `SERVICE_SLUGS` and they will
   move.
-- **Resources** — `RESOURCE_SLUGS` (reports, referral guides, FAQ, pricing)
-  and `ABOUT_SLUGS` (home, about, complaints, privacy, terms), rendered as two
-  sub-groups so the corporate pages stay out of the way. Any *new* page that
-  no rule recognises also lands here, so nothing is ever silently dropped.
+- **Resources** — `RESOURCE_SLUGS` (pricing, FAQ, blog hub, student
+  placements) and `ABOUT_SLUGS` (home, about, complaints, privacy, terms),
+  rendered as two sub-groups so the corporate pages stay out of the way. Any
+  *new* page that no rule recognises also lands here, so nothing is ever
+  silently dropped.
 
-Two pages are handled specially:
+Excluded pages are listed in `EXCLUDED_SLUGS`:
 
-- `/sitemap/` is excluded so the page does not link to itself.
-- `/relationship-counselling/` appears in both XML sitemaps; the page version
-  is kept under Services and the duplicate is dropped.
+- `/sitemap/` — this page, so it does not link to itself.
+- `/therapy/`, `/therapy-near-me/`, `/therapist-near-me/`,
+  `/mental-health-support-after-hospital-discharge/` and
+  `/neurodiversity-affirming-mental-health-support-in-australia/` — service
+  pages that are not in the site's Services menu. Delete a slug from that set
+  and add it to `SERVICE_ORDER` to bring it back.
+
+One further special case: `/relationship-counselling/` appears in both XML
+sitemaps; the page version is kept under Services and the duplicate dropped.
 
 Where two links would otherwise show identical text (for example
 `/burleigh-heads/` and `/qld-burleigh-heads/`), the URL path is appended in
@@ -120,7 +127,7 @@ Services menu.
 
 ## Behaviour
 
-- Every link is present in the static HTML, so crawlers see all 995 URLs
+- Every link is present in the static HTML, so crawlers see all 990 URLs
   without executing JavaScript.
 - The search box filters as you type across link text, role and slug, hides
   empty groups and sections, and live-updates every count. Escape clears it.

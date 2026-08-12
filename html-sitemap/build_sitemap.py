@@ -27,8 +27,16 @@ DATA = BASE / "data"
 OUT = BASE / "therapy-near-me-sitemap.html"
 SITE = "https://therapynearme.com.au"
 
-# The sitemap page itself -- excluded so the page does not link to itself.
-SELF_SLUG = "sitemap"
+# Pages deliberately kept off the HTML sitemap. "sitemap" is this page itself;
+# the rest are service pages that are not part of the site's Services menu.
+EXCLUDED_SLUGS = {
+    "sitemap",
+    "therapy",
+    "therapy-near-me",
+    "therapist-near-me",
+    "mental-health-support-after-hospital-discharge",
+    "neurodiversity-affirming-mental-health-support-in-australia",
+}
 
 # --------------------------------------------------------------------------
 # Classification tables
@@ -112,30 +120,27 @@ SERVICE_ORDER = [
     "board-approved-supervisor",
 ]
 
-# Service pages that exist but are not in the site's Services menu. Listed in
-# a second group so nothing is dropped. Move a slug into SERVICE_ORDER to
-# promote it, or into RESOURCE_SLUGS to file it under Resources.
-SERVICE_RELATED = [
-    "therapy",
-    "therapy-near-me",
-    "therapist-near-me",
-    "mental-health-support-after-hospital-discharge",
-    "neurodiversity-affirming-mental-health-support-in-australia",
+SERVICE_SLUGS = set(SERVICE_ORDER)
+
+# Referral pathways, in the order they should appear.
+REFERRAL_ORDER = [
+    "ndis-psychology-referrals",
+    "gp-psychology-referrals",
 ]
 
-SERVICE_SLUGS = set(SERVICE_ORDER) | set(SERVICE_RELATED)
+# Research reports and the research hub.
+REPORT_SLUGS = {
+    "australian-mental-health-access-report-2026",
+    "australian-psychology-fees-and-affordability-evidence-review-2026",
+    "global-mental-health-care-access-and-affordability-benchmark-2027",
+    "mental-health-research-and-resources",
+}
 
 # Resources, split into two on-page groups.
 RESOURCE_SLUGS = {
     "affordable-pricing",
-    "australian-mental-health-access-report-2026",
-    "australian-psychology-fees-and-affordability-evidence-review-2026",
     "faq",
-    "global-mental-health-care-access-and-affordability-benchmark-2027",
-    "gp-psychology-referrals",
     "mental-health-blog",
-    "mental-health-research-and-resources",
-    "ndis-psychology-referrals",
     "student-placements",
 }
 
@@ -274,6 +279,10 @@ def classify_page(slug: str) -> tuple[str, str]:
         return "practitioners", ""
     if slug in SERVICE_SLUGS:
         return "services", ""
+    if slug in REFERRAL_ORDER:
+        return "referrals", ""
+    if slug in REPORT_SLUGS:
+        return "reports", ""
     if slug in RESOURCE_SLUGS:
         return "resources", "guides"
     if slug in ABOUT_SLUGS:
@@ -291,14 +300,16 @@ def build_items() -> dict:
         "services": [],
         "locations": defaultdict(list),
         "practitioners": [],
-        "blogs": defaultdict(list),
+        "referrals": [],
         "resources": defaultdict(list),
+        "reports": [],
+        "blogs": defaultdict(list),
     }
     seen = set()
 
     for entry in pages:
         slug = slug_of(entry["loc"])
-        if slug == SELF_SLUG:
+        if slug in EXCLUDED_SLUGS:
             continue
         seen.add(slug)
         category, group = classify_page(slug)
@@ -323,8 +334,8 @@ def build_items() -> dict:
 
     for entry in posts:
         slug = slug_of(entry["loc"])
-        if slug in seen:
-            continue  # already listed as a page
+        if slug in seen or slug in EXCLUDED_SLUGS:
+            continue  # already listed as a page, or deliberately excluded
         seen.add(slug)
         label = titleise(slug)
         letter = label[0].upper() if label[:1].isalpha() else "#"
@@ -433,35 +444,37 @@ def build_html(buckets: dict) -> str:
     services = buckets["services"]
     practitioners = buckets["practitioners"]
     locations = buckets["locations"]
+    referrals = buckets["referrals"]
     resources = buckets["resources"]
+    reports = buckets["reports"]
     blogs = buckets["blogs"]
 
     loc_total = sum(len(v) for v in locations.values())
     blog_total = sum(len(v) for v in blogs.values())
     res_total = sum(len(v) for v in resources.values())
-    grand_total = len(services) + len(practitioners) + loc_total + blog_total + res_total
+    grand_total = (
+        len(services)
+        + loc_total
+        + len(practitioners)
+        + len(referrals)
+        + res_total
+        + len(reports)
+        + blog_total
+    )
 
     sections = []
 
-    # Services keep the site's own menu order; anything not in that menu is
-    # listed in a second group so no page is dropped.
+    # Services keep the site's own menu order rather than being sorted.
     by_slug = {item["slug"]: item for item in services}
     menu = [by_slug[s] for s in SERVICE_ORDER if s in by_slug]
-    related = [by_slug[s] for s in SERVICE_RELATED if s in by_slug]
-
-    service_groups = [
-        f'  <div class="tnm-group">\n    <ul class="tnm-links">\n'
-        f"{render_list(menu, sort=False)}\n    </ul>\n  </div>"
-    ]
-    if related:
-        service_groups.append(render_group("Related service pages", related))
 
     sections.append(
         render_section(
             "services",
             "Services",
             "Therapy, assessment and support services offered across Australia.",
-            "\n".join(service_groups),
+            f'  <div class="tnm-group">\n    <ul class="tnm-links">\n'
+            f"{render_list(menu, sort=False)}\n    </ul>\n  </div>",
             len(services),
         )
     )
@@ -490,6 +503,45 @@ def build_html(buckets: dict) -> str:
         )
     )
 
+    ref_by_slug = {item["slug"]: item for item in referrals}
+    ordered_referrals = [ref_by_slug[s] for s in REFERRAL_ORDER if s in ref_by_slug]
+    sections.append(
+        render_section(
+            "referrals",
+            "Referrals",
+            "How to refer a client, or get a referral to see us.",
+            f'  <div class="tnm-group">\n    <ul class="tnm-links">\n'
+            f"{render_list(ordered_referrals, sort=False)}\n    </ul>\n  </div>",
+            len(referrals),
+        )
+    )
+
+    res_groups = []
+    if resources.get("guides"):
+        res_groups.append(render_group("Guides & Information", resources["guides"]))
+    if resources.get("about"):
+        res_groups.append(render_group("About & Policies", resources["about"]))
+    sections.append(
+        render_section(
+            "resources",
+            "Resources",
+            "Pricing, frequently asked questions and company information.",
+            "\n".join(res_groups),
+            res_total,
+        )
+    )
+
+    sections.append(
+        render_section(
+            "reports",
+            "Reports",
+            "Original research and evidence reviews on access, affordability "
+            "and mental health care in Australia.",
+            f'  <div class="tnm-group">\n    <ul class="tnm-links">\n{render_list(reports)}\n    </ul>\n  </div>',
+            len(reports),
+        )
+    )
+
     blog_groups = []
     for letter in sorted(blogs):
         blog_groups.append(render_group(letter, blogs[letter], show_date=True))
@@ -503,29 +555,16 @@ def build_html(buckets: dict) -> str:
         )
     )
 
-    res_groups = []
-    if resources.get("guides"):
-        res_groups.append(render_group("Guides & Reports", resources["guides"]))
-    if resources.get("about"):
-        res_groups.append(render_group("About & Policies", resources["about"]))
-    sections.append(
-        render_section(
-            "resources",
-            "Resources",
-            "Research, referral guides, pricing and company information.",
-            "\n".join(res_groups),
-            res_total,
-        )
-    )
-
     nav = "\n".join(
         f'      <a class="tnm-chip" href="#{sid}">{esc(name)} <span>{count}</span></a>'
         for sid, name, count in [
             ("services", "Services", len(services)),
             ("locations", "Locations", loc_total),
             ("practitioners", "Practitioners", len(practitioners)),
-            ("blogs", "Blogs", blog_total),
+            ("referrals", "Referrals", len(referrals)),
             ("resources", "Resources", res_total),
+            ("reports", "Reports", len(reports)),
+            ("blogs", "Blogs", blog_total),
         ]
     )
 
@@ -664,16 +703,19 @@ def main() -> int:
     buckets = build_items()
     OUT.write_text(build_html(buckets), encoding="utf-8")
 
-    loc_total = sum(len(v) for v in buckets["locations"].values())
-    blog_total = sum(len(v) for v in buckets["blogs"].values())
-    res_total = sum(len(v) for v in buckets["resources"].values())
+    counts = [
+        ("services", len(buckets["services"])),
+        ("locations", sum(len(v) for v in buckets["locations"].values())),
+        ("practitioners", len(buckets["practitioners"])),
+        ("referrals", len(buckets["referrals"])),
+        ("resources", sum(len(v) for v in buckets["resources"].values())),
+        ("reports", len(buckets["reports"])),
+        ("blogs", sum(len(v) for v in buckets["blogs"].values())),
+    ]
     print(f"wrote {OUT.relative_to(BASE.parent)}")
-    print(f"  services      {len(buckets['services']):>4}")
-    print(f"  locations     {loc_total:>4}")
-    print(f"  practitioners {len(buckets['practitioners']):>4}")
-    print(f"  blogs         {blog_total:>4}")
-    print(f"  resources     {res_total:>4}")
-    print(f"  total         {len(buckets['services']) + loc_total + len(buckets['practitioners']) + blog_total + res_total:>4}")
+    for name, count in counts:
+        print(f"  {name:<14}{count:>4}")
+    print(f"  {'total':<14}{sum(c for _, c in counts):>4}")
     return 0
 
 
