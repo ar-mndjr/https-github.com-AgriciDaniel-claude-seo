@@ -43,15 +43,17 @@ of the `<style>` block:
 font-family: "Helvetica", Sans-serif;
 font-size: 16px;
 font-weight: 400;
-font-style: italic;   /* delete this line for upright link text */
+font-style: normal;
 line-height: 28px;
 color: #7A7A7A;
 ```
 
 Everything else follows from those six values. **Headings are deliberately not
-styled** — `h2`/`h3` keep the theme's own heading font, size and colour, and are
-forced upright so the italic applies to running text only. The search input is
-upright too.
+styled** — `h2`/`h3` keep the theme's own heading font, size and colour.
+
+The site's body rule specifies `font-style: italic`, but it is set to `normal`
+here: 989 italicised links read poorly, and the Services menu on the site
+renders upright.
 
 The secondary greys (counts, dates, blurbs, group headings, borders, the
 toolbar background) are not separate fixed values. They are mixed from the text

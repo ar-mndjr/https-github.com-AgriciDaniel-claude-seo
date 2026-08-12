@@ -591,14 +591,12 @@ TEMPLATE = """<!-- Therapy Near Me - HTML sitemap
       font-family:"Helvetica",Sans-serif;
       font-size:16px;
       font-weight:400;
-      font-style:italic;   /* delete this line for upright link text */
+      font-style:normal;
       line-height:28px;
       color:#7A7A7A;
       --tnm-muted:#a5a5a5;--tnm-muted:color-mix(in srgb,currentColor 68%,transparent);
       --tnm-line:rgba(122,122,122,.3);--tnm-line:color-mix(in srgb,currentColor 28%,transparent);
       --tnm-surface:rgba(122,122,122,.06);--tnm-surface:color-mix(in srgb,currentColor 6%,transparent);}}
-    /* Headings and form controls stay upright; only running text is italic. */
-    .tnm-sitemap h2,.tnm-sitemap h3,.tnm-search{{font-style:normal;}}
     .tnm-sitemap *{{box-sizing:border-box;}}
     .tnm-toolbar{{position:sticky;top:0;z-index:5;background:var(--tnm-surface);backdrop-filter:blur(6px);border:1px solid var(--tnm-line);border-radius:8px;padding:16px;margin-bottom:36px;}}
     .tnm-search{{display:block;width:100%;padding:11px 14px;font-size:16px;font-family:inherit;color:inherit;background:transparent;border:1px solid var(--tnm-line);border-radius:6px;}}
