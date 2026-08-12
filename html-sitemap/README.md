@@ -1,6 +1,6 @@
 # Therapy Near Me — categorised HTML sitemap
 
-A single, self-contained HTML block listing 989 URLs from `post-sitemap.xml`
+A single, self-contained HTML block listing 991 URLs from `post-sitemap.xml`
 and `page-sitemap.xml`, organised into seven categories. Sections render in
 this order, with Blogs last:
 
@@ -11,7 +11,7 @@ this order, with Blogs last:
 | Practitioners | 13 | flat, with role labels |
 | Referrals | 2 | NDIS, then GP |
 | Resources | 9 | Guides & Information, About & Policies |
-| Reports | 4 | flat, A–Z |
+| Reports | 6 | flat, A–Z |
 | Blogs | 822 | A–Z letter groups, with last-modified dates |
 
 ## Files
@@ -113,8 +113,10 @@ next run.
   a service, `ana-turino-psychologist` is a person).
 - **Referrals** — `REFERRAL_ORDER`, rendered in list order rather than
   alphabetically.
-- **Reports** — `REPORT_SLUGS`: the three research reports plus the
-  `/mental-health-research-and-resources/` hub.
+- **Reports** — `REPORT_SLUGS`: the three research reports, the
+  `/mental-health-research-and-resources/` hub, and the two evidence-led
+  support pages (`/mental-health-support-after-hospital-discharge/`,
+  `/neurodiversity-affirming-mental-health-support-in-australia/`).
 - **Blogs** — everything in `post-sitemap.xml`. This mirrors the site's own
   post/page split. A handful of posts read like service pages
   (`adhd-assessment`, `couples-therapy`, `mental-health-treatment`); if you
@@ -131,11 +133,9 @@ Excluded pages are listed in `EXCLUDED_SLUGS`:
 - `/sitemap/` — this page, so it does not link to itself.
 - `/authors/` — the authors index. The individual `/authors/*` profiles are
   kept, under Practitioners.
-- `/therapy/`, `/therapy-near-me/`, `/therapist-near-me/`,
-  `/mental-health-support-after-hospital-discharge/` and
-  `/neurodiversity-affirming-mental-health-support-in-australia/` — service
-  pages that are not in the site's Services menu. Delete a slug from that set
-  and add it to `SERVICE_ORDER` to bring it back.
+- `/therapy/`, `/therapy-near-me/` and `/therapist-near-me/` — landing pages
+  that are not in the site's Services menu. Delete a slug from that set and add
+  it to `SERVICE_ORDER` to bring it back.
 
 One further special case: `/relationship-counselling/` appears in both XML
 sitemaps; the page version is kept under Services and the duplicate dropped.
@@ -160,7 +160,7 @@ Services menu.
 
 ## Behaviour
 
-- Every link is present in the static HTML, so crawlers see all 989 URLs
+- Every link is present in the static HTML, so crawlers see all 991 URLs
   without executing JavaScript.
 - The search box filters as you type across link text, role and slug, hides
   empty groups and sections, and live-updates every count. Escape clears it.

@@ -28,15 +28,13 @@ OUT = BASE / "therapy-near-me-sitemap.html"
 SITE = "https://therapynearme.com.au"
 
 # Pages deliberately kept off the HTML sitemap. "sitemap" is this page itself;
-# the rest are service pages that are not part of the site's Services menu.
+# the rest are landing pages that are not part of the site's Services menu.
 EXCLUDED_SLUGS = {
     "sitemap",
     "authors",  # the authors index; individual /authors/* profiles are kept
     "therapy",
     "therapy-near-me",
     "therapist-near-me",
-    "mental-health-support-after-hospital-discharge",
-    "neurodiversity-affirming-mental-health-support-in-australia",
 }
 
 # --------------------------------------------------------------------------
@@ -128,12 +126,14 @@ REFERRAL_ORDER = [
     "gp-psychology-referrals",
 ]
 
-# Research reports and the research hub.
+# Research reports, evidence reviews and the research hub.
 REPORT_SLUGS = {
     "australian-mental-health-access-report-2026",
     "australian-psychology-fees-and-affordability-evidence-review-2026",
     "global-mental-health-care-access-and-affordability-benchmark-2027",
     "mental-health-research-and-resources",
+    "mental-health-support-after-hospital-discharge",
+    "neurodiversity-affirming-mental-health-support-in-australia",
 }
 
 # Resources, split into two on-page groups.
