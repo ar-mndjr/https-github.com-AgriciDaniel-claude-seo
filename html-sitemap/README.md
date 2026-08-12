@@ -1,6 +1,6 @@
 # Therapy Near Me — categorised HTML sitemap
 
-A single, self-contained HTML block listing 990 URLs from `post-sitemap.xml`
+A single, self-contained HTML block listing 989 URLs from `post-sitemap.xml`
 and `page-sitemap.xml`, organised into seven categories. Sections render in
 this order, with Blogs last:
 
@@ -8,7 +8,7 @@ this order, with Blogs last:
 | --- | ---: | --- |
 | Services | 24 | the site's Services menu, in the site's own order |
 | Locations | 115 | by state / territory |
-| Practitioners | 14 | flat, with role labels |
+| Practitioners | 13 | flat, with role labels |
 | Referrals | 2 | NDIS, then GP |
 | Resources | 9 | Guides & Information, About & Policies |
 | Reports | 4 | flat, A–Z |
@@ -36,11 +36,28 @@ rest of the page.
 
 ## Styling
 
-The block deliberately sets no fonts, text colours or heading styles — it
-inherits all of them from the theme, so it picks up the site's typography
-automatically and keeps matching if the theme changes. Links render in the
-body text colour with no underline, in three columns, matching the Services
-layout on the site.
+The block sets **no font-family, text colour or heading size anywhere** — it
+inherits every one of them from the theme, so it renders in the site's own
+typography and palette by construction, and keeps matching if the theme ever
+changes.
+
+The secondary greys (counts, dates, blurbs, group headings, borders, the
+toolbar background) are not fixed hex values either. They are mixed from the
+theme's own text colour:
+
+```css
+--tnm-muted: #8a8a8a;                                        /* fallback */
+--tnm-muted: color-mix(in srgb, currentColor 58%, transparent);
+```
+
+The first declaration is a neutral fallback for browsers without `color-mix()`;
+modern browsers use the second, so the whole block is tinted by the site's text
+colour. Because everything derives from `currentColor`, dark themes work with
+no extra rules.
+
+Verified by rendering the block inside a deliberately mismatched host page
+(Georgia body text in dark green, Trebuchet headings in brown): headings, links
+and muted text all took the host's fonts and colours exactly.
 
 Two knobs at the top of the `<style>` block:
 
@@ -48,8 +65,8 @@ Two knobs at the top of the `<style>` block:
   Set it to the brand colour for a tinted hover.
 - `--tnm-gap` — column gutter, `48px` on desktop.
 
-Columns drop to two below 900px and one below 600px. Dark mode is inherited
-too; `data-theme="light"` on the wrapping div forces light styling.
+Layout follows the Services section on the site: three columns, no bullets,
+generous row spacing. Columns drop to two below 900px and one below 600px.
 
 ## Regenerating after publishing new pages
 
@@ -98,6 +115,8 @@ next run.
 Excluded pages are listed in `EXCLUDED_SLUGS`:
 
 - `/sitemap/` — this page, so it does not link to itself.
+- `/authors/` — the authors index. The individual `/authors/*` profiles are
+  kept, under Practitioners.
 - `/therapy/`, `/therapy-near-me/`, `/therapist-near-me/`,
   `/mental-health-support-after-hospital-discharge/` and
   `/neurodiversity-affirming-mental-health-support-in-australia/` — service
@@ -127,7 +146,7 @@ Services menu.
 
 ## Behaviour
 
-- Every link is present in the static HTML, so crawlers see all 990 URLs
+- Every link is present in the static HTML, so crawlers see all 989 URLs
   without executing JavaScript.
 - The search box filters as you type across link text, role and slug, hides
   empty groups and sections, and live-updates every count. Escape clears it.

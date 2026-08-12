@@ -31,6 +31,7 @@ SITE = "https://therapynearme.com.au"
 # the rest are service pages that are not part of the site's Services menu.
 EXCLUDED_SLUGS = {
     "sitemap",
+    "authors",  # the authors index; individual /authors/* profiles are kept
     "therapy",
     "therapy-near-me",
     "therapist-near-me",
@@ -73,7 +74,6 @@ BARE_CITIES = {
 # that follow the same "firstname-lastname-role" pattern.
 PRACTITIONER_SLUGS = {
     "team",
-    "authors",
     "alyson-dunn-psychologist",
     "ana-turino-psychologist",
     "dr-ross-leembruggen-psychologist",
@@ -352,7 +352,7 @@ def build_items() -> dict:
     return buckets
 
 
-HUB_LABELS = {"team": "Our Team", "authors": "All Authors"}
+HUB_LABELS = {"team": "Our Team"}
 
 
 def practitioner_label(slug: str) -> tuple[str, str]:
@@ -580,10 +580,17 @@ TEMPLATE = """<!-- Therapy Near Me - HTML sitemap
      Paste this whole block into a WordPress "Custom HTML" block. -->
 <div class="tnm-sitemap">
   <style>
-    /* Fonts, text colour and heading styles are inherited from the theme, so
-       this block matches the rest of the site automatically. To tint links on
-       hover with your brand colour, change --tnm-accent below. */
-    .tnm-sitemap{{--tnm-accent:currentColor;--tnm-muted:#8a8a8a;--tnm-line:rgba(128,128,128,.25);--tnm-surface:rgba(128,128,128,.06);--tnm-gap:48px;line-height:1.5;}}
+    /* Every font, colour and heading style here is inherited from the theme:
+       no font-family, text colour or heading size is set anywhere in this
+       block. The greys below are mixed from the theme's own text colour
+       (currentColor) rather than being fixed hex values, so the palette is
+       the site's palette. The first declaration of each pair is a neutral
+       fallback for browsers without color-mix(). To tint links on hover with
+       a brand colour, set --tnm-accent. */
+    .tnm-sitemap{{--tnm-accent:currentColor;--tnm-gap:48px;line-height:1.5;
+      --tnm-muted:#8a8a8a;--tnm-muted:color-mix(in srgb,currentColor 58%,transparent);
+      --tnm-line:rgba(128,128,128,.25);--tnm-line:color-mix(in srgb,currentColor 22%,transparent);
+      --tnm-surface:rgba(128,128,128,.06);--tnm-surface:color-mix(in srgb,currentColor 5%,transparent);}}
     .tnm-sitemap *{{box-sizing:border-box;}}
     .tnm-toolbar{{position:sticky;top:0;z-index:5;background:var(--tnm-surface);backdrop-filter:blur(6px);border:1px solid var(--tnm-line);border-radius:8px;padding:16px;margin-bottom:36px;}}
     .tnm-search{{display:block;width:100%;padding:11px 14px;font-size:16px;font-family:inherit;color:inherit;background:transparent;border:1px solid var(--tnm-line);border-radius:6px;}}
@@ -613,9 +620,6 @@ TEMPLATE = """<!-- Therapy Near Me - HTML sitemap
     .tnm-sitemap [hidden]{{display:none !important;}}
     @media (max-width:900px){{.tnm-links{{columns:2;--tnm-gap:32px;}}}}
     @media (max-width:600px){{.tnm-links{{columns:1;}}}}
-    @media (prefers-color-scheme:dark){{
-      .tnm-sitemap:not([data-theme="light"]){{--tnm-muted:#9aa5ac;--tnm-line:rgba(160,170,180,.28);}}
-    }}
     @media print{{.tnm-toolbar{{display:none;}}.tnm-links{{columns:2;}}}}
   </style>
 

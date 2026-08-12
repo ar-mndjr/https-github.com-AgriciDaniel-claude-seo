@@ -3,10 +3,17 @@
      Paste this whole block into a WordPress "Custom HTML" block. -->
 <div class="tnm-sitemap">
   <style>
-    /* Fonts, text colour and heading styles are inherited from the theme, so
-       this block matches the rest of the site automatically. To tint links on
-       hover with your brand colour, change --tnm-accent below. */
-    .tnm-sitemap{--tnm-accent:currentColor;--tnm-muted:#8a8a8a;--tnm-line:rgba(128,128,128,.25);--tnm-surface:rgba(128,128,128,.06);--tnm-gap:48px;line-height:1.5;}
+    /* Every font, colour and heading style here is inherited from the theme:
+       no font-family, text colour or heading size is set anywhere in this
+       block. The greys below are mixed from the theme's own text colour
+       (currentColor) rather than being fixed hex values, so the palette is
+       the site's palette. The first declaration of each pair is a neutral
+       fallback for browsers without color-mix(). To tint links on hover with
+       a brand colour, set --tnm-accent. */
+    .tnm-sitemap{--tnm-accent:currentColor;--tnm-gap:48px;line-height:1.5;
+      --tnm-muted:#8a8a8a;--tnm-muted:color-mix(in srgb,currentColor 58%,transparent);
+      --tnm-line:rgba(128,128,128,.25);--tnm-line:color-mix(in srgb,currentColor 22%,transparent);
+      --tnm-surface:rgba(128,128,128,.06);--tnm-surface:color-mix(in srgb,currentColor 5%,transparent);}
     .tnm-sitemap *{box-sizing:border-box;}
     .tnm-toolbar{position:sticky;top:0;z-index:5;background:var(--tnm-surface);backdrop-filter:blur(6px);border:1px solid var(--tnm-line);border-radius:8px;padding:16px;margin-bottom:36px;}
     .tnm-search{display:block;width:100%;padding:11px 14px;font-size:16px;font-family:inherit;color:inherit;background:transparent;border:1px solid var(--tnm-line);border-radius:6px;}
@@ -36,20 +43,17 @@
     .tnm-sitemap [hidden]{display:none !important;}
     @media (max-width:900px){.tnm-links{columns:2;--tnm-gap:32px;}}
     @media (max-width:600px){.tnm-links{columns:1;}}
-    @media (prefers-color-scheme:dark){
-      .tnm-sitemap:not([data-theme="light"]){--tnm-muted:#9aa5ac;--tnm-line:rgba(160,170,180,.28);}
-    }
     @media print{.tnm-toolbar{display:none;}.tnm-links{columns:2;}}
   </style>
 
   <div class="tnm-toolbar">
     <label class="tnm-visually-hidden" for="tnm-search-input" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Search the sitemap</label>
     <input id="tnm-search-input" class="tnm-search" type="search" autocomplete="off"
-           placeholder="Search 990 pages by name, suburb or topic&hellip;">
+           placeholder="Search 989 pages by name, suburb or topic&hellip;">
     <nav class="tnm-nav" aria-label="Sitemap categories">
       <a class="tnm-chip" href="#services">Services <span>24</span></a>
       <a class="tnm-chip" href="#locations">Locations <span>115</span></a>
-      <a class="tnm-chip" href="#practitioners">Practitioners <span>14</span></a>
+      <a class="tnm-chip" href="#practitioners">Practitioners <span>13</span></a>
       <a class="tnm-chip" href="#referrals">Referrals <span>2</span></a>
       <a class="tnm-chip" href="#resources">Resources <span>9</span></a>
       <a class="tnm-chip" href="#reports">Reports <span>4</span></a>
@@ -257,12 +261,11 @@
 
 <section class="tnm-section" id="practitioners" data-section="practitioners">
   <header class="tnm-section-head">
-    <h2>Practitioners <span class="tnm-count" data-count-for="practitioners">14</span></h2>
+    <h2>Practitioners <span class="tnm-count" data-count-for="practitioners">13</span></h2>
     <p class="tnm-blurb">Psychologists, counsellors and allied health practitioners.</p>
   </header>
   <div class="tnm-group">
     <ul class="tnm-links">
-<li class="tnm-item" data-search="all authors  authors"><a href="https://therapynearme.com.au/authors/">All Authors</a></li>
 <li class="tnm-item" data-search="alyson dunn psychologist alyson-dunn-psychologist"><a href="https://therapynearme.com.au/alyson-dunn-psychologist/">Alyson Dunn</a><span class="tnm-note">Psychologist</span></li>
 <li class="tnm-item" data-search="ana turino psychologist ana-turino-psychologist"><a href="https://therapynearme.com.au/ana-turino-psychologist/">Ana Turino</a><span class="tnm-note">Psychologist</span></li>
 <li class="tnm-item" data-search="chantal santacaterina author authors/chantal-santacaterina"><a href="https://therapynearme.com.au/authors/chantal-santacaterina/">Chantal Santacaterina</a><span class="tnm-note">Author</span></li>
