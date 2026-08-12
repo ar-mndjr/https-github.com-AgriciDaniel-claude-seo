@@ -126,6 +126,133 @@
       "state": "Western Australia",
       "faq": [],
       "_reference": { "regulator": "Building and Energy (DEMIRS)", "tribunal": "State Administrative Tribunal (SAT)" }
+    },
+
+    {
+      "slug": "building-inspections-wagga-wagga",
+      "city": "Wagga Wagga",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-wollongong",
+      "city": "Wollongong",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-central-coast",
+      "city": "Central Coast",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-maitland",
+      "city": "Maitland",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-albury",
+      "city": "Albury",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-port-macquarie",
+      "city": "Port Macquarie",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-coffs-harbour",
+      "city": "Coffs Harbour",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-tamworth",
+      "city": "Tamworth",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-dubbo",
+      "city": "Dubbo",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-lismore",
+      "city": "Lismore",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-bathurst",
+      "city": "Bathurst",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-nowra",
+      "city": "Nowra",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-queanbeyan",
+      "city": "Queanbeyan",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-griffith",
+      "city": "Griffith",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-goulburn",
+      "city": "Goulburn",
+      "state": "New South Wales",
+      "faq": [],
+      "_reference": { "regulator": "NSW Fair Trading", "tribunal": "NCAT" }
+    },
+    {
+      "slug": "building-inspections-mildura",
+      "city": "Mildura",
+      "state": "Victoria",
+      "faq": [],
+      "_reference": { "regulator": "Victorian Building Authority (VBA)", "tribunal": "VCAT / DBDRV" }
+    },
+    {
+      "slug": "building-inspections-traralgon",
+      "city": "Traralgon",
+      "state": "Victoria",
+      "faq": [],
+      "_reference": { "regulator": "Victorian Building Authority (VBA)", "tribunal": "VCAT / DBDRV" }
+    },
+    {
+      "slug": "building-inspections-wodonga",
+      "city": "Wodonga",
+      "state": "Victoria",
+      "faq": [],
+      "_reference": { "regulator": "Victorian Building Authority (VBA)", "tribunal": "VCAT / DBDRV" }
     }
   ]
 }

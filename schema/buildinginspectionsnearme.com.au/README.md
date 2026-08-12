@@ -5,7 +5,7 @@ self-contained block carrying the local business, the page, its breadcrumb and
 the service.
 
 - **11 service pages** — `output/` — LocalBusiness, WebSite, WebPage, BreadcrumbList, Service
-- **16 location pages** — `output/locations/` — the same, with a Service scoped to that city. No FAQ markup: see [FAQ: empty by design](#faq-empty-by-design).
+- **34 location pages** — `output/locations/` — the same, with a Service scoped to that city. No FAQ markup: see [FAQ: empty by design](#faq-empty-by-design).
 
 ## Where the data came from
 
@@ -58,7 +58,7 @@ the keyword map so internal links and tracking do not point at the older slugs.
 |------|------------|
 | `business-profile.json` | Every business-specific value, in one place. **Edit this.** |
 | `services.json` | The 11 service definitions: name, description, inclusions, related services. |
-| `locations.json` | The 16 location pages: city, state, and an empty `faq` array to fill from each live page. |
+| `locations.json` | The 34 location pages: city, state, and an empty `faq` array to fill from each live page. |
 | `generate.py` | Renders the service pages into JSON-LD. No dependencies, Python 3. |
 | `generate-locations.py` | Renders the location pages. Imports `generate.py`, so both batches share one business node. |
 | `make-docx.js` / `make-location-docx.js` | Build the Word hand-off files. Need the `docx` npm package. |
@@ -143,12 +143,14 @@ The FAQ copy still does useful work as on-page content.
 Pages marked — are "contact for quote" in the copy docs, so no `Offer` is emitted.
 Add a `priceFrom` in `services.json` if that changes.
 
-## The 16 location pages
+## The 34 location pages
 
 Each one emits the same five nodes as a service page, with one difference: the
 `Service` is scoped to that city, and its `OfferCatalog` links all 11 service
 pages by `@id` — which is what wires the location pages into the service cluster
-rather than leaving 16 orphans.
+rather than leaving 34 orphans.
+
+Delivered in two batches. Batch 1 (16):
 
 | City | State | City | State |
 |------|-------|------|-------|
@@ -160,6 +162,24 @@ rather than leaving 16 orphans.
 | Geelong | VIC | Warrnambool | VIC |
 | Ballarat | VIC | Sunshine Coast | QLD |
 | Newcastle | NSW | Mandurah | WA |
+
+Batch 2 (18) — city, state and jurisdiction taken from the `BINM_Location_Pages`
+sheet, which lists all 18 with slugs matching the live URLs:
+
+| City | State | City | State |
+|------|-------|------|-------|
+| Wagga Wagga | NSW | Lismore | NSW |
+| Wollongong | NSW | Bathurst | NSW |
+| Central Coast | NSW | Nowra | NSW |
+| Maitland | NSW | Queanbeyan | NSW |
+| Albury | NSW | Griffith | NSW |
+| Port Macquarie | NSW | Goulburn | NSW |
+| Coffs Harbour | NSW | Mildura | VIC |
+| Tamworth | NSW | Traralgon | VIC |
+| Dubbo | NSW | Wodonga | VIC |
+
+That sheet still lists batch 2 under "Remaining Build Targets" while these pages
+are live. Worth moving them to the "Already Built" tab so the two stay in sync.
 
 ### FAQ: empty by design
 
@@ -197,7 +217,7 @@ engines.)
 ### Still to confirm
 
 1. **What the descriptions say.** The `WebPage` and `Service` descriptions are generated from the city, the state and BINM's verified positioning — not transcribed from the pages. Check them against each page's real copy.
-2. **Coverage outside VIC/NSW/QLD/SA.** The About page copy says BINM serves those four states. Perth and Mandurah (WA), Canberra (ACT), Darwin (NT) and Hobart (TAS) sit outside it, and the markup asserts coverage there.
+2. **Coverage outside VIC/NSW/QLD/SA.** The About page copy says BINM serves those four states. Perth and Mandurah (WA), Canberra (ACT), Darwin (NT) and Hobart (TAS) sit outside it, and the markup asserts coverage there. All of batch 2 is within the four states.
 3. **Pricing.** `priceFrom` is empty for all 16, so no `Offer` is emitted. The $495 entry price is published on the four metro pages; whether these pages state a price is unverified. Set `priceFrom` only where the page publishes one.
 
 `areaServed` uses named `City` nodes with `containedInPlace` `State` and no
