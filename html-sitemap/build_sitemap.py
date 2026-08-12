@@ -83,43 +83,53 @@ PRACTITIONER_RE = re.compile(
     r"speech-pathologist|behaviour-support-practitioner|occupational-therapist)$"
 )
 
-SERVICE_SLUGS = {
+# The Services menu exactly as it appears on the site, in the site's own
+# order (not alphabetical). Reorder this list to reorder the Services section.
+SERVICE_ORDER = [
     "anxiety-therapy",
-    "at-home-ndis-psychologist",
-    "behaviour-support-services",
-    "child-psychologist",
-    "counselling-services",
     "depression-treatment",
-    "eap-psychology-services",
-    "early-intervention",
-    "mental-health-support-after-hospital-discharge",
-    "ndis-psychology-services",
-    "neurodiversity-affirming-mental-health-support-in-australia",
-    "online-psychologist",
-    "psychologist-near-me-1",
-    "relationship-counselling",
+    "treatment-for-autism",
+    "treatment-for-adhd",
+    "treatment-for-ptsd",
     "schizophrenia-treatments",
+    "treatment-for-bpd",
+    "treatment-for-bipolar",
     "speech-therapy",
-    "support-coordination",
-    "support-work-services",
+    "ndis-psychology-services",
+    "workcover-psychologist",
+    "psychologist-near-me-1",
+    "online-psychologist",
+    "at-home-ndis-psychologist",
     "telehealth-psychologist",
-    "therapist-near-me",
+    "eap-psychology-services",
+    "child-psychologist",
+    "relationship-counselling",
+    "support-work-services",
+    "support-coordination",
+    "counselling-services",
+    "behaviour-support-services",
+    "early-intervention",
+    "board-approved-supervisor",
+]
+
+# Service pages that exist but are not in the site's Services menu. Listed in
+# a second group so nothing is dropped. Move a slug into SERVICE_ORDER to
+# promote it, or into RESOURCE_SLUGS to file it under Resources.
+SERVICE_RELATED = [
     "therapy",
     "therapy-near-me",
-    "treatment-for-adhd",
-    "treatment-for-autism",
-    "treatment-for-bipolar",
-    "treatment-for-bpd",
-    "treatment-for-ptsd",
-    "workcover-psychologist",
-}
+    "therapist-near-me",
+    "mental-health-support-after-hospital-discharge",
+    "neurodiversity-affirming-mental-health-support-in-australia",
+]
+
+SERVICE_SLUGS = set(SERVICE_ORDER) | set(SERVICE_RELATED)
 
 # Resources, split into two on-page groups.
 RESOURCE_SLUGS = {
     "affordable-pricing",
     "australian-mental-health-access-report-2026",
     "australian-psychology-fees-and-affordability-evidence-review-2026",
-    "board-approved-supervisor",
     "faq",
     "global-mental-health-care-access-and-affordability-benchmark-2027",
     "gp-psychology-referrals",
@@ -164,6 +174,11 @@ APOSTROPHES = {
     "lets": "Let's",
 }
 
+# Link text that should match the site's own wording rather than the slug.
+LABEL_OVERRIDES = {
+    "at-home-ndis-psychologist": "At-Home Psychologist",
+}
+
 # Proper nouns that simple title-casing gets wrong.
 CASE_FIXES = {
     "workcover": "WorkCover", "medicare": "Medicare", "telehealth": "Telehealth",
@@ -193,6 +208,8 @@ DUP_SUFFIX_RE = re.compile(r"-(?:1|2|3)$")
 
 def titleise(slug: str) -> str:
     """Turn a URL slug into readable link text."""
+    if slug in LABEL_OVERRIDES:
+        return LABEL_OVERRIDES[slug]
     slug = slug.rsplit("/", 1)[-1]  # nested paths: use the final segment
     slug = DUP_SUFFIX_RE.sub("", slug)
     words = [w for w in slug.split("-") if w]
@@ -365,10 +382,11 @@ def esc(text: str) -> str:
     return html.escape(text, quote=True)
 
 
-def render_list(items: list[dict], show_date: bool = False) -> str:
+def render_list(items: list[dict], show_date: bool = False, sort: bool = True) -> str:
     disambiguate(items)
     rows = []
-    for item in sorted(items, key=lambda i: i["label"].lower()):
+    ordered = sorted(items, key=lambda i: i["label"].lower()) if sort else items
+    for item in ordered:
         note = (
             f'<span class="tnm-note">{esc(item["note"])}</span>' if item.get("note") else ""
         )
@@ -400,11 +418,13 @@ def render_section(
 </section>"""
 
 
-def render_group(title: str, items: list[dict], show_date: bool = False) -> str:
+def render_group(
+    title: str, items: list[dict], show_date: bool = False, sort: bool = True
+) -> str:
     return f"""  <div class="tnm-group">
     <h3 class="tnm-group-title">{esc(title)} <span class="tnm-group-count">{len(items)}</span></h3>
     <ul class="tnm-links">
-{render_list(items, show_date)}
+{render_list(items, show_date, sort)}
     </ul>
   </div>"""
 
@@ -423,12 +443,25 @@ def build_html(buckets: dict) -> str:
 
     sections = []
 
+    # Services keep the site's own menu order; anything not in that menu is
+    # listed in a second group so no page is dropped.
+    by_slug = {item["slug"]: item for item in services}
+    menu = [by_slug[s] for s in SERVICE_ORDER if s in by_slug]
+    related = [by_slug[s] for s in SERVICE_RELATED if s in by_slug]
+
+    service_groups = [
+        f'  <div class="tnm-group">\n    <ul class="tnm-links">\n'
+        f"{render_list(menu, sort=False)}\n    </ul>\n  </div>"
+    ]
+    if related:
+        service_groups.append(render_group("Related service pages", related))
+
     sections.append(
         render_section(
             "services",
             "Services",
             "Therapy, assessment and support services offered across Australia.",
-            f'  <div class="tnm-group">\n    <ul class="tnm-links">\n{render_list(services)}\n    </ul>\n  </div>',
+            "\n".join(service_groups),
             len(services),
         )
     )
@@ -508,38 +541,41 @@ TEMPLATE = """<!-- Therapy Near Me - HTML sitemap
      Paste this whole block into a WordPress "Custom HTML" block. -->
 <div class="tnm-sitemap">
   <style>
-    .tnm-sitemap{{--tnm-ink:#12232e;--tnm-muted:#5c6f7c;--tnm-line:#dde5ea;--tnm-accent:#0f6f9c;--tnm-surface:#f6f9fb;--tnm-radius:10px;color:var(--tnm-ink);line-height:1.5;}}
+    /* Fonts, text colour and heading styles are inherited from the theme, so
+       this block matches the rest of the site automatically. To tint links on
+       hover with your brand colour, change --tnm-accent below. */
+    .tnm-sitemap{{--tnm-accent:currentColor;--tnm-muted:#8a8a8a;--tnm-line:rgba(128,128,128,.25);--tnm-surface:rgba(128,128,128,.06);--tnm-gap:48px;line-height:1.5;}}
     .tnm-sitemap *{{box-sizing:border-box;}}
-    .tnm-toolbar{{position:sticky;top:0;z-index:5;background:var(--tnm-surface);border:1px solid var(--tnm-line);border-radius:var(--tnm-radius);padding:16px;margin-bottom:28px;}}
-    .tnm-search{{display:block;width:100%;padding:11px 14px;font-size:16px;font-family:inherit;color:var(--tnm-ink);background:#fff;border:1px solid var(--tnm-line);border-radius:8px;}}
-    .tnm-search:focus{{outline:2px solid var(--tnm-accent);outline-offset:1px;border-color:var(--tnm-accent);}}
+    .tnm-toolbar{{position:sticky;top:0;z-index:5;background:var(--tnm-surface);backdrop-filter:blur(6px);border:1px solid var(--tnm-line);border-radius:8px;padding:16px;margin-bottom:36px;}}
+    .tnm-search{{display:block;width:100%;padding:11px 14px;font-size:16px;font-family:inherit;color:inherit;background:transparent;border:1px solid var(--tnm-line);border-radius:6px;}}
+    .tnm-search:focus{{outline:2px solid var(--tnm-accent);outline-offset:1px;}}
     .tnm-nav{{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}}
-    .tnm-chip{{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;font-size:14px;font-weight:600;text-decoration:none;color:var(--tnm-ink);background:#fff;border:1px solid var(--tnm-line);border-radius:999px;}}
-    .tnm-chip:hover,.tnm-chip:focus{{border-color:var(--tnm-accent);color:var(--tnm-accent);}}
-    .tnm-chip span{{font-weight:500;font-size:12px;color:var(--tnm-muted);}}
+    .tnm-chip{{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;font-size:14px;text-decoration:none;color:inherit;border:1px solid var(--tnm-line);border-radius:999px;}}
+    .tnm-chip:hover,.tnm-chip:focus{{border-color:currentColor;text-decoration:none;}}
+    .tnm-chip span{{font-size:12px;color:var(--tnm-muted);}}
     .tnm-status{{margin:10px 0 0;font-size:14px;color:var(--tnm-muted);}}
-    .tnm-section{{margin:0 0 40px;scroll-margin-top:96px;}}
-    .tnm-section-head{{border-bottom:2px solid var(--tnm-line);padding-bottom:8px;margin-bottom:18px;}}
-    .tnm-section h2{{margin:0;font-size:24px;line-height:1.25;display:flex;align-items:baseline;gap:10px;}}
-    .tnm-count{{font-size:13px;font-weight:600;color:var(--tnm-accent);background:rgba(15,111,156,.1);border-radius:999px;padding:2px 9px;}}
-    .tnm-blurb{{margin:6px 0 0;font-size:15px;color:var(--tnm-muted);}}
-    .tnm-group{{margin-bottom:22px;}}
-    .tnm-group-title{{margin:0 0 10px;font-size:15px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--tnm-muted);display:flex;align-items:baseline;gap:8px;}}
-    .tnm-group-count{{font-size:12px;font-weight:600;color:var(--tnm-muted);opacity:.75;text-transform:none;letter-spacing:0;}}
-    .tnm-links{{list-style:none;margin:0;padding:0;columns:3;column-gap:32px;}}
-    .tnm-item{{break-inside:avoid;margin:0 0 7px;font-size:15px;}}
-    .tnm-item a{{color:var(--tnm-accent);text-decoration:none;}}
-    .tnm-item a:hover,.tnm-item a:focus{{text-decoration:underline;}}
-    .tnm-hint,.tnm-date,.tnm-note{{display:inline-block;margin-left:6px;font-size:12px;color:var(--tnm-muted);}}
+    .tnm-section{{margin:0 0 56px;scroll-margin-top:100px;}}
+    .tnm-section-head{{border-bottom:1px solid var(--tnm-line);padding-bottom:10px;margin-bottom:26px;}}
+    .tnm-section h2{{margin:0;line-height:1.25;display:flex;align-items:baseline;gap:12px;}}
+    .tnm-count{{font-size:14px;font-weight:400;color:var(--tnm-muted);}}
+    .tnm-blurb{{margin:8px 0 0;font-size:15px;color:var(--tnm-muted);}}
+    .tnm-group{{margin-bottom:34px;}}
+    .tnm-group:last-child{{margin-bottom:0;}}
+    .tnm-group-title{{margin:0 0 16px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tnm-muted);display:flex;align-items:baseline;gap:8px;}}
+    .tnm-group-count{{font-size:12px;font-weight:400;text-transform:none;letter-spacing:0;opacity:.8;}}
+    .tnm-links{{list-style:none;margin:0;padding:0;columns:3;column-gap:var(--tnm-gap);}}
+    .tnm-item{{break-inside:avoid;margin:0 0 18px;}}
+    .tnm-item a{{color:inherit;text-decoration:none;}}
+    .tnm-item a:hover,.tnm-item a:focus{{color:var(--tnm-accent);text-decoration:underline;text-underline-offset:3px;}}
+    /* Blog titles are long and often wrap, so tighten their rhythm a little. */
+    #blogs .tnm-item{{margin-bottom:14px;}}
+    .tnm-hint,.tnm-date,.tnm-note{{display:inline-block;margin-left:8px;font-size:12px;color:var(--tnm-muted);}}
     .tnm-note{{white-space:nowrap;}}
-    .tnm-empty{{display:none;}}
     .tnm-sitemap [hidden]{{display:none !important;}}
-    @media (max-width:900px){{.tnm-links{{columns:2;}}}}
-    @media (max-width:600px){{.tnm-links{{columns:1;}}.tnm-section h2{{font-size:21px;}}}}
+    @media (max-width:900px){{.tnm-links{{columns:2;--tnm-gap:32px;}}}}
+    @media (max-width:600px){{.tnm-links{{columns:1;}}}}
     @media (prefers-color-scheme:dark){{
-      .tnm-sitemap:not([data-theme="light"]){{--tnm-ink:#e7eef3;--tnm-muted:#9fb2be;--tnm-line:#2a3a45;--tnm-accent:#5cc0ea;--tnm-surface:#16232b;}}
-      .tnm-sitemap:not([data-theme="light"]) .tnm-search,
-      .tnm-sitemap:not([data-theme="light"]) .tnm-chip{{background:#0f1b22;color:var(--tnm-ink);}}
+      .tnm-sitemap:not([data-theme="light"]){{--tnm-muted:#9aa5ac;--tnm-line:rgba(160,170,180,.28);}}
     }}
     @media print{{.tnm-toolbar{{display:none;}}.tnm-links{{columns:2;}}}}
   </style>

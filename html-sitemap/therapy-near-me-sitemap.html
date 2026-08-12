@@ -3,38 +3,41 @@
      Paste this whole block into a WordPress "Custom HTML" block. -->
 <div class="tnm-sitemap">
   <style>
-    .tnm-sitemap{--tnm-ink:#12232e;--tnm-muted:#5c6f7c;--tnm-line:#dde5ea;--tnm-accent:#0f6f9c;--tnm-surface:#f6f9fb;--tnm-radius:10px;color:var(--tnm-ink);line-height:1.5;}
+    /* Fonts, text colour and heading styles are inherited from the theme, so
+       this block matches the rest of the site automatically. To tint links on
+       hover with your brand colour, change --tnm-accent below. */
+    .tnm-sitemap{--tnm-accent:currentColor;--tnm-muted:#8a8a8a;--tnm-line:rgba(128,128,128,.25);--tnm-surface:rgba(128,128,128,.06);--tnm-gap:48px;line-height:1.5;}
     .tnm-sitemap *{box-sizing:border-box;}
-    .tnm-toolbar{position:sticky;top:0;z-index:5;background:var(--tnm-surface);border:1px solid var(--tnm-line);border-radius:var(--tnm-radius);padding:16px;margin-bottom:28px;}
-    .tnm-search{display:block;width:100%;padding:11px 14px;font-size:16px;font-family:inherit;color:var(--tnm-ink);background:#fff;border:1px solid var(--tnm-line);border-radius:8px;}
-    .tnm-search:focus{outline:2px solid var(--tnm-accent);outline-offset:1px;border-color:var(--tnm-accent);}
+    .tnm-toolbar{position:sticky;top:0;z-index:5;background:var(--tnm-surface);backdrop-filter:blur(6px);border:1px solid var(--tnm-line);border-radius:8px;padding:16px;margin-bottom:36px;}
+    .tnm-search{display:block;width:100%;padding:11px 14px;font-size:16px;font-family:inherit;color:inherit;background:transparent;border:1px solid var(--tnm-line);border-radius:6px;}
+    .tnm-search:focus{outline:2px solid var(--tnm-accent);outline-offset:1px;}
     .tnm-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
-    .tnm-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;font-size:14px;font-weight:600;text-decoration:none;color:var(--tnm-ink);background:#fff;border:1px solid var(--tnm-line);border-radius:999px;}
-    .tnm-chip:hover,.tnm-chip:focus{border-color:var(--tnm-accent);color:var(--tnm-accent);}
-    .tnm-chip span{font-weight:500;font-size:12px;color:var(--tnm-muted);}
+    .tnm-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 13px;font-size:14px;text-decoration:none;color:inherit;border:1px solid var(--tnm-line);border-radius:999px;}
+    .tnm-chip:hover,.tnm-chip:focus{border-color:currentColor;text-decoration:none;}
+    .tnm-chip span{font-size:12px;color:var(--tnm-muted);}
     .tnm-status{margin:10px 0 0;font-size:14px;color:var(--tnm-muted);}
-    .tnm-section{margin:0 0 40px;scroll-margin-top:96px;}
-    .tnm-section-head{border-bottom:2px solid var(--tnm-line);padding-bottom:8px;margin-bottom:18px;}
-    .tnm-section h2{margin:0;font-size:24px;line-height:1.25;display:flex;align-items:baseline;gap:10px;}
-    .tnm-count{font-size:13px;font-weight:600;color:var(--tnm-accent);background:rgba(15,111,156,.1);border-radius:999px;padding:2px 9px;}
-    .tnm-blurb{margin:6px 0 0;font-size:15px;color:var(--tnm-muted);}
-    .tnm-group{margin-bottom:22px;}
-    .tnm-group-title{margin:0 0 10px;font-size:15px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--tnm-muted);display:flex;align-items:baseline;gap:8px;}
-    .tnm-group-count{font-size:12px;font-weight:600;color:var(--tnm-muted);opacity:.75;text-transform:none;letter-spacing:0;}
-    .tnm-links{list-style:none;margin:0;padding:0;columns:3;column-gap:32px;}
-    .tnm-item{break-inside:avoid;margin:0 0 7px;font-size:15px;}
-    .tnm-item a{color:var(--tnm-accent);text-decoration:none;}
-    .tnm-item a:hover,.tnm-item a:focus{text-decoration:underline;}
-    .tnm-hint,.tnm-date,.tnm-note{display:inline-block;margin-left:6px;font-size:12px;color:var(--tnm-muted);}
+    .tnm-section{margin:0 0 56px;scroll-margin-top:100px;}
+    .tnm-section-head{border-bottom:1px solid var(--tnm-line);padding-bottom:10px;margin-bottom:26px;}
+    .tnm-section h2{margin:0;line-height:1.25;display:flex;align-items:baseline;gap:12px;}
+    .tnm-count{font-size:14px;font-weight:400;color:var(--tnm-muted);}
+    .tnm-blurb{margin:8px 0 0;font-size:15px;color:var(--tnm-muted);}
+    .tnm-group{margin-bottom:34px;}
+    .tnm-group:last-child{margin-bottom:0;}
+    .tnm-group-title{margin:0 0 16px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tnm-muted);display:flex;align-items:baseline;gap:8px;}
+    .tnm-group-count{font-size:12px;font-weight:400;text-transform:none;letter-spacing:0;opacity:.8;}
+    .tnm-links{list-style:none;margin:0;padding:0;columns:3;column-gap:var(--tnm-gap);}
+    .tnm-item{break-inside:avoid;margin:0 0 18px;}
+    .tnm-item a{color:inherit;text-decoration:none;}
+    .tnm-item a:hover,.tnm-item a:focus{color:var(--tnm-accent);text-decoration:underline;text-underline-offset:3px;}
+    /* Blog titles are long and often wrap, so tighten their rhythm a little. */
+    #blogs .tnm-item{margin-bottom:14px;}
+    .tnm-hint,.tnm-date,.tnm-note{display:inline-block;margin-left:8px;font-size:12px;color:var(--tnm-muted);}
     .tnm-note{white-space:nowrap;}
-    .tnm-empty{display:none;}
     .tnm-sitemap [hidden]{display:none !important;}
-    @media (max-width:900px){.tnm-links{columns:2;}}
-    @media (max-width:600px){.tnm-links{columns:1;}.tnm-section h2{font-size:21px;}}
+    @media (max-width:900px){.tnm-links{columns:2;--tnm-gap:32px;}}
+    @media (max-width:600px){.tnm-links{columns:1;}}
     @media (prefers-color-scheme:dark){
-      .tnm-sitemap:not([data-theme="light"]){--tnm-ink:#e7eef3;--tnm-muted:#9fb2be;--tnm-line:#2a3a45;--tnm-accent:#5cc0ea;--tnm-surface:#16232b;}
-      .tnm-sitemap:not([data-theme="light"]) .tnm-search,
-      .tnm-sitemap:not([data-theme="light"]) .tnm-chip{background:#0f1b22;color:var(--tnm-ink);}
+      .tnm-sitemap:not([data-theme="light"]){--tnm-muted:#9aa5ac;--tnm-line:rgba(160,170,180,.28);}
     }
     @media print{.tnm-toolbar{display:none;}.tnm-links{columns:2;}}
   </style>
@@ -44,50 +47,56 @@
     <input id="tnm-search-input" class="tnm-search" type="search" autocomplete="off"
            placeholder="Search 995 pages by name, suburb or topic&hellip;">
     <nav class="tnm-nav" aria-label="Sitemap categories">
-      <a class="tnm-chip" href="#services">Services <span>28</span></a>
+      <a class="tnm-chip" href="#services">Services <span>29</span></a>
       <a class="tnm-chip" href="#locations">Locations <span>115</span></a>
       <a class="tnm-chip" href="#practitioners">Practitioners <span>14</span></a>
       <a class="tnm-chip" href="#blogs">Blogs <span>822</span></a>
-      <a class="tnm-chip" href="#resources">Resources <span>16</span></a>
+      <a class="tnm-chip" href="#resources">Resources <span>15</span></a>
     </nav>
     <p class="tnm-status" role="status" aria-live="polite" data-tnm-status></p>
   </div>
 
 <section class="tnm-section" id="services" data-section="services">
   <header class="tnm-section-head">
-    <h2>Services <span class="tnm-count" data-count-for="services">28</span></h2>
+    <h2>Services <span class="tnm-count" data-count-for="services">29</span></h2>
     <p class="tnm-blurb">Therapy, assessment and support services offered across Australia.</p>
   </header>
   <div class="tnm-group">
     <ul class="tnm-links">
 <li class="tnm-item" data-search="anxiety therapy  anxiety-therapy"><a href="https://therapynearme.com.au/anxiety-therapy/">Anxiety Therapy</a></li>
-<li class="tnm-item" data-search="at home ndis psychologist  at-home-ndis-psychologist"><a href="https://therapynearme.com.au/at-home-ndis-psychologist/">At Home NDIS Psychologist</a></li>
-<li class="tnm-item" data-search="behaviour support services  behaviour-support-services"><a href="https://therapynearme.com.au/behaviour-support-services/">Behaviour Support Services</a></li>
-<li class="tnm-item" data-search="child psychologist  child-psychologist"><a href="https://therapynearme.com.au/child-psychologist/">Child Psychologist</a></li>
-<li class="tnm-item" data-search="counselling services  counselling-services"><a href="https://therapynearme.com.au/counselling-services/">Counselling Services</a></li>
 <li class="tnm-item" data-search="depression treatment  depression-treatment"><a href="https://therapynearme.com.au/depression-treatment/">Depression Treatment</a></li>
-<li class="tnm-item" data-search="eap psychology services  eap-psychology-services"><a href="https://therapynearme.com.au/eap-psychology-services/">EAP Psychology Services</a></li>
-<li class="tnm-item" data-search="early intervention  early-intervention"><a href="https://therapynearme.com.au/early-intervention/">Early Intervention</a></li>
-<li class="tnm-item" data-search="mental health support after hospital discharge  mental-health-support-after-hospital-discharge"><a href="https://therapynearme.com.au/mental-health-support-after-hospital-discharge/">Mental Health Support After Hospital Discharge</a></li>
-<li class="tnm-item" data-search="ndis psychology services  ndis-psychology-services"><a href="https://therapynearme.com.au/ndis-psychology-services/">NDIS Psychology Services</a></li>
-<li class="tnm-item" data-search="neurodiversity affirming mental health support in australia  neurodiversity-affirming-mental-health-support-in-australia"><a href="https://therapynearme.com.au/neurodiversity-affirming-mental-health-support-in-australia/">Neurodiversity Affirming Mental Health Support in Australia</a></li>
-<li class="tnm-item" data-search="online psychologist  online-psychologist"><a href="https://therapynearme.com.au/online-psychologist/">Online Psychologist</a></li>
-<li class="tnm-item" data-search="psychologist near me  psychologist-near-me-1"><a href="https://therapynearme.com.au/psychologist-near-me-1/">Psychologist Near Me</a></li>
-<li class="tnm-item" data-search="relationship counselling  relationship-counselling"><a href="https://therapynearme.com.au/relationship-counselling/">Relationship Counselling</a></li>
+<li class="tnm-item" data-search="treatment for autism  treatment-for-autism"><a href="https://therapynearme.com.au/treatment-for-autism/">Treatment for Autism</a></li>
+<li class="tnm-item" data-search="treatment for adhd  treatment-for-adhd"><a href="https://therapynearme.com.au/treatment-for-adhd/">Treatment for ADHD</a></li>
+<li class="tnm-item" data-search="treatment for ptsd  treatment-for-ptsd"><a href="https://therapynearme.com.au/treatment-for-ptsd/">Treatment for PTSD</a></li>
 <li class="tnm-item" data-search="schizophrenia treatments  schizophrenia-treatments"><a href="https://therapynearme.com.au/schizophrenia-treatments/">Schizophrenia Treatments</a></li>
+<li class="tnm-item" data-search="treatment for bpd  treatment-for-bpd"><a href="https://therapynearme.com.au/treatment-for-bpd/">Treatment for BPD</a></li>
+<li class="tnm-item" data-search="treatment for bipolar  treatment-for-bipolar"><a href="https://therapynearme.com.au/treatment-for-bipolar/">Treatment for Bipolar</a></li>
 <li class="tnm-item" data-search="speech therapy  speech-therapy"><a href="https://therapynearme.com.au/speech-therapy/">Speech Therapy</a></li>
-<li class="tnm-item" data-search="support coordination  support-coordination"><a href="https://therapynearme.com.au/support-coordination/">Support Coordination</a></li>
-<li class="tnm-item" data-search="support work services  support-work-services"><a href="https://therapynearme.com.au/support-work-services/">Support Work Services</a></li>
+<li class="tnm-item" data-search="ndis psychology services  ndis-psychology-services"><a href="https://therapynearme.com.au/ndis-psychology-services/">NDIS Psychology Services</a></li>
+<li class="tnm-item" data-search="workcover psychologist  workcover-psychologist"><a href="https://therapynearme.com.au/workcover-psychologist/">WorkCover Psychologist</a></li>
+<li class="tnm-item" data-search="psychologist near me  psychologist-near-me-1"><a href="https://therapynearme.com.au/psychologist-near-me-1/">Psychologist Near Me</a></li>
+<li class="tnm-item" data-search="online psychologist  online-psychologist"><a href="https://therapynearme.com.au/online-psychologist/">Online Psychologist</a></li>
+<li class="tnm-item" data-search="at-home psychologist  at-home-ndis-psychologist"><a href="https://therapynearme.com.au/at-home-ndis-psychologist/">At-Home Psychologist</a></li>
 <li class="tnm-item" data-search="telehealth psychologist  telehealth-psychologist"><a href="https://therapynearme.com.au/telehealth-psychologist/">Telehealth Psychologist</a></li>
+<li class="tnm-item" data-search="eap psychology services  eap-psychology-services"><a href="https://therapynearme.com.au/eap-psychology-services/">EAP Psychology Services</a></li>
+<li class="tnm-item" data-search="child psychologist  child-psychologist"><a href="https://therapynearme.com.au/child-psychologist/">Child Psychologist</a></li>
+<li class="tnm-item" data-search="relationship counselling  relationship-counselling"><a href="https://therapynearme.com.au/relationship-counselling/">Relationship Counselling</a></li>
+<li class="tnm-item" data-search="support work services  support-work-services"><a href="https://therapynearme.com.au/support-work-services/">Support Work Services</a></li>
+<li class="tnm-item" data-search="support coordination  support-coordination"><a href="https://therapynearme.com.au/support-coordination/">Support Coordination</a></li>
+<li class="tnm-item" data-search="counselling services  counselling-services"><a href="https://therapynearme.com.au/counselling-services/">Counselling Services</a></li>
+<li class="tnm-item" data-search="behaviour support services  behaviour-support-services"><a href="https://therapynearme.com.au/behaviour-support-services/">Behaviour Support Services</a></li>
+<li class="tnm-item" data-search="early intervention  early-intervention"><a href="https://therapynearme.com.au/early-intervention/">Early Intervention</a></li>
+<li class="tnm-item" data-search="board approved supervisor  board-approved-supervisor"><a href="https://therapynearme.com.au/board-approved-supervisor/">Board Approved Supervisor</a></li>
+    </ul>
+  </div>
+  <div class="tnm-group">
+    <h3 class="tnm-group-title">Related service pages <span class="tnm-group-count">5</span></h3>
+    <ul class="tnm-links">
+<li class="tnm-item" data-search="mental health support after hospital discharge  mental-health-support-after-hospital-discharge"><a href="https://therapynearme.com.au/mental-health-support-after-hospital-discharge/">Mental Health Support After Hospital Discharge</a></li>
+<li class="tnm-item" data-search="neurodiversity affirming mental health support in australia  neurodiversity-affirming-mental-health-support-in-australia"><a href="https://therapynearme.com.au/neurodiversity-affirming-mental-health-support-in-australia/">Neurodiversity Affirming Mental Health Support in Australia</a></li>
 <li class="tnm-item" data-search="therapist near me  therapist-near-me"><a href="https://therapynearme.com.au/therapist-near-me/">Therapist Near Me</a></li>
 <li class="tnm-item" data-search="therapy  therapy"><a href="https://therapynearme.com.au/therapy/">Therapy</a></li>
 <li class="tnm-item" data-search="therapy near me  therapy-near-me"><a href="https://therapynearme.com.au/therapy-near-me/">Therapy Near Me</a></li>
-<li class="tnm-item" data-search="treatment for adhd  treatment-for-adhd"><a href="https://therapynearme.com.au/treatment-for-adhd/">Treatment for ADHD</a></li>
-<li class="tnm-item" data-search="treatment for autism  treatment-for-autism"><a href="https://therapynearme.com.au/treatment-for-autism/">Treatment for Autism</a></li>
-<li class="tnm-item" data-search="treatment for bipolar  treatment-for-bipolar"><a href="https://therapynearme.com.au/treatment-for-bipolar/">Treatment for Bipolar</a></li>
-<li class="tnm-item" data-search="treatment for bpd  treatment-for-bpd"><a href="https://therapynearme.com.au/treatment-for-bpd/">Treatment for BPD</a></li>
-<li class="tnm-item" data-search="treatment for ptsd  treatment-for-ptsd"><a href="https://therapynearme.com.au/treatment-for-ptsd/">Treatment for PTSD</a></li>
-<li class="tnm-item" data-search="workcover psychologist  workcover-psychologist"><a href="https://therapynearme.com.au/workcover-psychologist/">WorkCover Psychologist</a></li>
     </ul>
   </div>
 </section>
@@ -1240,16 +1249,15 @@
 
 <section class="tnm-section" id="resources" data-section="resources">
   <header class="tnm-section-head">
-    <h2>Resources <span class="tnm-count" data-count-for="resources">16</span></h2>
+    <h2>Resources <span class="tnm-count" data-count-for="resources">15</span></h2>
     <p class="tnm-blurb">Research, referral guides, pricing and company information.</p>
   </header>
   <div class="tnm-group">
-    <h3 class="tnm-group-title">Guides &amp; Reports <span class="tnm-group-count">11</span></h3>
+    <h3 class="tnm-group-title">Guides &amp; Reports <span class="tnm-group-count">10</span></h3>
     <ul class="tnm-links">
 <li class="tnm-item" data-search="affordable pricing  affordable-pricing"><a href="https://therapynearme.com.au/affordable-pricing/">Affordable Pricing</a></li>
 <li class="tnm-item" data-search="australian mental health access report 2026  australian-mental-health-access-report-2026"><a href="https://therapynearme.com.au/australian-mental-health-access-report-2026/">Australian Mental Health Access Report 2026</a></li>
 <li class="tnm-item" data-search="australian psychology fees and affordability evidence review 2026  australian-psychology-fees-and-affordability-evidence-review-2026"><a href="https://therapynearme.com.au/australian-psychology-fees-and-affordability-evidence-review-2026/">Australian Psychology Fees and Affordability Evidence Review 2026</a></li>
-<li class="tnm-item" data-search="board approved supervisor  board-approved-supervisor"><a href="https://therapynearme.com.au/board-approved-supervisor/">Board Approved Supervisor</a></li>
 <li class="tnm-item" data-search="faq  faq"><a href="https://therapynearme.com.au/faq/">FAQ</a></li>
 <li class="tnm-item" data-search="global mental health care access and affordability benchmark 2027  global-mental-health-care-access-and-affordability-benchmark-2027"><a href="https://therapynearme.com.au/global-mental-health-care-access-and-affordability-benchmark-2027/">Global Mental Health Care Access and Affordability Benchmark 2027</a></li>
 <li class="tnm-item" data-search="gp psychology referrals  gp-psychology-referrals"><a href="https://therapynearme.com.au/gp-psychology-referrals/">GP Psychology Referrals</a></li>

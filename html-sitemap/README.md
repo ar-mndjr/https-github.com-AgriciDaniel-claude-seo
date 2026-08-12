@@ -5,11 +5,11 @@ A single, self-contained HTML block that lists all 995 indexable URLs from
 
 | Category | Count | Grouping |
 | --- | ---: | --- |
-| Services | 28 | flat, A–Z |
+| Services | 29 | the site's 24-item Services menu in its own order, then 5 related pages |
 | Locations | 115 | by state / territory |
 | Practitioners | 14 | flat, with role labels |
 | Blogs | 822 | A–Z letter groups, with last-modified dates |
-| Resources | 16 | Guides & Reports, About & Policies |
+| Resources | 15 | Guides & Reports, About & Policies |
 
 ## Files
 
@@ -28,8 +28,25 @@ A single, self-contained HTML block that lists all 995 indexable URLs from
 4. Publish.
 
 The block ships its own scoped CSS (everything is namespaced under
-`.tnm-sitemap`) and a small inline script, so it does not depend on the theme
-and cannot leak styles into the rest of the page.
+`.tnm-sitemap`) and a small inline script, so it cannot leak styles into the
+rest of the page.
+
+## Styling
+
+The block deliberately sets no fonts, text colours or heading styles — it
+inherits all of them from the theme, so it picks up the site's typography
+automatically and keeps matching if the theme changes. Links render in the
+body text colour with no underline, in three columns, matching the Services
+layout on the site.
+
+Two knobs at the top of the `<style>` block:
+
+- `--tnm-accent` — hover/focus colour for links, `currentColor` by default.
+  Set it to the brand colour for a tinted hover.
+- `--tnm-gap` — column gutter, `48px` on desktop.
+
+Columns drop to two below 900px and one below 600px. Dark mode is inherited
+too; `data-theme="light"` on the wrapping div forces light styling.
 
 ## Regenerating after publishing new pages
 
@@ -55,9 +72,18 @@ next run.
   `PRACTITIONER_RE` (`firstname-lastname-role`), plus `/authors/*`. The role
   suffix is stripped from the link text and shown as a muted label, so
   `alyson-dunn-psychologist` renders as **Alyson Dunn** · Psychologist.
-- **Services** — the explicit `SERVICE_SLUGS` list. It is explicit because
-  service slugs and practitioner slugs are otherwise indistinguishable
-  (`child-psychologist` is a service, `ana-turino-psychologist` is a person).
+- **Services** — `SERVICE_ORDER` holds the 24 pages in the site's Services
+  menu, in the site's own order (not alphabetical); reorder that list to
+  reorder the section. `SERVICE_RELATED` holds five service pages that are not
+  in that menu (`/therapy/`, `/therapy-near-me/`, `/therapist-near-me/`,
+  `/mental-health-support-after-hospital-discharge/`,
+  `/neurodiversity-affirming-mental-health-support-in-australia/`); they render
+  in a second group headed *Related service pages* so nothing is dropped. Move
+  a slug between the two lists to promote or demote it.
+
+  Both lists are explicit because service slugs and practitioner slugs are
+  otherwise indistinguishable (`child-psychologist` is a service,
+  `ana-turino-psychologist` is a person).
 - **Blogs** — everything in `post-sitemap.xml`. This mirrors the site's own
   post/page split. A handful of posts read like service pages
   (`adhd-assessment`, `couples-therapy`, `mental-health-treatment`); if you
@@ -87,7 +113,10 @@ fixes proper nouns like WorkCover, and drops WordPress's `-2` collision
 suffixes.
 
 Spot-check the output after regenerating; new topics may need an entry in
-`ACRONYMS`, `APOSTROPHES` or `CASE_FIXES`.
+`ACRONYMS`, `APOSTROPHES` or `CASE_FIXES`. Where the site's own wording differs
+from the slug, add it to `LABEL_OVERRIDES` — for example
+`at-home-ndis-psychologist` renders as *At-Home Psychologist* to match the
+Services menu.
 
 ## Behaviour
 
@@ -96,9 +125,5 @@ Spot-check the output after regenerating; new topics may need an entry in
 - The search box filters as you type across link text, role and slug, hides
   empty groups and sections, and live-updates every count. Escape clears it.
   It is progressive enhancement — with JS disabled the full list still renders.
-- Three columns on desktop, two on tablet, one on mobile. Print styles drop
-  the toolbar to two columns.
 - Category chips jump to each section; the toolbar stays pinned while
-  scrolling.
-- Respects `prefers-color-scheme: dark`. To force light mode, add
-  `data-theme="light"` to the wrapping `.tnm-sitemap` div.
+  scrolling. Print styles drop the toolbar and use two columns.
