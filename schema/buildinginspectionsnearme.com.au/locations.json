@@ -253,6 +253,116 @@
       "state": "Victoria",
       "faq": [],
       "_reference": { "regulator": "Victorian Building Authority (VBA)", "tribunal": "VCAT / DBDRV" }
+    },
+
+    {
+      "slug": "building-inspections-wangaratta",
+      "city": "Wangaratta",
+      "state": "Victoria",
+      "faq": [],
+      "_reference": { "regulator": "Victorian Building Authority (VBA)", "tribunal": "VCAT / DBDRV" }
+    },
+    {
+      "slug": "building-inspections-horsham",
+      "city": "Horsham",
+      "state": "Victoria",
+      "faq": [],
+      "_reference": { "regulator": "Victorian Building Authority (VBA)", "tribunal": "VCAT / DBDRV" }
+    },
+    {
+      "slug": "building-inspections-sale",
+      "city": "Sale",
+      "state": "Victoria",
+      "faq": [],
+      "_reference": { "regulator": "Victorian Building Authority (VBA)", "tribunal": "VCAT / DBDRV" }
+    },
+    {
+      "slug": "building-inspections-bairnsdale",
+      "city": "Bairnsdale",
+      "state": "Victoria",
+      "faq": [],
+      "_reference": { "regulator": "Victorian Building Authority (VBA)", "tribunal": "VCAT / DBDRV" }
+    },
+    {
+      "slug": "building-inspections-echuca",
+      "city": "Echuca",
+      "state": "Victoria",
+      "faq": [],
+      "_reference": { "regulator": "Victorian Building Authority (VBA)", "tribunal": "VCAT / DBDRV" }
+    },
+    {
+      "slug": "building-inspections-cairns",
+      "city": "Cairns",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+    {
+      "slug": "building-inspections-mackay",
+      "city": "Mackay",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+    {
+      "slug": "building-inspections-rockhampton",
+      "city": "Rockhampton",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+    {
+      "slug": "building-inspections-bundaberg",
+      "city": "Bundaberg",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+    {
+      "slug": "building-inspections-hervey-bay",
+      "city": "Hervey Bay",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+    {
+      "slug": "building-inspections-gladstone",
+      "city": "Gladstone",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+    {
+      "slug": "building-inspections-maryborough",
+      "city": "Maryborough",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": {
+        "regulator": "Queensland Building and Construction Commission (QBCC)",
+        "tribunal": "QCAT",
+        "note": "Maryborough QLD, per the BINM_Location_Pages sheet. Victoria also has a Maryborough and the slug does not disambiguate; confirm the live page is the Queensland one."
+      }
+    },
+    {
+      "slug": "building-inspections-ipswich",
+      "city": "Ipswich",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+    {
+      "slug": "building-inspections-gympie",
+      "city": "Gympie",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+    {
+      "slug": "building-inspections-logan",
+      "city": "Logan",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
     }
   ]
 }
