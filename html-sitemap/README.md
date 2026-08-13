@@ -1,18 +1,18 @@
 # Therapy Near Me — categorised HTML sitemap
 
-A single, self-contained HTML block listing 991 URLs from `post-sitemap.xml`
-and `page-sitemap.xml`, organised into seven categories. Sections render in
-this order, with Blogs last:
+A single, self-contained HTML block listing 736 indexable URLs from
+`post-sitemap.xml` and `page-sitemap.xml`, organised into seven categories.
+Sections render in this order, with Blogs last:
 
 | Category | Count | Grouping |
 | --- | ---: | --- |
 | Services | 24 | the site's Services menu, in the site's own order |
-| Locations | 115 | by state / territory |
+| Locations | 114 | by state / territory |
 | Practitioners | 13 | flat, with role labels |
 | Referrals | 2 | NDIS, then GP |
 | Resources | 9 | Guides & Information, About & Policies |
 | Reports | 6 | flat, A–Z |
-| Blogs | 822 | A–Z letter groups, with last-modified dates |
+| Blogs | 568 | A–Z letter groups, with last-modified dates |
 
 ## Files
 
@@ -21,6 +21,7 @@ this order, with Blogs last:
 - `build_sitemap.py` — regenerates the HTML from the XML sitemaps.
 - `data/page-sitemap.xml`, `data/post-sitemap.xml` — the source sitemaps
   (snapshot: 12 Aug 2026).
+- `data/noindex-urls.txt` — the 466 noindexed URLs, excluded from the output.
 
 ## Installing
 
@@ -52,7 +53,7 @@ Everything else follows from those six values. **Headings are deliberately not
 styled** — `h2`/`h3` keep the theme's own heading font, size and colour.
 
 The site's body rule specifies `font-style: italic`, but it is set to `normal`
-here: 989 italicised links read poorly, and the Services menu on the site
+here: hundreds of italicised links read poorly, and the Services menu on the site
 renders upright.
 
 The secondary greys (counts, dates, blurbs, group headings, borders, the
@@ -128,7 +129,28 @@ next run.
   *new* page that no rule recognises also lands here, so nothing is ever
   silently dropped.
 
-Excluded pages are listed in `EXCLUDED_SLUGS`:
+## Exclusions
+
+**Noindexed pages.** `data/noindex-urls.txt` holds the 466 URLs set to
+noindex, one per line; every one is kept out of the sitemap. 252 of them were
+still in the XML sitemaps and have been removed here — all 252 were blog posts,
+so no service, location or practitioner page was affected. The other 214 had
+already dropped out of the XML sitemaps. To change the list, edit that file and
+re-run the script; no code change is needed.
+
+**Duplicates.** `DUPLICATE_SLUGS` drops one URL from each pair that would
+otherwise render identical link text:
+
+| Dropped | Kept | Why |
+| --- | --- | --- |
+| `/relationship-counselling-2/` | `/relationship-counselling/` | WordPress slug collision |
+| `/do-i-need-to-see-a-psychologist-2/` | `/do-i-need-to-see-a-psychologist/` | WordPress slug collision |
+| `/burleigh-heads/` | `/qld-burleigh-heads/` | Burleigh Heads is published twice; the state-prefixed form matches every other Queensland page |
+
+Every rebuild re-checks for identical link text and prints any new collision,
+so a future duplicate cannot slip through silently.
+
+**Other exclusions**, listed in `EXCLUDED_SLUGS`:
 
 - `/sitemap/` — this page, so it does not link to itself.
 - `/authors/` — the authors index. The individual `/authors/*` profiles are
@@ -140,9 +162,9 @@ Excluded pages are listed in `EXCLUDED_SLUGS`:
 One further special case: `/relationship-counselling/` appears in both XML
 sitemaps; the page version is kept under Services and the duplicate dropped.
 
-Where two links would otherwise show identical text (for example
-`/burleigh-heads/` and `/qld-burleigh-heads/`), the URL path is appended in
-muted text so both are distinguishable.
+Should a new pair of identical link labels ever appear, the renderer appends
+the URL path in muted text so the two stay distinguishable until you decide
+which to drop.
 
 ## Link text
 
@@ -160,7 +182,7 @@ Services menu.
 
 ## Behaviour
 
-- Every link is present in the static HTML, so crawlers see all 991 URLs
+- Every link is present in the static HTML, so crawlers see all 736 URLs
   without executing JavaScript.
 - The search box filters as you type across link text, role and slug, hides
   empty groups and sections, and live-updates every count. Escape clears it.

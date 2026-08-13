@@ -37,6 +37,22 @@ EXCLUDED_SLUGS = {
     "therapist-near-me",
 }
 
+# Near-duplicate pages: two URLs that would show identical link text. The slug
+# listed here is the one dropped; the other one is kept.
+DUPLICATE_SLUGS = {
+    # WordPress "-2" slug collisions -- the originals are kept.
+    "relationship-counselling-2",
+    "do-i-need-to-see-a-psychologist-2",
+    # Burleigh Heads exists twice. The state-prefixed URL is kept because every
+    # other Queensland suburb page uses that form; swap the two entries here to
+    # keep /burleigh-heads/ instead.
+    "burleigh-heads",
+}
+
+# Pages set to noindex, one URL per line. Kept in a data file rather than in
+# this script because the list is long and maintained elsewhere.
+NOINDEX_FILE = DATA / "noindex-urls.txt"
+
 # --------------------------------------------------------------------------
 # Classification tables
 # --------------------------------------------------------------------------
@@ -258,6 +274,18 @@ def parse_sitemap(path: Path) -> list[dict]:
     return entries
 
 
+def load_noindex() -> set[str]:
+    """Slugs of pages set to noindex, read from data/noindex-urls.txt."""
+    if not NOINDEX_FILE.exists():
+        return set()
+    slugs = set()
+    for line in NOINDEX_FILE.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if line and not line.startswith("#"):
+            slugs.add(slug_of(line))
+    return slugs
+
+
 def slug_of(loc: str) -> str:
     return loc.replace(SITE, "").strip("/")
 
@@ -306,10 +334,11 @@ def build_items() -> dict:
         "blogs": defaultdict(list),
     }
     seen = set()
+    skip = EXCLUDED_SLUGS | DUPLICATE_SLUGS | load_noindex()
 
     for entry in pages:
         slug = slug_of(entry["loc"])
-        if slug in EXCLUDED_SLUGS:
+        if slug in skip:
             continue
         seen.add(slug)
         category, group = classify_page(slug)
@@ -334,7 +363,7 @@ def build_items() -> dict:
 
     for entry in posts:
         slug = slug_of(entry["loc"])
-        if slug in seen or slug in EXCLUDED_SLUGS:
+        if slug in seen or slug in skip:
             continue  # already listed as a page, or deliberately excluded
         seen.add(slug)
         label = titleise(slug)
@@ -726,6 +755,25 @@ def main() -> int:
     for name, count in counts:
         print(f"  {name:<14}{count:>4}")
     print(f"  {'total':<14}{sum(c for _, c in counts):>4}")
+    print(f"  ({len(load_noindex())} noindex URLs and "
+          f"{len(DUPLICATE_SLUGS)} duplicates excluded)")
+
+    # Surface any new pair of pages that would render identical link text.
+    everything = []
+    for value in buckets.values():
+        if isinstance(value, list):
+            everything.extend(value)
+        else:
+            for group in value.values():
+                everything.extend(group)
+    labels = defaultdict(list)
+    for item in everything:
+        labels[item["label"]].append(item["slug"])
+    clashes = {k: v for k, v in labels.items() if len(v) > 1}
+    if clashes:
+        print("\n  duplicate link text still present:")
+        for label, slugs in sorted(clashes.items()):
+            print(f"    {label}: {', '.join('/' + s + '/' for s in sorted(slugs))}")
     return 0
 
 
