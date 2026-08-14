@@ -5,7 +5,7 @@ self-contained block carrying the local business, the page, its breadcrumb and
 the service.
 
 - **11 service pages** — `output/` — LocalBusiness, WebSite, WebPage, BreadcrumbList, Service
-- **49 location pages** — `output/locations/` — the same, with a Service scoped to that city. No FAQ markup: see [FAQ: empty by design](#faq-empty-by-design).
+- **65 location pages** — `output/locations/` — the same, with a Service scoped to that city. No FAQ markup: see [FAQ: empty by design](#faq-empty-by-design).
 
 ## Where the data came from
 
@@ -58,7 +58,7 @@ the keyword map so internal links and tracking do not point at the older slugs.
 |------|------------|
 | `business-profile.json` | Every business-specific value, in one place. **Edit this.** |
 | `services.json` | The 11 service definitions: name, description, inclusions, related services. |
-| `locations.json` | The 49 location pages: city, state, and an empty `faq` array to fill from each live page. |
+| `locations.json` | The 65 location pages: city, state, and an empty `faq` array to fill from each live page. |
 | `generate.py` | Renders the service pages into JSON-LD. No dependencies, Python 3. |
 | `generate-locations.py` | Renders the location pages. Imports `generate.py`, so both batches share one business node. |
 | `make-docx.js` / `make-location-docx.js` | Build the Word hand-off files. Need the `docx` npm package. |
@@ -143,14 +143,16 @@ The FAQ copy still does useful work as on-page content.
 Pages marked — are "contact for quote" in the copy docs, so no `Offer` is emitted.
 Add a `priceFrom` in `services.json` if that changes.
 
-## The 49 location pages
+## The 65 location pages
 
 Each one emits the same five nodes as a service page, with one difference: the
 `Service` is scoped to that city, and its `OfferCatalog` links all 11 service
 pages by `@id` — which is what wires the location pages into the service cluster
-rather than leaving 49 orphans.
+rather than leaving 65 orphans.
 
-Delivered in three batches. Batch 1 (16):
+Coverage by state: NSW 17, QLD 15, VIC 13, WA 10, NT 4, TAS 4, ACT 1, SA 1.
+
+Delivered in four batches. Batch 1 (16):
 
 | City | State | City | State |
 |------|-------|------|-------|
@@ -196,9 +198,27 @@ Batch 3 (15) — same source:
 Maryborough and the slug does not disambiguate, so confirm the live page is the
 Queensland city before publishing.
 
-The sheet still lists batches 2 and 3 under "Remaining Build Targets" while these
-pages are live. Worth moving them to the "Already Built" tab so the two stay in
-sync.
+Batch 4 (16) — same source:
+
+| City | State | City | State |
+|------|-------|------|-------|
+| Warwick | QLD | Karratha | WA |
+| Bunbury | WA | Launceston | TAS |
+| Geraldton | WA | Devonport | TAS |
+| Albany | WA | Burnie | TAS |
+| Kalgoorlie | WA | Palmerston | NT |
+| Busselton | WA | Alice Springs | NT |
+| Rockingham | WA | Katherine | NT |
+| Broome | WA | Victor Harbor | SA |
+
+**Four of these are flagged remote in your own sheet** — Broome, Karratha, Alice
+Springs and Katherine all carry "(confirm pricing/coverage)". The markup asserts
+BINM services them, so confirm that holds before publishing. Each entry carries
+the flag in its `_reference` block.
+
+The sheet still lists batches 2, 3 and 4 under "Remaining Build Targets" while
+these pages are live. Worth moving them to the "Already Built" tab so the two
+stay in sync.
 
 ### FAQ: empty by design
 
@@ -236,7 +256,7 @@ engines.)
 ### Still to confirm
 
 1. **What the descriptions say.** The `WebPage` and `Service` descriptions are generated from the city, the state and BINM's verified positioning — not transcribed from the pages. Check them against each page's real copy.
-2. **Coverage outside VIC/NSW/QLD/SA.** The About page copy says BINM serves those four states. Perth and Mandurah (WA), Canberra (ACT), Darwin (NT) and Hobart (TAS) sit outside it, and the markup asserts coverage there. All of batch 2 is within the four states.
+2. **Coverage outside VIC/NSW/QLD/SA.** The About page copy says BINM serves those four states. 19 location pages now sit outside it: 10 in WA, 4 in NT, 4 in TAS and 1 in ACT. The markup asserts coverage on every one. Four of those — Broome, Karratha, Alice Springs and Katherine — are additionally flagged "confirm pricing/coverage" in the BINM_Location_Pages sheet itself.
 3. **Pricing.** `priceFrom` is empty for all 16, so no `Offer` is emitted. The $495 entry price is published on the four metro pages; whether these pages state a price is unverified. Set `priceFrom` only where the page publishes one.
 
 `areaServed` uses named `City` nodes with `containedInPlace` `State` and no

@@ -363,6 +363,139 @@
       "state": "Queensland",
       "faq": [],
       "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+
+    {
+      "slug": "building-inspections-warwick",
+      "city": "Warwick",
+      "state": "Queensland",
+      "faq": [],
+      "_reference": { "regulator": "Queensland Building and Construction Commission (QBCC)", "tribunal": "QCAT" }
+    },
+    {
+      "slug": "building-inspections-bunbury",
+      "city": "Bunbury",
+      "state": "Western Australia",
+      "faq": [],
+      "_reference": { "regulator": "Building and Energy (DEMIRS)", "tribunal": "State Administrative Tribunal (SAT)" }
+    },
+    {
+      "slug": "building-inspections-geraldton",
+      "city": "Geraldton",
+      "state": "Western Australia",
+      "faq": [],
+      "_reference": { "regulator": "Building and Energy (DEMIRS)", "tribunal": "State Administrative Tribunal (SAT)" }
+    },
+    {
+      "slug": "building-inspections-albany",
+      "city": "Albany",
+      "state": "Western Australia",
+      "faq": [],
+      "_reference": { "regulator": "Building and Energy (DEMIRS)", "tribunal": "State Administrative Tribunal (SAT)" }
+    },
+    {
+      "slug": "building-inspections-kalgoorlie",
+      "city": "Kalgoorlie",
+      "state": "Western Australia",
+      "faq": [],
+      "_reference": { "regulator": "Building and Energy (DEMIRS)", "tribunal": "State Administrative Tribunal (SAT)" }
+    },
+    {
+      "slug": "building-inspections-busselton",
+      "city": "Busselton",
+      "state": "Western Australia",
+      "faq": [],
+      "_reference": { "regulator": "Building and Energy (DEMIRS)", "tribunal": "State Administrative Tribunal (SAT)" }
+    },
+    {
+      "slug": "building-inspections-rockingham",
+      "city": "Rockingham",
+      "state": "Western Australia",
+      "faq": [],
+      "_reference": { "regulator": "Building and Energy (DEMIRS)", "tribunal": "State Administrative Tribunal (SAT)" }
+    },
+    {
+      "slug": "building-inspections-broome",
+      "city": "Broome",
+      "state": "Western Australia",
+      "faq": [],
+      "_reference": {
+        "regulator": "Building and Energy (DEMIRS)",
+        "tribunal": "State Administrative Tribunal (SAT)",
+        "note": "The BINM_Location_Pages sheet marks Broome 'remote (confirm pricing/coverage)'. The markup asserts BINM services this city; confirm before publishing."
+      }
+    },
+    {
+      "slug": "building-inspections-karratha",
+      "city": "Karratha",
+      "state": "Western Australia",
+      "faq": [],
+      "_reference": {
+        "regulator": "Building and Energy (DEMIRS)",
+        "tribunal": "State Administrative Tribunal (SAT)",
+        "note": "The BINM_Location_Pages sheet marks Karratha 'remote (confirm pricing/coverage)'. The markup asserts BINM services this city; confirm before publishing."
+      }
+    },
+
+    {
+      "slug": "building-inspections-launceston",
+      "city": "Launceston",
+      "state": "Tasmania",
+      "faq": [],
+      "_reference": { "regulator": "Consumer, Building and Occupational Services (CBOS)", "tribunal": "TASCAT" }
+    },
+    {
+      "slug": "building-inspections-devonport",
+      "city": "Devonport",
+      "state": "Tasmania",
+      "faq": [],
+      "_reference": { "regulator": "Consumer, Building and Occupational Services (CBOS)", "tribunal": "TASCAT" }
+    },
+    {
+      "slug": "building-inspections-burnie",
+      "city": "Burnie",
+      "state": "Tasmania",
+      "faq": [],
+      "_reference": { "regulator": "Consumer, Building and Occupational Services (CBOS)", "tribunal": "TASCAT" }
+    },
+    {
+      "slug": "building-inspections-palmerston",
+      "city": "Palmerston",
+      "state": "the Northern Territory",
+      "faq": [],
+      "_reference": { "regulator": "NT Building Practitioners Board", "tribunal": "NTCAT" }
+    },
+    {
+      "slug": "building-inspections-alice-springs",
+      "city": "Alice Springs",
+      "state": "the Northern Territory",
+      "faq": [],
+      "_reference": {
+        "regulator": "NT Building Practitioners Board",
+        "tribunal": "NTCAT",
+        "note": "The BINM_Location_Pages sheet marks Alice Springs 'remote (confirm pricing/coverage)'. The markup asserts BINM services this city; confirm before publishing."
+      }
+    },
+    {
+      "slug": "building-inspections-katherine",
+      "city": "Katherine",
+      "state": "the Northern Territory",
+      "faq": [],
+      "_reference": {
+        "regulator": "NT Building Practitioners Board",
+        "tribunal": "NTCAT",
+        "note": "The BINM_Location_Pages sheet marks Katherine 'remote (confirm pricing/coverage)'. The markup asserts BINM services this city; confirm before publishing."
+      }
+    },
+    {
+      "slug": "building-inspections-victor-harbor",
+      "city": "Victor Harbor",
+      "state": "South Australia",
+      "faq": [],
+      "_reference": {
+        "regulator": "Consumer and Business Services (CBS)",
+        "tribunal": "CBS / SBC / courts, per the BINM_Location_Pages sheet"
+      }
     }
   ]
 }
