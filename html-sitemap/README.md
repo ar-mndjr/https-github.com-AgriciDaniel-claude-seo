@@ -37,6 +37,21 @@ rest of the page.
 
 ## Styling
 
+### The stylesheet is on one line, deliberately
+
+WordPress's auto-formatter (`wpautop`) inserts `<br />` at every line break.
+A `<br />` inside `<style>` is not valid CSS, and the parser recovers by
+discarding everything up to the next `;` or `}` — which silently wipes out most
+of the stylesheet, leaving the sitemap almost entirely unstyled. Emitting the
+CSS with no line breaks removes anything for it to convert. **Keep it on one
+line if you edit it**, and paste into a **Custom HTML** block rather than a
+Paragraph block.
+
+`collapse_style()` in the generator does this automatically on every build, so
+the CSS comments live in the HTML comment at the top of the file instead.
+
+### Typography
+
 Body typography is set explicitly from the site's own text styles, at the top
 of the `<style>` block:
 
