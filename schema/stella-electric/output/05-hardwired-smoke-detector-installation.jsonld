@@ -1,0 +1,379 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Electrician",
+        "LocalBusiness"
+      ],
+      "@id": "https://stellaelectricllc.com/#organization",
+      "name": "Stella Electric LLC",
+      "alternateName": "Stella Electric",
+      "url": "https://stellaelectricllc.com/",
+      "telephone": "+1-410-429-0479",
+      "email": "stellaelectricco@gmail.com",
+      "foundingDate": "2016",
+      "priceRange": "$$",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://stellaelectricllc.com/#logo",
+        "url": "{{LOGO_URL}}",
+        "contentUrl": "{{LOGO_URL}}",
+        "caption": "Stella Electric LLC"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "532 Church Rd",
+        "addressLocality": "Reisterstown",
+        "addressRegion": "MD",
+        "postalCode": "21136",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "sameAs": [
+        "{{GOOGLE_BUSINESS_PROFILE_URL}}",
+        "{{FACEBOOK_URL}}",
+        "{{YELP_URL}}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stellaelectricllc.com/#website",
+      "url": "https://stellaelectricllc.com/",
+      "name": "Stella Electric LLC",
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#webpage",
+      "url": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/",
+      "name": "{{PAGE_TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/#website"
+      },
+      "about": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#primaryimage",
+      "url": "{{PRIMARY_IMAGE_URL}}",
+      "contentUrl": "{{PRIMARY_IMAGE_URL}}",
+      "width": "{{PRIMARY_IMAGE_WIDTH}}",
+      "height": "{{PRIMARY_IMAGE_HEIGHT}}",
+      "caption": "Hardwired interconnected smoke detector installed on a residential ceiling"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stellaelectricllc.com/#/schema/person/author",
+      "name": "{{AUTHOR_NAME}}",
+      "jobTitle": "{{AUTHOR_JOB_TITLE}}",
+      "worksFor": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "url": "{{AUTHOR_PROFILE_URL}}"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#article",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#webpage"
+      },
+      "headline": "Hardwired Smoke Detector Installation",
+      "description": "{{META_DESCRIPTION}}",
+      "articleSection": "Electrical Safety",
+      "keywords": "hardwired smoke detector installation, interconnected smoke alarms, smoke detector wiring, Baltimore electrician",
+      "author": {
+        "@id": "https://stellaelectricllc.com/#/schema/person/author"
+      },
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#primaryimage"
+      },
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}",
+      "inLanguage": "en-US",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Smoke detector"
+        },
+        {
+          "@type": "Thing",
+          "name": "Fire safety"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical installation"
+        },
+        {
+          "@type": "Thing",
+          "name": "Building code"
+        }
+      ],
+      "wordCount": "{{WORD_COUNT}}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stellaelectricllc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hardwired Smoke Detector Installation"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#faq-1",
+          "name": "Are hardwired smoke detectors required?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hardwired, interconnected alarms with battery backup are required in new construction and are usually triggered by additions and major remodels. In existing homes, Maryland law requires battery-only alarms over ten years old to be replaced with sealed ten-year units, and hardwired alarms must be maintained where they were originally required."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#faq-2",
+          "name": "How many smoke detectors does a house need and where do they go?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One inside each bedroom, one outside each separate sleeping area, and at least one on every level of the home including the basement. Larger or multi-wing homes need more to cover each sleeping area."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#faq-3",
+          "name": "What does interconnected mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interconnected alarms are linked so that when one detects smoke, every alarm in the home sounds. That matters most when a fire starts on a level far from the bedrooms, since it gives everyone the same warning at the same time."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#faq-4",
+          "name": "How often should hardwired smoke detectors be replaced?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Replace the alarms themselves every ten years from the manufacture date printed on the unit, and change the backup batteries on the schedule in the manufacturer's instructions. Sensors degrade whether or not the alarm has ever sounded."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#faq-5",
+          "name": "Can I install hardwired smoke detectors myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Running new cable and tying alarms into a branch circuit is licensed electrical work in Maryland and is typically permitted and inspected. Swapping an existing hardwired alarm for a compatible replacement on the same harness is straightforward, but new wiring or a new interconnect loop should be done by a licensed electrician."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#howto",
+      "name": "How Hardwired Smoke Detectors Are Installed",
+      "description": "The steps a licensed electrician follows to install and interconnect hardwired smoke detectors in a home.",
+      "totalTime": "{{HOWTO_TOTAL_TIME}}",
+      "image": {
+        "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#primaryimage"
+      },
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Plan the alarm locations",
+          "text": "Place an alarm inside every bedroom, outside each separate sleeping area, and on every level of the home including the basement. Keep alarms away from bathroom doors, supply registers and the immediate area over cooking appliances to limit nuisance alarms.",
+          "url": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#step-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Shut off and verify the power",
+          "text": "Turn off the circuit that will feed the alarms at the panel and confirm the wires are dead with a non-contact voltage tester before opening any box.",
+          "url": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#step-2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Run the interconnect cable",
+          "text": "Pull three-conductor cable between alarm locations so the hot, neutral and interconnect travel together. The interconnect conductor is what makes every alarm sound when one detects smoke.",
+          "url": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#step-3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Mount the boxes and bases",
+          "text": "Install the ceiling boxes at each planned location and mount the manufacturer's base plate to each box.",
+          "url": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#step-4"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Wire each detector",
+          "text": "Connect hot to black, neutral to white and the interconnect to the third conductor at every alarm, following the manufacturer's instructions. Do not mix brands or models on one interconnect loop unless the manufacturer lists them as compatible.",
+          "url": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#step-5"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Install the batteries and seat the alarms",
+          "text": "Install the backup batteries, twist each alarm onto its base and confirm it locks in place.",
+          "url": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#step-6"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Restore power and test the interconnect",
+          "text": "Energize the circuit, then hold the test button on one alarm and confirm every other alarm in the home sounds. Test each alarm in turn, and have the work inspected where a permit was required.",
+          "url": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#step-7"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Drill"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Drywall saw"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Wire strippers"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Non-contact voltage tester"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Fish tape"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Hardwired smoke detectors with battery backup"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "14/3 NM-B cable"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Old-work ceiling boxes"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Wire connectors"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://stellaelectricllc.com/hardwired-smoke-detector-installation/#service",
+      "name": "Hardwired Smoke Detector Installation",
+      "serviceType": "Smoke detector installation",
+      "description": "Installation, replacement and interconnection of hardwired smoke detectors with battery backup, wired and tested to code.",
+      "provider": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "category": "Electrical Services",
+      "url": "{{SMOKE_DETECTOR_SERVICE_URL}}"
+    }
+  ]
+}

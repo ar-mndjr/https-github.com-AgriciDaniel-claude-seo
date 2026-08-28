@@ -1,0 +1,377 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Electrician",
+        "LocalBusiness"
+      ],
+      "@id": "https://stellaelectricllc.com/#organization",
+      "name": "Stella Electric LLC",
+      "alternateName": "Stella Electric",
+      "url": "https://stellaelectricllc.com/",
+      "telephone": "+1-410-429-0479",
+      "email": "stellaelectricco@gmail.com",
+      "foundingDate": "2016",
+      "priceRange": "$$",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://stellaelectricllc.com/#logo",
+        "url": "{{LOGO_URL}}",
+        "contentUrl": "{{LOGO_URL}}",
+        "caption": "Stella Electric LLC"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "532 Church Rd",
+        "addressLocality": "Reisterstown",
+        "addressRegion": "MD",
+        "postalCode": "21136",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "sameAs": [
+        "{{GOOGLE_BUSINESS_PROFILE_URL}}",
+        "{{FACEBOOK_URL}}",
+        "{{YELP_URL}}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stellaelectricllc.com/#website",
+      "url": "https://stellaelectricllc.com/",
+      "name": "Stella Electric LLC",
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#webpage",
+      "url": "https://stellaelectricllc.com/smart-home-electrical-installation/",
+      "name": "{{PAGE_TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/#website"
+      },
+      "about": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#primaryimage",
+      "url": "{{PRIMARY_IMAGE_URL}}",
+      "contentUrl": "{{PRIMARY_IMAGE_URL}}",
+      "width": "{{PRIMARY_IMAGE_WIDTH}}",
+      "height": "{{PRIMARY_IMAGE_HEIGHT}}",
+      "caption": "Electrician installing a smart light switch in a residential wall box"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stellaelectricllc.com/#/schema/person/author",
+      "name": "{{AUTHOR_NAME}}",
+      "jobTitle": "{{AUTHOR_JOB_TITLE}}",
+      "worksFor": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "url": "{{AUTHOR_PROFILE_URL}}"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#article",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#webpage"
+      },
+      "headline": "Smart Home Electrical Installation",
+      "description": "{{META_DESCRIPTION}}",
+      "articleSection": "Smart Home",
+      "keywords": "smart home electrical installation, smart switch installation, smart home wiring, home automation electrician Baltimore",
+      "author": {
+        "@id": "https://stellaelectricllc.com/#/schema/person/author"
+      },
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#primaryimage"
+      },
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}",
+      "inLanguage": "en-US",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Home automation"
+        },
+        {
+          "@type": "Thing",
+          "name": "Smart switch"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical installation"
+        },
+        {
+          "@type": "Thing",
+          "name": "Smart home technology"
+        }
+      ],
+      "wordCount": "{{WORD_COUNT}}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stellaelectricllc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Smart Home Electrical Installation"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#faq-1",
+          "name": "Do smart switches need a neutral wire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most do. Smart switches draw a small amount of power continuously to stay connected, and that requires a neutral in the switch box. Many older Baltimore-area homes have switch loops with no neutral, so an electrician either pulls a neutral or installs a no-neutral switch that is compatible with your fixtures."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#faq-2",
+          "name": "Do I need an electrical panel upgrade for a smart home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lights, switches and thermostats rarely change the load. A panel upgrade comes into play when you add high-draw equipment such as an EV charger, a heat pump or a smart panel with circuit-level monitoring, or when the existing panel is already full or undersized."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#faq-3",
+          "name": "Can I install smart devices myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plug-in devices and screw-in bulbs are homeowner-friendly. Anything wired into a box - switches, dimmers, fan controls, doorbell transformers, hardwired hubs - is licensed electrical work in Maryland and is worth having done by an electrician, particularly where the box has no neutral or the wiring is aluminum."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#faq-4",
+          "name": "What does a smart thermostat need to work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A C-wire that supplies continuous 24-volt power. If your thermostat cable does not have a spare conductor, the fix is either new cable to the air handler or a manufacturer-supplied power adapter at the equipment."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#faq-5",
+          "name": "Should smart home devices be hardwired or wireless?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use wireless for convenience devices and hardwired connections for anything you depend on - cameras, automation hubs, access points and any device in a location with weak Wi-Fi. Hardwired network cable is the part that is far easier to install during a remodel than afterward."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#itemlist",
+      "name": "Smart home devices that need electrical work",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 7,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Smart switches and dimmers",
+          "description": "Most require a neutral conductor in the switch box, which older homes often do not have."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Smart thermostats",
+          "description": "Need a common (C) wire for continuous power, which frequently means pulling new thermostat cable."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Video doorbells",
+          "description": "Need adequate transformer voltage and capacity; many older door chime transformers are undersized."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Smart lighting and recessed fixtures",
+          "description": "Need dimmers and drivers listed as compatible with the fixtures to avoid flicker."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "EV chargers",
+          "description": "Need a dedicated 240-volt circuit and enough spare panel capacity."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Smart panels and energy monitoring",
+          "description": "Install at the electrical panel and often pair with a panel upgrade."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Structured wiring and access points",
+          "description": "Hardwired network cable gives automation hubs and cameras a connection that does not depend on Wi-Fi coverage."
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://stellaelectricllc.com/smart-home-electrical-installation/#service",
+      "name": "Smart Home Electrical Installation",
+      "serviceType": "Smart home installation",
+      "description": "Installation and wiring of smart switches, dimmers, thermostats, video doorbells, smart panels and structured wiring, including the neutral conductors and dedicated circuits these devices require.",
+      "provider": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "category": "Electrical Services",
+      "url": "https://stellaelectricllc.com/smart-home/",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Smart home electrical services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Smart switch and dimmer installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Smart thermostat wiring and C-wire installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Video doorbell and transformer upgrades"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Smart lighting and dimmer compatibility"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EV charger circuit installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Smart panel and energy monitoring installation"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

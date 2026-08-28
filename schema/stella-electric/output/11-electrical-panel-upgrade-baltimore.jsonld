@@ -1,0 +1,292 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Electrician",
+        "LocalBusiness"
+      ],
+      "@id": "https://stellaelectricllc.com/#organization",
+      "name": "Stella Electric LLC",
+      "alternateName": "Stella Electric",
+      "url": "https://stellaelectricllc.com/",
+      "telephone": "+1-410-429-0479",
+      "email": "stellaelectricco@gmail.com",
+      "foundingDate": "2016",
+      "priceRange": "$$",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://stellaelectricllc.com/#logo",
+        "url": "{{LOGO_URL}}",
+        "contentUrl": "{{LOGO_URL}}",
+        "caption": "Stella Electric LLC"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "532 Church Rd",
+        "addressLocality": "Reisterstown",
+        "addressRegion": "MD",
+        "postalCode": "21136",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "sameAs": [
+        "{{GOOGLE_BUSINESS_PROFILE_URL}}",
+        "{{FACEBOOK_URL}}",
+        "{{YELP_URL}}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stellaelectricllc.com/#website",
+      "url": "https://stellaelectricllc.com/",
+      "name": "Stella Electric LLC",
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#webpage",
+      "url": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/",
+      "name": "{{PAGE_TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/#website"
+      },
+      "about": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}",
+      "mainEntity": {
+        "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#service"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#primaryimage",
+      "url": "{{PRIMARY_IMAGE_URL}}",
+      "contentUrl": "{{PRIMARY_IMAGE_URL}}",
+      "width": "{{PRIMARY_IMAGE_WIDTH}}",
+      "height": "{{PRIMARY_IMAGE_HEIGHT}}",
+      "caption": "Newly installed 200-amp electrical panel in a Baltimore home"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stellaelectricllc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Electrical Services",
+          "item": "https://stellaelectricllc.com/electrical-services/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Electrical Panel Upgrade in Baltimore"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#faq-1",
+          "name": "How much does an electrical panel upgrade cost in Baltimore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upgrading an electrical panel in Baltimore, MD typically costs between $500 and $2,000. A straight panel replacement generally runs $1,000 to $2,500, while a full service upgrade can range from $2,500 to $5,000 or more when the service entrance, meter or extensive rewiring are involved."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#faq-2",
+          "name": "What are the signs I need a panel upgrade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Breakers that trip repeatedly, a fuse box or a panel with no room left for new circuits, reliance on tandem breakers and extension cords, lights that dim when large appliances start, a panel that is warm, rusted or buzzing, a recalled brand such as Federal Pacific or Zinsco, or planned additions like an EV charger, a heat pump or a finished basement."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#faq-3",
+          "name": "Should I upgrade to 200 amps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 100-amp service can still be adequate for a modest home with gas appliances. A 200-amp service is the practical choice for homes adding electric heat, an EV charger, central air, a hot tub or a large addition, because it provides both the capacity and the breaker spaces those loads need."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#faq-4",
+          "name": "How long does a panel upgrade take and will my power be off?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most panel replacements are completed in a day, with the power off for several hours while the old panel is removed and the circuits are transferred. A full service upgrade adds time for utility coordination and inspection."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#faq-5",
+          "name": "Do I need a permit for a panel upgrade in Baltimore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A panel upgrade requires a permit and an electrical inspection, and a service upgrade also requires coordination with BGE to disconnect and reconnect the service. A licensed electrical contractor handles the permit, the utility scheduling and the inspection."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://stellaelectricllc.com/electrical-panel-upgrade-baltimore/#service",
+      "name": "Electrical Panel Upgrade in Baltimore, MD",
+      "serviceType": "Electrical panel upgrade",
+      "description": "Electrical panel upgrades, breaker panel replacements and service upgrades for Baltimore-area homes, including permitting, utility coordination and inspection.",
+      "provider": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "category": "Electrical Services",
+      "url": "https://stellaelectricllc.com/electrical-panel-upgrades/",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://stellaelectricllc.com/electrical-panel-upgrades/",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "USD",
+          "minPrice": 500,
+          "maxPrice": 2000,
+          "valueAddedTaxIncluded": false
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Panel and service upgrade options",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "100 amp to 200 amp service upgrade"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Breaker panel replacement"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Subpanel installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fuse box replacement"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Federal Pacific and Zinsco panel replacement"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Service entrance and meter base repair"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

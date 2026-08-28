@@ -1,0 +1,138 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Electrician", "LocalBusiness"],
+      "@id": "https://stellaelectricllc.com/#organization",
+      "name": "Stella Electric LLC",
+      "alternateName": "Stella Electric",
+      "legalName": "Stella Electric LLC",
+      "url": "https://stellaelectricllc.com/",
+      "telephone": "+1-410-429-0479",
+      "email": "stellaelectricco@gmail.com",
+      "description": "Stella Electric LLC is a residential and commercial electrical contractor serving Baltimore and the surrounding metro area, with service across Maryland, Virginia, Pennsylvania, Delaware and the District of Columbia.",
+      "foundingDate": "2016",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Reisterstown",
+          "addressRegion": "MD",
+          "addressCountry": "US"
+        }
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "{{PAYMENT_ACCEPTED}}",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://stellaelectricllc.com/#logo",
+        "url": "{{LOGO_URL}}",
+        "contentUrl": "{{LOGO_URL}}",
+        "width": "{{LOGO_WIDTH}}",
+        "height": "{{LOGO_HEIGHT}}",
+        "caption": "Stella Electric LLC"
+      },
+      "image": { "@id": "https://stellaelectricllc.com/#logo" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "532 Church Rd",
+        "addressLocality": "Reisterstown",
+        "addressRegion": "MD",
+        "postalCode": "21136",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "{{LATITUDE}}",
+        "longitude": "{{LONGITUDE}}"
+      },
+      "hasMap": "{{GOOGLE_MAPS_URL}}",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:00",
+          "closes": "19:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-410-429-0479",
+          "contactType": "customer service",
+          "areaServed": ["US-MD", "US-VA", "US-PA", "US-DE", "US-DC"],
+          "availableLanguage": "English"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-410-429-0479",
+          "contactType": "emergency",
+          "contactOption": "TollFree",
+          "areaServed": ["US-MD"],
+          "availableLanguage": "English"
+        }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Baltimore", "containedInPlace": { "@type": "State", "name": "Maryland" } },
+        { "@type": "State", "name": "Maryland" },
+        { "@type": "State", "name": "Virginia" },
+        { "@type": "State", "name": "Pennsylvania" },
+        { "@type": "State", "name": "Delaware" },
+        { "@type": "AdministrativeArea", "name": "Washington, D.C." }
+      ],
+      "knowsAbout": [
+        "Residential electrical service",
+        "Commercial electrical service",
+        "Electrical panel upgrades",
+        "Home rewiring",
+        "Whole-house surge protection",
+        "Electrical code inspections",
+        "Emergency electrical repair",
+        "Smart home installation"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Electrical services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical panel upgrades", "url": "https://stellaelectricllc.com/electrical-panel-upgrades/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home rewiring", "url": "https://stellaelectricllc.com/home-rewire/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Whole-house surge protection", "url": "https://stellaelectricllc.com/whole-house-surge-protection/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical code inspection", "url": "https://stellaelectricllc.com/electrical-code-inspection/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical repair and troubleshooting", "url": "https://stellaelectricllc.com/electrical-repair-troubleshooting/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency electrical service", "url": "https://stellaelectricllc.com/emergency-electrician/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Outlet installation", "url": "https://stellaelectricllc.com/outlet-installation/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Indoor lighting installation", "url": "https://stellaelectricllc.com/indoor-lighting/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smart home installation", "url": "https://stellaelectricllc.com/smart-home/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical remodeling", "url": "https://stellaelectricllc.com/remodeling/" } }
+        ]
+      },
+      "sameAs": [
+        "{{GOOGLE_BUSINESS_PROFILE_URL}}",
+        "{{FACEBOOK_URL}}",
+        "{{YELP_URL}}",
+        "{{BBB_PROFILE_URL}}",
+        "{{INSTAGRAM_URL}}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stellaelectricllc.com/#website",
+      "url": "https://stellaelectricllc.com/",
+      "name": "Stella Electric LLC",
+      "description": "Baltimore area electricians",
+      "publisher": { "@id": "https://stellaelectricllc.com/#organization" },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://stellaelectricllc.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
