@@ -1,0 +1,287 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Electrician",
+        "LocalBusiness"
+      ],
+      "@id": "https://stellaelectricllc.com/#organization",
+      "name": "Stella Electric LLC",
+      "alternateName": "Stella Electric",
+      "url": "https://stellaelectricllc.com/",
+      "telephone": "+1-410-429-0479",
+      "email": "stellaelectricco@gmail.com",
+      "foundingDate": "2016",
+      "priceRange": "$$",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://stellaelectricllc.com/#logo",
+        "url": "{{LOGO_URL}}",
+        "contentUrl": "{{LOGO_URL}}",
+        "caption": "Stella Electric LLC"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "532 Church Rd",
+        "addressLocality": "Reisterstown",
+        "addressRegion": "MD",
+        "postalCode": "21136",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "sameAs": [
+        "{{GOOGLE_BUSINESS_PROFILE_URL}}",
+        "{{FACEBOOK_URL}}",
+        "{{YELP_URL}}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stellaelectricllc.com/#website",
+      "url": "https://stellaelectricllc.com/",
+      "name": "Stella Electric LLC",
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#webpage",
+      "url": "https://stellaelectricllc.com/aluminum-wiring-inspection/",
+      "name": "{{PAGE_TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/#website"
+      },
+      "about": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#primaryimage",
+      "url": "{{PRIMARY_IMAGE_URL}}",
+      "contentUrl": "{{PRIMARY_IMAGE_URL}}",
+      "width": "{{PRIMARY_IMAGE_WIDTH}}",
+      "height": "{{PRIMARY_IMAGE_HEIGHT}}",
+      "caption": "Aluminum branch circuit conductors terminated in a residential junction box"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stellaelectricllc.com/#/schema/person/author",
+      "name": "{{AUTHOR_NAME}}",
+      "jobTitle": "{{AUTHOR_JOB_TITLE}}",
+      "worksFor": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "url": "{{AUTHOR_PROFILE_URL}}"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#article",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#webpage"
+      },
+      "headline": "Aluminum Wiring Inspection",
+      "description": "{{META_DESCRIPTION}}",
+      "articleSection": "Electrical Inspections",
+      "keywords": "aluminum wiring inspection, aluminum wiring repair, COPALUM, AlumiConn, Baltimore electrician",
+      "author": {
+        "@id": "https://stellaelectricllc.com/#/schema/person/author"
+      },
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#primaryimage"
+      },
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}",
+      "inLanguage": "en-US",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Aluminum wiring"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical inspection"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical safety"
+        },
+        {
+          "@type": "Thing",
+          "name": "Home wiring"
+        }
+      ],
+      "wordCount": "{{WORD_COUNT}}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stellaelectricllc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aluminum Wiring Inspection"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#faq-1",
+          "name": "How do I know if my house has aluminum wiring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Homes built or rewired roughly between 1965 and 1973 are the ones to check. The cable jacket is often printed with ALUMINUM or AL, and the conductors are silver rather than copper-colored. The check has to be done at the panel and at devices, so it is work for an electrician, not a visual guess from the basement."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#faq-2",
+          "name": "Is aluminum wiring dangerous?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The wire itself is not the problem - the terminations are. Aluminum expands, contracts and oxidizes differently than copper, so connections at outlets, switches and splices loosen over time and overheat. Homes with aluminum branch circuits have a documented history of connection failures at those points."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#faq-3",
+          "name": "Does aluminum wiring have to be replaced?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. The recognized remediation is to repair the connections rather than rip out the wiring - most commonly COPALUM crimp connectors or AlumiConn connectors that join the aluminum conductor to a copper pigtail at every device and splice. Full rewiring is the alternative when the wiring is damaged or the home is already being renovated."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#faq-4",
+          "name": "Can I just install regular outlets and switches on aluminum wiring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Devices used with aluminum conductors must be listed for it - marked CO/ALR for receptacles and switches - and standard devices are a common cause of the overheating this wiring is known for. Even with listed devices, the connector-based repairs are the accepted fix."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#faq-5",
+          "name": "What does an aluminum wiring inspection involve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An electrician confirms whether the branch circuits are aluminum, opens a representative sample of devices and junction boxes to check the terminations, looks for heat damage, discoloration and loose connections at the panel, and reports on which repair approach fits the home."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#faq-6",
+          "name": "Will aluminum wiring affect my home insurance or sale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can. Insurers frequently ask about aluminum branch circuits and may require documented remediation, and buyers' inspectors flag it during a sale. A documented repair by a licensed electrician is what resolves both."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://stellaelectricllc.com/aluminum-wiring-inspection/#service",
+      "name": "Aluminum Wiring Inspection and Repair",
+      "serviceType": "Aluminum wiring inspection",
+      "description": "Inspection of aluminum branch circuit wiring, evaluation of terminations and heat damage, and remediation with listed connectors and copper pigtails or full rewiring.",
+      "provider": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "category": "Electrical Services",
+      "url": "https://stellaelectricllc.com/home-rewire/"
+    }
+  ]
+}

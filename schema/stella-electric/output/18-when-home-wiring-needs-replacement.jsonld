@@ -1,0 +1,347 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Electrician",
+        "LocalBusiness"
+      ],
+      "@id": "https://stellaelectricllc.com/#organization",
+      "name": "Stella Electric LLC",
+      "alternateName": "Stella Electric",
+      "url": "https://stellaelectricllc.com/",
+      "telephone": "+1-410-429-0479",
+      "email": "stellaelectricco@gmail.com",
+      "foundingDate": "2016",
+      "priceRange": "$$",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://stellaelectricllc.com/#logo",
+        "url": "{{LOGO_URL}}",
+        "contentUrl": "{{LOGO_URL}}",
+        "caption": "Stella Electric LLC"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "532 Church Rd",
+        "addressLocality": "Reisterstown",
+        "addressRegion": "MD",
+        "postalCode": "21136",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "sameAs": [
+        "{{GOOGLE_BUSINESS_PROFILE_URL}}",
+        "{{FACEBOOK_URL}}",
+        "{{YELP_URL}}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stellaelectricllc.com/#website",
+      "url": "https://stellaelectricllc.com/",
+      "name": "Stella Electric LLC",
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#webpage",
+      "url": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/",
+      "name": "{{PAGE_TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/#website"
+      },
+      "about": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#primaryimage",
+      "url": "{{PRIMARY_IMAGE_URL}}",
+      "contentUrl": "{{PRIMARY_IMAGE_URL}}",
+      "width": "{{PRIMARY_IMAGE_WIDTH}}",
+      "height": "{{PRIMARY_IMAGE_HEIGHT}}",
+      "caption": "Deteriorated cloth-insulated wiring in an older Baltimore home"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stellaelectricllc.com/#/schema/person/author",
+      "name": "{{AUTHOR_NAME}}",
+      "jobTitle": "{{AUTHOR_JOB_TITLE}}",
+      "worksFor": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "url": "{{AUTHOR_PROFILE_URL}}"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#article",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#webpage"
+      },
+      "headline": "When Home Wiring Needs Replacement",
+      "description": "{{META_DESCRIPTION}}",
+      "articleSection": "Home Rewiring",
+      "keywords": "when to replace home wiring, signs you need rewiring, old house wiring, rewiring Baltimore",
+      "author": {
+        "@id": "https://stellaelectricllc.com/#/schema/person/author"
+      },
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#primaryimage"
+      },
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}",
+      "inLanguage": "en-US",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Home wiring"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical rewiring"
+        },
+        {
+          "@type": "Thing",
+          "name": "Knob-and-tube wiring"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical safety"
+        }
+      ],
+      "wordCount": "{{WORD_COUNT}}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stellaelectricllc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "When Home Wiring Needs Replacement"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#faq-1",
+          "name": "How long does home wiring last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern copper branch wiring in good condition can last the life of the house. What ages out first is everything around it - insulation that degrades, connections that loosen, devices that wear, and panels and circuit layouts that no longer match how the home is used."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#faq-2",
+          "name": "What are the signs a house needs rewiring?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Knob-and-tube, cloth-insulated or aluminum wiring; two-prong ungrounded outlets throughout; a fuse box or an undersized panel; breakers that trip repeatedly; lights that dim when appliances start; warm or discolored outlets and switches; burning smells; and reliance on extension cords because there are not enough circuits."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#faq-3",
+          "name": "Does a whole house need rewiring, or just part of it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often just part. Many older homes have had kitchens, baths and additions updated over the years, leaving only the original circuits to replace. An electrician's evaluation identifies which circuits are original and which have already been brought up to date."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#faq-4",
+          "name": "How much does it cost to rewire a house?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A useful estimate is $7.79 per linear foot of wall space plus $1,200 to $2,500 for the electrical panel. The size of the home, the number of circuits added and how much access has to be opened up drive the total."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#faq-5",
+          "name": "Can I rewire a house without tearing out the walls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mostly, yes. Electricians route new cable through attics, basements, closets and existing chases, and open small, patchable access points where a run cannot be fished. Some drywall repair is normal, but a whole-home rewire does not mean gutting the house."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#itemlist",
+      "name": "Signs home wiring needs to be replaced",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Knob-and-tube wiring",
+          "description": "Ungrounded, brittle with age, and unsafe to bury in insulation. Insurers often will not write a policy on it."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cloth-insulated or deteriorating cable",
+          "description": "Mid-century cable whose insulation cracks and falls away at the terminations, leaving bare conductors in the box."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Aluminum branch circuits",
+          "description": "1965 to 1973 era wiring whose terminations loosen and overheat. It needs either connector-based remediation or replacement."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Two-prong ungrounded outlets throughout",
+          "description": "A house-wide sign that the branch circuits predate equipment grounding."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Repeated breaker trips and flickering",
+          "description": "Circuits that trip, dim when appliances start, or run warm are reporting that they are undersized or faulty."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Scorch marks, burning smells or warm devices",
+          "description": "Heat at outlets, switches or the panel means the connections are failing."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Too few circuits for how you live",
+          "description": "Extension cords and power strips as permanent wiring means the circuit layout no longer matches the house."
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "A major renovation with open walls",
+          "description": "The cheapest time to rewire is when the walls are already open. Waiting means paying twice for access."
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://stellaelectricllc.com/when-home-wiring-needs-replacement/#service",
+      "name": "Home Rewiring",
+      "serviceType": "Residential rewiring",
+      "description": "Evaluation and replacement of outdated or unsafe branch circuit wiring, including partial rewiring, added circuits and panel replacement, permitted and inspected.",
+      "provider": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "category": "Electrical Services",
+      "url": "https://stellaelectricllc.com/home-rewire/",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://stellaelectricllc.com/home-rewire/",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "USD",
+          "price": 7.79,
+          "unitText": "linear foot of wall space",
+          "valueAddedTaxIncluded": false
+        }
+      }
+    }
+  ]
+}

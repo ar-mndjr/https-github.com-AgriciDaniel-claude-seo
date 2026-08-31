@@ -1,0 +1,341 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Electrician",
+        "LocalBusiness"
+      ],
+      "@id": "https://stellaelectricllc.com/#organization",
+      "name": "Stella Electric LLC",
+      "alternateName": "Stella Electric",
+      "url": "https://stellaelectricllc.com/",
+      "telephone": "+1-410-429-0479",
+      "email": "stellaelectricco@gmail.com",
+      "foundingDate": "2016",
+      "priceRange": "$$",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://stellaelectricllc.com/#logo",
+        "url": "{{LOGO_URL}}",
+        "contentUrl": "{{LOGO_URL}}",
+        "caption": "Stella Electric LLC"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "532 Church Rd",
+        "addressLocality": "Reisterstown",
+        "addressRegion": "MD",
+        "postalCode": "21136",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "sameAs": [
+        "{{GOOGLE_BUSINESS_PROFILE_URL}}",
+        "{{FACEBOOK_URL}}",
+        "{{YELP_URL}}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stellaelectricllc.com/#website",
+      "url": "https://stellaelectricllc.com/",
+      "name": "Stella Electric LLC",
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#webpage",
+      "url": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/",
+      "name": "{{PAGE_TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/#website"
+      },
+      "about": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#primaryimage",
+      "url": "{{PRIMARY_IMAGE_URL}}",
+      "contentUrl": "{{PRIMARY_IMAGE_URL}}",
+      "width": "{{PRIMARY_IMAGE_WIDTH}}",
+      "height": "{{PRIMARY_IMAGE_HEIGHT}}",
+      "caption": "Open junction box with unsecured splices found inside a residential attic"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stellaelectricllc.com/#/schema/person/author",
+      "name": "{{AUTHOR_NAME}}",
+      "jobTitle": "{{AUTHOR_JOB_TITLE}}",
+      "worksFor": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "url": "{{AUTHOR_PROFILE_URL}}"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#article",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#webpage"
+      },
+      "headline": "Examples of Hidden Electrical Hazards",
+      "description": "{{META_DESCRIPTION}}",
+      "articleSection": "Electrical Safety",
+      "keywords": "hidden electrical hazards, electrical safety hazards at home, unsafe wiring examples, Baltimore electrician",
+      "author": {
+        "@id": "https://stellaelectricllc.com/#/schema/person/author"
+      },
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#primaryimage"
+      },
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}",
+      "inLanguage": "en-US",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Electrical hazard"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical safety"
+        },
+        {
+          "@type": "Thing",
+          "name": "Home wiring"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical inspection"
+        }
+      ],
+      "wordCount": "{{WORD_COUNT}}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stellaelectricllc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hidden Electrical Hazards"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#faq-1",
+          "name": "What are hidden electrical hazards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Problems that give no symptom from the living side of the wall - buried splices, loose back-stabbed connections, double-tapped breakers, damaged cable, bootleg grounds, moisture in boxes and recalled panels. They are found by opening devices and panels, not by looking at a room."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#faq-2",
+          "name": "How do I know if my home has hidden electrical problems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some give warning signs: warm outlets, flickering lights, breakers that trip, buzzing, or a faint burning smell. Many give none at all until they fail, which is why an inspection by a licensed electrician is the only reliable way to find them."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#faq-3",
+          "name": "Are DIY electrical repairs a common source of hazards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They are one of the most common. Buried splices, missing boxes, undersized wire, bootleg grounds and overloaded circuits are all typical of well-meaning work done without a permit or an inspection."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#faq-4",
+          "name": "Do home inspections catch hidden electrical hazards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Partly. A general home inspection is visual and non-invasive - it catches what is exposed and reachable, and it will flag a recalled panel or a missing cover. It does not open devices, pull the panel dead front or trace circuits, which is where the hidden problems live."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#faq-5",
+          "name": "What should I do if I find one of these hazards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shut off the affected circuit and have a licensed electrician evaluate it. Where one is found, others usually follow, so an inspection of the whole system is more useful than a single repair."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#itemlist",
+      "name": "Hidden electrical hazards found in homes",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 9,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Buried and open junction boxes",
+          "description": "Splices inside walls, ceilings or attics with no accessible box, or boxes left without covers, where a loose connection can arc unseen."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Back-stabbed device connections",
+          "description": "Receptacles wired through push-in holes instead of screw terminals. They loosen with load cycling and are a leading cause of warm outlets."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Double-tapped breakers",
+          "description": "Two conductors under one breaker terminal that is listed for one, which leaves at least one connection loose over time."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Undersized or unprotected extension wiring",
+          "description": "Lamp cord or undersized cable extending a circuit inside a wall, with no box and no protection from nails and screws."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Missing or bootleg grounds",
+          "description": "A jumper from neutral to ground at a receptacle so a three-prong tester reads correct. It hides an ungrounded circuit while creating a shock path."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Insulation contact with non-IC fixtures",
+          "description": "Blown-in insulation piled over recessed cans not rated for it, which cooks the fixture and the wiring above it."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Nicked or pierced cable",
+          "description": "Cable damaged by a drywall screw, a picture hook or a previous trade, arcing quietly inside the wall cavity."
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Recalled and obsolete panels",
+          "description": "Federal Pacific Stab-Lok and Zinsco panels with a documented history of breakers that fail to trip on a fault."
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Moisture in outdoor and basement boxes",
+          "description": "Water entering through failed covers, missing gaskets or unsealed penetrations, corroding terminations out of sight."
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://stellaelectricllc.com/examples-hidden-electrical-hazards/#service",
+      "name": "Electrical Hazard Inspection",
+      "serviceType": "Electrical safety inspection",
+      "description": "Inspection for concealed electrical hazards including buried splices, loose connections, damaged cable, improper grounding, recalled panels and moisture intrusion, with a written report.",
+      "provider": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "category": "Electrical Services",
+      "url": "https://stellaelectricllc.com/electrical-code-inspection/"
+    }
+  ]
+}

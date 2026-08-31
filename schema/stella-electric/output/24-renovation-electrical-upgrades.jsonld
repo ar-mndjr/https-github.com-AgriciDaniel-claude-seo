@@ -1,0 +1,347 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Electrician",
+        "LocalBusiness"
+      ],
+      "@id": "https://stellaelectricllc.com/#organization",
+      "name": "Stella Electric LLC",
+      "alternateName": "Stella Electric",
+      "url": "https://stellaelectricllc.com/",
+      "telephone": "+1-410-429-0479",
+      "email": "stellaelectricco@gmail.com",
+      "foundingDate": "2016",
+      "priceRange": "$$",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://stellaelectricllc.com/#logo",
+        "url": "{{LOGO_URL}}",
+        "contentUrl": "{{LOGO_URL}}",
+        "caption": "Stella Electric LLC"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "532 Church Rd",
+        "addressLocality": "Reisterstown",
+        "addressRegion": "MD",
+        "postalCode": "21136",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "sameAs": [
+        "{{GOOGLE_BUSINESS_PROFILE_URL}}",
+        "{{FACEBOOK_URL}}",
+        "{{YELP_URL}}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stellaelectricllc.com/#website",
+      "url": "https://stellaelectricllc.com/",
+      "name": "Stella Electric LLC",
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#webpage",
+      "url": "https://stellaelectricllc.com/renovation-electrical-upgrades/",
+      "name": "{{PAGE_TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/#website"
+      },
+      "about": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#primaryimage",
+      "url": "{{PRIMARY_IMAGE_URL}}",
+      "contentUrl": "{{PRIMARY_IMAGE_URL}}",
+      "width": "{{PRIMARY_IMAGE_WIDTH}}",
+      "height": "{{PRIMARY_IMAGE_HEIGHT}}",
+      "caption": "New circuits roughed in through open framing during a home renovation"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stellaelectricllc.com/#/schema/person/author",
+      "name": "{{AUTHOR_NAME}}",
+      "jobTitle": "{{AUTHOR_JOB_TITLE}}",
+      "worksFor": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "url": "{{AUTHOR_PROFILE_URL}}"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#article",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#webpage"
+      },
+      "headline": "Electrical Upgrades to Make During a Renovation",
+      "description": "{{META_DESCRIPTION}}",
+      "articleSection": "Remodeling",
+      "keywords": "renovation electrical upgrades, remodel wiring, electrical work during renovation, Baltimore electrician",
+      "author": {
+        "@id": "https://stellaelectricllc.com/#/schema/person/author"
+      },
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#primaryimage"
+      },
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}",
+      "inLanguage": "en-US",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Home renovation"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical upgrade"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical wiring"
+        },
+        {
+          "@type": "Thing",
+          "name": "Remodeling"
+        }
+      ],
+      "wordCount": "{{WORD_COUNT}}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stellaelectricllc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Renovation Electrical Upgrades"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#faq-1",
+          "name": "What electrical work should I do during a renovation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anything that needs access: replacing original wiring, adding circuits, upgrading the panel, roughing in EV charging, adding surge protection, running new lighting and switching, hardwiring interconnected alarms, and pulling network cable. Access is the expensive part of electrical work, and a renovation gives it to you for free."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#faq-2",
+          "name": "Does a renovation trigger electrical code requirements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often, yes. Work that extends or modifies circuits generally has to meet current code for the affected areas, and renovations frequently trigger requirements for AFCI and GFCI protection and for hardwired interconnected smoke alarms. The scope depends on the work and on your jurisdiction's adopted code."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#faq-3",
+          "name": "Should I upgrade the electrical panel during a remodel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the panel is full, undersized for the finished project, or a fuse box or recalled brand, do it as part of the project rather than after. Panel work during the renovation avoids a second round of scheduling, permitting and utility coordination."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#faq-4",
+          "name": "When in the renovation should the electrician come in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Twice: at rough-in, after framing and before insulation and drywall, and again at trim-out once the walls and finishes are done. The planning conversation should happen before demolition, while the layout can still change."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#faq-5",
+          "name": "Do I need a permit for electrical work during a renovation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. New circuits, panel work and rewiring all require a permit and inspections in Maryland jurisdictions. The rough-in inspection has to happen before the walls are closed, which is why it belongs in the schedule from the start."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#itemlist",
+      "name": "Electrical upgrades worth doing while the walls are open",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Panel or service upgrade",
+          "description": "Everything else depends on capacity. If the panel is full or the service is undersized, do this first rather than working around it."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Replace remaining original branch circuits",
+          "description": "Knob-and-tube, cloth-insulated and aluminum circuits are cheapest to replace when access is already open."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Add circuits for how the room will actually be used",
+          "description": "Home offices, media walls, workshops and kitchens all need more dedicated circuits than the original layout provided."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Rough in EV charging",
+          "description": "Even if the car comes later, running conduit or a circuit to the garage now costs a fraction of retrofitting it."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Whole-house surge protection",
+          "description": "A panel-mounted device is trivial to add while the panel is already being worked on - roughly $350 to $750."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "AFCI and GFCI protection",
+          "description": "New and extended circuits require it, and the renovation is the moment to bring the rest of the home's protection current."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Recessed and layered lighting",
+          "description": "Ceiling access is what makes new lighting affordable. Plan switching, dimming and zones before the drywall goes up."
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Hardwired interconnected smoke and CO alarms",
+          "description": "Renovations frequently trigger the requirement anyway, and the interconnect wiring is easy only while the walls are open."
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Structured network wiring",
+          "description": "Cable to access points, cameras and equipment locations is the upgrade people most regret skipping."
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Outlets where you will want them",
+          "description": "Under-cabinet, closet, garage, exterior and floor outlets are cheap now and disruptive later."
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://stellaelectricllc.com/renovation-electrical-upgrades/#service",
+      "name": "Renovation and Remodeling Electrical Work",
+      "serviceType": "Electrical remodeling",
+      "description": "Electrical rough-in and trim-out for renovations, including added circuits, rewiring, panel upgrades, lighting design, alarm interconnection and EV charger provisions.",
+      "provider": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "category": "Electrical Services",
+      "url": "https://stellaelectricllc.com/remodeling/"
+    }
+  ]
+}

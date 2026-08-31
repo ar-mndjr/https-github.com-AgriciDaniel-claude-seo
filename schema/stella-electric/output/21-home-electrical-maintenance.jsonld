@@ -1,0 +1,335 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Electrician",
+        "LocalBusiness"
+      ],
+      "@id": "https://stellaelectricllc.com/#organization",
+      "name": "Stella Electric LLC",
+      "alternateName": "Stella Electric",
+      "url": "https://stellaelectricllc.com/",
+      "telephone": "+1-410-429-0479",
+      "email": "stellaelectricco@gmail.com",
+      "foundingDate": "2016",
+      "priceRange": "$$",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://stellaelectricllc.com/#logo",
+        "url": "{{LOGO_URL}}",
+        "contentUrl": "{{LOGO_URL}}",
+        "caption": "Stella Electric LLC"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "532 Church Rd",
+        "addressLocality": "Reisterstown",
+        "addressRegion": "MD",
+        "postalCode": "21136",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "sameAs": [
+        "{{GOOGLE_BUSINESS_PROFILE_URL}}",
+        "{{FACEBOOK_URL}}",
+        "{{YELP_URL}}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://stellaelectricllc.com/#website",
+      "url": "https://stellaelectricllc.com/",
+      "name": "Stella Electric LLC",
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#webpage",
+      "url": "https://stellaelectricllc.com/home-electrical-maintenance/",
+      "name": "{{PAGE_TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/#website"
+      },
+      "about": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#breadcrumb"
+      },
+      "inLanguage": "en-US",
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#primaryimage",
+      "url": "{{PRIMARY_IMAGE_URL}}",
+      "contentUrl": "{{PRIMARY_IMAGE_URL}}",
+      "width": "{{PRIMARY_IMAGE_WIDTH}}",
+      "height": "{{PRIMARY_IMAGE_HEIGHT}}",
+      "caption": "Electrician checking connections during a routine home electrical maintenance visit"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stellaelectricllc.com/#/schema/person/author",
+      "name": "{{AUTHOR_NAME}}",
+      "jobTitle": "{{AUTHOR_JOB_TITLE}}",
+      "worksFor": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "url": "{{AUTHOR_PROFILE_URL}}"
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#article",
+      "isPartOf": {
+        "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#webpage"
+      },
+      "headline": "Home Electrical Maintenance",
+      "description": "{{META_DESCRIPTION}}",
+      "articleSection": "Electrical Maintenance",
+      "keywords": "home electrical maintenance, electrical maintenance checklist, annual electrical inspection, Baltimore electrician",
+      "author": {
+        "@id": "https://stellaelectricllc.com/#/schema/person/author"
+      },
+      "publisher": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "image": {
+        "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#primaryimage"
+      },
+      "datePublished": "{{DATE_PUBLISHED}}",
+      "dateModified": "{{DATE_MODIFIED}}",
+      "inLanguage": "en-US",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Home maintenance"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical safety"
+        },
+        {
+          "@type": "Thing",
+          "name": "Electrical inspection"
+        },
+        {
+          "@type": "Thing",
+          "name": "Preventive maintenance"
+        }
+      ],
+      "wordCount": "{{WORD_COUNT}}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stellaelectricllc.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Home Electrical Maintenance"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#faq-1",
+          "name": "What does home electrical maintenance involve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regular testing of smoke alarms and GFCI devices, a look at outlets, switches and cords for heat or damage, seasonal checks of the panel and outdoor equipment, and a periodic professional inspection of the connections, grounding and circuit loading behind the walls."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#faq-2",
+          "name": "How often should I have my electrical system inspected?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every three to five years for a typical home, annually for homes with older wiring or heavy loads, and additionally when buying or selling, before a major renovation, and after any storm or water damage to electrical equipment."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#faq-3",
+          "name": "What electrical maintenance can I do myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Testing alarms and GFCIs, checking for warm or discolored devices, replacing bulbs within the fixture's rating, keeping the panel accessible and labeled, and keeping cords out from under rugs and furniture. Anything requiring the panel cover to come off belongs to an electrician."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#faq-4",
+          "name": "Why does the panel need to be checked if nothing is wrong?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because connections loosen with thermal cycling, and a loose connection heats long before it trips a breaker. Torque checks, grounding and bonding verification and load balancing are preventive work - they find the failure while it is still a maintenance item."
+          }
+        },
+        {
+          "@type": "Question",
+          "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#faq-5",
+          "name": "Is an electrical maintenance plan worth it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is worth it when it catches the loose connection, the failed GFCI or the aging alarm before they become an emergency call. The value is in the schedule being kept rather than in any single visit."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#itemlist",
+      "name": "Home electrical maintenance schedule",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Monthly - test smoke and CO alarms",
+          "description": "Press the test button on every unit and confirm interconnected alarms all sound."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Monthly - test GFCI devices",
+          "description": "Press TEST and RESET on every GFCI receptacle and breaker. A device that will not trip has failed."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Quarterly - walk the outlets and cords",
+          "description": "Check for warm or discolored outlets, loose receptacles, damaged cords, and power strips doing the work of permanent circuits."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Twice a year - vacuum alarms and check bulbs",
+          "description": "Dust in an alarm chamber causes both missed detections and nuisance trips. Confirm fixtures are within their wattage rating."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Annually - check the panel and outdoor equipment",
+          "description": "Look for rust, moisture, burning smells or warmth at the panel, and check that outdoor covers, boxes and the service mast are intact."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Annually - exercise and inspect the generator",
+          "description": "Standby and portable generator equipment, transfer switches and their connections need a run and an inspection before storm season."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Every 10 years - replace smoke alarms and GFCIs",
+          "description": "Both age out on a schedule the test button cannot reveal. Replace by manufacture date, not by symptom."
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Every few years - a professional inspection",
+          "description": "A licensed electrician checks terminations, torque, grounding, bonding and circuit loading - the things that cannot be seen from the living side of the wall."
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://stellaelectricllc.com/home-electrical-maintenance/#service",
+      "name": "Home Electrical Maintenance",
+      "serviceType": "Electrical maintenance",
+      "description": "Scheduled residential electrical maintenance covering panel inspection, connection checks, GFCI and alarm testing, grounding verification and circuit load evaluation.",
+      "provider": {
+        "@id": "https://stellaelectricllc.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "Pennsylvania"
+        },
+        {
+          "@type": "State",
+          "name": "Delaware"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Washington, D.C."
+        }
+      ],
+      "category": "Electrical Services",
+      "url": "https://stellaelectricllc.com/stella-simple-electrical-maintenance/"
+    }
+  ]
+}

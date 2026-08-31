@@ -1,7 +1,7 @@
-# Stella Electric LLC — structured data (11 pages)
+# Stella Electric LLC - structured data (24 pages)
 
-JSON-LD for eleven stellaelectricllc.com pages, plus one site-wide organization
-block. Every file is valid JSON-LD; every value that could not be verified is an
+JSON-LD for twenty-four stellaelectricllc.com pages, plus one site-wide
+organization block. Every file is valid JSON-LD; every value that could not be verified is an
 explicit `{{PLACEHOLDER}}` that must be filled in before the markup goes live.
 
 ## Important: these were written without reading the live pages
@@ -72,6 +72,20 @@ python3 build_schema.py            # writes output/, reports remaining placehold
 | 10 | emergency-electrician-baltimore | WebPage, Service (+ OfferCatalog), FAQPage, Electrician, BreadcrumbList |
 | 11 | electrical-panel-upgrade-baltimore | WebPage, Service (offer $500-$2,000, + OfferCatalog), FAQPage, Electrician |
 
+| 12 | electrical-fire-prevention | BlogPosting, ItemList (8-point prevention checklist), FAQPage, Service |
+| 13 | circuit-breaker-versus-fuse-box | BlogPosting, ItemList (comparison), FAQPage, Service (panel replacement $1,000-$2,500) |
+| 14 | why-do-outlets-feel-warm | BlogPosting, HowTo (diagnostic, not repair), FAQPage, Service |
+| 15 | electrical-load-calculation | BlogPosting, HowTo (NEC Article 220 standard method), FAQPage, Service |
+| 16 | aluminum-wiring-inspection | BlogPosting, FAQPage, Service, BreadcrumbList |
+| 17 | gfci-outlet-replacement | BlogPosting, HowTo (LINE/LOAD), FAQPage, Service |
+| 18 | when-home-wiring-needs-replacement | BlogPosting, ItemList (signs), FAQPage, Service ($7.79/linear ft) |
+| 19 | how-to-test-smoke-alarms | BlogPosting, HowTo (monthly routine + interconnect check), FAQPage, Service |
+| 20 | ev-charger-versus-standard-outlet | BlogPosting, ItemList (Level 1 vs Level 2), FAQPage, Service |
+| 21 | home-electrical-maintenance | BlogPosting, ItemList (schedule by frequency), FAQPage, Service |
+| 22 | examples-hidden-electrical-hazards | BlogPosting, ItemList (9 hazards), FAQPage, Service |
+| 23 | how-to-plan-kitchen-outlets | BlogPosting, HowTo (layout + circuits), FAQPage, Service |
+| 24 | renovation-electrical-upgrades | BlogPosting, ItemList (10 upgrades), FAQPage, Service |
+
 Pages 10 and 11 read as local service landing pages rather than articles, so they
 use `WebPage` + `Service` with the service as `mainEntity` and no author/dateline.
 If either is actually a blog post, change its `"kind"` to `"article"` in
@@ -97,6 +111,8 @@ within that page. The site-wide file defines the same `@id` with the full detail
 | `{{GOOGLE_BUSINESS_PROFILE_URL}}`, `{{FACEBOOK_URL}}`, `{{YELP_URL}}`, `{{BBB_PROFILE_URL}}`, `{{INSTAGRAM_URL}}` | real profile URLs; delete any that do not exist |
 | `{{PAYMENT_ACCEPTED}}` | e.g. `Cash, Check, Credit Card` |
 | `{{SMOKE_DETECTOR_SERVICE_URL}}`, `{{HOT_TUB_SERVICE_URL}}`, `{{EXHAUST_FAN_SERVICE_URL}}` | the matching service page URL, or delete the property if none exists |
+| `{{EV_CHARGER_SERVICE_URL}}` | the EV charger service page URL, or delete the `url` property |
+| `{{EV_CHARGER_COST_ANSWER}}` | the installation cost answer as written on the page, or delete that Q&A entirely |
 | `{{EMERGENCY_RESPONSE_TIME_ANSWER}}`, `{{EMERGENCY_PRICING_ANSWER}}` | the answers as written on the page - do not promise a response time or a no-fee policy the business has not committed to |
 
 Delete any property you cannot fill honestly. An omitted property is fine;
@@ -131,6 +147,26 @@ Google's local systems and AI search surfaces read to understand who the busines
 is and what each page answers. The nodes that can still produce visible SERP
 features here are `BreadcrumbList`, the `Article`/`BlogPosting` byline data and
 the local business panel.
+
+## Code references used in the drafted copy
+
+Several pages state code requirements. They are written to standard practice and
+current NEC language, but adopted editions differ by jurisdiction - verify each
+against what the article says and what Maryland enforces locally before publishing:
+
+- **15 (load calculation)** - NEC Article 220 standard method: 3 VA per square
+  foot general lighting, 1,500 VA per small-appliance and laundry circuit, first
+  3,000 VA at 100% and the remainder at 35%, larger of heat or A/C.
+- **23 (kitchen outlets)** - 24-inch rule for countertop receptacles, two or more
+  20-amp small-appliance branch circuits, GFCI on countertop receptacles. Island
+  and peninsula requirements changed between recent editions, so that FAQ points
+  at the adopted edition rather than stating a rule.
+- **16 (aluminum wiring)** - 1965-1973 era branch circuits, CO/ALR devices,
+  COPALUM and AlumiConn remediation.
+- **17 (GFCI)** - self-test requirement on devices made since 2015, ~10-year
+  replacement, GFCI permitted on ungrounded circuits when labeled
+  "No Equipment Ground".
+
 
 ## Not included, deliberately
 
