@@ -16,15 +16,13 @@ SEO Specialist with 5+ years of experience in technical SEO, ecommerce SEO, on-p
 
 ## CORE COMPETENCIES
 
-**Search Engine Optimization:** Technical SEO | Ecommerce SEO | On-Page SEO | Local SEO | International SEO | SEO Audits | Crawl and Indexation Management | Site Architecture | Internal Linking | Schema Markup | Core Web Vitals | Site Migrations | Link Building
-
-**AI and Generative Search:** Generative Engine Optimization (GEO) | Answer Engine Optimization (AEO) | AI Overviews and AI Mode Optimization | LLM Brand Visibility and Citation Tracking | Entity SEO and Knowledge Graph Optimization | E-E-A-T Signals | Structured Data for AI Retrieval | AI-Assisted SEO Workflows and Automation
-
-**Content and Research:** Keyword Research | Search Intent Analysis | Topic Clusters | Content Briefs | Content Optimization | Competitor and Content Gap Analysis | Editorial Planning
-
-**Analytics and Reporting:** Google Search Console | Google Analytics 4 | Looker Studio | Google Tag Manager | Rank Tracking | Performance Reporting
-
-**Web Development:** WordPress | Shopify | Webflow | WooCommerce | HTML | CSS | Responsive and Mobile Optimization
+- **Technical SEO:** SEO audits, crawl and indexation management, site architecture, schema markup, Core Web Vitals, site migrations
+- **On-Page and Content SEO:** on-page optimization, keyword research, search intent analysis, topic clusters, content briefs, content gap analysis
+- **Off-Page SEO:** link building, digital PR outreach, internal linking strategy
+- **Ecommerce and Local SEO:** Shopify and WooCommerce SEO, product and category page optimization, local SEO, international SEO
+- **AI and Generative Search:** Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), AI Overviews optimization, LLM brand visibility and citation tracking, entity SEO, E-E-A-T signals
+- **Analytics and Measurement:** organic performance analysis, rank tracking, internal linking reports, reporting and insights
+- **Web Development:** WordPress, Shopify, Webflow, WooCommerce, HTML, CSS, responsive and mobile optimization
 
 ---
 
@@ -142,16 +140,16 @@ _Graduated June 2024_
 ## CERTIFICATIONS
 
 **Google Data Analytics Professional Certificate - Coursera**
-Data Analysis | SQL | Spreadsheet Software | Business Analysis | Business Communication | Data Visualization | Data Management | General Statistics
+Data Analysis, SQL, Spreadsheet Software, Business Analysis, Business Communication, Data Visualization, Data Management, General Statistics
 
 **Advanced Google Analytics**
-Content Groupings | Advanced Marketing Tools | Custom Dimensions and Metrics | Google Tag Manager | Data Collection and Processing | Assisted Conversions | Custom Reporting | Segments | User ID Tracking
+Content Groupings, Advanced Marketing Tools, Custom Dimensions and Metrics, Google Tag Manager, Data Collection and Processing, Assisted Conversions, Custom Reporting, Segments, User ID Tracking
 
 **SEO Advance Master Class - All White Hat SEO**
-Local SEO Techniques and Strategy | Creating an Internal Link building Strategy | Off page SEO Tactic: Niche edits | Off page SEO Tactic: HARO | Off page SEO Tactic: Roundup | Creating Off Page Link Building Strategy | Creating an SEO Strategy based on site audit | Content Audit and Consolidation
+Local SEO Techniques and Strategy, Creating an Internal Link building Strategy, Off page SEO Tactic: Niche edits, Off page SEO Tactic: HARO, Off page SEO Tactic: Roundup, Creating Off Page Link Building Strategy, Creating an SEO Strategy based on site audit, Content Audit and Consolidation
 
 **SEO Foundations - LinkedIn Learning**
-On-Page Optimization | Off-Page Optimization | Technical Optimization | Keyword Strategy | International SEO | Link building
+On-Page Optimization, Off-Page Optimization, Technical Optimization, Keyword Strategy, International SEO, Link building
 
 **WordPress Website Development - Udemy**
-Domain and Hosting Setup | Design and Development | Plugins | Content Creation | SEO Fundamentals | Woo-Commerce
+Domain and Hosting Setup, Design and Development, Plugins, Content Creation, SEO Fundamentals, Woo-Commerce
