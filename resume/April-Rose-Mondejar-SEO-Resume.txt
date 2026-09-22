@@ -1,10 +1,10 @@
-APRIL ROSE MONDEJAR
+APRIL ROSE P. MONDEJAR
 
 SEO Specialist | Technical SEO, Generative Engine Optimization & Web Development
 
-Philippines | Open to Remote (Australia, US, UK time zones)
+San Jose Del Monte, Bulacan, Philippines | Open to Remote (Australia, US, UK time zones)
 Email: aprilrosemondejar0@gmail.com | Phone: +63 953 132 4768
-LinkedIn: [add your LinkedIn URL] | Portfolio: [add your portfolio URL]
+LinkedIn: https://www.linkedin.com/in/april-rose-mondejar/
 
 PROFESSIONAL SUMMARY
 
@@ -124,11 +124,22 @@ Web Development: WordPress, Shopify, Webflow, WooCommerce, Elementor, Divi, HTML
 EDUCATION
 
 Bachelor of Science in Computer Engineering
-Colegio de San Gabriel Arcangel
+Colegio de San Gabriel Arcangel | San Jose Del Monte, Bulacan
 Graduated June 2024
 
 CERTIFICATIONS
 
-- Google Data Analytics Professional Certificate - Coursera
-- SEO Advanced Master Class - All White Hat SEO
-- SEO Foundations - LinkedIn Learning
+Google Data Analytics Professional Certificate - Coursera
+Data Analysis | SQL | Spreadsheet Software | Business Analysis | Business Communication | Data Visualization | Data Management | General Statistics
+
+Advanced Google Analytics
+Content Groupings | Advanced Marketing Tools | Custom Dimensions and Metrics | Google Tag Manager | Data Collection and Processing | Assisted Conversions | Custom Reporting | Segments | User ID Tracking
+
+SEO Advance Master Class - All White Hat SEO
+Local SEO Techniques and Strategy | Creating an Internal Link building Strategy | Off page SEO Tactic: Niche edits | Off page SEO Tactic: HARO | Off page SEO Tactic: Roundup | Creating Off Page Link Building Strategy | Creating an SEO Strategy based on site audit | Content Audit and Consolidation
+
+SEO Foundations - LinkedIn Learning
+On-Page Optimization | Off-Page Optimization | Technical Optimization | Keyword Strategy | International SEO | Link building
+
+WordPress Website Development - Udemy
+Domain and Hosting Setup | Design and Development | Plugins | Content Creation | SEO Fundamentals | Woo-Commerce
