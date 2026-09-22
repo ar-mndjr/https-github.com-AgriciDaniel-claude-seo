@@ -4,7 +4,7 @@
 - **Goal:** lead generation for freelance/contract SEO work.
 - **Markets:** Australia, New Zealand, US, UK, Europe.
 - **Lead magnet:** free basic SEO audit.
-- **Engagement models:** both retainers and one-off projects.
+- **Pricing model:** one-time setup fee, then a monthly retainer.
 - **Case studies:** anonymised — no client names.
 - **Platform:** WordPress.
 
@@ -52,24 +52,30 @@ Related choices that follow from a five-region target:
 /privacy-policy/   /terms/   /thank-you/     Utility
 ```
 
-Changes from the first draft: location pages are gone, and `/pricing/` is added because you sell
-two engagement models across five markets — prospects need to self-qualify before they contact you.
+Changes from the first draft: location pages are gone, and `/pricing/` is added because a setup fee
+plus retainer needs explaining before a prospect will enquire — they need to self-qualify on budget.
 
 ---
 
 ## 2. The funnel
 
-Your three assets need to ladder, not compete:
+Your assets need to ladder, not compete:
 
 ```
-Free basic SEO audit  →  Paid full audit  →  Retainer or project
-   (lead magnet)          (entry offer)        (the real work)
+Free basic SEO audit   →   Setup fee (one-time)   →   Monthly retainer
+   (lead magnet)            full audit, strategy,       ongoing execution
+                            technical fixes, tracking
 ```
 
-Every service page routes to the free audit. The free audit's follow-up sells the paid audit. The
-paid audit's deliverable ends with a scoped recommendation — which is the retainer or project
-proposal. This is why the free audit must stay *basic*: if it solves their problem, there is
-nothing left to sell.
+Every service page routes to the free audit. The free audit's follow-up sells the setup. The setup
+work ends with a roadmap that only makes sense to execute — which is the retainer.
+
+**The full audit now lives inside the setup fee**, not as a separate product. That is the right call:
+it removes a decision point from the funnel, and it stops clients buying the audit and walking away
+with your strategy.
+
+This is also why the free audit must stay *basic*. If it solves their problem, there is nothing
+left to sell.
 
 ---
 
@@ -82,12 +88,12 @@ nothing left to sell.
 
 ### Services hub `/services/`
 - **Intent:** "SEO services" commercial.
-- **Sections:** how you work → card per service → **engagement models (project vs retainer)** → link to pricing → FAQ → CTA.
+- **Sections:** how you work → card per service → **how engagements work (setup, then retainer)** → link to pricing → FAQ → CTA.
 - Routes and frames; the child pages sell.
 
 ### Individual service pages (six, shared template)
 One page, one primary keyword, one intent:
-- **Problem** in the client's words → **what is included** (concrete deliverables) → **process** → **what you will get** (actual artifacts) → **proof** (linked case study) → **project or retainer**, with starting price → **FAQ** with FAQPage schema → **CTA to the free audit**.
+- **Problem** in the client's words → **what is included** (concrete deliverables) → **process** → **what you will get** (actual artifacts) → **proof** (linked case study) → **how it is delivered** (in setup, in the retainer, or both) → **FAQ** with FAQPage schema → **CTA to the free audit**.
 
 | Page | Primary intent |
 |---|---|
@@ -99,10 +105,22 @@ One page, one primary keyword, one intent:
 | `/services/wordpress-website-development/` | "WordPress SEO / website development" |
 
 ### Pricing `/pricing/`
-- **Why it exists:** two engagement models across five markets means a lot of unqualified enquiries. A pricing page filters them out before they reach your inbox.
-- **Sections:** project pricing (audit, migration, build) → retainer tiers with what each includes → what changes the price → what you do not do → FAQ → CTA.
-- Starting prices are enough — "projects from $X, retainers from $X/month". You do not need a full rate card.
-- State the currency and note that you invoice internationally.
+- **Model:** a one-time setup fee, then a monthly retainer.
+- **Why it exists:** a two-part price is harder to grasp than a single number, and an unexplained setup fee reads as padding. This page is where it becomes obvious why the first month costs more.
+- **Sections:** how engagements work (the two-part structure, in one short paragraph) → **what the setup covers**, itemised → **retainer tiers** with what each includes → minimum term → what changes the price → what you do not do → FAQ → CTA.
+
+**Getting the setup fee to land:**
+- **Itemise it.** Full technical audit, keyword and intent map, site architecture plan, priority fixes, GA4 and Search Console configuration, reporting setup. A setup fee is only defensible as a list of deliverables, never as a line item called "setup".
+- **Name it for its value, not its function.** "Foundation & Strategy" or "SEO Onboarding" rather than "setup fee".
+- **Common benchmark:** setup lands around 1-2x the monthly retainer. Enough to cover genuinely front-loaded work, not so much that it blocks the first yes.
+- **State a minimum term** — 3 or 6 months. SEO cannot show results in one month, and saying so upfront filters out clients who will churn angry in week 6.
+- **Tier the retainer** by scope (pages, content volume, channels), not by vague "hours". Hours invite micro-management.
+- State the currency and that you invoice internationally.
+
+**The one risk of this model:** it raises the barrier to the first yes, because the client pays the
+most before seeing any results. Two things carry that weight — the free audit, which has to be good
+enough that they already trust your judgement, and the itemised setup list, which has to read as
+obviously worth it. Get both right and the setup fee stops being an objection.
 
 ### Case studies `/case-studies/` — anonymised
 Anonymity costs you credibility, so replace the client name with **specificity everywhere else**:
