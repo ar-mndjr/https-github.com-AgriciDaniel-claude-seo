@@ -1,12 +1,27 @@
 # Website Outline — April Rose P. Mondejar, SEO Services
 
-## Assumptions behind this structure
-- **Goal:** lead generation for freelance/contract SEO work, not a blog or portfolio for its own sake.
-- **Primary market:** Australia (your current contracts), with US/UK/NZ remote as secondary.
-- **Platform:** WordPress, since it is your strongest and cheapest to iterate on.
-- **Launch lean.** Phase 1 is 10-12 pages. Do not publish 40 thin pages on a new domain.
+## Confirmed decisions
+- **Goal:** lead generation for freelance/contract SEO work.
+- **Markets:** Australia, New Zealand, US, UK, Europe.
+- **Lead magnet:** free basic SEO audit.
+- **Engagement models:** both retainers and one-off projects.
+- **Case studies:** anonymised — no client names.
+- **Platform:** WordPress.
 
-If any of these are wrong — especially the market — the location and industry sections change.
+---
+
+## 0. Decide this before you buy a domain
+
+**Use a `.com`, not a `.com.au`.** A country-code domain signals a single market and will work
+against you in the US, UK, and Europe. Since you are targeting five regions, `.com` is the only
+option that does not handicap four of them. If you have already bought a `.com.au`, keep it as a
+redirect and make the `.com` canonical.
+
+Related choices that follow from a five-region target:
+- **One English-language site.** No hreflang needed unless you later publish non-English content for Europe.
+- **Quote in one currency** — USD is the safest default — and say so, so prospects do not have to ask.
+- **State your timezone overlap explicitly.** You are in the Philippines selling to AU, NZ, US, UK, and EU. "Can she work my hours?" is a real objection, so answer it before it is asked: name the hours you overlap with each region.
+- **No city or country landing pages at launch.** Five regions of templated location pages is thin content at scale. Build one only if a single market starts dominating your leads, and only when you can write something genuinely specific about it.
 
 ---
 
@@ -21,10 +36,11 @@ If any of these are wrong — especially the market — the location and industr
   /services/generative-engine-optimization/
   /services/seo-content-optimization/
   /services/wordpress-website-development/
-/case-studies/                               Results hub
-  /case-studies/{client-or-niche}/
+/pricing/                                    Engagement models + starting prices
+/case-studies/                               Results hub (anonymised)
+  /case-studies/{industry}-{region}/
 /about/
-/free-seo-audit/                             Lead magnet / conversion page
+/free-seo-audit/                             Lead magnet
 /contact/
 /blog/
   /blog/{post}/
@@ -33,127 +49,127 @@ If any of these are wrong — especially the market — the location and industr
   /industries/healthcare-seo/
   /industries/real-estate-seo/
   /industries/construction-seo/
-/seo-services-{city}/                        PHASE 3, only if genuinely localised
 /privacy-policy/   /terms/   /thank-you/     Utility
 ```
 
-**Why this shape.** Services are the money pages and sit one click from home. Industries are a
-second commercial layer that catches "SEO for [vertical]" searches without diluting the service
-pages. The blog is informational only — keep commercial intent out of it, or it will cannibalise
-the pages that need to rank.
+Changes from the first draft: location pages are gone, and `/pricing/` is added because you sell
+two engagement models across five markets — prospects need to self-qualify before they contact you.
 
 ---
 
-## 2. Page-by-page
+## 2. The funnel
+
+Your three assets need to ladder, not compete:
+
+```
+Free basic SEO audit  →  Paid full audit  →  Retainer or project
+   (lead magnet)          (entry offer)        (the real work)
+```
+
+Every service page routes to the free audit. The free audit's follow-up sells the paid audit. The
+paid audit's deliverable ends with a scoped recommendation — which is the retainer or project
+proposal. This is why the free audit must stay *basic*: if it solves their problem, there is
+nothing left to sell.
+
+---
+
+## 3. Page-by-page
 
 ### Home `/`
-- **Intent:** branded and "SEO specialist / consultant" searches. Not your hardest-working ranking page — its job is routing and conversion.
-- **Sections:** value proposition above the fold (who you help, what result, how) → proof strip (client logos or results numbers) → services grid linking to all six service pages → one flagship case study → how you work (3-4 steps) → credentials and certifications → FAQ → primary CTA.
-- **CTA:** book a call, with free audit as the secondary.
-- **Links out to:** every service page, top case study, about, contact.
+- **Intent:** branded and "SEO specialist / consultant" searches. Its job is routing and conversion, not heavy ranking.
+- **Sections:** value proposition above the fold → **markets served + timezone overlap** → proof strip (anonymised results numbers) → services grid → one flagship case study → how you work → credentials and certifications → FAQ → CTA.
+- **CTA:** free basic audit primary, book a call secondary.
 
 ### Services hub `/services/`
 - **Intent:** "SEO services" commercial.
-- **Sections:** short intro framing your approach → card per service with a one-line outcome and link → engagement models (one-off audit, project, monthly retainer) → pricing signal, even just "from $X" or "projects start at" → FAQ → CTA.
-- Do not let this page duplicate the child pages. It routes and frames; children sell.
+- **Sections:** how you work → card per service → **engagement models (project vs retainer)** → link to pricing → FAQ → CTA.
+- Routes and frames; the child pages sell.
 
-### Individual service pages (six, same template)
-One page, one primary keyword, one intent. Template:
-- **Problem** the client has, in their words.
-- **What is included** — concrete deliverables, not adjectives.
-- **Process** — what happens week by week.
-- **What you will get** — the actual artifacts (audit doc, keyword map, monthly report).
-- **Proof** — a relevant case study or result, linked.
-- **Pricing or engagement model.**
-- **FAQ** — 5-8 real questions, marked up with FAQPage schema.
-- **CTA.**
+### Individual service pages (six, shared template)
+One page, one primary keyword, one intent:
+- **Problem** in the client's words → **what is included** (concrete deliverables) → **process** → **what you will get** (actual artifacts) → **proof** (linked case study) → **project or retainer**, with starting price → **FAQ** with FAQPage schema → **CTA to the free audit**.
 
-Suggested primary targets:
 | Page | Primary intent |
 |---|---|
-| `/services/technical-seo-audit/` | "technical SEO audit" — your strongest differentiator, highest-value entry offer |
+| `/services/technical-seo-audit/` | "technical SEO audit" — your strongest differentiator and the paid entry offer |
 | `/services/ecommerce-seo/` | "ecommerce SEO" / "Shopify SEO" |
 | `/services/local-seo/` | "local SEO services" |
-| `/services/generative-engine-optimization/` | "GEO" / "AI search optimization" — low competition now, high growth |
+| `/services/generative-engine-optimization/` | "GEO" / "AI search optimization" — low competition, high growth |
 | `/services/seo-content-optimization/` | "SEO content optimization" |
 | `/services/wordpress-website-development/` | "WordPress SEO / website development" |
 
-### Case studies `/case-studies/`
-- Hub page listing results, each with the headline number visible before the click.
-- One page per study: client context → problem → what you did → results with real numbers and a timeframe → tools used → testimonial if you can get one.
-- **These do triple duty:** conversion proof, long-tail rankings ("Shopify SEO case study"), and E-E-A-T signals for both Google and AI assistants.
-- You already have a case-study workflow — reuse it here.
+### Pricing `/pricing/`
+- **Why it exists:** two engagement models across five markets means a lot of unqualified enquiries. A pricing page filters them out before they reach your inbox.
+- **Sections:** project pricing (audit, migration, build) → retainer tiers with what each includes → what changes the price → what you do not do → FAQ → CTA.
+- Starting prices are enough — "projects from $X, retainers from $X/month". You do not need a full rate card.
+- State the currency and note that you invoice internationally.
+
+### Case studies `/case-studies/` — anonymised
+Anonymity costs you credibility, so replace the client name with **specificity everywhere else**:
+
+- **Title the studies by industry and region**, not client: `/case-studies/shopify-fashion-retailer-au/`, `/case-studies/healthcare-clinic-network-uk/`.
+- **Describe the client precisely without naming them:** "a 40-location Australian allied health network", "a UK Shopify fashion retailer, ~$2M annual revenue".
+- **Lead with the number and the timeframe.** Anonymous studies live or die on whether the metrics feel real: "organic traffic +38% in 6 months", not "significant growth".
+- **Use redacted screenshots** — GSC and GA4 graphs with the property name blurred. Far more convincing than a number in text.
+- **Get a testimonial even if anonymous.** "Head of Marketing, Australian healthcare network" is worth much more than nothing.
+- **Say why they are anonymised** in one line ("client work under NDA"). Unexplained anonymity reads as fabricated; explained anonymity reads as professional.
+- These rank well for "[vertical] SEO case study" long-tail, and feed AI assistants asking for proof.
 
 ### About `/about/`
-- More important than most freelancers think. It is your main E-E-A-T and entity page.
-- **Sections:** your story and why SEO → credentials, certifications, education → tools and methodology → industries served → photo → CTA.
-- Mark up with Person schema, link your LinkedIn and any author profiles, and keep your name, role, and location stated as plain facts — this is what AI assistants extract when someone asks "who is a good SEO specialist for X".
+- Your main E-E-A-T and entity page, and it carries more weight now that case studies are anonymous — you are the verifiable credential.
+- **Sections:** your story → credentials, certifications, education → tools and methodology → **markets and timezones** → industries served → photo → CTA.
+- Person schema, linked LinkedIn, name/role/location stated as plain facts. This is what AI assistants extract.
 
 ### Free SEO audit `/free-seo-audit/`
-- Your lead magnet and likely your highest-converting page.
-- Set a boundary: what they get (e.g. a 10-point technical review and a short Loom), and what it is not (a full audit).
-- Short form: URL, email, main goal. Every field you add costs conversions.
-- Route to `/thank-you/` so you can track the conversion in GA4.
+- Scope it as **basic** and say so: name exactly what they get (e.g. a 10-point technical review plus a short Loom) and what it is not.
+- Short form — URL, email, main goal. Every extra field costs conversions.
+- Route to `/thank-you/` for GA4 conversion tracking.
+- The follow-up email sequence is where the paid audit gets sold. Plan it alongside the page.
 
 ### Contact `/contact/`
-- Form, email, timezone and working hours, expected response time, and what to include in the message.
-- LocalBusiness or Person schema with contact details.
+- Form, email, **timezone and overlap hours per region**, expected response time.
+- Person/LocalBusiness schema.
 
 ### Blog `/blog/`
-- Informational intent only. Purpose: topical authority, internal links to service pages, and AI citation surface.
-- Post types that earn links and citations: original data or teardowns, "how to fix X" technical guides, and GEO/AI-search commentary while the topic is still underserved.
-- Every post links to a relevant service page. That is the whole point.
+- Informational intent only — keep commercial intent on the service pages or they will cannibalise each other.
+- Earns links and citations: original data or teardowns, "how to fix X" technical guides, GEO/AI-search commentary while the topic is underserved.
+- Every post links to a relevant service page.
 
 ### Industries `/industries/{vertical}/` — Phase 2
-- One per vertical you have real experience in: ecommerce, healthcare, real estate, construction.
-- Each needs genuinely vertical-specific content — the compliance issues in healthcare SEO, the listing-page architecture problem in real estate. If you cannot write something specific, do not publish the page.
-
-### Location pages — Phase 3, conditional
-- Only build these if you are genuinely targeting named cities and can differentiate each page. Duplicating a template with the city swapped is the fastest way to a thin-content problem.
-- If your positioning is "remote specialist for Australian businesses", a single well-optimised page plus the about page covers it better.
+- Ecommerce, healthcare, real estate, construction — the four you have real experience in.
+- Each needs genuinely vertical-specific substance (healthcare compliance constraints, real-estate listing-page architecture). If you cannot write something specific, do not publish it.
 
 ---
 
-## 3. GEO layer — practise what you sell
+## 4. GEO layer — practise what you sell
 
-You are selling Generative Engine Optimization, so the site has to be a demonstration of it.
-Prospects and AI assistants will both check.
+You are selling GEO, so the site has to demonstrate it. Prospects and AI assistants will both check.
 
-- **Answer-first structure.** Lead sections with a direct, quotable answer, then elaborate. AI assistants cite the extractable sentence.
+- **Answer-first structure.** Lead with the direct, quotable answer, then elaborate.
 - **Schema:** Person, Service, FAQPage, Article, BreadcrumbList.
-- **Entity clarity.** State your name, role, location, and specialisms as plain facts in consistent wording across the site, and keep them consistent with your LinkedIn.
-- **FAQ blocks** on every commercial page — these are what get pulled into AI Overviews.
-- **`/llms.txt`** at the root describing who you are and what you offer.
-- **Track it.** Monitor brand mentions and citations in ChatGPT, Claude, Gemini, and Perplexity, and use the results as case-study material.
+- **Entity clarity.** Name, role, location, specialisms stated as plain facts in consistent wording sitewide and matching your LinkedIn.
+- **FAQ blocks** on every commercial page — this is what gets pulled into AI Overviews.
+- **`/llms.txt`** at the root.
+- **Track your own citations** across ChatGPT, Claude, Gemini, and Perplexity — and turn the results into a case study. "I rank in AI search for my own service terms" is the most direct proof you can offer a GEO client.
 
 ---
 
-## 4. Build order
+## 5. Build order
 
-**Phase 1 — launch (10-12 pages).** Home, services hub, 3 strongest service pages, about, contact,
-free audit, thank you, privacy, terms. Ship it and start collecting leads.
+**Phase 1 — launch (12-14 pages).** Home, services hub, 3 strongest service pages, pricing, about,
+contact, free audit, thank you, privacy, terms. Ship and start collecting leads.
 
-**Phase 2 — depth.** Remaining 3 service pages, first 3 case studies, blog with 5-8 posts.
+**Phase 2 — depth.** Remaining 3 service pages, first 3 anonymised case studies, blog with 5-8 posts.
 
-**Phase 3 — expansion.** Industry pages, location pages if justified, more case studies.
-
-Resist building everything before launch. A live 10-page site collecting leads beats a perfect
-40-page site that never ships.
+**Phase 3 — expansion.** Industry pages, more case studies. Revisit region pages only if one market
+clearly dominates your leads.
 
 ---
 
-## 5. Before you write a word of copy
+## 6. Before you write copy
 
-1. **Keyword research per page.** One primary keyword and intent per URL, mapped in a sheet, before any drafting. Your own discipline — apply it here.
-2. **Check for cannibalisation** between the service pages, industry pages, and blog. This is the most common failure in a services site.
-3. **Decide on pricing transparency.** Showing a starting price filters out bad leads and increases qualified conversions. Most freelancers hide it and regret it.
-4. **Set up GA4, Search Console, and conversion tracking on day one**, not after launch.
-
----
-
-## 6. Open questions
-
-- Is Australia the primary market, or are you positioning globally?
-- Do you want to lead with the audit as a paid entry offer, or keep it free as a lead magnet?
-- Are you selling retainers, projects, or both? This changes the services hub and pricing sections.
-- Do you have client permission to publish named case studies, or do they need anonymising?
+1. **Keyword research per page** — one primary keyword and intent per URL, mapped in a sheet, before drafting.
+2. **Check cannibalisation** across service pages, industry pages, and blog. The most common failure mode for a services site.
+3. **Plan the free-audit follow-up sequence** at the same time as the page. The lead magnet is worthless without it.
+4. **GA4, Search Console, and conversion tracking on day one.**
+5. **Collect testimonials now**, even anonymous role-level ones. They matter more than usual given anonymised case studies.
