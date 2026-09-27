@@ -391,3 +391,43 @@
 
 /* option pills are labels too; keep them in the body font */
 .field label.choice { display: inline-block; margin: 0; font-family: var(--f-body); font-size: inherit; letter-spacing: 0; text-transform: none; color: inherit; }
+
+/* ---------- Exact-copy pass additions ---------- */
+.itile.num { font-family: var(--f-mono); font-size: 12px; font-weight: 500; }
+.fc .foot-mono.hot, .foot-mono.hot { color: var(--coral); }
+.stat-card .small { color: var(--text-3); font-size: 12.5px; line-height: 19px; }
+
+/* Result cards: tag + right label, key/value rows, long metric */
+.rc-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.rc-top .mono { font-size: 10px; }
+.rc .rc-top .chip { align-self: auto; }
+.rc-kv { margin-top: auto; padding-top: 22px; display: grid; gap: 8px; }
+.rc-kv div { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 4px; background: #20263a; }
+.rc-kv .mono { font-size: 9.5px; }
+.rc-kv b { font-family: var(--f-mono); font-size: 11.5px; font-weight: 500; color: var(--mint); text-align: right; }
+.rc .big.long { font-size: 22px; line-height: 29px; text-transform: uppercase; letter-spacing: -.01em; }
+
+/* About: LinkedIn row */
+.li-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 22px; }
+.li-row .btn { margin-top: 0 !important; }
+.li-row .mono { font-size: 10.5px; }
+
+/* Contact */
+.form-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.form-head .mono { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; color: var(--mint); }
+.field .opt { text-transform: none; letter-spacing: 0; color: var(--text-3); font-family: var(--f-body); font-size: 12px; }
+.choices.tagged .choice span { flex-direction: row; }
+.choices.tagged em { font-style: normal; margin-left: 4px; padding: 1px 6px; border-radius: 3px; background: rgba(255,255,255,.04); font-family: var(--f-mono); font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-3); }
+.choices.tagged .choice input:checked + span em { color: var(--indigo-l); background: rgba(129,140,248,.12); }
+.contact-grid > div > .label { margin-bottom: 12px; }
+.loc-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 16px 8px 8px; }
+.loc-stats > div { padding: 12px; border-radius: 6px; background: #20263a; }
+.loc-stats .mono { font-size: 9.5px; }
+.loc-stats b { display: block; margin-top: 4px; font-family: var(--f-head); font-size: 20px; line-height: 26px; color: var(--text); }
+.loc-stats small { display: block; margin-top: 2px; font-size: 11.5px; line-height: 16px; color: var(--text-2); }
+@media (max-width: 767px) {
+  .loc-stats { grid-template-columns: 1fr; }
+}
+/* keep the copy's own casing where it isn't an uppercase label */
+.stat-card .src, .link-chip.as-is, .foot-mono.as-is, .dom-card .more, .choices.tagged em { text-transform: none; }
+.choices.tagged em { letter-spacing: .02em; }
