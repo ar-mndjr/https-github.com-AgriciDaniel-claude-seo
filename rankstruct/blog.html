@@ -87,47 +87,184 @@
 </header>
 
 <main>
-<!-- ============ BLOG HERO ============ -->
-<section class="blog-hero">
-  <div class="glow indigo drift-a" style="width:520px;height:420px;top:-160px;right:10%;"></div>
-  <div class="glow green drift-b" style="width:380px;height:380px;top:10%;left:-180px;"></div>
-  <div class="container">
-    <div class="blog-head">
-      <div class="reveal">
-        <span class="crumb"><i class="live"></i>// Dispatches &amp; Teardowns</span>
-        <h1 class="h-xl">Engineering <span class="grad-text">dispatches.</span></h1>
-        <p class="lead">Field notes from real client work: SEO experiments, performance teardowns and automation patterns. No listicles, no fluff, just what we measured.</p>
-      </div>
+<!-- ============ HERO ============ -->
+<section class="hero blog-hero">
+  <div class="glow indigo drift-a" style="width:560px;height:480px;top:-120px;right:18%;"></div>
+  <div class="glow green drift-b" style="width:420px;height:420px;bottom:-160px;left:-160px;"></div>
+  <div class="glow violet drift-c" style="width:320px;height:320px;top:40%;right:-120px;opacity:.6"></div>
 
-      <div class="card struct index-card reveal" aria-label="Blog at a glance">
-        <div class="ix-top"><span class="mono">// Dispatch_Index</span><span class="chip rank"><i class="dot" style="background:var(--emerald)"></i>Live</span></div>
-        <div class="ix-stats">
-          <div><b data-count="10">10</b><span class="mono">Articles</span></div>
-          <div><b>10.1<small>min</small></b><span class="mono">Avg read</span></div>
-          <div><b data-count="3">3</b><span class="mono">Topics</span></div>
-        </div>
-        <div class="ix-bars">
-          <div data-cat="seo"><span class="mono">SEO</span><i style="--w:40%"></i><em>4</em></div>
-          <div data-cat="web"><span class="mono">Web</span><i style="--w:30%"></i><em>3</em></div>
-          <div data-cat="automation"><span class="mono">Automation</span><i style="--w:30%"></i><em>3</em></div>
-        </div>
-        <div class="ix-foot mono">Last dispatch · Sep 25, 2026 <span class="cursor-sm"></span></div>
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="crumb"><i class="live"></i>// Dispatches &amp; Teardowns</span>
+      <h1 class="h-xl" style="margin-top:14px">Engineering<br /><span class="grad">dispatches.</span></h1>
+      <p class="lead">Field notes from real client work: SEO experiments, performance teardowns and automation patterns. No listicles, no fluff. Just what we measured.</p>
+      <div class="hero-cta">
+        <a href="#newsletter" class="btn btn-primary">Get the Dispatch <svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <a href="#articles" class="btn btn-ghost"><svg><use href="#i-sparkle"/></svg> Browse Articles</a>
       </div>
     </div>
-  </div>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>#technical-seo</span><span>#core-web-vitals</span><span>#programmatic-seo</span><span>#nextjs</span><span>#astro</span><span>#log-file-analysis</span><span>#llm-agents</span><span>#webhooks</span><span>#headless-commerce</span><span>#schema</span><span>#migrations</span><span>#crm-automation</span><span>#edge-functions</span><span>#entity-seo</span><span>#technical-seo</span><span>#core-web-vitals</span><span>#programmatic-seo</span><span>#nextjs</span><span>#astro</span><span>#log-file-analysis</span><span>#llm-agents</span><span>#webhooks</span><span>#headless-commerce</span><span>#schema</span><span>#migrations</span><span>#crm-automation</span><span>#edge-functions</span><span>#entity-seo</span>
+    <div class="hero-cards reveal">
+      <!-- SEO -->
+      <a href="#articles" class="card rank hc" data-go="seo">
+        <div class="hc-top">
+          <span class="hc-tag" style="color:var(--emerald)"><i class="dot" style="background:var(--emerald)"></i>SEO</span>
+          <span class="chip plain" style="font-size:8px;padding:1px 6px">4 articles</span>
+        </div>
+        <h4>Latest in search</h4>
+        <p class="sub">Crawl budget, entities, migrations and programmatic SEO.</p>
+        <svg class="hc-chart" viewBox="0 0 200 70" preserveAspectRatio="none" width="100%">
+          <defs><linearGradient id="gAreaBlog" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10b981" stop-opacity=".45"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient></defs>
+          <path d="M0 62 C30 60 50 56 80 50 S140 30 200 12 L200 70 L0 70Z" fill="url(#gAreaBlog)"/>
+          <path class="line" d="M0 62 C30 60 50 56 80 50 S140 30 200 12" fill="none" stroke="#34d399" stroke-width="2"/>
+        </svg>
+        <div class="hc-axis"><span>JUL</span><span>SEP</span></div>
+        <div class="hc-pills"><span>#crawl</span><span>#entities</span><span>#migrations</span></div>
+      </a>
+
+      <!-- WEB -->
+      <a href="#articles" class="card struct hc" data-go="web">
+        <div class="hc-top">
+          <span class="hc-tag" style="color:var(--indigo-l)"><i class="dot" style="background:var(--indigo-l)"></i>WEB</span>
+          <span class="chip plain" style="font-size:8px;padding:1px 6px">3 articles</span>
+        </div>
+        <h4>Latest in web</h4>
+        <p class="sub">Speed, frameworks and headless builds.</p>
+        <ul class="hc-list">
+          <li><span class="tick"><svg><use href="#i-check"/></svg></span><span class="t">Core Web Vitals in 2026</span><span class="v">9 min</span></li>
+          <li><span class="tick"><svg><use href="#i-check"/></svg></span><span class="t">Next.js vs Astro for marketing sites</span><span class="v">8 min</span></li>
+          <li><span class="tick"><svg><use href="#i-check"/></svg></span><span class="t">Headless Shopify</span><span class="v">9 min</span></li>
+        </ul>
+      </a>
+
+      <!-- AUTOMATION -->
+      <a href="#articles" class="card automate hc wide" data-go="automation">
+        <div class="hc-top">
+          <span class="hc-tag" style="color:var(--indigo-l)"><i class="dot" style="background:var(--indigo-l)"></i>Automation</span>
+          <span class="chip struct" style="font-size:8px;padding:1px 6px"><i class="dot" style="background:var(--indigo-l);width:5px;height:5px"></i>New every Friday</span>
+        </div>
+        <h4>Latest in automation</h4>
+        <p class="sub">How we connect forms, CRMs, AI agents and webhooks so nothing gets copied by hand.</p>
+        <div class="flow">
+          <i class="pulse"></i>
+          <div class="flow-step"><div class="flow-ic" style="color:var(--emerald)"><svg><use href="#i-mail"/></svg></div><b>Webhooks</b><span>That don't drop</span></div>
+          <div class="flow-step"><div class="flow-ic" style="color:var(--indigo-l)"><svg><use href="#i-db"/></svg></div><b>CRM pipelines</b><span>Event-driven</span></div>
+          <div class="flow-step"><div class="flow-ic" style="color:var(--indigo-l)"><svg><use href="#i-shield"/></svg></div><b>AI agents</b><span>With guardrails</span></div>
+          <div class="flow-step"><div class="flow-ic" style="color:var(--violet-l)"><svg><use href="#i-bell"/></svg></div><b>Alerts</b><span>Ready to act on</span></div>
+        </div>
+        <div class="hc-foot"><span style="color:var(--text-3)">3 ARTICLES <b style="color:#e2e8f0;font-weight:500">real client builds</b></span><span style="color:var(--emerald)">↓ READ THE PLAYBOOKS</span></div>
+      </a>
     </div>
   </div>
+</section>
 
+<!-- ============ FEATURED ============ -->
+<section class="why sec-deep">
+  <div class="glow green drift-a" style="width:420px;height:420px;bottom:-120px;right:-140px;opacity:.55"></div>
+  <div class="glow indigo drift-c" style="width:460px;height:380px;top:10%;left:25%;opacity:.35"></div>
   <div class="container">
+    <div class="sec-head reveal">
+      <h2 class="h-lg">This week's featured dispatch.</h2>
+      <p>The one article we'd send to every founder on our list. Plus what the rest of our readers opened most this month.</p>
+    </div>
+    <div class="lead-row">
+      <a href="blog-post.html" class="card rank featured reveal" data-cat="seo">
+        <div class="cover has-art" style="--gx:70%;--gy:35%"><span class="label">SEO</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect class="tile" style="--d:0.00s" x="40" y="36" width="14" height="14" rx="2" fill="#334155" fill-opacity="0.5"/><rect class="tile" style="--d:0.12s" x="60" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.24s" x="80" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.36s" x="100" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.48s" x="120" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.60s" x="140" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.72s" x="160" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.84s" x="180" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.96s" x="200" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.08s" x="220" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.20s" x="240" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.32s" x="260" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.18s" x="40" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.30s" x="60" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.42s" x="80" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.54s" x="100" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.66s" x="120" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.78s" x="140" y="56" width="14" height="14" rx="2" fill="#334155" fill-opacity="0.5"/><rect class="tile" style="--d:0.90s" x="160" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.02s" x="180" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.14s" x="200" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.26s" x="220" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.38s" x="240" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.50s" x="260" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.36s" x="40" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.48s" x="60" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.60s" x="80" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.72s" x="100" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.84s" x="120" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.96s" x="140" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.08s" x="160" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.20s" x="180" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.32s" x="200" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.44s" x="220" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.56s" x="240" y="76" width="14" height="14" rx="2" fill="#334155" fill-opacity="0.5"/><rect class="tile" style="--d:1.68s" x="260" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.54s" x="40" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.66s" x="60" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.78s" x="80" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.90s" x="100" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.02s" x="120" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.14s" x="140" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.26s" x="160" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.38s" x="180" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.50s" x="200" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.62s" x="220" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.74s" x="240" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.86s" x="260" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.72s" x="40" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.84s" x="60" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.96s" x="80" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.08s" x="100" y="116" width="14" height="14" rx="2" fill="#334155" fill-opacity="0.5"/><rect class="tile" style="--d:1.20s" x="120" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.32s" x="140" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.44s" x="160" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.56s" x="180" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.68s" x="200" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.80s" x="220" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.92s" x="240" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:2.04s" x="260" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect x="206" y="136" width="84" height="22" rx="4" fill="#0d1120" stroke="#10b981" stroke-opacity=".5"/><text x="248" y="150.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#4edea3">94% INDEXED</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>14 min read</span></div>
+        <div class="body">
+          <div class="tag-row"><span class="chip rank">01 // Rank</span><span class="chip plain">Featured</span></div>
+          <h2>Programmatic SEO without the spam: how we shipped 12,000 pages Google actually indexed</h2>
+          <p>Most programmatic SEO gets deindexed within months. We walk through the data model, template rules and quality gates that got 94% of 12,000 pages indexed and ranking.</p>
+          <div class="metric"><span class="big" style="color:var(--mint)" data-count="94" data-suffix="%">94%</span><span class="mono">Pages indexed</span></div>
+          <div class="foot"><b>✓</b> Sep 25, 2026 · Daniel Reyes · 14 min read</div>
+          <span class="btn btn-primary">Read the Article <svg class="arrow"><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+
+      <aside class="card struct most-read reveal" aria-label="Most read">
+        <div class="ix-top"><span class="mono">// Most_Read · 30d</span><svg style="width:16px;height:16px;color:var(--emerald)"><use href="#i-trend"/></svg></div>
+        <ol>
+        <li data-cat="seo"><a href="blog-post.html"><span class="rank-n">01</span><span><b>Migrating 42,000 URLs without losing a single ranking</b><span class="meta"><span class="cat-chip">SEO</span><span>15 min read</span></span></span></a></li>
+        <li data-cat="web"><a href="blog-post.html"><span class="rank-n">02</span><span><b>Core Web Vitals in 2026: the INP fixes that actually moved revenue</b><span class="meta"><span class="cat-chip">Web</span><span>9 min read</span></span></span></a></li>
+        <li data-cat="seo"><a href="blog-post.html"><span class="rank-n">03</span><span><b>Crawl budget is real: a log-file audit of a 40k-URL SaaS site</b><span class="meta"><span class="cat-chip">SEO</span><span>12 min read</span></span></span></a></li>
+        <li data-cat="automation"><a href="blog-post.html"><span class="rank-n">04</span><span><b>LLM agents in the back office: where they break and how we guard them</b><span class="meta"><span class="cat-chip">Automation</span><span>10 min read</span></span></span></a></li>
+        <li data-cat="automation"><a href="blog-post.html"><span class="rank-n">05</span><span><b>Webhooks that don&#x27;t drop: idempotency patterns for small teams</b><span class="meta"><span class="cat-chip">Automation</span><span>6 min read</span></span></span></a></li>
+        </ol>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOPICS ============ -->
+<section class="services">
+  <div class="glow indigo drift-c" style="width:520px;height:420px;top:10%;left:30%;opacity:.45"></div>
+  <div class="glow violet drift-a" style="width:360px;height:360px;bottom:-100px;right:-80px;opacity:.6"></div>
+  <div class="container">
+    <div class="sec-row reveal">
+      <div class="sec-head" style="max-width:900px">
+        <h2 class="h-lg">SEO, web and automation. One dispatch.</h2>
+        <p style="max-width:720px">The same three disciplines we deliver for clients, written up as we build them. Pick a track or read across all three.</p>
+      </div>
+      <svg style="transform:rotate(-45deg)"><use href="#i-arrow"/></svg>
+    </div>
+
+    <div class="svc-grid">
+      <article class="card rank svc reveal">
+        <div class="svc-top"><span class="chip rank">01 // Rank</span><svg style="color:var(--emerald)"><use href="#i-trend"/></svg></div>
+        <h3>Search &amp; Organic Growth</h3>
+        <p>Log-file audits, entity mapping, migrations and programmatic SEO, with the numbers behind every claim.</p>
+        <ul>
+          <li class="row-pop"><a href="blog-post.html">Programmatic SEO without the spam: how we shipped 12,000 pages Google actually indexed</a><svg><use href="#i-chev"/></svg></li>
+          <li class="row-pop"><a href="blog-post.html">Crawl budget is real: a log-file audit of a 40k-URL SaaS site</a><svg><use href="#i-chev"/></svg></li>
+          <li class="row-pop"><a href="blog-post.html">Entity SEO: mapping your brand into Google&#x27;s Knowledge Graph</a><svg><use href="#i-chev"/></svg></li>
+          <li class="row-pop"><a href="blog-post.html">Migrating 42,000 URLs without losing a single ranking</a><svg><use href="#i-chev"/></svg></li>
+        </ul>
+        <a href="#articles" class="btn-explore" data-go="seo">Explore SEO Articles <svg><use href="#i-chev"/></svg></a>
+      </article>
+
+      <article class="card struct svc reveal">
+        <div class="svc-top"><span class="chip struct">02 // Struct</span><svg style="color:var(--indigo-l)"><use href="#i-window"/></svg></div>
+        <h3>Web Engineering &amp; Speed</h3>
+        <p>Core Web Vitals teardowns, framework benchmarks and headless rebuilds for sites that need to convert.</p>
+        <ul>
+          <li class="row-pop"><a href="blog-post.html">Core Web Vitals in 2026: the INP fixes that actually moved revenue</a><svg><use href="#i-chev"/></svg></li>
+          <li class="row-pop"><a href="blog-post.html">Next.js vs Astro for marketing sites: a benchmark, not an opinion</a><svg><use href="#i-chev"/></svg></li>
+          <li class="row-pop"><a href="blog-post.html">Headless Shopify: when it&#x27;s worth it (and when it isn&#x27;t)</a><svg><use href="#i-chev"/></svg></li>
+        </ul>
+        <a href="#articles" class="btn-explore" data-go="web">Explore Web Articles <svg><use href="#i-chev"/></svg></a>
+      </article>
+
+      <article class="card automate svc reveal">
+        <div class="svc-top"><span class="chip struct">03 // Automate</span><svg style="color:var(--indigo-l)"><use href="#i-flow"/></svg></div>
+        <h3>Automation &amp; AI Pipelines</h3>
+        <p>Event-driven CRMs, reliable webhooks and AI agents with guardrails, built for small teams.</p>
+        <ul>
+          <li class="row-pop"><a href="blog-post.html">Your CRM is lying to you: building an event-driven lead pipeline</a><svg><use href="#i-chev"/></svg></li>
+          <li class="row-pop"><a href="blog-post.html">LLM agents in the back office: where they break and how we guard them</a><svg><use href="#i-chev"/></svg></li>
+          <li class="row-pop"><a href="blog-post.html">Webhooks that don&#x27;t drop: idempotency patterns for small teams</a><svg><use href="#i-chev"/></svg></li>
+        </ul>
+        <a href="#articles" class="btn-explore" data-go="automation">Explore Automation <svg><use href="#i-chev"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALL ARTICLES ============ -->
+<section class="cases sec-deep" id="articles">
+  <div class="glow violet drift-a" style="width:500px;height:420px;top:25%;left:35%;opacity:.4"></div>
+  <div class="glow cyan drift-b" style="width:360px;height:360px;top:-80px;left:-120px"></div>
+  <div class="container">
+    <div class="sec-row reveal">
+      <div class="sec-head" style="max-width:560px">
+        <h2 class="h-lg">Every article, with the numbers.</h2>
+        <p>Real projects. Transparent methods. Each write-up leads with the result it produced.</p>
+      </div>
+      <a href="#newsletter">Get new articles by email <svg width="10" height="10"><use href="#i-arrow"/></svg></a>
+    </div>
 
     <div class="toolbar reveal">
-      <div class="filters" role="group" aria-label="Filter posts by topic">
-        <button class="filter" aria-pressed="true" data-filter="all"><i class="dot"></i>All <span class="count">10</span></button>
-        <button class="filter" aria-pressed="false" data-filter="seo" data-cat="seo"><i class="dot"></i>SEO <span class="count">4</span></button>
+      <div class="filters" role="group" aria-label="Filter articles by topic">
+        <button class="filter" aria-pressed="true" data-filter="all"><i class="dot"></i>All <span class="count">9</span></button>
+        <button class="filter" aria-pressed="false" data-filter="seo" data-cat="seo"><i class="dot"></i>SEO <span class="count">3</span></button>
         <button class="filter" aria-pressed="false" data-filter="web" data-cat="web"><i class="dot"></i>Web <span class="count">3</span></button>
         <button class="filter" aria-pressed="false" data-filter="automation" data-cat="automation"><i class="dot"></i>Automation <span class="count">3</span></button>
       </div>
@@ -137,112 +274,78 @@
       </label>
     </div>
 
-    <div class="lead-row">
-    <!-- Featured -->
-    <a href="blog-post.html" class="card rank featured reveal" data-cat="seo" id="featured">
-      <div class="cover has-art" style="--gx:70%;--gy:35%"><span class="label">SEO</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect class="tile" style="--d:0.00s" x="40" y="36" width="14" height="14" rx="2" fill="#334155" fill-opacity="0.5"/><rect class="tile" style="--d:0.12s" x="60" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.24s" x="80" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.36s" x="100" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.48s" x="120" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.60s" x="140" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.72s" x="160" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.84s" x="180" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.96s" x="200" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.08s" x="220" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.20s" x="240" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.32s" x="260" y="36" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.18s" x="40" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.30s" x="60" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.42s" x="80" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.54s" x="100" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.66s" x="120" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.78s" x="140" y="56" width="14" height="14" rx="2" fill="#334155" fill-opacity="0.5"/><rect class="tile" style="--d:0.90s" x="160" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.02s" x="180" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.14s" x="200" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.26s" x="220" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.38s" x="240" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.50s" x="260" y="56" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.36s" x="40" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.48s" x="60" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.60s" x="80" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.72s" x="100" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.84s" x="120" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.96s" x="140" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.08s" x="160" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.20s" x="180" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.32s" x="200" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.44s" x="220" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.56s" x="240" y="76" width="14" height="14" rx="2" fill="#334155" fill-opacity="0.5"/><rect class="tile" style="--d:1.68s" x="260" y="76" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.54s" x="40" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.66s" x="60" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.78s" x="80" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.90s" x="100" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.02s" x="120" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.14s" x="140" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.26s" x="160" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.38s" x="180" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.50s" x="200" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.62s" x="220" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.74s" x="240" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.86s" x="260" y="96" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.72s" x="40" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.84s" x="60" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:0.96s" x="80" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.08s" x="100" y="116" width="14" height="14" rx="2" fill="#334155" fill-opacity="0.5"/><rect class="tile" style="--d:1.20s" x="120" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.32s" x="140" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.44s" x="160" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.56s" x="180" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.68s" x="200" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.80s" x="220" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:1.92s" x="240" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect class="tile" style="--d:2.04s" x="260" y="116" width="14" height="14" rx="2" fill="#10b981" fill-opacity="0.75"/><rect x="206" y="136" width="84" height="22" rx="4" fill="#0d1120" stroke="#10b981" stroke-opacity=".5"/><text x="248" y="150.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#4edea3">94% INDEXED</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>14 min read</span></div>
-      <div class="body">
-        <div class="tag-row"><span class="cat-chip">SEO</span><span class="chip plain">Featured</span></div>
-        <h2>Programmatic SEO without the spam: how we shipped 12,000 pages Google actually indexed</h2>
-        <p>Most programmatic SEO gets deindexed within months. We walk through the data model, template rules and quality gates that got 94% of 12,000 pages indexed and ranking.</p>
-        <div class="meta"><span>Sep 25, 2026</span><span><svg><use href="#i-clock"/></svg>14 min read</span><span>By Daniel Reyes</span></div>
-        <span class="btn btn-primary">Read the Article <svg class="arrow"><use href="#i-arrow"/></svg></span>
-      </div>
-    </a>
-
-    <aside class="card struct most-read reveal" id="mostRead" aria-label="Most read">
-      <div class="ix-top"><span class="mono">// Most_Read · 30d</span><svg style="width:16px;height:16px;color:var(--emerald)"><use href="#i-trend"/></svg></div>
-      <ol>
-        <li data-cat="seo"><a href="blog-post.html"><span class="rank-n">01</span><span><b>Migrating 42,000 URLs without losing a single ranking</b><span class="meta"><span class="cat-chip">SEO</span><span>15 min read</span></span></span></a></li>
-        <li data-cat="web"><a href="blog-post.html"><span class="rank-n">02</span><span><b>Core Web Vitals in 2026: the INP fixes that actually moved revenue</b><span class="meta"><span class="cat-chip">Web</span><span>9 min read</span></span></span></a></li>
-        <li data-cat="seo"><a href="blog-post.html"><span class="rank-n">03</span><span><b>Crawl budget is real: a log-file audit of a 40k-URL SaaS site</b><span class="meta"><span class="cat-chip">SEO</span><span>12 min read</span></span></span></a></li>
-        <li data-cat="automation"><a href="blog-post.html"><span class="rank-n">04</span><span><b>LLM agents in the back office: where they break and how we guard them</b><span class="meta"><span class="cat-chip">Automation</span><span>10 min read</span></span></span></a></li>
-        <li data-cat="automation"><a href="blog-post.html"><span class="rank-n">05</span><span><b>Webhooks that don&#x27;t drop: idempotency patterns for small teams</b><span class="meta"><span class="cat-chip">Automation</span><span>6 min read</span></span></span></a></li>
-      </ol>
-    </aside>
-    </div>
-
-    <div class="post-grid" id="grid">
-      <a href="blog-post.html" class="card struct post reveal" data-cat="web">
+    <div class="case-grid" id="grid">
+      <a href="blog-post.html" class="card struct case article reveal" data-cat="web">
         <div class="cover has-art" style="--gx:20%;--gy:30%"><span class="label">Web</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="30" y="26" width="170" height="128" rx="5" fill="#151a2c" stroke="#334155"/><circle cx="39" cy="34" r="2" fill="#f87171"/><circle cx="46" cy="34" r="2" fill="#f59e0b"/><circle cx="53" cy="34" r="2" fill="#4edea3"/><text x="62" y="36.5" font-family="JetBrains Mono, monospace" font-size="6" fill="#475569">store.com/checkout</text><line x1="30" y1="42" x2="200" y2="42" stroke="#334155"/><rect x="42" y="52" width="90" height="10" rx="2" fill="#334155"/><rect x="42" y="68" width="146" height="40" rx="3" fill="#1e2640"/><rect x="42" y="114" width="68" height="28" rx="3" fill="#1e2640"/><rect x="118" y="114" width="70" height="28" rx="3" fill="#1e2640"/><circle cx="252" cy="90" r="36" fill="none" stroke="#334155" stroke-width="7"/><circle class="gauge" cx="252" cy="90" r="36" fill="none" stroke="#818cf8" stroke-width="7" stroke-linecap="round" stroke-dasharray="226" stroke-dashoffset="40" transform="rotate(-90 252 90)"/><text x="252" y="92" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="17" fill="#f8fafc">90ms</text><text x="252" y="104" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">INP · GOOD</text><text x="252" y="146" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#475569">was 380ms</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>9 min read</span></div>
-        <div class="body">
-          <span><span class="cat-chip">Web</span></span>
-          <h3>Core Web Vitals in 2026: the INP fixes that actually moved revenue</h3>
-          <p>Interaction to Next Paint is the metric most sites still fail. Here are the five fixes that took a Shopify store from 380ms to 90ms.</p>
-          <div class="meta"><span>Sep 18, 2026</span><span>Maya Okafor</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
-        </div>
+        <div class="mono">Performance / Commerce</div>
+        <h3>Core Web Vitals in 2026: the INP fixes that actually moved revenue</h3>
+        <p>Interaction to Next Paint is the metric most sites still fail. Here are the five fixes that took a Shopify store from 380ms to 90ms.</p>
+        <div class="metric"><span class="big" style="color:var(--lav)">90ms</span><span class="mono">INP after fixes</span></div>
+        <div class="foot"><b>✓</b> Sep 18, 2026 · Maya Okafor · 9 min read</div>
       </a>
-      <a href="blog-post.html" class="card automate post reveal" data-cat="automation">
+      <a href="blog-post.html" class="card automate case article reveal" data-cat="automation">
         <div class="cover has-art" style="--gx:80%;--gy:20%"><span class="label">Automation</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path d="M66 90 H262" stroke="#c084fc" stroke-opacity=".45" stroke-dasharray="3 4"/><rect x="22" y="68" width="44" height="44" rx="8" fill="#151a2c" stroke="#10b981" stroke-opacity=".7"/><text x="44" y="93.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#4edea3">FORM</text><rect x="102" y="68" width="44" height="44" rx="8" fill="#151a2c" stroke="#c084fc" stroke-opacity=".7"/><text x="124" y="93.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#c084fc">EVENT</text><rect x="182" y="68" width="44" height="44" rx="8" fill="#151a2c" stroke="#c084fc" stroke-opacity=".7"/><text x="204" y="93.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#c084fc">CRM</text><rect x="262" y="68" width="44" height="44" rx="8" fill="#151a2c" stroke="#c084fc" stroke-opacity=".7"/><text x="284" y="93.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#c084fc">SLACK</text><circle r="4" fill="#c084fc"><animateMotion dur="3s" repeatCount="indefinite" path="M66 90 H262"/></circle><text x="160" y="140" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#475569">lead.created → enrich → route → notify</text><text x="160" y="46" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">p95 latency: 1.8s</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>11 min read</span></div>
-        <div class="body">
-          <span><span class="cat-chip">Automation</span></span>
-          <h3>Your CRM is lying to you: building an event-driven lead pipeline</h3>
-          <p>Duplicate contacts, stale deal stages and missed follow-ups. We rebuilt the pipeline around events instead of nightly syncs.</p>
-          <div class="meta"><span>Sep 11, 2026</span><span>Sam Lindqvist</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
-        </div>
+        <div class="mono">CRM / Pipelines</div>
+        <h3>Your CRM is lying to you: building an event-driven lead pipeline</h3>
+        <p>Duplicate contacts, stale deal stages and missed follow-ups. We rebuilt the pipeline around events instead of nightly syncs.</p>
+        <div class="metric"><span class="big" style="color:var(--violet-l)">1.8s</span><span class="mono">Lead routing p95</span></div>
+        <div class="foot"><b>✓</b> Sep 11, 2026 · Sam Lindqvist · 11 min read</div>
       </a>
-      <a href="blog-post.html" class="card rank post reveal" data-cat="seo">
+      <a href="blog-post.html" class="card rank case article reveal" data-cat="seo">
         <div class="cover has-art" style="--gx:30%;--gy:70%"><span class="label">SEO</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><line x1="30" y1="150" x2="296" y2="150" stroke="#334155"/><rect class="bar" style="--d:0.00s" x="34" y="120" width="7" height="30" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.05s" x="45" y="106" width="7" height="44" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.10s" x="56" y="112" width="7" height="38" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.15s" x="67" y="80" width="7" height="70" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.20s" x="78" y="98" width="7" height="52" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.25s" x="89" y="54" width="7" height="96" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.30s" x="100" y="62" width="7" height="88" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.35s" x="111" y="76" width="7" height="74" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.40s" x="122" y="46" width="7" height="104" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.45s" x="133" y="58" width="7" height="92" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.50s" x="144" y="90" width="7" height="60" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.55s" x="155" y="68" width="7" height="82" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.60s" x="166" y="40" width="7" height="110" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.65s" x="177" y="52" width="7" height="98" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.70s" x="188" y="84" width="7" height="66" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.75s" x="199" y="92" width="7" height="58" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.80s" x="210" y="60" width="7" height="90" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.85s" x="221" y="78" width="7" height="72" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.90s" x="232" y="102" width="7" height="48" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.95s" x="243" y="86" width="7" height="64" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:1.00s" x="254" y="110" width="7" height="40" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:1.05s" x="265" y="94" width="7" height="56" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:1.10s" x="276" y="116" width="7" height="34" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:1.15s" x="287" y="122" width="7" height="28" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect x="30" y="20" width="8" height="8" rx="2" fill="#f59e0b"/><text x="42" y="27" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">faceted URLs · 61% of hits</text><rect x="176" y="20" width="8" height="8" rx="2" fill="#10b981"/><text x="188" y="27" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">money pages</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>12 min read</span></div>
-        <div class="body">
-          <span><span class="cat-chip">SEO</span></span>
-          <h3>Crawl budget is real: a log-file audit of a 40k-URL SaaS site</h3>
-          <p>Googlebot spent 61% of its visits on faceted URLs nobody searches for. What the server logs showed, and how we fixed it.</p>
-          <div class="meta"><span>Sep 4, 2026</span><span>Daniel Reyes</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
-        </div>
+        <div class="mono">Technical SEO / Logs</div>
+        <h3>Crawl budget is real: a log-file audit of a 40k-URL SaaS site</h3>
+        <p>Googlebot spent 61% of its visits on faceted URLs nobody searches for. What the server logs showed, and how we fixed it.</p>
+        <div class="metric"><span class="big" style="color:var(--mint)">−61%</span><span class="mono">Crawl waste</span></div>
+        <div class="foot"><b>✓</b> Sep 4, 2026 · Daniel Reyes · 12 min read</div>
       </a>
-      <a href="blog-post.html" class="card struct post reveal" data-cat="web">
+      <a href="blog-post.html" class="card struct case article reveal" data-cat="web">
         <div class="cover has-art" style="--gx:70%;--gy:60%"><span class="label">Web</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><text x="30" y="49" font-family="JetBrains Mono, monospace" font-size="7" fill="#475569">BUILD</text><rect class="grow" style="--d:0.00s" x="80" y="40" width="198" height="10" rx="2" fill="#334155"/><rect class="grow" style="--d:0.10s" x="80" y="54" width="144" height="10" rx="2" fill="#818cf8"/><text x="30" y="93" font-family="JetBrains Mono, monospace" font-size="7" fill="#475569">JS KB</text><rect class="grow" style="--d:0.15s" x="80" y="84" width="212" height="10" rx="2" fill="#334155"/><rect class="grow" style="--d:0.25s" x="80" y="98" width="118" height="10" rx="2" fill="#818cf8"/><text x="30" y="137" font-family="JetBrains Mono, monospace" font-size="7" fill="#475569">LCP</text><rect class="grow" style="--d:0.30s" x="80" y="128" width="176" height="10" rx="2" fill="#334155"/><rect class="grow" style="--d:0.40s" x="80" y="142" width="150" height="10" rx="2" fill="#818cf8"/><rect x="200" y="152" width="8" height="8" rx="2" fill="#334155"/><text x="212" y="159" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">Next.js</text><rect x="252" y="152" width="8" height="8" rx="2" fill="#818cf8"/><text x="264" y="159" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">Astro</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>8 min read</span></div>
-        <div class="body">
-          <span><span class="cat-chip">Web</span></span>
-          <h3>Next.js vs Astro for marketing sites: a benchmark, not an opinion</h3>
-          <p>We built the same 40-page site twice and measured build time, bundle size, LCP and editor experience.</p>
-          <div class="meta"><span>Aug 28, 2026</span><span>Maya Okafor</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
-        </div>
+        <div class="mono">Frameworks / Benchmark</div>
+        <h3>Next.js vs Astro for marketing sites: a benchmark, not an opinion</h3>
+        <p>We built the same 40-page site twice and measured build time, bundle size, LCP and editor experience.</p>
+        <div class="metric"><span class="big" style="color:var(--lav)">3.4×</span><span class="mono">Smaller JS bundle</span></div>
+        <div class="foot"><b>✓</b> Aug 28, 2026 · Maya Okafor · 8 min read</div>
       </a>
-      <a href="blog-post.html" class="card automate post reveal" data-cat="automation">
+      <a href="blog-post.html" class="card automate case article reveal" data-cat="automation">
         <div class="cover has-art" style="--gx:25%;--gy:25%"><span class="label">Automation</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="26" y="36" width="92" height="22" rx="6" fill="#1e2640"/><text x="34" y="50" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">"pay inv #4471"</text><rect x="40" y="66" width="78" height="22" rx="6" fill="#241c3d" stroke="#c084fc" stroke-opacity=".5"/><text x="48" y="80" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#c084fc">agent: $4,471?</text><rect x="26" y="96" width="92" height="22" rx="6" fill="#1e2640"/><text x="34" y="110" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">"approve refund"</text><path d="M160 50 l26 10 v20 c0 16 -11 26 -26 32 c-15 -6 -26 -16 -26 -32 v-20z" fill="#151a2c" stroke="#c084fc" stroke-width="1.5"/><path class="pulse-soft" d="M150 82 l7 7 l13 -14" fill="none" stroke="#4edea3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="160" y="132" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#475569">SCHEMA · LIMITS · HUMAN</text><path d="M122 77 H130 M190 77 H200" stroke="#c084fc" stroke-opacity=".5" stroke-dasharray="2 3"/><rect x="204" y="40" width="92" height="14" rx="3" fill="#151a2c" stroke="#334155"/><text x="210" y="50" font-family="JetBrains Mono, monospace" font-size="6" fill="#4edea3">✓ INV-4471  4,471.00</text><rect x="204" y="60" width="92" height="14" rx="3" fill="#151a2c" stroke="#334155"/><text x="210" y="70" font-family="JetBrains Mono, monospace" font-size="6" fill="#4edea3">✓ INV-4472    312.50</text><rect x="204" y="80" width="92" height="14" rx="3" fill="#151a2c" stroke="#334155"/><text x="210" y="90" font-family="JetBrains Mono, monospace" font-size="6" fill="#f59e0b">⚠ REFUND  held for review</text><rect x="204" y="100" width="92" height="14" rx="3" fill="#151a2c" stroke="#334155"/><text x="210" y="110" font-family="JetBrains Mono, monospace" font-size="6" fill="#4edea3">✓ INV-4473  1,090.00</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>10 min read</span></div>
-        <div class="body">
-          <span><span class="cat-chip">Automation</span></span>
-          <h3>LLM agents in the back office: where they break and how we guard them</h3>
-          <p>Agents are great at messy input and terrible at being trusted. The validation layer we put between them and your ledger.</p>
-          <div class="meta"><span>Aug 21, 2026</span><span>Sam Lindqvist</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
-        </div>
+        <div class="mono">AI Agents / Finance Ops</div>
+        <h3>LLM agents in the back office: where they break and how we guard them</h3>
+        <p>Agents are great at messy input and terrible at being trusted. The validation layer we put between them and your ledger.</p>
+        <div class="metric"><span class="big" style="color:var(--violet-l)">0</span><span class="mono">Unreviewed payouts</span></div>
+        <div class="foot"><b>✓</b> Aug 21, 2026 · Sam Lindqvist · 10 min read</div>
       </a>
-      <a href="blog-post.html" class="card rank post reveal" data-cat="seo">
+      <a href="blog-post.html" class="card rank case article reveal" data-cat="seo">
         <div class="cover has-art" style="--gx:75%;--gy:75%"><span class="label">SEO</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><line x1="160" y1="92" x2="80" y2="50" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="240" y2="48" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="268" y2="118" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="200" y2="152" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="104" y2="150" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="56" y2="108" stroke="#10b981" stroke-opacity=".4"/><circle class="pulse-soft" style="--d:0.0s" cx="80" cy="50" r="6" fill="#151a2c" stroke="#4edea3"/><text x="80" y="39" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Founder</text><circle class="pulse-soft" style="--d:0.3s" cx="240" cy="48" r="6" fill="#151a2c" stroke="#4edea3"/><text x="240" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Product</text><circle class="pulse-soft" style="--d:0.6s" cx="268" cy="118" r="6" fill="#151a2c" stroke="#4edea3"/><text x="268" y="135" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Reviews</text><circle class="pulse-soft" style="--d:0.9s" cx="200" cy="152" r="6" fill="#151a2c" stroke="#4edea3"/><text x="200" y="169" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Location</text><circle class="pulse-soft" style="--d:1.2s" cx="104" cy="150" r="6" fill="#151a2c" stroke="#4edea3"/><text x="104" y="167" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Industry</text><circle class="pulse-soft" style="--d:1.5s" cx="56" cy="108" r="6" fill="#151a2c" stroke="#4edea3"/><text x="56" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Awards</text><circle cx="160" cy="92" r="20" fill="#0f2a22" stroke="#10b981" stroke-width="1.5"/><text x="160" y="95" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="9" fill="#f8fafc">Brand</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>7 min read</span></div>
-        <div class="body">
-          <span><span class="cat-chip">SEO</span></span>
-          <h3>Entity SEO: mapping your brand into Google&#x27;s Knowledge Graph</h3>
-          <p>Schema markup is the start, not the strategy. How we build entity associations that survive algorithm updates.</p>
-          <div class="meta"><span>Aug 14, 2026</span><span>Daniel Reyes</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
-        </div>
+        <div class="mono">Entity SEO / Schema</div>
+        <h3>Entity SEO: mapping your brand into Google&#x27;s Knowledge Graph</h3>
+        <p>Schema markup is the start, not the strategy. How we build entity associations that survive algorithm updates.</p>
+        <div class="metric"><span class="big" style="color:var(--mint)">+48%</span><span class="mono">Branded CTR</span></div>
+        <div class="foot"><b>✓</b> Aug 14, 2026 · Daniel Reyes · 7 min read</div>
       </a>
-      <a href="blog-post.html" class="card rank post reveal" data-cat="seo">
+      <a href="blog-post.html" class="card rank case article reveal" data-cat="seo">
         <div class="cover has-art" style="--gx:60%;--gy:30%"><span class="label">SEO</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><text x="26" y="26" font-family="JetBrains Mono, monospace" font-size="7" fill="#475569">OLD URL</text><text x="190" y="26" font-family="JetBrains Mono, monospace" font-size="7" fill="#475569">NEW URL · 301</text><rect x="22" y="36" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="48" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/blog/2021/03/crm-guide</text><path class="flow-line" style="--d:0.0s" d="M154 45 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 42 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="36" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="48" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/blog/crm-guide</text><rect x="22" y="62" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="74" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/docs/v1/api/auth</text><path class="flow-line" style="--d:0.2s" d="M154 71 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 68 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="62" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="74" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/docs/api/auth</text><rect x="22" y="88" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="100" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/resources/seo.pdf</text><path class="flow-line" style="--d:0.4s" d="M154 97 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 94 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="88" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="100" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/guides/seo</text><rect x="22" y="114" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="126" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/features?id=42</text><path class="flow-line" style="--d:0.6s" d="M154 123 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 120 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="114" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="126" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/features/sync</text><rect x="22" y="140" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="152" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/old-pricing</text><path class="flow-line" style="--d:0.8s" d="M154 149 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 146 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="140" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="152" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/pricing</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>15 min read</span></div>
-        <div class="body">
-          <span><span class="cat-chip">SEO</span></span>
-          <h3>Migrating 42,000 URLs without losing a single ranking</h3>
-          <p>The exact redirect mapping, staging checks and launch-day runbook behind our +185% enterprise migration.</p>
-          <div class="meta"><span>Aug 7, 2026</span><span>Daniel Reyes</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
-        </div>
+        <div class="mono">Migrations / Case Study</div>
+        <h3>Migrating 42,000 URLs without losing a single ranking</h3>
+        <p>The exact redirect mapping, staging checks and launch-day runbook behind our +185% enterprise migration.</p>
+        <div class="metric"><span class="big" style="color:var(--mint)">+185%</span><span class="mono">Organic clicks (6 mo)</span></div>
+        <div class="foot"><b>✓</b> Aug 7, 2026 · Daniel Reyes · 15 min read</div>
       </a>
-      <a href="blog-post.html" class="card struct post reveal" data-cat="web">
+      <a href="blog-post.html" class="card struct case article reveal" data-cat="web">
         <div class="cover has-art" style="--gx:35%;--gy:50%"><span class="label">Web</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="30" y="26" width="178" height="136" rx="5" fill="#151a2c" stroke="#334155"/><circle cx="39" cy="34" r="2" fill="#f87171"/><circle cx="46" cy="34" r="2" fill="#f59e0b"/><circle cx="53" cy="34" r="2" fill="#4edea3"/><text x="62" y="36.5" font-family="JetBrains Mono, monospace" font-size="6" fill="#475569">shop.brand.com</text><line x1="30" y1="42" x2="208" y2="42" stroke="#334155"/><rect x="42" y="50" width="40" height="42" rx="4" fill="#1e2640"/><rect x="46" y="54" width="32" height="22" rx="2" fill="#818cf8" fill-opacity="0.25"/><rect x="46" y="80" width="22" height="4" rx="1" fill="#334155"/><rect x="90" y="50" width="40" height="42" rx="4" fill="#1e2640"/><rect x="94" y="54" width="32" height="22" rx="2" fill="#818cf8" fill-opacity="0.4"/><rect x="94" y="80" width="22" height="4" rx="1" fill="#334155"/><rect x="138" y="50" width="40" height="42" rx="4" fill="#1e2640"/><rect x="142" y="54" width="32" height="22" rx="2" fill="#818cf8" fill-opacity="0.55"/><rect x="142" y="80" width="22" height="4" rx="1" fill="#334155"/><rect x="42" y="100" width="40" height="42" rx="4" fill="#1e2640"/><rect x="46" y="104" width="32" height="22" rx="2" fill="#818cf8" fill-opacity="0.4"/><rect x="46" y="130" width="22" height="4" rx="1" fill="#334155"/><rect x="90" y="100" width="40" height="42" rx="4" fill="#1e2640"/><rect x="94" y="104" width="32" height="22" rx="2" fill="#818cf8" fill-opacity="0.55"/><rect x="94" y="130" width="22" height="4" rx="1" fill="#334155"/><rect x="138" y="100" width="40" height="42" rx="4" fill="#1e2640"/><rect x="142" y="104" width="32" height="22" rx="2" fill="#818cf8" fill-opacity="0.25"/><rect x="142" y="130" width="22" height="4" rx="1" fill="#334155"/><rect x="222" y="44" width="72" height="100" rx="6" fill="#151a2c" stroke="#818cf8" stroke-opacity=".6"/><text x="258" y="62" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">CART</text><path class="pulse-soft" d="M262 76 l-12 20 h9 l-4 18 l14 -24 h-9 z" fill="#f59e0b"/><text x="258" y="130" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#818cf8">+32% conv.</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>9 min read</span></div>
-        <div class="body">
-          <span><span class="cat-chip">Web</span></span>
-          <h3>Headless Shopify: when it&#x27;s worth it (and when it isn&#x27;t)</h3>
-          <p>Headless is a cost, not a feature. The four signals that tell you a rebuild will pay for itself within a year.</p>
-          <div class="meta"><span>Jul 31, 2026</span><span>Maya Okafor</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
-        </div>
+        <div class="mono">Headless / Commerce</div>
+        <h3>Headless Shopify: when it&#x27;s worth it (and when it isn&#x27;t)</h3>
+        <p>Headless is a cost, not a feature. The four signals that tell you a rebuild will pay for itself within a year.</p>
+        <div class="metric"><span class="big" style="color:var(--lav)">+32%</span><span class="mono">Checkout conversion</span></div>
+        <div class="foot"><b>✓</b> Jul 31, 2026 · Maya Okafor · 9 min read</div>
       </a>
-      <a href="blog-post.html" class="card automate post reveal" data-cat="automation">
+      <a href="blog-post.html" class="card automate case article reveal" data-cat="automation">
         <div class="cover has-art" style="--gx:65%;--gy:40%"><span class="label">Automation</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><line x1="36" y1="92" x2="290" y2="92" stroke="#334155" stroke-width="2"/><circle class="pulse-soft" style="--d:0.00s" cx="50" cy="92" r="12" fill="#151a2c" stroke="#4edea3" stroke-width="1.5"/><text x="50" y="96" text-anchor="middle" font-size="11" fill="#4edea3">✓</text><text x="50" y="122" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">evt_01</text><circle class="pulse-soft" style="--d:0.25s" cx="106" cy="92" r="12" fill="#151a2c" stroke="#f59e0b" stroke-width="1.5"/><text x="106" y="96" text-anchor="middle" font-size="11" fill="#f59e0b">↻</text><text x="106" y="70" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">retry</text><circle class="pulse-soft" style="--d:0.50s" cx="162" cy="92" r="12" fill="#151a2c" stroke="#4edea3" stroke-width="1.5"/><text x="162" y="96" text-anchor="middle" font-size="11" fill="#4edea3">✓</text><text x="162" y="122" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">dedup</text><circle class="pulse-soft" style="--d:0.75s" cx="218" cy="92" r="12" fill="#151a2c" stroke="#4edea3" stroke-width="1.5"/><text x="218" y="96" text-anchor="middle" font-size="11" fill="#4edea3">✓</text><text x="218" y="70" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">evt_02</text><circle class="pulse-soft" style="--d:1.00s" cx="274" cy="92" r="12" fill="#151a2c" stroke="#4edea3" stroke-width="1.5"/><text x="274" y="96" text-anchor="middle" font-size="11" fill="#4edea3">✓</text><text x="274" y="122" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">evt_03</text><path d="M106 78 C106 50 162 50 162 78" fill="none" stroke="#f59e0b" stroke-opacity=".6" stroke-dasharray="3 3"/><text x="160" y="160" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#475569">idempotency-key: 7f3a…c2 · exactly-once</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>6 min read</span></div>
-        <div class="body">
-          <span><span class="cat-chip">Automation</span></span>
-          <h3>Webhooks that don&#x27;t drop: idempotency patterns for small teams</h3>
-          <p>Retries, duplicate deliveries and out-of-order events. Three patterns that make webhook pipelines boring again.</p>
-          <div class="meta"><span>Jul 24, 2026</span><span>Sam Lindqvist</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
-        </div>
+        <div class="mono">Webhooks / Reliability</div>
+        <h3>Webhooks that don&#x27;t drop: idempotency patterns for small teams</h3>
+        <p>Retries, duplicate deliveries and out-of-order events. Three patterns that make webhook pipelines boring again.</p>
+        <div class="metric"><span class="big" style="color:var(--violet-l)">0</span><span class="mono">Dropped events · 90d</span></div>
+        <div class="foot"><b>✓</b> Jul 24, 2026 · Sam Lindqvist · 6 min read</div>
       </a>
     </div>
     <div class="card empty" id="empty"><b>No articles match that search.</b>Try a different keyword or switch the topic filter back to All.</div>
@@ -251,22 +354,20 @@
 </section>
 
 <!-- ============ NEWSLETTER ============ -->
-<section class="news">
+<section class="cta" id="newsletter">
   <div class="container">
     <div class="cta-box card struct reveal">
       <div class="glow indigo drift-a" style="width:420px;height:360px;bottom:-140px;right:-80px;opacity:.9"></div>
-      <div class="glow green drift-b" style="width:300px;height:300px;top:-120px;right:30%;opacity:.5"></div>
+      <div class="glow violet drift-b" style="width:280px;height:280px;top:-100px;right:25%;opacity:.35"></div>
       <div class="news-grid">
         <div>
-          <span class="mono" style="color:var(--mint)">// Weekly Dispatch</span>
-          <h2 style="margin-top:14px">Get the teardowns before they're public.</h2>
-          <p>One email a week with our latest experiment, the numbers behind it and the code we used. Unsubscribe in one click.</p>
+          <h2>Get the teardowns before they're public.</h2>
+          <p>One email a week with our latest experiment, the numbers behind it and the code we used. No sales pitch, just what worked.</p>
           <form class="news-form" id="newsForm">
             <input type="email" placeholder="you@company.com" aria-label="Email address" required />
             <button type="submit" class="btn btn-primary">Subscribe <svg class="arrow"><use href="#i-arrow"/></svg></button>
           </form>
           <span class="news-ok" id="newsOk">✓ You're on the list. First dispatch lands this Friday.</span>
-          <div class="news-proof"><span class="faces"><i>DR</i><i>MO</i><i>SL</i></span>Join 2,400+ founders and engineers.</div>
         </div>
         <div class="mail" aria-hidden="true">
           <div class="mail-top"><span class="avatar">R</span><div><b>RankStruct Dispatch</b><small>to you · Friday 8:00</small></div><span class="mono">#042</span></div>
@@ -275,6 +376,11 @@
           <div class="mail-code"><span class="k">SELECT</span> path, <span class="k">COUNT</span>(*) <span class="k">FROM</span> googlebot_hits …</div>
           <div class="mail-lines"><i style="width:64%"></i></div>
         </div>
+      </div>
+      <div class="cta-checks">
+        <span><svg><use href="#i-check"/></svg>One email a week</span>
+        <span><svg><use href="#i-check"/></svg>Real numbers and code</span>
+        <span><svg><use href="#i-check"/></svg>Unsubscribe in one click</span>
       </div>
     </div>
   </div>
@@ -322,34 +428,37 @@
   // Topic filter + search + "load more"
   const PAGE = 6;
   let shown = PAGE, active = 'all';
-  const posts = [...document.querySelectorAll('#grid .post')];
-  const featured = document.getElementById('featured');
+  const posts = [...document.querySelectorAll('#grid .article')];
   const q = document.getElementById('q');
   const empty = document.getElementById('empty');
   const moreRow = document.getElementById('moreRow');
+  const buttons = [...document.querySelectorAll('.filter')];
   const matches = el => (active === 'all' || el.dataset.cat === active) &&
     el.textContent.toLowerCase().includes(q.value.trim().toLowerCase());
 
   function render() {
-    let n = 0, visible = 0;
+    let n = 0;
     posts.forEach(el => {
       const ok = matches(el);
       if (ok) n++;
       const show = ok && n <= shown;
       el.classList.toggle('hide', !show);
-      if (show) { visible++; el.classList.add('in'); }
+      if (show) el.classList.add('in');
     });
-    const f = matches(featured);
-    document.querySelector('.lead-row').style.display = f ? '' : 'none';
-    empty.classList.toggle('show', n === 0 && !f);
+    empty.classList.toggle('show', n === 0);
     moreRow.style.display = n > shown ? '' : 'none';
   }
-  document.querySelectorAll('.filter').forEach(btn => btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter').forEach(b => b.setAttribute('aria-pressed', b === btn));
-    active = btn.dataset.filter; shown = PAGE; render();
-  }));
+  function setFilter(cat) {
+    active = cat; shown = PAGE;
+    buttons.forEach(b => b.setAttribute('aria-pressed', b.dataset.filter === cat));
+    render();
+  }
+  buttons.forEach(btn => btn.addEventListener('click', () => setFilter(btn.dataset.filter)));
   q.addEventListener('input', () => { shown = PAGE; render(); });
   document.getElementById('more').addEventListener('click', () => { shown += PAGE; render(); });
+
+  // Topic cards and hero cards jump to the article list, pre-filtered
+  document.querySelectorAll('[data-go]').forEach(a => a.addEventListener('click', () => { q.value = ''; setFilter(a.dataset.go); }));
   render();
 
   document.getElementById('newsForm').addEventListener('submit', e => {
