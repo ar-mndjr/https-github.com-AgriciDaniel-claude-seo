@@ -38,6 +38,12 @@
     --amber: #f59e0b;
     --coral: #f0a58c;
 
+    /* one button size, used on every device */
+    --btn-h: 44px;
+    --btn-fs: 14px;
+    --btn-px: 1.25rem;
+    --btn-min-w: 184px;
+
     --r-sm: 4px;
     --r: 8px;
     --r-lg: 12px;
@@ -182,9 +188,9 @@
   /* ---------- Buttons ---------- */
   .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-    height: 40px; padding: 0 1.25rem;
+    height: var(--btn-h); padding: 0 var(--btn-px);
     border-radius: var(--r);
-    font-family: var(--f-head); font-weight: 600; font-size: 14px;
+    font-family: var(--f-head); font-weight: 600; font-size: var(--btn-fs); line-height: 1;
     border: 1px solid transparent;
     transition: background .2s, border-color .2s, transform .15s, box-shadow .25s;
     white-space: nowrap;
@@ -196,7 +202,6 @@
   .btn-ghost:hover { border-color: #64748b; background: rgba(30,41,59,.8); }
   .btn-dark { background: #0b0f1a; color: var(--text); border-color: rgba(255,255,255,.06); }
   .btn-dark:hover { border-color: #64748b; }
-  .btn-sm { height: 32px; font-size: 12px; padding: 0 .9rem; }
   .btn svg { width: 14px; height: 14px; transition: transform .2s; }
   .btn:hover svg.arrow { transform: translateX(3px); }
 
@@ -232,8 +237,8 @@
   .nav-links a:hover { color: var(--text); }
   .nav-links a:hover::after { transform: scaleX(1); }
   .nav-links a.active { color: var(--text); }
-  .nav .btn { margin-left: auto; height: 36px; font-size: 13px; }
-  .burger { display: none; margin-left: auto; background: none; border: 1px solid var(--border-2); border-radius: var(--r); width: 40px; height: 40px; color: var(--text); align-items: center; justify-content: center; }
+  .nav .btn { margin-left: auto; }
+  .burger { display: none; margin-left: auto; background: none; border: 1px solid var(--border-2); border-radius: var(--r); width: var(--btn-h); height: var(--btn-h); color: var(--text); align-items: center; justify-content: center; }
   .mobile-menu { display: none; }
 
   /* ---------- Hero ---------- */
@@ -243,7 +248,8 @@
   @keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
   .hero h1 { color: #dee2f6; }
   .hero .lead { margin: 20px 0 32px; max-width: 520px; color: #c7cede; }
-  .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  /* paired buttons share one width: the wider of the two, never under --btn-min-w */
+  .hero-cta, .cta-actions { display: inline-grid; grid-auto-flow: column; grid-auto-columns: minmax(var(--btn-min-w), 1fr); gap: 12px; }
 
   .hero-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .hc { padding: 14px 16px; }
@@ -304,7 +310,7 @@
   .svc ul { list-style: none; padding: 0; margin: 20px 0 32px; display: grid; gap: 8px; }
   .svc li { display: flex; justify-content: space-between; align-items: center; gap: 8px; background: #20263a; border-radius: 5px; padding: 11px 12px; font-size: 11.5px; color: #cbd5e1; border: 1px solid transparent; }
   .svc li svg { width: 12px; height: 12px; color: var(--emerald); }
-  .svc .btn-explore { margin-top: auto; width: 100%; height: 38px; background: #20263a; border: 1px solid transparent; border-radius: 5px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #cbd5e1; display: flex; align-items: center; justify-content: center; gap: 6px; transition: border-color .2s, color .2s, background .2s; }
+  .svc .btn-explore { margin-top: auto; width: 100%; height: var(--btn-h); background: #20263a; border: 1px solid transparent; border-radius: 5px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #cbd5e1; display: flex; align-items: center; justify-content: center; gap: 6px; transition: border-color .2s, color .2s, background .2s; }
   .svc.rank .btn-explore { color: var(--emerald); }
   .svc:hover .btn-explore { border-color: rgba(var(--accent), .45); background: rgba(var(--accent), .08); }
   .svc .btn-explore svg { width: 12px; height: 12px; }
@@ -324,7 +330,7 @@
   .pipe-note .ic svg { width: 16px; height: 16px; }
   .pipe-note h4 { font-family: var(--f-body); font-size: 13px; font-weight: 600; }
   .pipe-note p { font-size: 11.5px; color: var(--text-3); }
-  .pipe-note .btn { margin-left: auto; font-family: var(--f-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; font-weight: 500; height: 34px; background: #151a28; border-color: rgba(255,255,255,.05); }
+  .pipe-note .btn { margin-left: auto; font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 500; min-width: var(--btn-min-w); background: #151a28; border-color: rgba(255,255,255,.05); }
 
   /* ---------- Case studies ---------- */
   .cases { padding: 110px 0 100px; }
@@ -385,7 +391,6 @@
   .cta-box > *:not(.glow) { position: relative; z-index: 1; }
   .cta-box h2 { font-size: 48px; line-height: 58px; font-weight: 700; letter-spacing: -.03em; max-width: 640px; color: #dee2f6; }
   .cta-box p { margin: 18px 0 28px; max-width: 580px; color: var(--text-2); font-size: 14px; line-height: 22px; }
-  .cta-actions { display: flex; gap: 14px; flex-wrap: wrap; }
   .cta-actions .btn svg.chat { color: var(--emerald); }
   .cta-checks { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 60px; font-family: var(--f-mono); font-size: 9.5px; color: var(--text-3); }
   .cta-checks span { display: inline-flex; gap: 6px; align-items: center; }
@@ -430,7 +435,7 @@
     .mobile-menu { display: grid; gap: 4px; max-height: 0; overflow: hidden; transition: max-height .35s var(--ease); }
     .mobile-menu.open { max-height: 420px; }
     .mobile-menu a { padding: 12px 0; border-bottom: 1px solid var(--border); color: #cbd5e1; }
-    .mobile-menu .btn { margin: 14px 0 20px; height: 44px; }
+    .mobile-menu .btn { margin: 14px 0 20px; }
     .svc-grid, .case-grid { grid-template-columns: 1fr 1fr; }
     .compare { grid-template-columns: 1fr; }
   }
@@ -440,7 +445,7 @@
     .h-lg { font-size: 28px; line-height: 36px; letter-spacing: -.02em; }
     .hero { padding: 48px 0 72px; }
     .hero .lead { font-size: 16px; line-height: 26px; }
-    .btn { height: 44px; }
+    .hero-cta, .cta-actions { display: grid; grid-auto-flow: row; grid-auto-columns: 1fr; }
     .hero-cards { grid-template-columns: 1fr; }
     .hc.wide { grid-column: auto; }
     .flow { grid-template-columns: repeat(2, 1fr); row-gap: 18px; }
