@@ -1,0 +1,573 @@
+{
+  "seo": {
+    "title": "AI Automation Agency: GoHighLevel, n8n, Zapier & Make | RankStruct",
+    "description": "Automate leads, sales, support and admin with AI. We build GoHighLevel, n8n, Zapier and Make workflows, plus custom AI agents. Save hours every week. Free automation audit."
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "Put your busywork on autopilot.",
+    "accent": "on autopilot.",
+    "text": "We build AI automations that capture leads, follow up instantly, update your CRM and handle repetitive admin, using GoHighLevel, n8n, Zapier, Make or custom code. Your team gets hours back every week, and nothing slips through the cracks.",
+    "primary": {
+      "label": "Get a Free Automation Audit",
+      "url": "/contact/"
+    },
+    "secondary": {
+      "label": "See Automation Examples",
+      "url": "#automate"
+    },
+    "trust": [
+      "GHL, n8n, Zapier & Make experts",
+      "Fixed-price builds",
+      "You own every workflow"
+    ]
+  },
+  "problem": {
+    "title": "Manual work is quietly costing you money.",
+    "text": "Leads wait hours for a reply. Data gets copied between five different tools. Invoices, reports and follow-ups depend on someone remembering. Every manual step slows you down, and every missed one costs you revenue.",
+    "cards": [
+      {
+        "label": "FRICTION: 01",
+        "title": "Slow Lead Response",
+        "text": "Leads go cold while they wait. Businesses that reply in minutes win far more deals than those that reply in hours.",
+        "icon": "i-clock",
+        "tone": "red",
+        "footer": "> 78% drop-off after 60 min delay"
+      },
+      {
+        "label": "FRICTION: 02",
+        "title": "Copy-Paste Admin",
+        "text": "Your team re-types the same data into your CRM, spreadsheets and invoicing tools every day.",
+        "icon": "i-repeat",
+        "tone": "slate",
+        "footer": "~12.5 hrs lost per employee / wk"
+      },
+      {
+        "label": "FRICTION: 03",
+        "title": "Human Error",
+        "text": "Missed follow-ups, wrong data and forgotten tasks, because people shouldn't have to do what software can.",
+        "icon": "i-alert",
+        "tone": "violet",
+        "footer": "0% repeatable failure tolerance"
+      }
+    ]
+  },
+  "platforms": {
+    "title": "Automation on the platform that fits your business.",
+    "text": "We're tool-agnostic. We choose the platform that fits your budget, tech stack and team, and often connect several together.",
+    "cards": [
+      {
+        "tag": "GHL_STACK",
+        "tone": "rank",
+        "icon": "i-users",
+        "title": "GoHighLevel Automation",
+        "text": "All-in-one CRM, marketing and sales automation for agencies and service businesses. We set up GHL so leads are captured, nurtured and booked automatically.",
+        "items": [
+          "CRM, pipelines & lead scoring",
+          "SMS, email & WhatsApp follow-ups",
+          "Calendar booking & reminders",
+          "AI chat, voice agents & review requests",
+          "Snapshots & SaaS mode for agencies"
+        ],
+        "link": {
+          "label": "GoHighLevel Services",
+          "url": "/contact/"
+        },
+        "wide": false
+      },
+      {
+        "tag": "N8N_CORE",
+        "tone": "automate",
+        "icon": "i-flow",
+        "title": "n8n Automation",
+        "text": "Powerful, flexible workflows with full control over your data. Self-hosted or in the cloud, n8n is ideal for complex logic, AI agents and high-volume automations at low cost.",
+        "items": [
+          "Complex multi-step workflows",
+          "AI agents with OpenAI, Claude & Gemini",
+          "Self-hosted for data privacy",
+          "Custom code & API integrations"
+        ],
+        "link": {
+          "label": "n8n Automation",
+          "url": "/contact/"
+        },
+        "wide": false
+      },
+      {
+        "tag": "ZAPIER_SYS",
+        "tone": "automate",
+        "icon": "i-zap",
+        "title": "Zapier Automation",
+        "text": "The fastest way to connect thousands of apps. Perfect for simple, reliable automations your team can understand and manage.",
+        "items": [
+          "Multi-step Zaps",
+          "App-to-app integrations",
+          "Zapier AI & Tables",
+          "Cleanup & cost optimization of existing Zaps"
+        ],
+        "link": {
+          "label": "Zapier Automation",
+          "url": "/contact/"
+        },
+        "wide": false
+      },
+      {
+        "tag": "MAKE_FLOW",
+        "tone": "rank",
+        "icon": "i-share",
+        "title": "Make.com Automation",
+        "text": "Visual, flexible automation at a lower cost per task than Zapier. Great for data-heavy workflows with branching logic.",
+        "items": [
+          "Visual scenario building",
+          "Data transformation & routing",
+          "Error handling & retries",
+          "Migration from Zapier to Make"
+        ],
+        "link": {
+          "label": "Make Automation",
+          "url": "/contact/"
+        },
+        "wide": false
+      },
+      {
+        "tag": "PROPRIETARY_ENGINE",
+        "tone": "struct",
+        "icon": "i-code",
+        "title": "Custom AI & API Automation",
+        "text": "When no-code tools reach their limits, we build custom automations and AI agents in code, for full flexibility, speed and scale.",
+        "items": [
+          "Custom AI agents & LLM workflows",
+          "Webhooks & data pipelines",
+          "Internal tools & dashboards",
+          "Enterprise system integrations"
+        ],
+        "link": {
+          "label": "Custom Automation",
+          "url": "/contact/"
+        },
+        "wide": true
+      }
+    ]
+  },
+  "compare": {
+    "title": "GoHighLevel vs. n8n vs. Zapier vs. Make",
+    "text": "Not sure which to choose? Here's a quick comparison. We'll recommend the best fit on your free audit call.",
+    "columns": [
+      "Criteria",
+      "GoHighLevel",
+      "n8n",
+      "Zapier",
+      "Make"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Best for:",
+          "Agencies & service businesses",
+          "Complex, AI-heavy workflows",
+          "Simple, fast integrations",
+          "Data-heavy, visual workflows"
+        ]
+      },
+      {
+        "cells": [
+          "Ease of use:",
+          "★★★★☆",
+          "★★★☆☆",
+          "★★★★★",
+          "★★★★☆"
+        ]
+      },
+      {
+        "cells": [
+          "Flexibility:",
+          "★★★☆☆",
+          "★★★★★",
+          "★★★☆☆",
+          "★★★★☆"
+        ]
+      },
+      {
+        "cells": [
+          "Cost at scale:",
+          "Fixed monthly",
+          "Lowest (self-hosted)",
+          "Highest",
+          "Low to medium"
+        ]
+      },
+      {
+        "cells": [
+          "Built-in CRM:",
+          "Yes",
+          "✗ No",
+          "✗ No",
+          "✗ No"
+        ]
+      },
+      {
+        "cells": [
+          "Self-hosting:",
+          "✗ No",
+          "Yes",
+          "✗ No",
+          "✗ No"
+        ]
+      }
+    ],
+    "button": {
+      "label": "Help Me Choose",
+      "url": "/contact/"
+    }
+  },
+  "automate": {
+    "title": "What we can automate for you",
+    "text": "If it's repetitive and rule-based, it can probably be automated. Here's what we build most often.",
+    "cards": [
+      {
+        "label": "MODULE: 01",
+        "title": "Lead Capture & Follow-Up",
+        "text": "Instantly reply to new leads by SMS, email or chat, qualify them with AI and add them to your CRM.",
+        "icon": "i-target",
+        "tone": "green"
+      },
+      {
+        "label": "MODULE: 02",
+        "title": "Sales Pipeline",
+        "text": "Move deals automatically, assign leads to reps, send reminders and trigger proposals and contracts.",
+        "icon": "i-trend",
+        "tone": "indigo"
+      },
+      {
+        "label": "MODULE: 03",
+        "title": "Appointment Booking",
+        "text": "Online booking, confirmations, reminders and no-show follow-ups, all hands-free.",
+        "icon": "i-cal",
+        "tone": "violet"
+      },
+      {
+        "label": "MODULE: 04",
+        "title": "Customer Support",
+        "text": "AI chatbots and email assistants that answer common questions 24/7 and hand off complex issues to your team.",
+        "icon": "i-chat",
+        "tone": "green"
+      },
+      {
+        "label": "MODULE: 05",
+        "title": "Marketing",
+        "text": "Email and SMS campaigns, review requests, social posting and lead nurturing sequences.",
+        "icon": "i-send",
+        "tone": "indigo"
+      },
+      {
+        "label": "MODULE: 06",
+        "title": "Invoicing & Payments",
+        "text": "Create and send invoices, chase late payments and sync everything to your accounting software.",
+        "icon": "i-dollar",
+        "tone": "violet"
+      },
+      {
+        "label": "MODULE: 07",
+        "title": "Client Onboarding",
+        "text": "Welcome emails, forms, contracts, folders and task lists created automatically for every new client.",
+        "icon": "i-clip",
+        "tone": "green"
+      },
+      {
+        "label": "MODULE: 08",
+        "title": "Reporting & Dashboards",
+        "text": "Live dashboards and weekly reports pulled from all your tools, delivered to your inbox or Slack.",
+        "icon": "i-chart",
+        "tone": "indigo"
+      },
+      {
+        "label": "MODULE: 09",
+        "title": "Data Sync",
+        "text": "Keep your CRM, spreadsheets, ecommerce store and accounting tools in sync, with no copy-pasting.",
+        "icon": "i-repeat",
+        "tone": "violet"
+      }
+    ]
+  },
+  "agents": {
+    "title": "AI agents that work like extra team members.",
+    "text": "AI agents go beyond simple automation. They can read, write, decide and take action, handling tasks that used to need a person, around the clock.",
+    "cards": [
+      {
+        "title": "AI Voice Agents",
+        "text": "Answer calls, qualify leads and book appointments 24/7 with natural-sounding AI voice assistants.",
+        "icon": "i-phone",
+        "footer": "Speech-to-intent engine"
+      },
+      {
+        "title": "AI Chat Agents",
+        "text": "Website, SMS, WhatsApp and Instagram chatbots that answer questions and capture leads instantly.",
+        "icon": "i-chat",
+        "footer": "Omnichannel synchrony"
+      },
+      {
+        "title": "AI Lead Qualification",
+        "text": "AI scores and researches every new lead, then routes the best ones straight to your sales team.",
+        "icon": "i-target",
+        "footer": "Multi-variable scoring"
+      },
+      {
+        "title": "AI Document Processing",
+        "text": "Extract data from invoices, forms, contracts and emails automatically, with no manual entry.",
+        "icon": "i-doc",
+        "footer": "Vision OCR & structuring"
+      },
+      {
+        "title": "AI Content Assistants",
+        "text": "Draft emails, proposals, reports and social posts in your brand voice, ready for review.",
+        "icon": "i-edit",
+        "footer": "Brand embeddings"
+      },
+      {
+        "title": "AI Knowledge Assistants",
+        "text": "An internal assistant trained on your documents, so your team can find answers in seconds.",
+        "icon": "i-brain",
+        "footer": "RAG vector indexing"
+      }
+    ],
+    "note": {
+      "strong": "Guaranteed Guardrails:",
+      "text": "Every AI agent includes human-review options, clear limits and monitoring, so it never acts outside the rules you set."
+    }
+  },
+  "trust": {
+    "title": "Automations you can trust",
+    "text": "A broken automation is worse than none. We build every workflow to be reliable, secure and easy to maintain.",
+    "cards": [
+      {
+        "title": "Error handling & alerts",
+        "text": "If something fails, you're notified immediately and it retries automatically.",
+        "icon": "i-bell",
+        "tone": "red",
+        "footer": "Auto-retry policy"
+      },
+      {
+        "title": "Monitoring",
+        "text": "We track every workflow so problems get fixed before they cost you.",
+        "icon": "i-eye",
+        "tone": "slate",
+        "footer": "Proactive healing"
+      },
+      {
+        "title": "Data security",
+        "text": "Secure connections, limited access and self-hosting options for sensitive data.",
+        "icon": "i-lock",
+        "tone": "green",
+        "footer": "Encryption in transit"
+      },
+      {
+        "title": "Documentation",
+        "text": "Every workflow is documented so your team understands how it works.",
+        "icon": "i-book",
+        "tone": "indigo",
+        "footer": "Runbooks included"
+      },
+      {
+        "title": "Full ownership",
+        "text": "Everything is built in your accounts. You own it all, with no lock-in.",
+        "icon": "i-key",
+        "tone": "slate",
+        "footer": "Zero platform lock-in"
+      }
+    ]
+  },
+  "industries": {
+    "title": "AI automation for your industry",
+    "text": "",
+    "cards": [
+      {
+        "label": "01 // AGENCY",
+        "title": "Agencies",
+        "text": "GoHighLevel setups, client onboarding, reporting and white-label SaaS automation."
+      },
+      {
+        "label": "02 // REAL ESTATE",
+        "title": "Real Estate",
+        "text": "Instant lead response, showing bookings, nurture sequences and CRM updates."
+      },
+      {
+        "label": "03 // MEDICAL",
+        "title": "Healthcare & Clinics",
+        "text": "Appointment booking, reminders, intake forms and review requests."
+      },
+      {
+        "label": "04 // TRADES",
+        "title": "Home Services",
+        "text": "Missed-call text-back, quote follow-ups, job scheduling and invoicing."
+      },
+      {
+        "label": "05 // COMMERCE",
+        "title": "Ecommerce",
+        "text": "Order syncing, abandoned cart flows, inventory alerts and customer support bots."
+      },
+      {
+        "label": "06 // CONSULTING",
+        "title": "Professional Services",
+        "text": "Client onboarding, document collection, billing and proposal automation for law, accounting and consulting firms."
+      },
+      {
+        "label": "07 // SOFTWARE",
+        "title": "B2B SaaS",
+        "text": "Lead enrichment, CRM syncing, trial nurturing and product usage alerts."
+      },
+      {
+        "label": "08 // EDUCATION",
+        "title": "Coaches & Creators",
+        "text": "Funnels, payment flows, course access and community onboarding."
+      }
+    ]
+  },
+  "process": {
+    "title": "How we automate your business",
+    "text": "From manual chaos to automated systems in weeks, not months.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Automation Audit",
+        "phase": "DISCOVERY",
+        "text": "We map your workflows and find the biggest time and revenue drains.",
+        "when": "WEEK 1"
+      },
+      {
+        "number": "02",
+        "title": "Fixed Scope",
+        "phase": "SPECIFICATION",
+        "text": "A clear plan with the right platforms, workflows and a fixed price.",
+        "when": "WEEK 1"
+      },
+      {
+        "number": "03",
+        "title": "Build & Connect",
+        "phase": "ASSEMBLY",
+        "text": "We build, connect your tools and add AI where it helps.",
+        "when": "WEEK 2–4"
+      },
+      {
+        "number": "04",
+        "title": "Test & Launch",
+        "phase": "QA_STAGING",
+        "text": "Every workflow is tested with real scenarios before going live.",
+        "when": "WEEK 3–5"
+      },
+      {
+        "number": "05",
+        "title": "Train & Optimize",
+        "phase": "HANDOFF",
+        "text": "Team training, documentation and ongoing monitoring and improvements.",
+        "when": "ONGOING"
+      }
+    ]
+  },
+  "results": {
+    "label": "",
+    "title": "Automation results",
+    "text": "",
+    "link": {
+      "label": "View all case studies",
+      "url": "/#cases"
+    },
+    "cards": [
+      {
+        "tag": "// Fintech_Logistics",
+        "tone": "plain",
+        "side_label": "Make + Webhooks",
+        "title": "Back-Office Automation",
+        "text": "Connected 4 separate SaaS tools into one automated data pipeline.",
+        "metric": "14 hrs",
+        "metric_label": "Saved per founder / wk",
+        "rows": [],
+        "checks": [
+          "Zero manual data-entry errors"
+        ]
+      },
+      {
+        "tag": "// Home_Services",
+        "tone": "rank",
+        "side_label": "GoHighLevel",
+        "title": "Missed-Call Text-Back & AI Booking",
+        "text": "Automated instant SMS responses to missed inbound phone calls and integrated booking calendar.",
+        "metric": "+42%",
+        "metric_label": "More booked jobs / month",
+        "rows": [],
+        "checks": [
+          "< 45s Response Time"
+        ]
+      },
+      {
+        "tag": "// B2B_SaaS",
+        "tone": "automate",
+        "side_label": "n8n / AI Agent",
+        "title": "AI Lead Qualification Agent",
+        "text": "Automated multi-source background enrichment and instant tiering in HubSpot and Slack.",
+        "metric": "3.5x",
+        "metric_label": "Faster lead response",
+        "rows": [],
+        "checks": [
+          "85% Less SDR Admin Time"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "label": "// 11_FAQ_Store",
+    "title": "AI automation FAQs",
+    "text": "",
+    "numbered": false,
+    "items": [
+      {
+        "question": "What is AI automation?",
+        "answer": "AI automation uses software and artificial intelligence to handle repetitive tasks automatically, like replying to leads, updating your CRM, processing documents or answering customer questions. It saves time, reduces errors and helps your business respond faster."
+      },
+      {
+        "question": "Which is better: GoHighLevel, n8n, Zapier or Make?",
+        "answer": "It depends on your needs. GoHighLevel is best for agencies and service businesses that want an all-in-one CRM. n8n suits complex, AI-heavy workflows and data privacy. Zapier is easiest for simple integrations, and Make offers flexible visual workflows at lower cost. We'll recommend the right fit."
+      },
+      {
+        "question": "Can you fix or improve my existing automations?",
+        "answer": "Yes. We audit, fix and optimize existing GoHighLevel, n8n, Zapier and Make workflows. That includes cutting costs, fixing errors and moving workflows to better-suited platforms."
+      },
+      {
+        "question": "How much does automation cost?",
+        "answer": "Every project is fixed-price and scoped upfront. Simple workflows cost less than complex AI agent builds. Book a free audit and you'll get a clear quote within 48 hours."
+      },
+      {
+        "question": "How long does it take?",
+        "answer": "Most automation projects go live in 2–5 weeks. Simple workflows can be ready in days."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Yes. We use secure connections, limit access to only what's needed and can self-host n8n for sensitive data. Everything is built in your own accounts."
+      },
+      {
+        "question": "Will AI replace my team?",
+        "answer": "No. AI automation removes repetitive tasks so your team can focus on clients, sales and growth. You set the rules, and humans stay in control of important decisions."
+      },
+      {
+        "question": "Do you offer ongoing support?",
+        "answer": "Yes. We offer monitoring, maintenance and improvement plans so your automations keep running smoothly as your business grows."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Find out what you can automate.",
+    "text": "Book a free automation audit. Within 48 hours, you'll get a list of the tasks costing you the most time, the best tools to automate them and a fixed-price plan. No sales pitch.",
+    "primary": {
+      "label": "Get My Free Automation Audit",
+      "url": "/contact/"
+    },
+    "secondary": {
+      "label": "Book a Quick Chat",
+      "url": "/contact/"
+    },
+    "checks": [
+      "Reply within 24 hours",
+      "GHL, n8n, Zapier & Make",
+      "No obligation"
+    ]
+  }
+}

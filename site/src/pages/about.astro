@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Glow from '../components/Glow.astro';
+import SecHead from '../components/SecHead.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import { inline } from '../lib/text';
+import settings from '../content/settings.json';
+import c from '../content/pages/about.json';
+const accentFor: Record<string, string> = { rank: 'green', struct: 'indigo', automate: 'violet' };
+const schema = { '@context': 'https://schema.org', '@type': 'AboutPage', name: c.seo.title,
+  mainEntity: { '@type': 'Organization', name: settings.site_name, founder: { '@type': 'Person', name: 'April' }, areaServed: 'Worldwide' } };
+---
+<Layout title={c.seo.title} description={c.seo.description} active="about" schemas={[schema]}>
+  <section class="phero a-hero">
+    <Glow color="indigo" style="width:620px;height:520px;top:-120px;right:0;opacity:.9" />
+    <Glow color="green" drift="b" style="width:360px;height:360px;bottom:-200px;left:-140px;opacity:.4" />
+    <div class="container reveal">
+      <h1 class="h-xl">{c.hero.title}<br /><span class="accent">{c.hero.highlight}</span></h1>
+      <div class="body">
+        <p class="first">{c.hero.lead}</p>
+        {c.hero.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+      {c.hero.quote && <div class="quote-bar">{c.hero.quote}</div>}
+    </div>
+  </section>
+
+  <section class="psec sec-deep">
+    <Glow color="indigo" style="width:500px;height:400px;top:10%;left:30%;opacity:.35" />
+    <Glow color="green" drift="b" style="width:340px;height:340px;bottom:-120px;right:-100px;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.needs.title} text={c.needs.text} />
+      <div class="g g3 mt">
+        {c.needs.cards.map((k) => (
+          <article class={`card ${accentFor[k.tone] ?? 'indigo'} fc dom-card reveal`}>
+            <div class="fc-top"><span class={`chip ${k.tone}`}>{k.tag}</span><svg><use href={`#${k.icon}`} /></svg></div>
+            <h3>{k.title}</h3>
+            <span class="mono accent" style="text-transform:none;letter-spacing:.02em">{k.subtitle}</span>
+            <p style="margin-top:10px">{k.text}</p>
+            <a href={k.link.url} class="more">{k.link.label}</a>
+          </article>
+        ))}
+      </div>
+      <div class="card struct combo reveal">
+        <div><h3>{c.needs.combo_title}</h3><p>{c.needs.combo_text}</p><p class="strong">{c.needs.combo_strong}</p></div>
+        <div class="pull">{c.needs.combo_quote}</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="psec">
+    <Glow color="violet" style="width:460px;height:380px;top:20%;right:-120px;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.approach.title} text={c.approach.text} />
+      <div class="define-label reveal">{c.approach.define_label}</div>
+      <div class="g g5" style="margin-top:18px">
+        {c.approach.cards.map((k) => {
+          const [n, ...rest] = k.label.split('//');
+          return <div class="card struct def-card reveal"><span class="mono"><span class="n">{n.trim()}</span> //{rest.join('//')}</span><div><h3>{k.title}</h3><p class="small" style="margin-top:6px">{k.text}</p></div></div>;
+        })}
+      </div>
+      <div class="g g2" style="margin-top:20px">
+        {c.approach.quotes.map((q, i) => <div class="card struct qcard reveal"><span class="itile t-slate"><svg><use href={i === 0 ? '#i-block' : '#i-shield'} /></svg></span><p>{q}</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep" id="how">
+    <Glow color="green" style="width:420px;height:380px;bottom:-140px;left:20%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.how.title} text={c.how.text} />
+      <div class="g g7 mt">
+        {c.how.steps.map((s, i) => <div class="card struct wcard reveal"><div class="top"><span>{String(i + 1).padStart(2, '0')}</span><i class="dot"></i></div><span class="mono">{s.label}</span><h3>{s.title}</h3><p>{s.text}</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="psec" id="april">
+    <Glow color="indigo" style="width:520px;height:440px;top:10%;left:-160px;opacity:.45" />
+    <div class="container">
+      <div class="person">
+        <div class="photo reveal">
+          {c.person.photo
+            ? <img src={c.person.photo} alt={c.person.photo_alt} onerror="this.remove()" />
+            : null}
+          <div class="ph"><svg><use href="#i-users" /></svg>Add photo in the CMS</div>
+        </div>
+        <div class="reveal">
+          <h2 class="h-lg">{c.person.title}</h2>
+          <div class="hi">{c.person.greeting}</div>
+          <div class="story">{c.person.story.map((p) => <p set:html={inline(p)} />)}</div>
+          <div class="card rank approach"><span class="mono">{c.person.approach_label}</span><p>{c.person.approach}</p></div>
+          <div class="li-row">
+            {settings.linkedin_url && <a href={settings.linkedin_url} class="btn btn-ghost" target="_blank" rel="noopener">{c.person.linkedin_label} <svg><use href="#i-ext" /></svg></a>}
+            <span class="mono">{c.person.location}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep">
+    <Glow color="violet" drift="b" style="width:420px;height:380px;bottom:-140px;right:10%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.expect.title} text={c.expect.text} />
+      <div class="g g3 mt">
+        {c.expect.cards.map((k) => (
+          <article class="card indigo fc reveal">
+            <div class="head-row" style="flex-direction:column;align-items:flex-start;gap:14px"><span class={`itile t-${k.tone}`}><svg><use href={`#${k.icon}`} /></svg></span><span class="tag-mono">{k.label}</span></div>
+            <h3>{k.title}</h3><p>{k.text}</p>
+          </article>
+        ))}
+      </div>
+      <div class="card rank note-bar reveal"><i class="dot"></i><p><b>{c.expect.bar.strong}</b> {c.expect.bar.text}</p><span class="side mono">{c.expect.bar.side}</span></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box card struct reveal">
+        <Glow color="indigo" style="width:420px;height:360px;bottom:-140px;right:-80px;opacity:.9" />
+        <h2>{c.cta.title}</h2>
+        <p>{c.cta.text}</p>
+        <div class="cta-actions"><a href={c.cta.primary.url} class="btn btn-primary">{c.cta.primary.label} <svg class="arrow"><use href="#i-arrow" /></svg></a></div>
+      </div>
+    </div>
+  </section>
+</Layout>

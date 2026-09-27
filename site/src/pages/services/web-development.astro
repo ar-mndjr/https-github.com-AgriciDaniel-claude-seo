@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Glow from '../../components/Glow.astro';
+import SecHead from '../../components/SecHead.astro';
+import PageHero from '../../components/PageHero.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import CompareTable from '../../components/CompareTable.astro';
+import StepCards from '../../components/StepCards.astro';
+import ResultCard from '../../components/ResultCard.astro';
+import FaqList from '../../components/FaqList.astro';
+import CtaCenter from '../../components/CtaCenter.astro';
+import { serviceSchema, faqSchema } from '../../lib/schema';
+import c from '../../content/pages/web-development.json';
+---
+<Layout title={c.seo.title} description={c.seo.description} active="services"
+  schemas={[serviceSchema('Web Development Services', c.seo.description), faqSchema(c.faq.items)]}>
+  <PageHero hero={c.hero} />
+
+  <section class="psec sec-deep" id="platforms">
+    <Glow color="indigo" drift="c" style="width:520px;height:420px;top:20%;left:35%;opacity:.35" />
+    <Glow color="green" drift="b" style="width:360px;height:360px;bottom:-120px;left:-140px;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.platforms.title} text={c.platforms.text} />
+      <div class="g g3 mt">
+        {c.platforms.cards.map((k) => <FeatureCard title={k.title} text={k.text} icon={k.icon} tone={k.tone} accent={k.accent as any} items={k.items} link={k.link} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="psec">
+    <Glow color="violet" style="width:460px;height:380px;top:10%;right:-100px;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.compare.title} text={c.compare.text} />
+      <CompareTable columns={c.compare.columns} rows={c.compare.rows} dots />
+      <div class="after"><a href={c.compare.button.url} class="btn btn-primary">{c.compare.button.label} <svg class="arrow"><use href="#i-arrow" /></svg></a></div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep">
+    <Glow color="indigo" drift="b" style="width:480px;height:400px;bottom:-140px;left:20%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.customize.title} text={c.customize.text} />
+      <div class="g g3 mt">{c.customize.cards.map((k) => <FeatureCard title={k.title} text={k.text} icon={k.icon} tone={k.tone} />)}</div>
+    </div>
+  </section>
+
+  <section class="psec">
+    <Glow color="green" style="width:420px;height:420px;top:10%;right:-160px;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.included.title} text={c.included.text} />
+      <div class="g g4 mt">
+        {c.included.cards.map((k) => (
+          <article class="card green fc sm reveal"><span class="icon-plain"><svg><use href={`#${k.icon}`} /></svg></span><h3>{k.title}</h3><p>{k.text}</p></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep" id="process">
+    <Glow color="indigo" style="width:520px;height:400px;top:0;left:40%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.process.title} text={c.process.text} />
+      <div class="g g5 mt"><StepCards steps={c.process.steps} accents={['green', 'indigo', 'indigo', 'green', 'indigo']} /></div>
+      <div class="card struct note-bar big reveal">
+        <div><b>{c.process.note.title}</b><p>{c.process.note.text}</p></div>
+        <div class="side"><span class="link-chip">{c.process.note.badge}</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="psec" id="results">
+    <Glow color="violet" style="width:500px;height:400px;top:20%;left:30%;opacity:.35" />
+    <div class="container">
+      <div class="sec-row">
+        <SecHead title={c.results.title} text={c.results.text} label={c.results.label} />
+        <a href={c.results.link.url} class="link-chip neutral">{c.results.link.label} <svg><use href="#i-arrow" /></svg></a>
+      </div>
+      <div class="g g3 mt">{c.results.cards.map((k, i) => <ResultCard card={k} accent={i === 0 ? 'green' : 'indigo'} />)}</div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep"><div class="container"><FaqList faq={c.faq} /></div></section>
+
+  <CtaCenter cta={c.cta} />
+</Layout>

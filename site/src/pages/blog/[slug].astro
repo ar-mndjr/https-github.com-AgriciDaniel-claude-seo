@@ -1,0 +1,170 @@
+---
+import { render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Glow from '../../components/Glow.astro';
+import CoverArt from '../../components/CoverArt.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPosts, CATEGORY, postUrl, formatDate } from '../../lib/posts';
+import settings from '../../content/settings.json';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post, i) => ({ params: { slug: post.id }, props: { post, newer: posts[i - 1], older: posts[i + 1], all: posts } }));
+}
+
+const { post, newer, older, all } = Astro.props;
+const d = post.data;
+const cat = CATEGORY[d.category];
+const { Content, headings } = await render(post);
+const toc = headings.filter((h) => h.depth === 2);
+const related = [...all.filter((p) => p !== post && p.data.category === d.category), ...all.filter((p) => p !== post && p.data.category !== d.category)].slice(0, 3);
+const initials = d.author.split(/\s+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase();
+const schema = {
+  '@context': 'https://schema.org', '@type': 'BlogPosting', headline: d.title, description: d.description,
+  datePublished: d.date.toISOString(), author: { '@type': 'Person', name: d.author },
+  publisher: { '@type': 'Organization', name: settings.site_name, logo: { '@type': 'ImageObject', url: new URL('/logo.svg', settings.site_url).href } },
+  mainEntityOfPage: new URL(postUrl(post), settings.site_url).href,
+  ...(d.cover_image ? { image: new URL(d.cover_image, settings.site_url).href } : {}),
+};
+---
+<Layout title={`${d.title} — RankStruct Blog`} description={d.description} active="blog" schemas={[schema]} image={d.cover_image || undefined}>
+  <div class="progress" id="progress" slot="head"></div>
+  <article>
+    <section class="post-hero">
+      <Glow color="green" style="width:460px;height:420px;top:-160px;right:12%;" />
+      <Glow color="indigo" drift="b" style="width:380px;height:380px;top:30%;left:-200px;opacity:.6" />
+      <div class="container">
+        <div class="reveal">
+          <a href="/blog/" class="back"><svg><use href="#i-back" /></svg> All articles</a>
+          <div class="tag-row" data-cat={d.category}><span class="cat-chip">{cat.name}</span>{d.subcategory && <span class="chip plain">{d.subcategory}</span>}{d.draft && <span class="chip plain">Draft</span>}</div>
+          <h1 class="h-xl">{d.title}</h1>
+          <p class="lead">{d.description}</p>
+          <div class="byline">
+            <div class="author"><span class="avatar">{initials}</span><div><b>{d.author}</b><small>Founder, RankStruct</small></div></div>
+            <div class="meta"><span>{formatDate(d.date)}</span><span><svg><use href="#i-clock" /></svg>{d.read_time} min read</span></div>
+            <div class="share">
+              <button class="icon-btn" id="copyLink" aria-label="Copy link"><svg><use href="#i-link" /></svg><span class="tip">Link copied</span></button>
+              <button class="icon-btn" id="shareBtn" aria-label="Share"><svg><use href="#i-share" /></svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="post-cover reveal" data-cat={d.category}><CoverArt cover={d.cover} image={d.cover_image} alt={d.title} gx="70%" gy="40%" /></div>
+      </div>
+    </section>
+
+    <section style="overflow:visible">
+      <div class="container post-layout">
+        <div>
+          {toc.length > 0 && (
+            <details class="card toc-mobile">
+              <summary>On this page <svg><use href="#i-down" /></svg></summary>
+              <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+            </details>
+          )}
+          <div class="prose" id="prose">
+            {d.tldr.length > 0 && (
+              <div class="card rank tldr-box">
+                <span class="mono" style="color:var(--mint)">// TL;DR</span>
+                <ul>{d.tldr.map((t) => <li>{t}</li>)}</ul>
+                {d.highlights.length > 0 && <div class="kv">{d.highlights.map((x) => <div><span class="mono">{x.label}</span><b>{x.value}</b></div>)}</div>}
+              </div>
+            )}
+            <Content />
+
+            {d.tags.length > 0 && <div class="tags">{d.tags.map((t) => <a href="/blog/#articles">#{t}</a>)}</div>}
+
+            <div class="card struct author-card">
+              <span class="avatar">{initials}</span>
+              <div>
+                <b>{d.author}</b>
+                <span class="role">Founder · RankStruct</span>
+                <p>April runs RankStruct and works across SEO, web development and automation, staying hands-on with every project from first call to launch.</p>
+              </div>
+            </div>
+
+            {(older || newer) && (
+              <nav class="pager" aria-label="More articles">
+                {older ? <a href={postUrl(older)} class="card struct"><span class="mono">← Previous</span><b>{older.data.title}</b></a> : <span></span>}
+                {newer && <a href={postUrl(newer)} class="card struct"><span class="mono">Next →</span><b>{newer.data.title}</b></a>}
+              </nav>
+            )}
+          </div>
+        </div>
+
+        {toc.length > 0 && (
+          <aside class="card toc" aria-label="Table of contents">
+            <h5>On this page</h5>
+            <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+            <div class="toc-prog"><span class="mono">Read</span><b id="pct">0%</b><i><em id="pbar"></em></i></div>
+            <a href="/contact/" class="btn btn-primary toc-cta">Start a Project</a>
+          </aside>
+        )}
+      </div>
+    </section>
+  </article>
+
+  {related.length > 0 && (
+    <section class="related cases sec-deep">
+      <Glow color="violet" style="width:460px;height:380px;top:20%;left:40%;opacity:.4" />
+      <div class="container">
+        <div class="sec-row reveal">
+          <div class="sec-head" style="max-width:560px"><h2 class="h-lg">Keep reading.</h2><p>More write-ups from real client builds, each with the number it moved.</p></div>
+          <a href="/blog/#articles">View all articles <svg width="10" height="10"><use href="#i-arrow" /></svg></a>
+        </div>
+        <div class="case-grid">{related.map((p, i) => <PostCard post={p} index={i} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <section class="cta sec-deep">
+    <div class="container">
+      <div class="cta-box card struct reveal">
+        <Glow color="indigo" style="width:420px;height:360px;bottom:-140px;right:-80px;opacity:.9" />
+        <h2>Have something you're trying to solve?</h2>
+        <p>Tell us about it, and we'll tell you honestly what makes sense. You'll get a written assessment within 48 hours. No sales pitch.</p>
+        <div class="cta-actions">
+          <a href="/contact/" class="btn btn-primary">Start a Project <svg class="arrow"><use href="#i-arrow" /></svg></a>
+          <a href="/contact/" class="btn btn-dark"><svg class="chat"><use href="#i-chat" /></svg> Quick Chat</a>
+        </div>
+        <div class="cta-checks"><span><svg><use href="#i-check" /></svg>Response within 24h</span><span><svg><use href="#i-check" /></svg>NDA protection available</span><span><svg><use href="#i-check" /></svg>Zero-obligation code review</span></div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const bar = document.getElementById('progress')!;
+  const prose = document.getElementById('prose')!;
+  const pct = document.getElementById('pct');
+  const pbar = document.getElementById('pbar');
+  function progress() {
+    const r = prose.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, -r.top / (r.height - innerHeight * 0.6)));
+    bar.style.transform = `scaleX(${p})`;
+    if (pct) pct.textContent = Math.round(p * 100) + '%';
+    if (pbar) pbar.style.transform = `scaleX(${p})`;
+  }
+  addEventListener('scroll', progress, { passive: true }); addEventListener('resize', progress); progress();
+
+  const tocLinks = [...document.querySelectorAll('.toc ol a')];
+  const heads = [...prose.querySelectorAll('h2[id]')];
+  function spy() {
+    if (!heads.length) return;
+    let cur = heads[0];
+    heads.forEach((h) => { if (h.getBoundingClientRect().top < innerHeight * 0.35) cur = h; });
+    tocLinks.forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + cur.id));
+  }
+  addEventListener('scroll', spy, { passive: true }); spy();
+  document.querySelectorAll('.toc-mobile a').forEach((a) => a.addEventListener('click', () => { (a.closest('details') as HTMLDetailsElement).open = false; }));
+
+  const copyBtn = document.getElementById('copyLink')!;
+  copyBtn.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(location.href); } catch {}
+    copyBtn.classList.add('copied');
+    setTimeout(() => copyBtn.classList.remove('copied'), 1600);
+  });
+  document.getElementById('shareBtn')!.addEventListener('click', () => {
+    if (navigator.share) navigator.share({ title: document.title, url: location.href }).catch(() => {});
+    else copyBtn.click();
+  });
+</script>

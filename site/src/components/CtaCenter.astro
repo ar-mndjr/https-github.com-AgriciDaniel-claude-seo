@@ -1,0 +1,23 @@
+---
+import Glow from './Glow.astro';
+interface Link { label: string; url: string }
+interface Props { cta: { title: string; text: string; primary: Link; secondary?: Link; checks?: string[] }; button?: string }
+const { cta, button = 'btn-primary' } = Astro.props;
+---
+<section class="cta sec-deep" id="contact">
+  <div class="container">
+    <div class="cta-box card struct cta-center reveal">
+      <Glow color="indigo" style="width:520px;height:380px;bottom:-200px;left:30%;opacity:.8" />
+      <Glow color="violet" drift="b" style="width:300px;height:300px;top:-120px;right:10%;opacity:.35" />
+      <h2>{cta.title}</h2>
+      <p>{cta.text}</p>
+      <div class="cta-actions">
+        <a href={cta.primary.url} class={`btn ${button}`}>{cta.primary.label} <svg class="arrow"><use href="#i-arrow" /></svg></a>
+        {cta.secondary && <a href={cta.secondary.url} class="btn btn-dark"><svg class="chat"><use href="#i-chat" /></svg> {cta.secondary.label}</a>}
+      </div>
+      {cta.checks && cta.checks.length > 0 && (
+        <div class="cta-checks">{cta.checks.map((c) => <span><svg><use href="#i-check" /></svg>{c}</span>)}</div>
+      )}
+    </div>
+  </div>
+</section>

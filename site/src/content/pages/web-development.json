@@ -1,0 +1,453 @@
+{
+  "seo": {
+    "title": "Web Development Services: WordPress, Shopify, Webflow & Custom | RankStruct",
+    "description": "Fast, SEO-ready websites on WordPress, Shopify, Webflow, Wix or fully custom code. Fixed-price web development, delivered hands-on. Get a free quote in 48 hours."
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "Websites that load fast, rank well and convert.",
+    "accent": "",
+    "text": "We design and build websites on WordPress, Shopify, Webflow, Wix or fully custom code, whichever platform fits your business. Every site is fast, SEO-ready and easy for your team to manage.",
+    "primary": {
+      "label": "Get a Free Quote",
+      "url": "/contact/"
+    },
+    "secondary": {
+      "label": "See Our Work",
+      "url": "#results"
+    },
+    "trust": []
+  },
+  "platforms": {
+    "title": "Web development on the platform that fits your business.",
+    "text": "We don't push one tool on every client. We recommend the right platform for your goals, budget and team, then customize it to fit exactly.",
+    "cards": [
+      {
+        "title": "WordPress Development",
+        "text": "Custom WordPress themes and plugins built lean. No page-builder bloat and no plugin overload. Ideal for content-heavy sites, blogs and businesses that want full control.",
+        "icon": "i-edit",
+        "tone": "indigo",
+        "accent": "indigo",
+        "items": [
+          "Custom theme development",
+          "WooCommerce stores",
+          "Plugin cleanup & speed fixes",
+          "Headless WordPress"
+        ],
+        "link": {
+          "label": "WordPress Development",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Shopify Development",
+        "text": "High-converting Shopify stores, from theme customization to fully custom storefronts. Built for fast checkout and easy product management.",
+        "icon": "i-cart",
+        "tone": "green",
+        "accent": "green",
+        "items": [
+          "Custom Shopify themes",
+          "Shopify store setup & migration",
+          "App integration & custom features",
+          "Headless Shopify (Hydrogen / Next.js)"
+        ],
+        "link": {
+          "label": "Shopify Development",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Webflow Development",
+        "text": "Pixel-perfect, design-led websites your marketing team can update without a developer. Great for SaaS, startups and agencies.",
+        "icon": "i-palette",
+        "tone": "slate",
+        "accent": "indigo",
+        "items": [
+          "Figma to Webflow builds",
+          "Webflow CMS setup",
+          "Interactions & animations",
+          "Webflow SEO setup"
+        ],
+        "link": {
+          "label": "Webflow Development",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Wix Website Design",
+        "text": "Professional Wix websites for small businesses that want a simple, affordable site they can easily edit themselves.",
+        "icon": "i-grid",
+        "tone": "indigo",
+        "accent": "indigo",
+        "items": [
+          "Custom Wix design",
+          "Wix Studio builds",
+          "Booking & online store setup",
+          "Wix SEO optimization"
+        ],
+        "link": {
+          "label": "Wix Website Design",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Squarespace Websites",
+        "text": "Clean, elegant websites for creatives, consultants and service businesses, set up for SEO from day one.",
+        "icon": "i-layers",
+        "tone": "green",
+        "accent": "green",
+        "items": [
+          "Custom Squarespace design",
+          "Template customization",
+          "Scheduling & ecommerce setup",
+          "Squarespace SEO"
+        ],
+        "link": {
+          "label": "Squarespace Websites",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Custom Web Development",
+        "text": "When templates aren't enough. Fully custom websites and web apps built with Next.js and Astro, for maximum speed, flexibility and scale.",
+        "icon": "i-code",
+        "tone": "slate",
+        "accent": "indigo",
+        "items": [
+          "Next.js & Astro development",
+          "Headless CMS (Sanity, Contentful, Payload)",
+          "Custom web applications",
+          "API & third-party integrations"
+        ],
+        "link": {
+          "label": "Custom Development",
+          "url": "/contact/"
+        }
+      }
+    ]
+  },
+  "compare": {
+    "title": "Not sure which platform to choose?",
+    "text": "Here's a quick guide. On our free consultation call, we'll recommend the best fit and explain why.",
+    "columns": [
+      "Platform",
+      "Best for",
+      "Ease of editing",
+      "Flexibility",
+      "Typical budget"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "WordPress",
+          "Blogs, content sites, service businesses",
+          "★★★★☆",
+          "★★★★☆",
+          "$$"
+        ]
+      },
+      {
+        "cells": [
+          "Shopify",
+          "Online stores of any size",
+          "★★★★★",
+          "★★★☆☆",
+          "$$"
+        ]
+      },
+      {
+        "cells": [
+          "Webflow",
+          "SaaS, startups, design-led brands",
+          "★★★★☆",
+          "★★★★☆",
+          "$$"
+        ]
+      },
+      {
+        "cells": [
+          "Wix",
+          "Small businesses, simple sites",
+          "★★★★★",
+          "★★☆☆☆",
+          "$"
+        ]
+      },
+      {
+        "cells": [
+          "Custom (Next.js / Astro)",
+          "High traffic, complex features, web apps",
+          "★★★☆☆ (with CMS)",
+          "★★★★★",
+          "$$$"
+        ]
+      }
+    ],
+    "button": {
+      "label": "Help Me Choose",
+      "url": "/contact/"
+    }
+  },
+  "customize": {
+    "title": "Already have a website? We'll customize it.",
+    "text": "You don't always need a new site. We improve, extend and fix existing websites on any platform, without starting from scratch.",
+    "cards": [
+      {
+        "title": "Custom Features & Functionality",
+        "text": "Booking systems, calculators, member areas, filters and anything else your site needs.",
+        "icon": "i-plug",
+        "tone": "indigo"
+      },
+      {
+        "title": "Theme & Design Customization",
+        "text": "Update your design to match your brand, without switching platforms.",
+        "icon": "i-palette",
+        "tone": "green"
+      },
+      {
+        "title": "Speed & Performance Fixes",
+        "text": "Remove bloat, compress assets and fix Core Web Vitals so pages load in under 2 seconds.",
+        "icon": "i-gauge",
+        "tone": "slate"
+      },
+      {
+        "title": "Integrations",
+        "text": "Connect your site to your CRM, email marketing, payment, booking and analytics tools.",
+        "icon": "i-flow",
+        "tone": "indigo"
+      },
+      {
+        "title": "Bug Fixes & Maintenance",
+        "text": "Broken layouts, plugin conflicts, security updates. We keep your site running smoothly.",
+        "icon": "i-bug",
+        "tone": "green"
+      },
+      {
+        "title": "Platform Migration",
+        "text": "Move from Wix to WordPress, WordPress to Webflow, or any platform to custom code, without losing SEO rankings.",
+        "icon": "i-swap",
+        "tone": "slate"
+      }
+    ]
+  },
+  "included": {
+    "title": "Every website we build includes",
+    "text": "Whatever platform you choose, every project comes with the same standards.",
+    "cards": [
+      {
+        "title": "Mobile-first, responsive design",
+        "text": "looks great on every screen.",
+        "icon": "i-mobile"
+      },
+      {
+        "title": "Fast load times",
+        "text": "optimized images, clean code, passes Core Web Vitals.",
+        "icon": "i-zap"
+      },
+      {
+        "title": "SEO foundations",
+        "text": "clean URLs, meta tags, schema markup, sitemap and redirects.",
+        "icon": "i-search"
+      },
+      {
+        "title": "Conversion-focused layout",
+        "text": "clear calls to action and forms that turn visitors into leads.",
+        "icon": "i-target"
+      },
+      {
+        "title": "Security & SSL",
+        "text": "HTTPS, spam protection and secure hosting setup.",
+        "icon": "i-lock"
+      },
+      {
+        "title": "Analytics setup",
+        "text": "Google Analytics 4 and Search Console connected from day one.",
+        "icon": "i-chart"
+      },
+      {
+        "title": "Easy editing",
+        "text": "a CMS your team can use, plus a recorded walkthrough.",
+        "icon": "i-edit"
+      },
+      {
+        "title": "Full ownership",
+        "text": "you own the site, the code and every account.",
+        "icon": "i-key"
+      }
+    ]
+  },
+  "process": {
+    "title": "How we build your website",
+    "text": "A clear, fixed-price process from first call to launch. No surprises.",
+    "steps": [
+      {
+        "label": "01 // DISCOVER",
+        "title": "Discovery Call",
+        "text": "We learn your goals, audience and must-have features, and recommend a platform.",
+        "when": "DAY 1",
+        "footer": ""
+      },
+      {
+        "label": "02 // PLAN",
+        "title": "Fixed Scope",
+        "text": "Sitemap, features, timeline and a fixed price, agreed in writing.",
+        "when": "DAY 2–5",
+        "footer": ""
+      },
+      {
+        "label": "03 // DESIGN",
+        "title": "Design",
+        "text": "Custom designs in Figma, reviewed and approved by you before we build.",
+        "when": "WEEK 1–2",
+        "footer": ""
+      },
+      {
+        "label": "04 // BUILD",
+        "title": "Development",
+        "text": "We build, test on every device and set up SEO and analytics.",
+        "when": "WEEK 2–5",
+        "footer": ""
+      },
+      {
+        "label": "05 // LAUNCH",
+        "title": "Launch & Handover",
+        "text": "Go live, redirects checked, team training and a support period included.",
+        "when": "TARGET",
+        "footer": ""
+      }
+    ],
+    "note": {
+      "title": "Fixed Price. No Budget Overruns.",
+      "text": "The price we quote is the price you pay. If we underestimate the work, the cost is ours.",
+      "badge": "✓ 100% Guaranteed"
+    }
+  },
+  "results": {
+    "label": "",
+    "title": "Web development results",
+    "text": "Recent website projects and the results they delivered.",
+    "link": {
+      "label": "View all case studies",
+      "url": "/#cases"
+    },
+    "cards": [
+      {
+        "tag": "Ecommerce / Shopify",
+        "tone": "rank",
+        "side_label": "",
+        "title": "Headless Shopify Rebuild",
+        "text": "Replaced a slow Shopify theme with a Next.js storefront, cutting load times and checkout friction.",
+        "metric": "",
+        "metric_label": "",
+        "rows": [
+          {
+            "label": "Metric",
+            "value": "< 0.75s MOBILE LCP"
+          },
+          {
+            "label": "Conversion",
+            "value": "+31.4% mobile checkout"
+          }
+        ],
+        "checks": []
+      },
+      {
+        "tag": "WordPress / Performance",
+        "tone": "struct",
+        "side_label": "",
+        "title": "WordPress Speed & Architecture Overhaul",
+        "text": "Stripped 28 bloated plugins, rebuilt bespoke lightweight PHP theme templates, and eliminated database query bottlenecks for a high-volume publisher.",
+        "metric": "",
+        "metric_label": "",
+        "rows": [
+          {
+            "label": "Speed gain",
+            "value": "1.2s TTFB → 140ms"
+          },
+          {
+            "label": "Visibility",
+            "value": "+84% Organic Pageviews"
+          }
+        ],
+        "checks": []
+      },
+      {
+        "tag": "Webflow & Wix / Migration",
+        "tone": "plain",
+        "side_label": "",
+        "title": "Wix to Webflow Enterprise Migration",
+        "text": "Migrated 150+ marketing pages and dynamic CMS collections with 100% 1:1 automated 301 redirects, modernizing brand aesthetics and CMS authoring speed.",
+        "metric": "",
+        "metric_label": "",
+        "rows": [
+          {
+            "label": "Index integrity",
+            "value": "0 Rank Loss"
+          },
+          {
+            "label": "Authoring",
+            "value": "4x Faster Publishing"
+          }
+        ],
+        "checks": []
+      }
+    ]
+  },
+  "faq": {
+    "label": "// Clarifications",
+    "title": "Web development FAQs",
+    "text": "",
+    "numbered": true,
+    "items": [
+      {
+        "question": "How much does a website cost?",
+        "answer": "It depends on the platform, number of pages and features. Simple Wix or Squarespace sites cost the least, while custom Next.js builds cost the most. Every project gets a fixed price before work starts. Book a free call for a quote within 48 hours."
+      },
+      {
+        "question": "How long does it take to build a website?",
+        "answer": "Most websites launch in 2–6 weeks. Simple sites can be ready sooner, while large ecommerce or custom builds may take longer. Your scope will include exact dates."
+      },
+      {
+        "question": "Which is better: WordPress, Shopify, Webflow or Wix?",
+        "answer": "It depends on your goals. Shopify is best for online stores, WordPress for content-heavy sites, Webflow for design-led marketing sites and Wix for simple small-business sites. We'll recommend the right fit on our consultation call."
+      },
+      {
+        "question": "Can you customize my existing website?",
+        "answer": "Yes. We add features, redesign pages, fix speed issues and connect integrations on WordPress, Shopify, Webflow, Wix and custom sites, without rebuilding from scratch."
+      },
+      {
+        "question": "Can you move my website to a different platform?",
+        "answer": "Yes. We migrate sites between any platforms and set up redirects so you keep your Google rankings and traffic."
+      },
+      {
+        "question": "Will my new website be SEO-friendly?",
+        "answer": "Yes. Every site includes technical SEO foundations: fast load times, clean URLs, meta tags, schema markup, sitemaps and analytics. As an SEO agency, we build sites that are ready to rank from day one."
+      },
+      {
+        "question": "Do you offer website maintenance?",
+        "answer": "Yes. We offer ongoing support for updates, security, backups and small changes, so your site stays fast and secure."
+      },
+      {
+        "question": "Will I own my website?",
+        "answer": "Yes. You own 100% of the website, code, content and accounts from day one."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready for a website that actually works?",
+    "text": "Tell us about your business and goals. Within 48 hours, you'll get a platform recommendation, a clear plan and a fixed-price quote. No sales pitch.",
+    "primary": {
+      "label": "Get a Free Quote",
+      "url": "/contact/"
+    },
+    "secondary": {
+      "label": "Book a Quick Chat",
+      "url": "/contact/"
+    },
+    "checks": [
+      "Reply within 24 hours",
+      "Fixed-price projects",
+      "No obligation"
+    ]
+  }
+}

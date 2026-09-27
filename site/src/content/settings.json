@@ -1,0 +1,16 @@
+{
+  "site_name": "RankStruct",
+  "site_url": "https://rankstruct.io",
+  "contact_email": "hello@rankstruct.io",
+  "form_recipient": "hello@rankstruct.io",
+  "linkedin_url": "",
+  "booking_url": "",
+  "footer": {
+    "description": "Engineered discovery, resilient web systems, and autonomous digital operations built with mathematical precision.",
+    "newsletter_title": "Dispatch & Inquiries",
+    "newsletter_text": "Technical dispatches, architecture teardowns, and engineering availability.",
+    "newsletter_placeholder": "terminal@organization.com",
+    "copyright": "© 2025 RankStruct LLC. High-craft digital systems.",
+    "established": "EST. 2023"
+  }
+}

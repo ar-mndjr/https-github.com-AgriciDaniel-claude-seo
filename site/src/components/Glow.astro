@@ -1,0 +1,6 @@
+---
+// Blurred, drifting background colour (see .glow in styles.css)
+interface Props { color: 'indigo' | 'green' | 'violet' | 'cyan'; drift?: 'a' | 'b' | 'c'; style: string }
+const { color, drift = 'a', style } = Astro.props;
+---
+<div class={`glow ${color} drift-${drift}`} style={style}></div>

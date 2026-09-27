@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Glow from '../components/Glow.astro';
+import SecHead from '../components/SecHead.astro';
+import FaqList from '../components/FaqList.astro';
+import { faqSchema, organizationSchema } from '../lib/schema';
+import settings from '../content/settings.json';
+import c from '../content/pages/contact.json';
+
+// Dotted world map with pulsing points (decorative)
+const pins = [[70, 62], [148, 48], [178, 92], [232, 70], [290, 58], [318, 110], [110, 104], [260, 124]];
+const dots: [number, number][] = [];
+for (let x = 14; x < 380; x += 14) for (let y = 14; y < 160; y += 14)
+  if (((x - 190) / 190) ** 2 + ((y - 80) / 120) ** 2 < 1.05) dots.push([x, y]);
+---
+<Layout title={c.seo.title} description={c.seo.description} active="contact" schemas={[organizationSchema(), faqSchema(c.faq.items)]}>
+  <section class="phero">
+    <Glow color="indigo" style="width:600px;height:460px;top:-140px;left:25%;" />
+    <Glow color="green" drift="b" style="width:380px;height:380px;bottom:-200px;right:-100px;opacity:.5" />
+    <div class="container reveal">
+      <h1 class="h-xl">{c.hero.title}</h1>
+      {c.hero.paragraphs.map((p, i) => <p class="lead" style={i > 0 ? 'margin-top:-14px' : undefined}>{p}</p>)}
+    </div>
+  </section>
+
+  <section class="psec sec-deep" id="start" style="padding-top:72px">
+    <Glow color="violet" style="width:460px;height:400px;top:10%;right:-120px;opacity:.35" />
+    <div class="container">
+      <div class="contact-grid" style="margin-top:0">
+        <div>
+          <span class="label reveal">{c.form.label}</span>
+          <form class="card struct contact-form reveal" data-endpoint="/contact.php" data-kind="contact" data-fallback={settings.contact_email} novalidate>
+            <div class="form-head"><h2>{c.form.title}</h2><span class="mono"><i class="dot" style="background:var(--emerald)"></i> {c.form.status}</span></div>
+            <div class="fgrid">
+              <div class="field"><label for="c-name">Name <span class="req">*</span></label><input id="c-name" name="name" type="text" autocomplete="name" placeholder="Elena Rostova" required /></div>
+              <div class="field"><label for="c-email">Email <span class="req">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" placeholder="elena@company.com" required /></div>
+              <div class="field full"><label for="c-site">Company / Website <span class="opt">(optional, but it helps us look before we reply)</span></label><input id="c-site" name="company" type="text" autocomplete="organization" placeholder="Acme Systems Corp (acmesystems.io)" /></div>
+              <div class="field full"><span class="flabel">What do you need help with? (select all that apply)</span>
+                <div class="choices tagged">{c.form.help_options.map((o) => <label class="choice"><input type="checkbox" name="help[]" value={o.label} /><span>{o.label}<em>{o.tag}</em></span></label>)}</div>
+              </div>
+              <div class="field full"><label for="c-msg">What are you trying to solve? <span class="req">*</span></label><textarea id="c-msg" name="message" placeholder="A few sentences is enough. What's happening, what you'd like to happen and what's getting in the way." required></textarea></div>
+              <div class="field full"><span class="flabel">Budget range</span>
+                <div class="choices tagged">{c.form.budget_options.map((o) => <label class="choice"><input type="radio" name="budget" value={o.label} /><span>{o.label}<em>{o.tag}</em></span></label>)}</div>
+              </div>
+              <div class="field full"><span class="flabel">Timeline</span>
+                <div class="choices">{c.form.timeline_options.map((o) => <label class="choice"><input type="radio" name="timeline" value={o} /><span>{o}</span></label>)}</div>
+              </div>
+              <input type="text" name="company_website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            </div>
+            <div class="form-actions"><button type="submit" class="btn btn-primary">{c.form.button} <svg class="arrow"><use href="#i-arrow" /></svg></button></div>
+            <span class="form-ok" role="status"></span>
+            <p class="privacy">{c.form.privacy}</p>
+          </form>
+        </div>
+
+        <div>
+          <span class="label reveal">{c.reach.label}</span>
+          <div class="card struct reach reveal">
+            <h3>{c.reach.title}</h3>
+            <a class="line" href={`mailto:${settings.contact_email}`}><span class="itile t-green"><svg><use href="#i-mail" /></svg></span><span><span class="mono">Email</span><b>{settings.contact_email}</b></span><svg><use href="#i-arrow" /></svg></a>
+            {settings.booking_url && <a class="line" href={settings.booking_url} target="_blank" rel="noopener"><span class="itile t-indigo"><svg><use href="#i-cal" /></svg></span><span><span class="mono">Book a call</span><b>{c.reach.booking_label}</b></span><svg><use href="#i-arrow" /></svg></a>}
+            {settings.linkedin_url && <a class="line" href={settings.linkedin_url} target="_blank" rel="noopener"><span class="itile t-violet"><svg><use href="#i-users" /></svg></span><span><span class="mono">LinkedIn</span><b>{c.reach.linkedin_label}</b></span><svg><use href="#i-ext" /></svg></a>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="psec">
+    <Glow color="green" style="width:420px;height:380px;bottom:-140px;left:20%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.next.title} text={c.next.text} />
+      <div class="g g4 mt">
+        {c.next.steps.map((s, i) => <div class={`card ${i % 2 === 0 ? 'green' : 'indigo'} step-card reveal`}><div class="top"><span class="n">{s.number}</span></div><h3>{s.title}</h3><p>{s.text}</p><span class="when">{s.stage}</span></div>)}
+      </div>
+      <div class="card rank note-bar reveal"><i class="dot"></i><p>{c.next.note}</p></div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep">
+    <Glow color="green" style="width:460px;height:400px;top:10%;right:5%;opacity:.4" />
+    <div class="container">
+      <div class="where">
+        <div class="reveal"><h2 class="h-lg">{c.location.title}</h2><p>{c.location.text}</p></div>
+        <div class="card rank reveal" style="padding:16px">
+          <div class="globe-dots">
+            <svg viewBox="0 0 380 160" aria-hidden="true">
+              {dots.map(([x, y]) => <circle cx={x} cy={y} r="1.2" fill="#334155" />)}
+              {pins.map(([x, y], i) => <><circle class="ping" style={`--d:${(i * 0.3).toFixed(1)}s`} cx={x} cy={y} r="5" fill="none" stroke="#10b981" /><circle cx={x} cy={y} r="2.5" fill="#4edea3" /></>)}
+            </svg>
+          </div>
+          <div class="loc-stats">{c.location.stats.map((s) => <div><span class="mono">{s.label}</span><b>{s.value}</b><small>{s.text}</small></div>)}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="psec"><div class="container"><FaqList faq={c.faq} accent="16,185,129" /></div></section>
+
+  <section class="cta sec-deep">
+    <div class="container">
+      <div class="cta-box card struct cta-center reveal">
+        <Glow color="indigo" style="width:520px;height:380px;bottom:-200px;left:30%;opacity:.8" />
+        <h2>{c.cta.title}</h2>
+        <p>{c.cta.text}</p>
+        <div class="cta-actions"><a href="#start" class="btn btn-primary">{c.cta.button} <svg class="arrow"><use href="#i-arrow" /></svg></a></div>
+      </div>
+    </div>
+  </section>
+</Layout>

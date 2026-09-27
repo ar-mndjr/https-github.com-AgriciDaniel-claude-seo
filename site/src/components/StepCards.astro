@@ -1,0 +1,17 @@
+---
+interface Step { label: string; title: string; text: string; when: string; footer?: string }
+interface Props { steps: Step[]; accents: string[] }
+const { steps, accents } = Astro.props;
+---
+{steps.map((s, i) => {
+  const [num, ...rest] = s.label.split('//');
+  return (
+    <div class={`card ${accents[i % accents.length]} step-card reveal`} style={`--p:${Math.round(((i + 1) / steps.length) * 100)}%`}>
+      <div class="top"><span><span class="n">{num.trim()}</span> //{rest.join('//')}</span><span>{s.when}</span></div>
+      <h3>{s.title}</h3>
+      <p>{s.text}</p>
+      <div class="bar"><i></i></div>
+      {s.footer && <span class="foot-mono">{s.footer}</span>}
+    </div>
+  );
+})}

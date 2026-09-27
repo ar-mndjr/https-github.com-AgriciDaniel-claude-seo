@@ -1,0 +1,395 @@
+{
+  "seo": {
+    "title": "RankStruct — We solve digital problems",
+    "description": "Practical solutions in SEO, web, and automation. Built around your goals, budget, and timeline."
+  },
+  "hero": {
+    "title": "We solve digital",
+    "highlight": "problems.",
+    "text": "Practical solutions in SEO, web, and automation. Built around your goals, budget, and timeline. No hand-waving. Just verifiable systems engineered to compound.",
+    "primary": {
+      "label": "Discuss a Project",
+      "url": "/contact/"
+    },
+    "secondary": {
+      "label": "Explore Services",
+      "url": "#services"
+    },
+    "seo_card": {
+      "tag": "SEO",
+      "badge": "Growth",
+      "title": "Get found on Google",
+      "text": "More of the right visitors, month after month.",
+      "axis_start": "MONTH 1",
+      "axis_end": "MONTH 6",
+      "pills": [
+        "↑ Rankings",
+        "↑ Traffic",
+        "↑ Leads"
+      ]
+    },
+    "web_card": {
+      "tag": "WEB",
+      "badge": "Built right",
+      "title": "A website that works",
+      "text": "Fast, easy to use, ready for every screen.",
+      "items": [
+        {
+          "label": "Loads fast",
+          "value": "< 1s"
+        },
+        {
+          "label": "Mobile friendly",
+          "value": "100%"
+        },
+        {
+          "label": "Secure & reliable",
+          "value": "HTTPS"
+        },
+        {
+          "label": "Built to convert",
+          "value": "↑ Leads"
+        }
+      ]
+    },
+    "automation_card": {
+      "tag": "Automation",
+      "badge": "Runs 24/7",
+      "title": "Busywork, handled automatically",
+      "text": "Every new enquiry follows the same fast path, with no one copying and pasting.",
+      "steps": [
+        {
+          "title": "New enquiry",
+          "text": "From your website"
+        },
+        {
+          "title": "Saved to CRM",
+          "text": "Details filed in"
+        },
+        {
+          "title": "Reply sent",
+          "text": "Within seconds"
+        },
+        {
+          "title": "Team notified",
+          "text": "Ready to follow up"
+        }
+      ],
+      "footer_left": "WORKS",
+      "footer_left_strong": "while you sleep",
+      "footer_right": "↓ ZERO MANUAL WORK"
+    }
+  },
+  "why": {
+    "title": "Why traditional agencies fail you and how we engineer differently.",
+    "text": "Most businesses spend thousands a month on vague retainers, junior account managers and slow websites that quietly cost them revenue. We run a lean team of senior engineers and SEO specialists instead.",
+    "trap_label": "// The Common Agency Trap",
+    "trap_items": [
+      {
+        "title": "Retainers That Pay for Meetings",
+        "text": "Monthly fees for check-in calls and status reports that never move the numbers."
+      },
+      {
+        "title": "\"Guaranteed #1\" SEO Promises",
+        "text": "Overnight ranking promises built on spammy tactics that put your domain at risk."
+      },
+      {
+        "title": "Slow, Plugin-Heavy WordPress Sites",
+        "text": "Dozens of plugins, 4+ second load times and constant security patches."
+      },
+      {
+        "title": "Account Managers in the Way",
+        "text": "You never speak to the engineers or strategists actually doing the work."
+      }
+    ],
+    "paradigm_label": "// The RankStruct Paradigm",
+    "paradigm_items": [
+      {
+        "title": "Clear Deliverables, Fixed Scope",
+        "text": "Every sprint has a written definition of done, a visible change log and a clear link to revenue."
+      },
+      {
+        "title": "SEO Built on Real Search Demand",
+        "text": "No keyword stuffing. Technical SEO, content matched to search intent and a site structure Google can crawl with ease."
+      },
+      {
+        "title": "Fast, Modern Websites",
+        "text": "Lean Next.js and Astro builds that load in under a second, pass Core Web Vitals and stay secure."
+      },
+      {
+        "title": "Direct Senior Engineer & Founder Collaboration",
+        "text": "Collaborate directly in Slack or Linear with the technical leads doing the actual architecture and code delivery."
+      }
+    ]
+  },
+  "services": {
+    "title": "SEO, web development and automation. Zero siloing.",
+    "text": "A slow website hurts rankings, and SEO leads are wasted without fast follow-up. We handle search, websites and automation as one growth system, not three separate vendors.",
+    "cards": [
+      {
+        "domain": "rank",
+        "tag": "01 // Rank",
+        "icon": "i-trend",
+        "title": "Organic Search & Discovery",
+        "text": "Algorithmic visibility engineered around actual search engine information retrieval mechanics. We turn Google into your highest-margin customer acquisition channel.",
+        "items": [
+          "Programmatic SEO Clusters",
+          "Technical Crawl & Indexation Audits",
+          "Entity & Semantic Graph Mapping",
+          "High-Intent Bottom-Funnel Copy"
+        ],
+        "link": {
+          "label": "Explore SEO Services",
+          "url": "/services/seo/"
+        }
+      },
+      {
+        "domain": "struct",
+        "tag": "02 // Struct",
+        "icon": "i-window",
+        "title": "Web Design & Development",
+        "text": "Clean, edge-ready digital platforms engineered for conversion velocity and flawless stability. We eliminate slow page loads and brittle tech stacks forever.",
+        "items": [
+          "Headless Next.js & Astro Builds",
+          "High-Conversion Landing Architectures",
+          "Edge API & Serverless Deployment",
+          "Sub-Second Core Web Vitals Guaranteed"
+        ],
+        "link": {
+          "label": "Explore Web Development",
+          "url": "/services/web-development/"
+        }
+      },
+      {
+        "domain": "automate",
+        "tag": "03 // Automate",
+        "icon": "i-flow",
+        "title": "Automation & Data Pipelines",
+        "text": "Connect your business logic directly. We remove manual data entry, automate lead qualification, and streamline operations with intelligent, deterministic code.",
+        "items": [
+          "Custom Ingestion & Webhook Pipelines",
+          "AI Agent & LLM Operational Enrichment",
+          "CRM, ERP & Billing Synchronizations",
+          "Internal Dashboards & Alert Telemetry"
+        ],
+        "link": {
+          "label": "Explore Automation",
+          "url": "/services/ai-automation/"
+        }
+      }
+    ]
+  },
+  "pipeline": {
+    "title": "The 7-Step Pragmatic Pipeline",
+    "text": "We don't do endless discovery meetings or perpetual brainstorming. Every engagement moves through a linear, measurable delivery framework.",
+    "steps": [
+      {
+        "label": "01 // UNDERSTAND",
+        "title": "Ingest Context",
+        "text": "Extract business model, gross margins, and growth constraints.",
+        "when": "Day 1"
+      },
+      {
+        "label": "02 // ASSESS",
+        "title": "Deep Audit",
+        "text": "Code profiling, crawl health review, and stack latency tests.",
+        "when": "Day 2-4"
+      },
+      {
+        "label": "03 // SCOPE",
+        "title": "Lock Spec",
+        "text": "Zero-ambiguity technical contract with deterministic milestones.",
+        "when": "Day 5"
+      },
+      {
+        "label": "04 // BUILD",
+        "title": "Sprint Velocity",
+        "text": "Production deployment in rapid, peer-reviewed engineering cycles.",
+        "when": "Week 2-4"
+      },
+      {
+        "label": "05 // DELIVER",
+        "title": "Production Go",
+        "text": "DNS cutovers, automation triggering, and telemetry handoff.",
+        "when": "Target Date"
+      },
+      {
+        "label": "06 // MEASURE",
+        "title": "Trace Impact",
+        "text": "Rank tracker validation, Core Web Vitals real-user metric logging.",
+        "when": "Post Launch"
+      },
+      {
+        "label": "07 // IMPROVE",
+        "title": "Iterate & Scale",
+        "text": "Continuous programmatic refinements based on revenue yield.",
+        "when": "Recurring"
+      }
+    ],
+    "note": {
+      "title": "Fixed Scopes. No Budget Overruns.",
+      "text": "We sign strict scope documentation. If we underestimate engineering complexity, the cost is ours.",
+      "link": {
+        "label": "See Our Full Process",
+        "url": "/about/#how"
+      }
+    }
+  },
+  "cases": {
+    "title": "SEO, web and automation case studies.",
+    "text": "Real systems. Transparent code. Documented bottom-line results for venture-backed and founder-led organizations.",
+    "link": {
+      "label": "View all case studies",
+      "url": "/blog/"
+    },
+    "cards": [
+      {
+        "domain": "rank",
+        "art": "case-rank",
+        "category": "B2B SaaS / Cloud Platform",
+        "title": "Complex Enterprise Migration",
+        "text": "Migrated 42,000 legacy URLs during a full platform re-architecture without losing existing organic authority.",
+        "metric": "+185%",
+        "metric_label": "Organic clicks (6 mo)",
+        "footer": "Zero 404 indexing errors recorded"
+      },
+      {
+        "domain": "struct",
+        "art": "case-struct",
+        "category": "Direct-to-Consumer / Commerce",
+        "title": "Headless Rebuild & Speed Overhaul",
+        "text": "Replaced monolithic Shopify storefront with modern Next.js edge storefront, slashing latency and cart friction.",
+        "metric": "< 0.75s",
+        "metric_label": "LCP Performance (Mobile)",
+        "footer": "+31.4% Mobile Checkout Conversion Rate"
+      },
+      {
+        "domain": "automate",
+        "art": "case-automate",
+        "category": "Venture Logistics / Fintech",
+        "title": "Back-Office Pipeline Automation",
+        "text": "Engineered unified data pipeline consolidating 4 separate SaaS tools into single event-driven architecture.",
+        "metric": "14 hrs",
+        "metric_label": "Saved per founder / wk",
+        "footer": "100% human data-entry error elimination"
+      }
+    ]
+  },
+  "audience": {
+    "title": "Built for companies that treat their website as core infrastructure.",
+    "text": "We do our best work with teams that value clear execution and measurable results.",
+    "cards": [
+      {
+        "domain": "rank",
+        "icon": "i-rocket",
+        "title": "Growth-Stage B2B",
+        "text": "Seed through Series B software companies needing high-intent customer acquisition and scalable CMS architectures."
+      },
+      {
+        "domain": "struct",
+        "icon": "i-badge",
+        "title": "Founder-Led Brands",
+        "text": "Lean teams whose leadership needs direct, executive-grade engineering partners without intermediary agency bureaucracy."
+      },
+      {
+        "domain": "struct",
+        "icon": "i-bag",
+        "title": "Technical E-Commerce",
+        "text": "Merchants hindered by sluggish templated platforms who require sub-second checkout speeds and programmatic catalogs."
+      },
+      {
+        "domain": "rank",
+        "icon": "i-building",
+        "title": "Modern Professional Services",
+        "text": "Consultancies, architectural studios, and legal teams ready to modernize client onboarding and search authority."
+      }
+    ]
+  },
+  "accountability": {
+    "title": "Direct accountability is our competitive advantage.",
+    "text": "We operate more like an embedded fractional CTO and principal search architect than a vendor. You will never be handed off to an inexperienced intern.",
+    "features": [
+      {
+        "icon": "i-code",
+        "title": "Full Code & Asset Ownership",
+        "text": "You own 100% of the repository, scripts, and documentation on day one. No vendor lock-in."
+      },
+      {
+        "icon": "i-gauge",
+        "title": "Performance Guarantee",
+        "text": "If our web builds fail Google Core Web Vitals thresholds on launch, we fix it on our own dime."
+      },
+      {
+        "icon": "i-board",
+        "title": "Direct Slack / Linear Access",
+        "text": "Real-time collaboration with the engineers building your software. Typical reply time < 2 hours."
+      }
+    ],
+    "code_file": "manifesto.json",
+    "code_type": "Type: Rigor_Spec",
+    "partner": "RankStruct",
+    "principles": [
+      {
+        "key": "bloatware",
+        "value": false
+      },
+      {
+        "key": "guaranteed_milestones",
+        "value": true
+      },
+      {
+        "key": "direct_engineer_access",
+        "value": true
+      },
+      {
+        "key": "retainer_opacity",
+        "value": false
+      },
+      {
+        "key": "weekly_deployments",
+        "value": true
+      }
+    ],
+    "metrics": [
+      {
+        "key": "median_lcp",
+        "value": "0.72s"
+      },
+      {
+        "key": "avg_traffic_compounding",
+        "value": "+114% yoy"
+      },
+      {
+        "key": "on_time_delivery_rate",
+        "value": "97.4%"
+      }
+    ],
+    "facts": [
+      {
+        "label": "// Sprint_Cadence",
+        "value": "14-Day Deployments"
+      },
+      {
+        "label": "// Founder_Involvement",
+        "value": "100% Direct Review"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to solve your digital bottleneck?",
+    "text": "Let's assess your goals, timeline, and budget. You'll receive a blunt, high-fidelity engineering diagnosis within 48 hours. No sales pitch just actionable architecture.",
+    "primary": {
+      "label": "Start an Assessment",
+      "url": "/contact/"
+    },
+    "secondary": {
+      "label": "Quick Chat",
+      "url": "/contact/"
+    },
+    "checks": [
+      "Response within 24h",
+      "NDA protection available",
+      "Zero-obligation code review"
+    ]
+  }
+}

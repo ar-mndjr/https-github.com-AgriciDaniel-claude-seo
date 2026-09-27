@@ -1,0 +1,151 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Glow from '../../components/Glow.astro';
+import SecHead from '../../components/SecHead.astro';
+import PageHero from '../../components/PageHero.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import CompareTable from '../../components/CompareTable.astro';
+import StepCards from '../../components/StepCards.astro';
+import ResultCard from '../../components/ResultCard.astro';
+import FaqList from '../../components/FaqList.astro';
+import { serviceSchema, faqSchema } from '../../lib/schema';
+import settings from '../../content/settings.json';
+import c from '../../content/pages/seo.json';
+const statColor: Record<string, string> = { coral: 'var(--coral)', mint: 'var(--mint)', lavender: 'var(--lav)' };
+---
+<Layout title={c.seo.title} description={c.seo.description} active="services"
+  schemas={[serviceSchema('SEO Services for Google & AI Search', c.seo.description), faqSchema(c.faq.items)]}>
+  <PageHero hero={c.hero} button="btn-green" glows="green" />
+
+  <section class="psec sec-deep">
+    <Glow color="violet" style="width:420px;height:380px;top:10%;right:-120px;opacity:.35" />
+    <div class="container">
+      <div class="split reveal">
+        <div>{c.problem.label && <span class="label" style="color:var(--coral)">{c.problem.label}</span>}<h2 class="h-lg">{c.problem.title}</h2></div>
+        <p>{c.problem.text}</p>
+      </div>
+      <div class="g g3 mt">
+        {c.problem.stats.map((s) => (
+          <div class="card struct stat-card reveal">
+            <div class="num" style={`color:${statColor[s.color] ?? 'var(--mint)'}`}>{s.number}</div>
+            <p>{s.title}</p><p class="small" style="margin-top:6px">{s.text}</p>
+            <span class="src">{s.source}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="psec" id="services">
+    <Glow color="indigo" drift="c" style="width:520px;height:420px;top:15%;left:30%;opacity:.4" />
+    <Glow color="green" drift="b" style="width:360px;height:360px;bottom:-140px;left:-120px;opacity:.45" />
+    <div class="container">
+      <SecHead title={c.services.title} text={c.services.text} label={c.services.label} />
+      <div class="g g3 mt">
+        {c.services.cards.map((k) => <FeatureCard title={k.title} text={k.text} tag={k.tag} tagTone={k.tone} icon={k.icon} accent={k.tone === 'rank' ? 'green' : 'indigo'} items={k.items} ticks />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep" id="geo">
+    <Glow color="green" style="width:480px;height:420px;top:5%;right:5%;opacity:.45" />
+    <Glow color="cyan" drift="b" style="width:320px;height:320px;bottom:-120px;left:10%;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.geo.title} text={c.geo.text} label={c.geo.label} />
+      <div class="g g3 mt">{c.geo.cards.map((k, i) => <FeatureCard title={k.title} text={k.text} number={String(i + 1).padStart(2, '0')} tone="green" accent="green" />)}</div>
+      <div class="after"><a href={c.geo.button.url} class="btn btn-green">{c.geo.button.label}</a></div>
+    </div>
+  </section>
+
+  <section class="psec" id="aeo">
+    <Glow color="violet" style="width:480px;height:400px;top:10%;left:30%;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.aeo.title} text={c.aeo.text} label={c.aeo.label} labelClass="violet" />
+      <div class="g g5 mt">{c.aeo.cards.map((k, i) => <FeatureCard title={k.title} text={k.text} number={String(i + 1).padStart(2, '0')} tone="indigo" small />)}</div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep">
+    <Glow color="indigo" drift="b" style="width:500px;height:400px;bottom:-160px;right:10%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.compare.title} text={c.compare.text} />
+      <CompareTable columns={c.compare.columns} rows={c.compare.rows} highlight={['', 'green', 'indigo', 'violet']} />
+      <div class="card rank note-bar reveal">
+        <svg><use href="#i-okc" /></svg>
+        <p><b>{c.compare.note.strong}</b> {c.compare.note.text}</p>
+        <div class="side"><a href={c.compare.note.link.url} class="link-chip neutral as-is">{c.compare.note.link.label}</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="psec" id="trends">
+    <Glow color="green" style="width:420px;height:420px;top:20%;left:-160px;opacity:.4" />
+    <Glow color="violet" drift="b" style="width:380px;height:380px;bottom:-100px;right:-80px;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.trends.title} text={c.trends.text} />
+      <div class="g g3 mt">{c.trends.cards.map((k, i) => <FeatureCard title={k.title} text={k.text} label={k.label} accent={i % 3 === 0 ? 'green' : 'indigo'} small />)}</div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep" id="industries">
+    <Glow color="indigo" style="width:520px;height:400px;top:10%;left:35%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.industries.title} text={c.industries.text} />
+      <div class="g g5 mt">{c.industries.cards.map((k) => <FeatureCard title={k.title} text={k.text} icon={k.icon} tone="green" accent="green" link={k.link} small />)}</div>
+    </div>
+  </section>
+
+  <section class="psec" id="process">
+    <Glow color="green" style="width:460px;height:380px;top:0;right:10%;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.process.title} text={c.process.text} />
+      <div class="g g5 mt"><StepCards steps={c.process.steps} accents={['green', 'indigo']} /></div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep">
+    <Glow color="violet" drift="b" style="width:420px;height:380px;bottom:-140px;left:20%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.reporting.title} text={c.reporting.text} />
+      <div class="g g3 mt">{c.reporting.cards.map((k) => <FeatureCard title={k.title} text={k.text} icon={k.icon} tone={k.tone} accent={k.tone === 'green' ? 'green' : 'indigo'} />)}</div>
+    </div>
+  </section>
+
+  <section class="psec" id="results">
+    <Glow color="green" style="width:480px;height:400px;top:20%;left:30%;opacity:.35" />
+    <div class="container">
+      <div class="sec-row">
+        <SecHead title={c.results.title} text={c.results.text} label={c.results.label} />
+        <a href={c.results.link.url} class="link-chip">{c.results.link.label} <svg><use href="#i-arrow" /></svg></a>
+      </div>
+      <div class="g g3 mt">{c.results.cards.map((k) => <ResultCard card={k} accent="green" />)}</div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep"><div class="container"><FaqList faq={c.faq} accent="16,185,129" /></div></section>
+
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="card rank form-card reveal">
+        <Glow color="green" style="width:420px;height:360px;bottom:-200px;right:-100px;opacity:.5" />
+        <span class="label"><i class="dot" style="background:var(--emerald);margin-right:8px;vertical-align:1px"></i>{c.audit.label}</span>
+        <h2 class="h-lg">{c.audit.title}</h2>
+        <p>{c.audit.text}</p>
+        <form data-endpoint="/contact.php" data-kind="audit" data-fallback={settings.contact_email} novalidate>
+          <div class="fgrid">
+            <div class="field"><label for="a-site">Website URL <span class="req">*</span></label><input id="a-site" name="website" type="url" placeholder="https://yourcompany.com" required /></div>
+            <div class="field"><label for="a-email">Work email <span class="req">*</span></label><input id="a-email" name="email" type="email" placeholder="founder@yourcompany.com" required /></div>
+            <div class="field full"><label for="a-comp">Top competitor or key target search term</label><input id="a-comp" name="competitor_or_search_term" type="text" placeholder="e.g. competitor.com or 'enterprise accounting software'" /></div>
+            <input type="text" name="company_website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-green">{c.audit.button}</button>
+            <a href={c.audit.secondary.url} class="btn btn-dark"><svg class="chat"><use href="#i-chat" /></svg> {c.audit.secondary.label}</a>
+          </div>
+          <span class="form-ok" role="status"></span>
+        </form>
+        <div class="cta-checks">{c.audit.checks.map((t) => <span><svg><use href="#i-check" /></svg>{t}</span>)}</div>
+      </div>
+    </div>
+  </section>
+</Layout>

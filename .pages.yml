@@ -1,0 +1,2417 @@
+# Pages CMS configuration — https://pagescms.org/docs/
+# Open https://app.pagescms.org, sign in with GitHub and pick this repository.
+media:
+  input: site/public/images
+  output: /images
+
+content:
+  - name: blog
+    label: Blog posts
+    type: collection
+    path: site/src/content/blog
+    filename: "{primary}.md"
+    view:
+      fields: [title, date, category, draft]
+      primary: title
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: "Summary (shown on cards and in Google)", type: text }
+      - { name: date, label: Publish date, type: date, required: true }
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values: [seo, web, automation]
+      - { name: subcategory, label: "Small label above the title (e.g. Technical SEO / Logs)", type: string }
+      - { name: read_time, label: Read time (minutes), type: number }
+      - name: cover
+        label: Cover illustration (used when no cover image is uploaded)
+        type: select
+        options:
+          values: ["agent", "bench", "crawl", "crm", "cwv", "entity", "headless", "migrate", "programmatic", "webhook"]
+      - { name: cover_image, label: Cover image (optional), type: image }
+      - { name: metric, label: "Headline number (e.g. +185%)", type: string }
+      - { name: metric_label, label: "Headline number label (e.g. Organic clicks)", type: string }
+      - { name: featured, label: Feature at the top of the blog, type: boolean }
+      - { name: popular, label: Show in Most Read, type: boolean }
+      - { name: draft, label: "Draft (hidden from the site)", type: boolean }
+      - { name: author, label: Author, type: string, default: April }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: tldr, label: TL;DR points (optional), type: text, list: true }
+      - name: highlights
+        label: TL;DR numbers (optional)
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Number, type: string }
+          - { name: label, label: Label, type: string }
+      - name: body
+        label: Article
+        type: rich-text
+        options:
+          format: markdown
+
+  - name: settings
+    label: Site settings (email, links, footer)
+    type: file
+    path: site/src/content/settings.json
+    format: json
+    fields:
+      - name: site_name
+        label: "Site name"
+        type: string
+      - name: site_url
+        label: "Site url"
+        type: string
+      - name: contact_email
+        label: "Contact email"
+        type: string
+      - name: form_recipient
+        label: "Form recipient"
+        type: string
+      - name: linkedin_url
+        label: "Linkedin url"
+        type: string
+      - name: booking_url
+        label: "Booking url"
+        type: string
+      - name: footer
+        label: "Footer"
+        type: object
+        fields:
+          - name: description
+            label: "Description"
+            type: text
+          - name: newsletter_title
+            label: "Newsletter title"
+            type: string
+          - name: newsletter_text
+            label: "Newsletter text"
+            type: text
+          - name: newsletter_placeholder
+            label: "Newsletter placeholder"
+            type: string
+          - name: copyright
+            label: "Copyright"
+            type: string
+          - name: established
+            label: "Established"
+            type: string
+
+  - name: page-home
+    label: "Home"
+    type: file
+    path: site/src/content/pages/home.json
+    format: json
+    fields:
+      - name: seo
+        label: "SEO (Google title & description)"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: description
+            label: "Description"
+            type: text
+      - name: hero
+        label: "Hero"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: highlight
+            label: "Highlight"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: primary
+            label: "Primary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: secondary
+            label: "Secondary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: seo_card
+            label: "Seo card"
+            type: object
+            fields:
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: badge
+                label: "Badge"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: axis_start
+                label: "Axis start"
+                type: string
+              - name: axis_end
+                label: "Axis end"
+                type: string
+              - name: pills
+                label: "Pills"
+                type: string
+                list: true
+          - name: web_card
+            label: "Web card"
+            type: object
+            fields:
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: badge
+                label: "Badge"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: items
+                label: "Items"
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    label: "Label"
+                    type: string
+                  - name: value
+                    label: "Value"
+                    type: string
+          - name: automation_card
+            label: "Automation card"
+            type: object
+            fields:
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: badge
+                label: "Badge"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: steps
+                label: "Steps"
+                type: object
+                list: true
+                fields:
+                  - name: title
+                    label: "Title"
+                    type: string
+                  - name: text
+                    label: "Text"
+                    type: string
+              - name: footer_left
+                label: "Footer left"
+                type: string
+              - name: footer_left_strong
+                label: "Footer left strong"
+                type: string
+              - name: footer_right
+                label: "Footer right"
+                type: string
+      - name: why
+        label: "Why"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: trap_label
+            label: "Trap label"
+            type: string
+          - name: trap_items
+            label: "Trap items"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+          - name: paradigm_label
+            label: "Paradigm label"
+            type: string
+          - name: paradigm_items
+            label: "Paradigm items"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+      - name: services
+        label: "Services"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: domain
+                label: "Domain"
+                type: string
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: items
+                label: "Items"
+                type: string
+                list: true
+              - name: link
+                label: "Link"
+                type: object
+                fields:
+                  - name: label
+                    label: "Label"
+                    type: string
+                  - name: url
+                    label: "Link (URL)"
+                    type: string
+      - name: pipeline
+        label: "Pipeline"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: steps
+            label: "Steps"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: when
+                label: "When"
+                type: string
+          - name: note
+            label: "Note"
+            type: object
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: link
+                label: "Link"
+                type: object
+                fields:
+                  - name: label
+                    label: "Label"
+                    type: string
+                  - name: url
+                    label: "Link (URL)"
+                    type: string
+      - name: cases
+        label: "Cases"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: link
+            label: "Link"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: domain
+                label: "Domain"
+                type: string
+              - name: art
+                label: "Art"
+                type: string
+              - name: category
+                label: "Category"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: metric
+                label: "Metric"
+                type: string
+              - name: metric_label
+                label: "Metric label"
+                type: string
+              - name: footer
+                label: "Footer"
+                type: string
+      - name: audience
+        label: "Audience"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: domain
+                label: "Domain"
+                type: string
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+      - name: accountability
+        label: "Accountability"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: features
+            label: "Features"
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+          - name: code_file
+            label: "Code file"
+            type: string
+          - name: code_type
+            label: "Code type"
+            type: string
+          - name: partner
+            label: "Partner"
+            type: string
+          - name: principles
+            label: "Principles"
+            type: object
+            list: true
+            fields:
+              - name: key
+                label: "Key"
+                type: string
+              - name: value
+                label: "Value"
+                type: boolean
+          - name: metrics
+            label: "Metrics"
+            type: object
+            list: true
+            fields:
+              - name: key
+                label: "Key"
+                type: string
+              - name: value
+                label: "Value"
+                type: string
+          - name: facts
+            label: "Facts"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: value
+                label: "Value"
+                type: string
+      - name: cta
+        label: "Call to action"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: primary
+            label: "Primary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: secondary
+            label: "Secondary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: checks
+            label: "Checks"
+            type: string
+            list: true
+
+  - name: page-seo
+    label: "SEO page"
+    type: file
+    path: site/src/content/pages/seo.json
+    format: json
+    fields:
+      - name: seo
+        label: "SEO (Google title & description)"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: description
+            label: "Description"
+            type: text
+      - name: hero
+        label: "Hero"
+        type: object
+        fields:
+          - name: eyebrow
+            label: "Eyebrow"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: accent
+            label: "Accent"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: primary
+            label: "Primary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: secondary
+            label: "Secondary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: trust
+            label: "Trust"
+            type: string
+            list: true
+      - name: problem
+        label: "Problem"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: stats
+            label: "Stats"
+            type: object
+            list: true
+            fields:
+              - name: number
+                label: "Number"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: source
+                label: "Source"
+                type: string
+              - name: color
+                label: "Color"
+                type: string
+      - name: services
+        label: "Services"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: tone
+                label: "Tone"
+                type: string
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: items
+                label: "Items"
+                type: string
+                list: true
+      - name: geo
+        label: "Geo"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+          - name: button
+            label: "Button"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+      - name: aeo
+        label: "Aeo"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+      - name: compare
+        label: "Compare"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: columns
+            label: "Columns"
+            type: string
+            list: true
+          - name: rows
+            label: "Rows"
+            type: object
+            list: true
+            fields:
+              - name: cells
+                label: "Cells"
+                type: string
+                list: true
+          - name: note
+            label: "Note"
+            type: object
+            fields:
+              - name: strong
+                label: "Strong"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: link
+                label: "Link"
+                type: object
+                fields:
+                  - name: label
+                    label: "Label"
+                    type: string
+                  - name: url
+                    label: "Link (URL)"
+                    type: string
+      - name: trends
+        label: "Trends"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+      - name: industries
+        label: "Industries"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: link
+                label: "Link"
+                type: object
+                fields:
+                  - name: label
+                    label: "Label"
+                    type: string
+                  - name: url
+                    label: "Link (URL)"
+                    type: string
+      - name: process
+        label: "Process"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: steps
+            label: "Steps"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: when
+                label: "When"
+                type: string
+              - name: footer
+                label: "Footer"
+                type: string
+      - name: reporting
+        label: "Reporting"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: tone
+                label: "Tone"
+                type: string
+      - name: results
+        label: "Results"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: link
+            label: "Link"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: tone
+                label: "Tone"
+                type: string
+              - name: side_label
+                label: "Side label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: metric
+                label: "Metric"
+                type: string
+              - name: metric_label
+                label: "Metric label"
+                type: string
+              - name: rows
+                label: "Rows"
+                type: string
+                list: true
+              - name: checks
+                label: "Checks"
+                type: string
+                list: true
+      - name: faq
+        label: "FAQ"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: numbered
+            label: "Numbered"
+            type: boolean
+          - name: items
+            label: "Items"
+            type: object
+            list: true
+            fields:
+              - name: question
+                label: "Question"
+                type: string
+              - name: answer
+                label: "Answer"
+                type: text
+      - name: audit
+        label: "Audit"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: button
+            label: "Button"
+            type: string
+          - name: secondary
+            label: "Secondary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: checks
+            label: "Checks"
+            type: string
+            list: true
+
+  - name: page-web-development
+    label: "Web Development page"
+    type: file
+    path: site/src/content/pages/web-development.json
+    format: json
+    fields:
+      - name: seo
+        label: "SEO (Google title & description)"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: text
+          - name: description
+            label: "Description"
+            type: text
+      - name: hero
+        label: "Hero"
+        type: object
+        fields:
+          - name: eyebrow
+            label: "Eyebrow"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: accent
+            label: "Accent"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: primary
+            label: "Primary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: secondary
+            label: "Secondary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: trust
+            label: "Trust"
+            type: string
+            list: true
+      - name: platforms
+        label: "Platforms"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: tone
+                label: "Tone"
+                type: string
+              - name: accent
+                label: "Accent"
+                type: string
+              - name: items
+                label: "Items"
+                type: string
+                list: true
+              - name: link
+                label: "Link"
+                type: object
+                fields:
+                  - name: label
+                    label: "Label"
+                    type: string
+                  - name: url
+                    label: "Link (URL)"
+                    type: string
+      - name: compare
+        label: "Compare"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: columns
+            label: "Columns"
+            type: string
+            list: true
+          - name: rows
+            label: "Rows"
+            type: object
+            list: true
+            fields:
+              - name: cells
+                label: "Cells"
+                type: string
+                list: true
+          - name: button
+            label: "Button"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+      - name: customize
+        label: "Customize"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: tone
+                label: "Tone"
+                type: string
+      - name: included
+        label: "Included"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+      - name: process
+        label: "Process"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: steps
+            label: "Steps"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: when
+                label: "When"
+                type: string
+              - name: footer
+                label: "Footer"
+                type: string
+          - name: note
+            label: "Note"
+            type: object
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: badge
+                label: "Badge"
+                type: string
+      - name: results
+        label: "Results"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: link
+            label: "Link"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: tone
+                label: "Tone"
+                type: string
+              - name: side_label
+                label: "Side label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: metric
+                label: "Metric"
+                type: string
+              - name: metric_label
+                label: "Metric label"
+                type: string
+              - name: rows
+                label: "Rows"
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    label: "Label"
+                    type: string
+                  - name: value
+                    label: "Value"
+                    type: string
+              - name: checks
+                label: "Checks"
+                type: string
+                list: true
+      - name: faq
+        label: "FAQ"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: numbered
+            label: "Numbered"
+            type: boolean
+          - name: items
+            label: "Items"
+            type: object
+            list: true
+            fields:
+              - name: question
+                label: "Question"
+                type: string
+              - name: answer
+                label: "Answer"
+                type: text
+      - name: cta
+        label: "Call to action"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: primary
+            label: "Primary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: secondary
+            label: "Secondary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: checks
+            label: "Checks"
+            type: string
+            list: true
+
+  - name: page-automation
+    label: "AI Automation page"
+    type: file
+    path: site/src/content/pages/automation.json
+    format: json
+    fields:
+      - name: seo
+        label: "SEO (Google title & description)"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: description
+            label: "Description"
+            type: text
+      - name: hero
+        label: "Hero"
+        type: object
+        fields:
+          - name: eyebrow
+            label: "Eyebrow"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: accent
+            label: "Accent"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: primary
+            label: "Primary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: secondary
+            label: "Secondary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: trust
+            label: "Trust"
+            type: string
+            list: true
+      - name: problem
+        label: "Problem"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: tone
+                label: "Tone"
+                type: string
+              - name: footer
+                label: "Footer"
+                type: string
+      - name: platforms
+        label: "Platforms"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: tone
+                label: "Tone"
+                type: string
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: items
+                label: "Items"
+                type: string
+                list: true
+              - name: link
+                label: "Link"
+                type: object
+                fields:
+                  - name: label
+                    label: "Label"
+                    type: string
+                  - name: url
+                    label: "Link (URL)"
+                    type: string
+              - name: wide
+                label: "Wide"
+                type: boolean
+      - name: compare
+        label: "Compare"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: columns
+            label: "Columns"
+            type: string
+            list: true
+          - name: rows
+            label: "Rows"
+            type: object
+            list: true
+            fields:
+              - name: cells
+                label: "Cells"
+                type: string
+                list: true
+          - name: button
+            label: "Button"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+      - name: automate
+        label: "Automate"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: tone
+                label: "Tone"
+                type: string
+      - name: agents
+        label: "Agents"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: footer
+                label: "Footer"
+                type: string
+          - name: note
+            label: "Note"
+            type: object
+            fields:
+              - name: strong
+                label: "Strong"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+      - name: trust
+        label: "Trust"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: tone
+                label: "Tone"
+                type: string
+              - name: footer
+                label: "Footer"
+                type: string
+      - name: industries
+        label: "Industries"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+      - name: process
+        label: "Process"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: steps
+            label: "Steps"
+            type: object
+            list: true
+            fields:
+              - name: number
+                label: "Number"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: phase
+                label: "Phase"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: when
+                label: "When"
+                type: string
+      - name: results
+        label: "Results"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: link
+            label: "Link"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: tone
+                label: "Tone"
+                type: string
+              - name: side_label
+                label: "Side label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: metric
+                label: "Metric"
+                type: string
+              - name: metric_label
+                label: "Metric label"
+                type: string
+              - name: rows
+                label: "Rows"
+                type: string
+                list: true
+              - name: checks
+                label: "Checks"
+                type: string
+                list: true
+      - name: faq
+        label: "FAQ"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: numbered
+            label: "Numbered"
+            type: boolean
+          - name: items
+            label: "Items"
+            type: object
+            list: true
+            fields:
+              - name: question
+                label: "Question"
+                type: string
+              - name: answer
+                label: "Answer"
+                type: text
+      - name: cta
+        label: "Call to action"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: primary
+            label: "Primary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: secondary
+            label: "Secondary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: checks
+            label: "Checks"
+            type: string
+            list: true
+
+  - name: page-about
+    label: "About page"
+    type: file
+    path: site/src/content/pages/about.json
+    format: json
+    fields:
+      - name: seo
+        label: "SEO (Google title & description)"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: description
+            label: "Description"
+            type: text
+      - name: hero
+        label: "Hero"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: highlight
+            label: "Highlight"
+            type: string
+          - name: lead
+            label: "Lead"
+            type: text
+          - name: paragraphs
+            label: "Paragraphs"
+            type: text
+            list: true
+          - name: quote
+            label: "Quote"
+            type: string
+      - name: needs
+        label: "Needs"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: tone
+                label: "Tone"
+                type: string
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: title
+                label: "Title"
+                type: string
+              - name: subtitle
+                label: "Subtitle"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: link
+                label: "Link"
+                type: object
+                fields:
+                  - name: label
+                    label: "Label"
+                    type: string
+                  - name: url
+                    label: "Link (URL)"
+                    type: string
+          - name: combo_title
+            label: "Combo title"
+            type: string
+          - name: combo_text
+            label: "Combo text"
+            type: text
+          - name: combo_strong
+            label: "Combo strong"
+            type: text
+          - name: combo_quote
+            label: "Combo quote"
+            type: text
+      - name: approach
+        label: "Approach"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: define_label
+            label: "Define label"
+            type: string
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+          - name: quotes
+            label: "Quotes"
+            type: text
+            list: true
+      - name: how
+        label: "How"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: steps
+            label: "Steps"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+      - name: person
+        label: "Person"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: greeting
+            label: "Greeting"
+            type: string
+          - name: photo
+            label: "Photo"
+            type: image
+          - name: photo_alt
+            label: "Photo alt"
+            type: string
+          - name: story
+            label: "Story"
+            type: text
+            list: true
+          - name: approach_label
+            label: "Approach label"
+            type: string
+          - name: approach
+            label: "Approach"
+            type: text
+          - name: linkedin_label
+            label: "Linkedin label"
+            type: string
+          - name: location
+            label: "Location"
+            type: string
+      - name: expect
+        label: "Expect"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+              - name: tone
+                label: "Tone"
+                type: string
+          - name: bar
+            label: "Bar"
+            type: object
+            fields:
+              - name: strong
+                label: "Strong"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: side
+                label: "Side"
+                type: string
+      - name: cta
+        label: "Call to action"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: primary
+            label: "Primary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+
+  - name: page-contact
+    label: "Contact page"
+    type: file
+    path: site/src/content/pages/contact.json
+    format: json
+    fields:
+      - name: seo
+        label: "SEO (Google title & description)"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: description
+            label: "Description"
+            type: text
+      - name: hero
+        label: "Hero"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: paragraphs
+            label: "Paragraphs"
+            type: text
+            list: true
+      - name: form
+        label: "Form"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: status
+            label: "Status"
+            type: string
+          - name: help_options
+            label: "Help options"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: tag
+                label: "Tag"
+                type: string
+          - name: budget_options
+            label: "Budget options"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: tag
+                label: "Tag"
+                type: string
+          - name: timeline_options
+            label: "Timeline options"
+            type: string
+            list: true
+          - name: button
+            label: "Button"
+            type: string
+          - name: privacy
+            label: "Privacy"
+            type: string
+      - name: reach
+        label: "Reach"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: booking_label
+            label: "Booking label"
+            type: string
+          - name: linkedin_label
+            label: "Linkedin label"
+            type: string
+      - name: next
+        label: "Next"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: steps
+            label: "Steps"
+            type: object
+            list: true
+            fields:
+              - name: number
+                label: "Number"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: stage
+                label: "Stage"
+                type: string
+          - name: note
+            label: "Note"
+            type: text
+      - name: location
+        label: "Location"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: stats
+            label: "Stats"
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: value
+                label: "Value"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+      - name: faq
+        label: "FAQ"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: numbered
+            label: "Numbered"
+            type: boolean
+          - name: items
+            label: "Items"
+            type: object
+            list: true
+            fields:
+              - name: question
+                label: "Question"
+                type: string
+              - name: answer
+                label: "Answer"
+                type: text
+      - name: cta
+        label: "Call to action"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: button
+            label: "Button"
+            type: string
+
+  - name: page-blog
+    label: "Blog page (text around the posts)"
+    type: file
+    path: site/src/content/pages/blog.json
+    format: json
+    fields:
+      - name: seo
+        label: "SEO (Google title & description)"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: description
+            label: "Description"
+            type: text
+      - name: hero
+        label: "Hero"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: highlight
+            label: "Highlight"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: primary
+            label: "Primary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: secondary
+            label: "Secondary"
+            type: object
+            fields:
+              - name: label
+                label: "Label"
+                type: string
+              - name: url
+                label: "Link (URL)"
+                type: string
+          - name: seo_card
+            label: "Seo card"
+            type: object
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+          - name: web_card
+            label: "Web card"
+            type: object
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+          - name: automation_card
+            label: "Automation card"
+            type: object
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+      - name: featured
+        label: "Featured"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: most_read_label
+            label: "Most read label"
+            type: string
+      - name: topics
+        label: "Topics"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: category
+                label: "Category"
+                type: string
+              - name: tag
+                label: "Tag"
+                type: string
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: button
+                label: "Button"
+                type: string
+      - name: articles
+        label: "Articles"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: link_label
+            label: "Link label"
+            type: string
+      - name: newsletter
+        label: "Newsletter"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: button
+            label: "Button"
+            type: string
+          - name: success
+            label: "Success"
+            type: string
+          - name: mail_subject
+            label: "Mail subject"
+            type: string
+          - name: checks
+            label: "Checks"
+            type: string
+            list: true
+

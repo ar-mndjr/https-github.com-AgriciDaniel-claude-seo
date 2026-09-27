@@ -1,0 +1,221 @@
+{
+  "seo": {
+    "title": "About RankStruct | SEO, Web Development & Automation",
+    "description": "RankStruct helps businesses solve digital problems through SEO, web development and automation. Clear scope, realistic timelines, transparent pricing."
+  },
+  "hero": {
+    "title": "We solve problems.",
+    "highlight": "We build solutions.",
+    "lead": "RankStruct helps businesses solve digital problems through SEO, web development, and automation.",
+    "paragraphs": [
+      "Every business is different, so we don't believe in forcing every client into the same package or process.",
+      "We start by understanding what you're trying to achieve, what's getting in the way, and what you're working with. From there, we determine the right solution based on your needs, budget, and timeline."
+    ],
+    "quote": "\"The goal is simple: deliver work that creates a meaningful result.\""
+  },
+  "needs": {
+    "title": "Built around what you actually need",
+    "text": "SEO, websites, and automation are not the goal by themselves. They're tools we use to solve problems.",
+    "cards": [
+      {
+        "tag": "DOMAIN: RANK",
+        "tone": "rank",
+        "icon": "i-search",
+        "title": "You may need better search visibility.",
+        "subtitle": "Organic discovery & Generative Engine Optimization",
+        "text": "Technical SEO and AI search visibility across Google, AI Overviews, Perplexity, and Gemini.",
+        "link": {
+          "label": "[Explore SEO Architecture →]",
+          "url": "/services/seo/"
+        }
+      },
+      {
+        "tag": "DOMAIN: STRUCT",
+        "tone": "struct",
+        "icon": "i-window",
+        "title": "You may need a website that works better for your customers.",
+        "subtitle": "High-performance web architecture",
+        "text": "A new WordPress, Shopify or Webflow website, or custom Next.js/Astro builds that load fast and pass Core Web Vitals.",
+        "link": {
+          "label": "[Explore Web Development →]",
+          "url": "/services/web-development/"
+        }
+      },
+      {
+        "tag": "DOMAIN: AUTOMATE",
+        "tone": "automate",
+        "icon": "i-flow",
+        "title": "You may have repetitive processes that are taking too much time.",
+        "subtitle": "Intelligent workflow automation",
+        "text": "Automations built with GoHighLevel, n8n, Zapier or Make to eliminate manual copy-paste admin and speed up lead handling.",
+        "link": {
+          "label": "[Explore Automation →]",
+          "url": "/services/ai-automation/"
+        }
+      }
+    ],
+    "combo_title": "Or you may need a combination of all three.",
+    "combo_text": "That could mean technical SEO and AI search visibility, a new WordPress, Shopify or Webflow website, or automations built with GoHighLevel, n8n, Zapier or Make.",
+    "combo_strong": "RankStruct's services are designed to work independently or together, depending on what makes sense for your business.",
+    "combo_quote": "\"No forced packages. No unnecessary services. Just the solution the problem calls for.\""
+  },
+  "approach": {
+    "title": "A practical approach",
+    "text": "We believe good digital work starts with realistic expectations. Before anything is built, we look at the challenge, the objective, the available resources, the budget, and the timeline.",
+    "define_label": "// Then_we_define:",
+    "cards": [
+      {
+        "label": "01 // TARGET",
+        "title": "What needs to be done.",
+        "text": "Precise technical scope and architecture boundary."
+      },
+      {
+        "label": "02 // RESOURCE",
+        "title": "What it will take.",
+        "text": "Prerequisite tools, team access, and dependencies."
+      },
+      {
+        "label": "03 // FISCAL",
+        "title": "What it will cost.",
+        "text": "Transparent flat cost or sprint estimate. Zero fee creep."
+      },
+      {
+        "label": "04 // TEMPORAL",
+        "title": "How long it will take.",
+        "text": "Firm, realistic calendar milestones that account for reality."
+      },
+      {
+        "label": "05 // OUTCOME",
+        "title": "What result we're working toward.",
+        "text": "Measurable KPI, search position, or operational hour saved."
+      }
+    ],
+    "quotes": [
+      "\"If something isn't necessary, we won't recommend it just to make the project bigger.\"",
+      "\"If something can't reasonably be achieved within the available scope, budget, or timeline, we'll say so.\""
+    ]
+  },
+  "how": {
+    "title": "How we work",
+    "text": "An orderly, disciplined progression from first conversation to measured deployment.",
+    "steps": [
+      {
+        "label": "// DISCOVER",
+        "title": "Understand",
+        "text": "Get clear on the business, the challenge, and the objective."
+      },
+      {
+        "label": "// AUDIT",
+        "title": "Assess",
+        "text": "Identify what is actually needed and what is realistically achievable."
+      },
+      {
+        "label": "// DEFINE",
+        "title": "Scope",
+        "text": "Define the solution, deliverables, budget, and timeline."
+      },
+      {
+        "label": "// ENGINEER",
+        "title": "Build",
+        "text": "Implement the agreed solution."
+      },
+      {
+        "label": "// SHIP",
+        "title": "Deliver",
+        "text": "Complete the work according to the agreed scope and timeline."
+      },
+      {
+        "label": "// TELEMETRY",
+        "title": "Measure",
+        "text": "Look at the outcome against the original objective."
+      },
+      {
+        "label": "// ITERATE",
+        "title": "Improve",
+        "text": "Identify what should happen next based on what we've learned."
+      }
+    ]
+  },
+  "person": {
+    "title": "The person behind RankStruct",
+    "greeting": "Hi, I'm April.",
+    "photo": "/images/april.jpg",
+    "photo_alt": "April, RankStruct",
+    "story": [
+      "My journey into digital work started while I was studying BS Computer Engineering. During that time, I began doing freelance web development as a side hustle. Building websites introduced me to the technical side of helping businesses establish their presence online.",
+      "That led to a question that changed the direction of my work:",
+      "**How do people actually find these websites?**",
+      "I became curious about how search engines evaluate websites and what makes a page visible in search results. I started learning SEO through free resources, paid masterclasses, hands-on experimentation, and real client projects.",
+      "As I worked with different businesses, I learned that SEO is more than rankings. A strong digital presence depends on how a website is structured, how information is presented, how users find what they need, and how different systems work together.",
+      "That experience naturally expanded my work from SEO and web development into automation and digital systems.",
+      "I continue to develop my skills through hands-on projects, ongoing research, technical learning, and staying current with changes in search, web technologies, automation, and AI. Working with businesses also means every project brings a different challenge, which creates opportunities to learn, test, and improve.",
+      "That continuous learning is part of how RankStruct operates.",
+      "**I bring together SEO, web development, and automation to help businesses solve practical digital problems with solutions that fit their goals, requirements, budget, and timeline.**"
+    ],
+    "approach_label": "// The approach is simple:",
+    "approach": "\"Understand the problem. Find the right solution. Deliver the work. Keep improving.\"",
+    "linkedin_label": "Connect on LinkedIn",
+    "location": "Location: Remote_Global"
+  },
+  "expect": {
+    "title": "What you can expect",
+    "text": "When you work with RankStruct, you can expect:",
+    "cards": [
+      {
+        "label": "STANDARD_01",
+        "title": "Clear scope",
+        "text": "Know exactly what we're doing.",
+        "icon": "i-clip",
+        "tone": "indigo"
+      },
+      {
+        "label": "STANDARD_02",
+        "title": "Realistic timelines",
+        "text": "Know when things are expected to happen.",
+        "icon": "i-clock",
+        "tone": "green"
+      },
+      {
+        "label": "STANDARD_03",
+        "title": "Transparent pricing",
+        "text": "Know what you're paying for.",
+        "icon": "i-doc",
+        "tone": "violet"
+      },
+      {
+        "label": "STANDARD_04",
+        "title": "Practical solutions",
+        "text": "Recommendations based on your actual needs.",
+        "icon": "i-tool",
+        "tone": "indigo"
+      },
+      {
+        "label": "STANDARD_05",
+        "title": "Straightforward communication",
+        "text": "No unnecessary jargon or inflated claims.",
+        "icon": "i-chat",
+        "tone": "green"
+      },
+      {
+        "label": "STANDARD_06",
+        "title": "Accountability",
+        "text": "We take responsibility for the work we agree to deliver.",
+        "icon": "i-okc",
+        "tone": "violet"
+      }
+    ],
+    "bar": {
+      "strong": "No overpromising. No unnecessary work.",
+      "text": "Just the right solution for the problem.",
+      "side": "// Standards_compliant"
+    }
+  },
+  "cta": {
+    "title": "Have something you're trying to solve?",
+    "text": "Tell us about it, and we'll tell you honestly what makes sense.",
+    "primary": {
+      "label": "Start a Project",
+      "url": "/contact/"
+    }
+  }
+}

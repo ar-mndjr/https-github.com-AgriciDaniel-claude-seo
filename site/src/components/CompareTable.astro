@@ -1,0 +1,41 @@
+---
+// Comparison table. Cells are plain text; a few patterns get special styling:
+//   ★★★★☆ (with note)  -> green star rating, note in small text
+//   $ / $$ / $$$        -> budget
+//   Yes / ✓ Yes         -> green, ✗ No -> muted
+interface Props { columns: string[]; rows: { cells: string[] }[]; highlight?: string[]; dots?: boolean }
+const { columns, rows, highlight = [], dots = false } = Astro.props;
+const dotColors = ['var(--indigo-l)', 'var(--emerald)'];
+
+function kind(cell: string) {
+  const s = cell.trim();
+  const stars = s.match(/^([★☆]{1,5})\s*(.*)$/);
+  if (stars) return { type: 'stars', full: [...stars[1]].filter((c) => c === '★').length, note: stars[2] };
+  if (/^\$+$/.test(s)) return { type: 'money', text: s };
+  if (/^(✓\s*)?yes$/i.test(s) || /^lowest/i.test(s)) return { type: 'yes', text: s };
+  if (/^✗/.test(s)) return { type: 'no', text: s };
+  if (/^highest$/i.test(s)) return { type: 'bad', text: s };
+  return { type: 'text', text: s };
+}
+---
+<div class="card ptable reveal">
+  <table>
+    <thead><tr>{columns.map((c, i) => <th class={highlight[i] ? `hl-${highlight[i]}` : ''}>{c}</th>)}</tr></thead>
+    <tbody>
+      {rows.map((r, ri) => (
+        <tr>
+          {r.cells.map((cell, ci) => {
+            const k = kind(cell);
+            if (ci === 0) return <td>{dots && <i class="dot" style={`background:${dotColors[ri % 2 === 1 || ri === rows.length - 1 ? 1 : 0]}`}></i>}{cell}</td>;
+            if (k.type === 'stars') return <td><span class="stars" aria-label={`${k.full} out of 5`}>{[0, 1, 2, 3, 4].map((n) => (n < k.full ? '★' : <span class="off">★</span>))}{k.note && <small>{k.note}</small>}</span></td>;
+            if (k.type === 'money') return <td><span class="money">{k.text}</span></td>;
+            if (k.type === 'yes') return <td><span class="yes">{k.text}</span></td>;
+            if (k.type === 'no') return <td><span class="no">{k.text}</span></td>;
+            if (k.type === 'bad') return <td><span style="color:var(--coral)">{k.text}</span></td>;
+            return <td>{k.text}</td>;
+          })}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

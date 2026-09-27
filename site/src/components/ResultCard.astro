@@ -1,0 +1,22 @@
+---
+interface Props {
+  card: {
+    tag: string; tone: string; side_label?: string; title: string; text: string;
+    metric?: string; metric_label?: string; rows?: { label: string; value: string }[]; checks?: string[];
+  };
+  accent?: string;
+}
+const { card, accent = 'green' } = Astro.props;
+---
+<article class={`card ${accent} rc reveal`}>
+  <div class="rc-top"><span class={`chip ${card.tone || 'plain'}`}>{card.tag}</span>{card.side_label && <span class="mono">{card.side_label}</span>}</div>
+  <h3>{card.title}</h3>
+  <p>{card.text}</p>
+  {card.rows && card.rows.length > 0 && (
+    <div class="rc-kv">{card.rows.map((r) => <div><span class="mono">{r.label}</span><b>{r.value}</b></div>)}</div>
+  )}
+  {card.metric && (
+    <div class:list={['big', { long: !card.metric_label }]}>{card.metric}{card.metric_label && <small>{card.metric_label}</small>}</div>
+  )}
+  {card.checks?.map((c) => <div class="foot"><b>✓</b> {c}</div>)}
+</article>

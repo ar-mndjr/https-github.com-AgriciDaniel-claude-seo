@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Glow from '../../components/Glow.astro';
+import SecHead from '../../components/SecHead.astro';
+import PageHero from '../../components/PageHero.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import CompareTable from '../../components/CompareTable.astro';
+import ResultCard from '../../components/ResultCard.astro';
+import FaqList from '../../components/FaqList.astro';
+import CtaCenter from '../../components/CtaCenter.astro';
+import { serviceSchema, faqSchema } from '../../lib/schema';
+import c from '../../content/pages/automation.json';
+---
+<Layout title={c.seo.title} description={c.seo.description} active="services"
+  schemas={[serviceSchema('AI Automation Services', c.seo.description), faqSchema(c.faq.items)]}>
+  <PageHero hero={c.hero} button="btn-violet" glows="violet" />
+
+  <section class="psec sec-deep">
+    <Glow color="violet" style="width:420px;height:380px;bottom:-160px;right:10%;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.problem.title} text={c.problem.text} />
+      <div class="g g3 mt">
+        {c.problem.cards.map((k, i) => <FeatureCard title={k.title} text={k.text} icon={k.icon} tone={k.tone} label={k.label} accent="violet" footer={k.footer} footerClass={`as-is${i === 0 ? ' hot' : ''}`} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="psec" id="platforms">
+    <Glow color="violet" drift="c" style="width:520px;height:420px;top:10%;left:30%;opacity:.45" />
+    <Glow color="green" drift="b" style="width:340px;height:340px;bottom:-120px;left:-120px;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.platforms.title} text={c.platforms.text} />
+      <div class="g g3 mt">
+        {c.platforms.cards.map((k) => <FeatureCard title={k.title} text={k.text} tag={k.tag} tagTone={k.tone} icon={k.icon} accent={k.tone === 'rank' ? 'green' : 'violet'} items={k.items} link={k.link} ticks twoCols={k.wide} class={k.wide ? 'span2' : ''} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep">
+    <Glow color="indigo" style="width:480px;height:380px;top:20%;right:-100px;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.compare.title} text={c.compare.text} />
+      <CompareTable columns={c.compare.columns} rows={c.compare.rows} highlight={['', 'green', 'violet', 'indigo', 'green']} />
+      <div class="center-row"><a href={c.compare.button.url} class="btn btn-ghost">{c.compare.button.label} <svg class="arrow"><use href="#i-arrow" /></svg></a></div>
+    </div>
+  </section>
+
+  <section class="psec" id="automate">
+    <Glow color="violet" style="width:460px;height:400px;top:30%;left:-140px;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.automate.title} text={c.automate.text} />
+      <div class="g g3 mt">{c.automate.cards.map((k) => <FeatureCard title={k.title} text={k.text} icon={k.icon} tone={k.tone} label={k.label} labelInline accent="violet" />)}</div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep" id="agents">
+    <Glow color="violet" style="width:560px;height:440px;top:0;left:30%;opacity:.5" />
+    <div class="container">
+      <SecHead title={c.agents.title} text={c.agents.text} />
+      <div class="g g3 mt">{c.agents.cards.map((k) => <FeatureCard title={k.title} text={k.text} icon={k.icon} tone="violet" accent="violet" footer={k.footer} />)}</div>
+      <div class="card violet note-bar reveal"><svg style="color:var(--emerald)"><use href="#i-shield" /></svg><p><b>{c.agents.note.strong}</b> {c.agents.note.text}</p></div>
+    </div>
+  </section>
+
+  <section class="psec">
+    <Glow color="green" style="width:380px;height:380px;bottom:-140px;right:5%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.trust.title} text={c.trust.text} />
+      <div class="g g5 mt">{c.trust.cards.map((k) => <FeatureCard title={k.title} text={k.text} icon={k.icon} tone={k.tone} accent="violet" footer={k.footer} small />)}</div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep">
+    <Glow color="indigo" style="width:480px;height:380px;top:10%;left:35%;opacity:.35" />
+    <div class="container">
+      <SecHead title={c.industries.title} text={c.industries.text} />
+      <div class="g g4 mt">{c.industries.cards.map((k, i) => <FeatureCard title={k.title} text={k.text} label={k.label} accent={i % 2 === 0 ? 'green' : 'violet'} small />)}</div>
+    </div>
+  </section>
+
+  <section class="psec" id="process">
+    <Glow color="violet" style="width:420px;height:380px;top:20%;right:-120px;opacity:.4" />
+    <div class="container">
+      <SecHead title={c.process.title} text={c.process.text} />
+      <div class="rows">
+        {c.process.steps.map((s) => (
+          <div class="card violet prow reveal"><span class="n">{s.number}</span><div><h3>{s.title}</h3><span class="phase">// {s.phase}</span><p>{s.text}</p></div><span class="when">{s.when}</span></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="psec sec-deep" id="results">
+    <Glow color="violet" style="width:500px;height:400px;top:20%;left:30%;opacity:.35" />
+    <div class="container">
+      <div class="sec-row">
+        <SecHead title={c.results.title} text={c.results.text} label={c.results.label} />
+        <a href={c.results.link.url} class="link-chip">{c.results.link.label} <svg><use href="#i-arrow" /></svg></a>
+      </div>
+      <div class="g g3 mt">{c.results.cards.map((k) => <ResultCard card={k} accent={k.tone === 'rank' ? 'green' : 'violet'} />)}</div>
+    </div>
+  </section>
+
+  <section class="psec"><div class="container"><FaqList faq={c.faq} accent="192,132,252" labelClass="violet" /></div></section>
+
+  <CtaCenter cta={c.cta} button="btn-violet" />
+</Layout>

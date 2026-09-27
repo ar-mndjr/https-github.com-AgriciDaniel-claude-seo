@@ -1,0 +1,243 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Glow from '../components/Glow.astro';
+import covers from '../lib/covers.json';
+import { organizationSchema } from '../lib/schema';
+import c from '../content/pages/home.json';
+
+const h = c.hero;
+const a = c.accountability;
+const metricColor: Record<string, string> = { rank: 'var(--mint)', struct: 'var(--lav)', automate: 'var(--lav)' };
+const audColor: Record<string, string> = { rank: 'var(--emerald)', struct: 'var(--indigo-l)' };
+const flowIcons = ['i-mail', 'i-db', 'i-send', 'i-bell'];
+const flowColors = ['var(--emerald)', 'var(--indigo-l)', 'var(--indigo-l)', 'var(--violet-l)'];
+// manifesto.json card: principles and metrics come from the CMS
+const esc = (v: string) => v.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const k = (key: string) => `<span class="k">"${esc(key)}"</span>`;
+const brace = (b: string) => `<span class="p">${b}</span>`;
+const manifesto = [
+  brace('{'),
+  `  ${k('partner')}: <span class="s">"${esc(a.partner)}"</span>,`,
+  `  ${k('engagement_principles')}: ${brace('{')}`,
+  ...a.principles.map((p, i) => `    ${k(p.key)}: <span class="b">${p.value ? 'true' : 'false'}</span>${i < a.principles.length - 1 ? ',' : ''}`),
+  `  ${brace('}')},`,
+  `  ${k('core_metrics')}: ${brace('{')}`,
+  ...a.metrics.map((m, i) => `    ${k(m.key)}: <span class="s">"${esc(m.value)}"</span>${i < a.metrics.length - 1 ? ',' : ''}`),
+  `  ${brace('}')}`,
+  `${brace('}')} <span class="cursor"></span>`,
+].join('\n');
+const stepDomain = (i: number) => (i < 2 ? 'rank' : i < 5 ? 'struct' : 'automate');
+// Count-up animation for metrics like "+185%" or "14 hrs"
+const countAttrs = (m: string) => {
+  const mm = m.match(/^([+−-]?)(\d+)(%|\s*hrs?)?$/);
+  return mm ? { 'data-count': mm[2], 'data-prefix': mm[1], 'data-suffix': mm[3] ?? '' } : {};
+};
+---
+<Layout title={c.seo.title} description={c.seo.description} schemas={[organizationSchema()]}>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <Glow color="indigo" style="width:560px;height:480px;top:-120px;right:18%;" />
+    <Glow color="green" drift="b" style="width:420px;height:420px;bottom:-160px;left:-160px;" />
+    <Glow color="violet" drift="c" style="width:320px;height:320px;top:40%;right:-120px;opacity:.6" />
+    <div class="container hero-grid">
+      <div class="reveal">
+        <h1 class="h-xl">{h.title}<br /><span class="grad">{h.highlight}</span></h1>
+        <p class="lead">{h.text}</p>
+        <div class="hero-cta">
+          <a href={h.primary.url} class="btn btn-primary">{h.primary.label} <svg class="arrow"><use href="#i-arrow" /></svg></a>
+          <a href={h.secondary.url} class="btn btn-ghost"><svg><use href="#i-sparkle" /></svg> {h.secondary.label}</a>
+        </div>
+      </div>
+
+      <div class="hero-cards reveal">
+        <div class="card rank hc">
+          <div class="hc-top">
+            <span class="hc-tag" style="color:var(--emerald)"><i class="dot" style="background:var(--emerald)"></i>{h.seo_card.tag}</span>
+            <span class="chip plain" style="font-size:8px;padding:1px 6px">{h.seo_card.badge}</span>
+          </div>
+          <h4>{h.seo_card.title}</h4>
+          <p class="sub">{h.seo_card.text}</p>
+          <svg class="hc-chart" viewBox="0 0 200 70" preserveAspectRatio="none" width="100%">
+            <defs><linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10b981" stop-opacity=".45" /><stop offset="1" stop-color="#10b981" stop-opacity="0" /></linearGradient></defs>
+            <path d="M0 62 C30 60 50 56 80 50 S140 30 200 12 L200 70 L0 70Z" fill="url(#gArea)" />
+            <path class="line" d="M0 62 C30 60 50 56 80 50 S140 30 200 12" fill="none" stroke="#34d399" stroke-width="2" />
+          </svg>
+          <div class="hc-axis"><span>{h.seo_card.axis_start}</span><span>{h.seo_card.axis_end}</span></div>
+          <div class="hc-pills">{h.seo_card.pills.map((p) => <span>{p}</span>)}</div>
+        </div>
+
+        <div class="card struct hc">
+          <div class="hc-top">
+            <span class="hc-tag" style="color:var(--indigo-l)"><i class="dot" style="background:var(--indigo-l)"></i>{h.web_card.tag}</span>
+            <span class="chip plain" style="font-size:8px;padding:1px 6px">{h.web_card.badge}</span>
+          </div>
+          <h4>{h.web_card.title}</h4>
+          <p class="sub">{h.web_card.text}</p>
+          <ul class="hc-list">
+            {h.web_card.items.map((i) => <li><span class="tick"><svg><use href="#i-check" /></svg></span>{i.label}<span class="v">{i.value}</span></li>)}
+          </ul>
+        </div>
+
+        <div class="card automate hc wide">
+          <div class="hc-top">
+            <span class="hc-tag" style="color:var(--indigo-l)"><i class="dot" style="background:var(--indigo-l)"></i>{h.automation_card.tag}</span>
+            <span class="chip struct" style="font-size:8px;padding:1px 6px"><i class="dot" style="background:var(--indigo-l);width:5px;height:5px"></i>{h.automation_card.badge}</span>
+          </div>
+          <h4>{h.automation_card.title}</h4>
+          <p class="sub">{h.automation_card.text}</p>
+          <div class="flow">
+            <i class="pulse"></i>
+            {h.automation_card.steps.map((s, i) => (
+              <div class="flow-step"><div class="flow-ic" style={`color:${flowColors[i % 4]}`}><svg><use href={`#${flowIcons[i % 4]}`} /></svg></div><b>{s.title}</b><span>{s.text}</span></div>
+            ))}
+          </div>
+          <div class="hc-foot">
+            <span style="color:var(--text-3)">{h.automation_card.footer_left} <b style="color:#e2e8f0;font-weight:500">{h.automation_card.footer_left_strong}</b></span>
+            <span style="color:var(--emerald)">{h.automation_card.footer_right}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section class="why sec-deep" id="about">
+    <div class="glow coral drift-b" style="width:380px;height:380px;top:30%;left:-200px;background:radial-gradient(circle,rgba(240,165,140,.18),transparent 70%)"></div>
+    <Glow color="green" style="width:420px;height:420px;bottom:-120px;right:-140px;opacity:.55" />
+    <div class="container">
+      <div class="sec-head reveal"><h2 class="h-lg">{c.why.title}</h2><p>{c.why.text}</p></div>
+      <div class="compare">
+        <div class="card coral cmp bad reveal">
+          <div class="cmp-head"><span class="mono" style="color:var(--coral)">{c.why.trap_label}</span><svg style="color:var(--coral)"><use href="#i-block" /></svg></div>
+          {c.why.trap_items.map((i) => <div class="cmp-item row-pop"><h4>{i.title}</h4><p>{i.text}</p></div>)}
+        </div>
+        <div class="card rank cmp good reveal">
+          <div class="cmp-head"><span class="mono" style="color:var(--mint)">{c.why.paradigm_label}</span><svg style="color:var(--mint)"><use href="#i-okc" /></svg></div>
+          {c.why.paradigm_items.map((i) => <div class="cmp-item row-pop"><h4>{i.title}</h4><p>{i.text}</p></div>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services" id="services">
+    <Glow color="indigo" drift="c" style="width:520px;height:420px;top:10%;left:30%;opacity:.45" />
+    <Glow color="violet" style="width:360px;height:360px;bottom:-100px;right:-80px;opacity:.6" />
+    <div class="container">
+      <div class="sec-row reveal">
+        <div class="sec-head" style="max-width:900px"><h2 class="h-lg">{c.services.title}</h2><p style="max-width:720px">{c.services.text}</p></div>
+        <svg style="transform:rotate(-45deg)"><use href="#i-arrow" /></svg>
+      </div>
+      <div class="svc-grid">
+        {c.services.cards.map((s) => (
+          <article class={`card ${s.domain} svc reveal`}>
+            <div class="svc-top"><span class={`chip ${s.domain === 'rank' ? 'rank' : 'struct'}`}>{s.tag}</span><svg style={`color:${s.domain === 'rank' ? 'var(--emerald)' : 'var(--indigo-l)'}`}><use href={`#${s.icon}`} /></svg></div>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+            <ul>{s.items.map((i) => <li class="row-pop">{i}<svg><use href="#i-check" /></svg></li>)}</ul>
+            <a href={s.link.url} class="btn-explore">{s.link.label} <svg><use href="#i-chev" /></svg></a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PIPELINE ============ -->
+  <section class="pipeline sec-deep" id="process">
+    <Glow color="indigo" drift="b" style="width:480px;height:380px;top:20%;right:5%;opacity:.4" />
+    <Glow color="green" drift="c" style="width:360px;height:360px;bottom:-140px;left:10%;opacity:.45" />
+    <div class="container">
+      <div class="sec-head reveal" style="max-width:600px"><h2 class="h-lg">{c.pipeline.title}</h2><p>{c.pipeline.text}</p></div>
+      <div class="pipe-grid">
+        {c.pipeline.steps.map((s, i) => {
+          const [n, ...rest] = s.label.split('//');
+          return <div class={`card ${stepDomain(i)} step reveal`}><span class="mono"><span class="n">{n.trim()}</span> //{rest.join('//')}</span><h3>{s.title}</h3><p>{s.text}</p><span class="when">{s.when}</span></div>;
+        })}
+      </div>
+      <div class="card struct pipe-note reveal">
+        <div class="ic"><svg><use href="#i-shield" /></svg></div>
+        <div><h4>{c.pipeline.note.title}</h4><p>{c.pipeline.note.text}</p></div>
+        <a href={c.pipeline.note.link.url} class="btn">{c.pipeline.note.link.label}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASE STUDIES ============ -->
+  <section class="cases" id="cases">
+    <Glow color="violet" style="width:500px;height:420px;top:25%;left:35%;opacity:.4" />
+    <Glow color="cyan" drift="b" style="width:360px;height:360px;top:-80px;left:-120px" />
+    <div class="container">
+      <div class="sec-row reveal">
+        <div class="sec-head" style="max-width:560px"><h2 class="h-lg">{c.cases.title}</h2><p>{c.cases.text}</p></div>
+        <a href={c.cases.link.url}>{c.cases.link.label} <svg width="10" height="10"><use href="#i-arrow" /></svg></a>
+      </div>
+      <div class="case-grid">
+        {c.cases.cards.map((k) => (
+          <article class={`card ${k.domain} case reveal`}>
+            <div class="case-shot" set:html={(covers as Record<string, string>)[k.art] ?? covers['case-rank']} />
+            <div class="mono">{k.category}</div>
+            <h3>{k.title}</h3>
+            <p>{k.text}</p>
+            <div class="metric"><span class="big" style={`color:${metricColor[k.domain]}`} {...countAttrs(k.metric)}>{k.metric}</span><span class="mono">{k.metric_label}</span></div>
+            <div class="foot"><b>✓</b> {k.footer}</div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BUILT FOR ============ -->
+  <section class="built sec-deep">
+    <Glow color="indigo" style="width:520px;height:380px;top:-60px;left:30%;opacity:.35" />
+    <Glow color="green" drift="b" style="width:360px;height:360px;bottom:-140px;right:5%;opacity:.4" />
+    <div class="container">
+      <div class="sec-head reveal"><h2 class="h-lg">{c.audience.title}</h2><p>{c.audience.text}</p></div>
+      <div class="aud-grid">
+        {c.audience.cards.map((k, i) => (
+          <div class={`card ${k.domain} aud reveal`}><div class="ic" style={`color:${i === 2 ? '#cbd5e1' : audColor[k.domain]}`}><svg><use href={`#${k.icon}`} /></svg></div><h3>{k.title}</h3><p>{k.text}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACCOUNTABILITY ============ -->
+  <section class="acc">
+    <Glow color="indigo" drift="c" style="width:520px;height:420px;top:10%;right:10%;opacity:.4" />
+    <Glow color="green" style="width:340px;height:340px;bottom:-100px;left:-100px;opacity:.45" />
+    <div class="container acc-grid">
+      <div class="reveal">
+        <h2 class="h-lg">{a.title}</h2>
+        <p class="intro">{a.text}</p>
+        {a.features.map((f, i) => (
+          <div class="feat"><svg style={`color:${i === 0 ? 'var(--mint)' : 'var(--indigo-l)'}`}><use href={`#${f.icon}`} /></svg><div><h4>{f.title}</h4><p>{f.text}</p></div></div>
+        ))}
+      </div>
+      <div class="card rank code-card reveal">
+        <div class="code-top">
+          <i class="dot" style="background:#f87171"></i><i class="dot" style="background:#f59e0b"></i><i class="dot" style="background:#4edea3"></i>
+          <span class="mono">{a.code_file}</span>
+          <span class="mono r">{a.code_type}</span>
+        </div>
+<pre class="code" set:html={manifesto} />
+        <div class="kv">{a.facts.map((f) => <div class="row-pop"><span class="mono">{f.label}</span><b>{f.value}</b></div>)}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta sec-deep" id="contact">
+    <div class="container">
+      <div class="cta-box card struct reveal">
+        <Glow color="indigo" style="width:420px;height:360px;bottom:-140px;right:-80px;opacity:.9" />
+        <Glow color="violet" drift="b" style="width:280px;height:280px;top:-100px;right:25%;opacity:.35" />
+        <h2>{c.cta.title}</h2>
+        <p>{c.cta.text}</p>
+        <div class="cta-actions">
+          <a href={c.cta.primary.url} class="btn btn-primary">{c.cta.primary.label} <svg class="arrow"><use href="#i-arrow" /></svg></a>
+          <a href={c.cta.secondary.url} class="btn btn-dark"><svg class="chat"><use href="#i-chat" /></svg> {c.cta.secondary.label}</a>
+        </div>
+        <div class="cta-checks">{c.cta.checks.map((t) => <span><svg><use href="#i-check" /></svg>{t}</span>)}</div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,17 @@
+---
+interface Props { faq: { label?: string; title: string; text?: string; numbered?: boolean; items: { question: string; answer: string }[] }; accent?: string; labelClass?: string }
+const { faq, accent = '129,140,248', labelClass = '' } = Astro.props;
+---
+<div class="sec-head center reveal">
+  {faq.label && <span class={`label ${labelClass}`}>{faq.label}</span>}
+  <h2 class="h-lg">{faq.title}</h2>
+  {faq.text && <p>{faq.text}</p>}
+</div>
+<div class="faq" style={`--accent:${accent}`}>
+  {faq.items.map((f, i) => (
+    <details class="reveal">
+      <summary>{faq.numbered ? `${i + 1}. ` : ''}{f.question}<svg><use href="#i-down" /></svg></summary>
+      <div class="ans"><p>{f.answer}</p></div>
+    </details>
+  ))}
+</div>

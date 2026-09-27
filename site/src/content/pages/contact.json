@@ -1,0 +1,156 @@
+{
+  "seo": {
+    "title": "Contact RankStruct | SEO, Web Development & Automation",
+    "description": "Tell us what you're working on. RankStruct works remotely with businesses worldwide on SEO, web development and automation. We reply within 24 hours."
+  },
+  "hero": {
+    "title": "Tell us what you're working on.",
+    "paragraphs": [
+      "Whether it's search visibility, your website, a workflow that takes too much time, or something you can't quite name yet, start by telling us about it.",
+      "We'll review it and reply with an honest take on what makes sense, what it may involve and whether we're the right fit."
+    ]
+  },
+  "form": {
+    "label": "// Project_Intake",
+    "title": "Start a project",
+    "status": "Status: Intake_Ready",
+    "help_options": [
+      {
+        "label": "SEO & search visibility",
+        "tag": "RANK"
+      },
+      {
+        "label": "Website (new build, redesign or fixes)",
+        "tag": "STRUCT"
+      },
+      {
+        "label": "Automation & workflows",
+        "tag": "AUTO"
+      },
+      {
+        "label": "Not sure yet",
+        "tag": "EXPLORE"
+      }
+    ],
+    "budget_options": [
+      {
+        "label": "Under $1k",
+        "tag": "Quick task"
+      },
+      {
+        "label": "$1k–$3k",
+        "tag": "Target sprint"
+      },
+      {
+        "label": "$3k–$10k",
+        "tag": "Architecture"
+      },
+      {
+        "label": "$10k+",
+        "tag": "Full system"
+      },
+      {
+        "label": "Not sure",
+        "tag": "Let's discuss"
+      }
+    ],
+    "timeline_options": [
+      "As soon as possible",
+      "Within 1–3 months",
+      "Just exploring"
+    ],
+    "button": "Send Message",
+    "privacy": "We'll only use your details to reply to your message."
+  },
+  "reach": {
+    "label": "// Alternative_Paths",
+    "title": "Other ways to reach us",
+    "booking_label": "Schedule a 20-minute chat",
+    "linkedin_label": "Connect with April"
+  },
+  "next": {
+    "title": "What happens next",
+    "text": "Every project follows four predictable, transparent milestones before any monetary commitment.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "We review your message",
+        "text": "We look at what you've shared and, if you included it, your current website or setup.",
+        "stage": "Stage: Audit"
+      },
+      {
+        "number": "02",
+        "title": "We reply within 24 hours",
+        "text": "You'll get a response on business days, either with initial thoughts or a few questions to understand things better.",
+        "stage": "Stage: Initial_Take"
+      },
+      {
+        "number": "03",
+        "title": "We talk it through",
+        "text": "If it makes sense, we'll set up a short call to understand the details.",
+        "stage": "Stage: Alignment"
+      },
+      {
+        "number": "04",
+        "title": "You get a clear proposal",
+        "text": "Scope, timeline and price, all in writing, before any work begins.",
+        "stage": "Stage: Architecture"
+      }
+    ],
+    "note": "No pressure and no obligation. If what you need isn't something we can help with, we'll tell you."
+  },
+  "location": {
+    "title": "Remote-first. Working with businesses everywhere.",
+    "text": "RankStruct operates fully remotely, so location isn't a barrier. We work with clients across different countries and time zones, using video calls, email, shared documents and project tools to keep everything clear and on track.",
+    "stats": [
+      {
+        "label": "Location",
+        "value": "Remote",
+        "text": "Worldwide delivery"
+      },
+      {
+        "label": "Hours",
+        "value": "Flexible",
+        "text": "Scheduled around your time zone"
+      },
+      {
+        "label": "Latency",
+        "value": "< 24h",
+        "text": "Within 24 hours on business days"
+      }
+    ]
+  },
+  "faq": {
+    "label": "",
+    "title": "Before you reach out",
+    "text": "Common queries answered frankly before we jump into an initial dialogue.",
+    "numbered": false,
+    "items": [
+      {
+        "question": "Do you work with businesses outside my country?",
+        "answer": "Yes. RankStruct works remotely with businesses worldwide. Calls are scheduled at times that work for both sides."
+      },
+      {
+        "question": "What if I don't know exactly what I need?",
+        "answer": "That's fine. Tell us what's happening and what you'd like to improve. Working out the right solution is part of what we do."
+      },
+      {
+        "question": "Is there a minimum project size?",
+        "answer": "Projects are scoped around your needs, so there's no fixed package. If a project is too small to be worth it for you, we'll say so honestly."
+      },
+      {
+        "question": "Is the first conversation free?",
+        "answer": "Yes. The first review and call are free, with no obligation."
+      },
+      {
+        "question": "Can you sign an NDA?",
+        "answer": "Yes. If your project involves sensitive information, we're happy to sign an NDA before discussing details."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Have something you're trying to solve?",
+    "text": "Let's start there.",
+    "button": "Send a Message"
+  }
+}

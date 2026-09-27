@@ -1,0 +1,44 @@
+# Builds the Astro site and uploads it to your cPanel hosting over FTP.
+# Runs whenever you save in Pages CMS (every save is a commit to main).
+#
+# One-time setup: GitHub repo → Settings → Secrets and variables → Actions →
+# add FTP_SERVER, FTP_USERNAME, FTP_PASSWORD (from cPanel → FTP Accounts).
+# Optional: FTP_DIR if your site folder isn't public_html/.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+    paths: ['site/**', '.github/workflows/deploy.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Upload to hosting
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: site/dist/
+          server-dir: ${{ secrets.FTP_DIR || 'public_html/' }}

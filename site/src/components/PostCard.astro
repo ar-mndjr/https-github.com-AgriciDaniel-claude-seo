@@ -1,0 +1,18 @@
+---
+import CoverArt from './CoverArt.astro';
+import { CATEGORY, postUrl, formatDate, type Post } from '../lib/posts';
+interface Props { post: Post; index?: number; reveal?: boolean }
+const { post, index = 0, reveal = true } = Astro.props;
+const d = post.data;
+const cat = CATEGORY[d.category];
+const spots = [['20%', '30%'], ['80%', '20%'], ['30%', '70%'], ['70%', '60%'], ['25%', '25%'], ['75%', '75%'], ['60%', '30%'], ['35%', '50%'], ['65%', '40%']];
+const [gx, gy] = spots[index % spots.length];
+---
+<a href={postUrl(post)} class:list={['card', cat.domain, 'case article', { reveal }]} data-cat={d.category}>
+  <CoverArt cover={d.cover} image={d.cover_image} label={cat.name} readTime={`${d.read_time} min read`} gx={gx} gy={gy} alt={d.title} />
+  <div class="mono">{d.subcategory}{d.draft && ' · DRAFT'}</div>
+  <h3>{d.title}</h3>
+  <p>{d.description}</p>
+  {d.metric && <div class="metric"><span class="big" style={`color:${cat.color}`}>{d.metric}</span><span class="mono">{d.metric_label}</span></div>}
+  <div class="foot"><b>✓</b> {formatDate(d.date)} · {d.author} · {d.read_time} min read</div>
+</a>

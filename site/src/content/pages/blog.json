@@ -1,0 +1,81 @@
+{
+  "seo": {
+    "title": "Blog — RankStruct",
+    "description": "Technical dispatches on SEO, web engineering and automation from the RankStruct team."
+  },
+  "hero": {
+    "label": "// Dispatches & Teardowns",
+    "title": "Engineering",
+    "highlight": "dispatches.",
+    "text": "Field notes from real client work: SEO experiments, performance teardowns and automation patterns. No listicles, no fluff. Just what we measured.",
+    "primary": {
+      "label": "Get the Dispatch",
+      "url": "#newsletter"
+    },
+    "secondary": {
+      "label": "Browse Articles",
+      "url": "#articles"
+    },
+    "seo_card": {
+      "title": "Latest in search",
+      "text": "Crawl budget, entities, migrations and programmatic SEO."
+    },
+    "web_card": {
+      "title": "Latest in web",
+      "text": "Speed, frameworks and headless builds."
+    },
+    "automation_card": {
+      "title": "Latest in automation",
+      "text": "How we connect forms, CRMs, AI agents and webhooks so nothing gets copied by hand."
+    }
+  },
+  "featured": {
+    "title": "This week's featured dispatch.",
+    "text": "The one article we'd send to every founder on our list. Plus what the rest of our readers opened most this month.",
+    "most_read_label": "// Most_Read · 30d"
+  },
+  "topics": {
+    "title": "SEO, web and automation. One dispatch.",
+    "text": "The same three disciplines we deliver for clients, written up as we build them. Pick a track or read across all three.",
+    "cards": [
+      {
+        "category": "seo",
+        "tag": "01 // Rank",
+        "title": "Search & Organic Growth",
+        "text": "Log-file audits, entity mapping, migrations and programmatic SEO, with the numbers behind every claim.",
+        "button": "Explore SEO Articles"
+      },
+      {
+        "category": "web",
+        "tag": "02 // Struct",
+        "title": "Web Engineering & Speed",
+        "text": "Core Web Vitals teardowns, framework benchmarks and headless rebuilds for sites that need to convert.",
+        "button": "Explore Web Articles"
+      },
+      {
+        "category": "automation",
+        "tag": "03 // Automate",
+        "title": "Automation & AI Pipelines",
+        "text": "Event-driven CRMs, reliable webhooks and AI agents with guardrails, built for small teams.",
+        "button": "Explore Automation"
+      }
+    ]
+  },
+  "articles": {
+    "title": "Every article, with the numbers.",
+    "text": "Real projects. Transparent methods. Each write-up leads with the result it produced.",
+    "link_label": "Get new articles by email"
+  },
+  "newsletter": {
+    "title": "Get the teardowns before they're public.",
+    "text": "One email a week with our latest experiment, the numbers behind it and the code we used. No sales pitch, just what worked.",
+    "button": "Subscribe",
+    "success": "✓ You're on the list. First dispatch lands this Friday.",
+    "mail_subject": "We cut crawl waste by 61%. Here's the log query.",
+    "checks": [
+      "One email a week",
+      "Real numbers and code",
+      "Unsubscribe in one click"
+    ]
+  }
+}

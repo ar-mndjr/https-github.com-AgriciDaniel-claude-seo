@@ -1,0 +1,50 @@
+---
+// One card component for every grid on the service pages. Which parts show
+// depends on which fields the content provides.
+import { tileClass } from '../lib/text';
+interface Props {
+  title: string;
+  text?: string;
+  icon?: string;          // icon tile (top-left)
+  tone?: string;          // tile colour: green, indigo, violet, slate, red, amber
+  accent?: 'green' | 'indigo' | 'violet';  // hover glow colour
+  tag?: string;           // chip (top-left) with icon at top-right
+  tagTone?: string;       // rank | struct | automate | plain
+  label?: string;         // small mono label
+  labelInline?: boolean;  // show label next to the icon tile
+  number?: string;        // numbered tile instead of an icon
+  items?: string[];
+  ticks?: boolean;
+  twoCols?: boolean;
+  link?: { label: string; url: string };
+  footer?: string;
+  footerClass?: string;
+  small?: boolean;
+  class?: string;
+}
+const p = Astro.props;
+const accent = p.accent || 'indigo';
+---
+<article class:list={['card', accent, 'fc reveal', { sm: p.small }, p.class]}>
+  {p.tag ? (
+    <div class="fc-top"><span class={`chip ${p.tagTone || 'struct'}`}>{p.tag}</span>{p.icon && <svg><use href={`#${p.icon}`} /></svg>}</div>
+  ) : p.number ? (
+    <span class={`itile ${tileClass(p.tone)} num`}>{p.number}</span>
+  ) : p.icon && p.label && p.labelInline ? (
+    <div class="head-row"><span class={`itile ${tileClass(p.tone)}`}><svg><use href={`#${p.icon}`} /></svg></span><span class="tag-mono">{p.label}</span></div>
+  ) : p.icon ? (
+    <>
+      <span class={`itile ${tileClass(p.tone)}`}><svg><use href={`#${p.icon}`} /></svg></span>
+      {p.label && <span class="tag-mono" style="margin-top:16px">{p.label}</span>}
+    </>
+  ) : p.label ? (
+    <span class="mono accent">{p.label}</span>
+  ) : null}
+  <h3 style={p.icon && p.label && !p.labelInline && !p.tag ? 'margin-top:6px' : undefined}>{p.title}</h3>
+  {p.text && <p>{p.text}</p>}
+  {p.items && p.items.length > 0 && (
+    <ul class:list={{ ticks: p.ticks, two: p.twoCols }}>{p.items.map((i) => <li>{i}</li>)}</ul>
+  )}
+  {p.link && p.link.label && <a href={p.link.url} class="more">{p.link.label} <svg><use href="#i-arrow" /></svg></a>}
+  {p.footer && <span class={`foot-mono ${p.footerClass || ''}`}>{p.footer}</span>}
+</article>

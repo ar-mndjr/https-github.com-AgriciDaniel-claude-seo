@@ -1,0 +1,52 @@
+---
+import '../styles/styles.css';
+import '../styles/pages.css';
+import '../styles/blog.css';
+import Icons from '../components/Icons.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import settings from '../content/settings.json';
+
+interface Props {
+  title: string;
+  description?: string;
+  active?: 'services' | 'about' | 'blog' | 'contact' | '';
+  schemas?: object[];
+  image?: string;
+}
+const { title, description = '', active = '', schemas = [], image } = Astro.props;
+const canonical = new URL(Astro.url.pathname, settings.site_url).href;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:type" content="website" />
+  {image && <meta property="og:image" content={new URL(image, settings.site_url).href} />}
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+  {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+  <slot name="head" />
+</head>
+<body>
+  <Icons />
+  <Nav active={active} />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+  <script>
+    import '../scripts/main.js';
+    import '../scripts/forms.js';
+  </script>
+</body>
+</html>

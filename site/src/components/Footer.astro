@@ -1,0 +1,39 @@
+---
+import settings from '../content/settings.json';
+const f = settings.footer;
+---
+<footer class="sec-deep">
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a href="/" class="logo">
+          <svg viewBox="0 0 290 350" aria-hidden="true"><use href="#logo" /></svg>
+          RankStruct
+        </a>
+        <p class="desc">{f.description}</p>
+      </div>
+      <div class="f-col">
+        <h5>Services</h5>
+        <a href="/services/seo/">▪ SEO</a>
+        <a href="/services/web-development/">▪ Web Development</a>
+        <a href="/services/ai-automation/">▪ AI Automation</a>
+      </div>
+      <div class="f-col">
+        <h5>about</h5>
+        <a href="/#cases">Work &amp; Case Studies</a>
+        <a href="/blog/">Blogs</a>
+        <a href="/about/">About Us</a>
+      </div>
+      <div class="f-col">
+        <h5>{f.newsletter_title}</h5>
+        <p>{f.newsletter_text}</p>
+        <form class="sub-form" data-endpoint="/contact.php" data-kind="newsletter">
+          <input type="email" name="email" placeholder={f.newsletter_placeholder} aria-label="Email address" required />
+          <input type="text" name="company_website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" aria-label="Subscribe"><svg><use href="#i-arrow" /></svg></button>
+        </form>
+      </div>
+    </div>
+    <div class="f-bottom">{f.copyright}<span>|</span>{f.established}</div>
+  </div>
+</footer>

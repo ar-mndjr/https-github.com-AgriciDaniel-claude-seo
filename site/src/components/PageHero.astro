@@ -1,0 +1,29 @@
+---
+import Glow from './Glow.astro';
+interface Link { label: string; url: string }
+interface Props {
+  hero: { eyebrow?: string; title: string; accent?: string; text: string; primary: Link; secondary: Link; trust?: string[] };
+  button?: string;
+  glows?: 'indigo' | 'green' | 'violet';
+}
+const { hero, button = 'btn-primary', glows = 'indigo' } = Astro.props;
+const split = !!hero.accent && hero.title.includes(hero.accent);
+const [before, after] = split ? hero.title.split(hero.accent as string) : [hero.title, ''];
+const hasArrow = hero.primary.label.trim().endsWith('→');
+---
+<section class="phero">
+  {glows === 'green' && <><Glow color="indigo" style="width:620px;height:460px;top:-160px;left:18%;" /><Glow color="green" drift="b" style="width:420px;height:420px;bottom:-200px;right:-100px;opacity:.6" /><Glow color="cyan" drift="c" style="width:300px;height:300px;top:25%;right:18%;opacity:.5" /></>}
+  {glows === 'indigo' && <><Glow color="indigo" style="width:620px;height:460px;top:-140px;left:22%;" /><Glow color="green" drift="b" style="width:380px;height:380px;bottom:-180px;right:-120px;opacity:.5" /><Glow color="violet" drift="c" style="width:300px;height:300px;top:30%;right:12%;opacity:.35" /></>}
+  {glows === 'violet' && <><Glow color="violet" style="width:640px;height:480px;top:-120px;left:30%;opacity:.9" /><Glow color="indigo" drift="b" style="width:420px;height:420px;bottom:-200px;left:-140px;opacity:.6" /><Glow color="green" drift="c" style="width:280px;height:280px;top:30%;right:-60px;opacity:.35" /></>}
+  <div class="container reveal">
+    <h1 class="h-xl">{hero.eyebrow && <span class="eyebrow">{hero.eyebrow}</span>}{before}{split && <span class="accent">{hero.accent}</span>}{after}</h1>
+    <p class="lead">{hero.text}</p>
+    <div class="hero-cta">
+      <a href={hero.primary.url} class={`btn ${button}`}>{hero.primary.label}{!hasArrow && <> <svg class="arrow"><use href="#i-arrow" /></svg></>}</a>
+      <a href={hero.secondary.url} class="btn btn-ghost"><svg><use href="#i-eye" /></svg> {hero.secondary.label}</a>
+    </div>
+    {hero.trust && hero.trust.length > 0 && (
+      <div class="trust">{hero.trust.map((t) => <span><svg><use href="#i-check" /></svg>{t}</span>)}</div>
+    )}
+  </div>
+</section>

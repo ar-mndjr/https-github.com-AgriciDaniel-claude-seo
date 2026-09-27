@@ -1,0 +1,583 @@
+{
+  "seo": {
+    "title": "SEO Services for Google & AI Search (GEO + AEO) | RankStruct",
+    "description": "Get found on Google, AI Overviews, ChatGPT and Perplexity. Technical SEO, content, GEO and AEO services with clear reporting and no retainer fluff."
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "Get found everywhere your customers search.",
+    "accent": "",
+    "text": "Search has changed. Your buyers now find answers on Google, in AI Overviews, and on ChatGPT, Perplexity and Gemini. Our SEO services make your business the one they find, trust and choose, across every search platform.",
+    "primary": {
+      "label": "Get a Free SEO Audit →",
+      "url": "/contact/"
+    },
+    "secondary": {
+      "label": "See SEO Results",
+      "url": "#results"
+    },
+    "trust": []
+  },
+  "problem": {
+    "label": "The shift in buyer behavior",
+    "title": "Ranking on Google is no longer enough.",
+    "text": "More searches now end without a click. Google answers questions directly with AI Overviews, and millions of people ask ChatGPT instead of searching. If your brand isn't cited in those answers, you're invisible at the exact moment buyers decide.",
+    "stats": [
+      {
+        "number": "58.5%",
+        "title": "Of Google searches now end without a click.",
+        "text": "Zero-click results answer queries inside SERP, requiring answer-first content architectures.",
+        "source": "Source: SparkToro / Similarweb",
+        "color": "coral"
+      },
+      {
+        "number": "25%+",
+        "title": "Of Google searches now trigger an AI Overview.",
+        "text": "Direct synthetic syntheses dominate above-the-fold space for commercial and informational queries.",
+        "source": "Source: Semrush / Ahrefs Sensor",
+        "color": "mint"
+      },
+      {
+        "number": "200M+",
+        "title": "Active weekly users querying AI assistants for purchase research.",
+        "text": "Conversational decision engines recommend brands through structured entity citations.",
+        "source": "Source: OpenAI / Similarweb",
+        "color": "lavender"
+      }
+    ]
+  },
+  "services": {
+    "label": "Core pillars",
+    "title": "Complete SEO services, built for how search works today.",
+    "text": "We combine classic SEO fundamentals with optimization for AI search, so you win traffic today and visibility tomorrow.",
+    "cards": [
+      {
+        "tag": "01 // TECHNICAL",
+        "tone": "rank",
+        "icon": "i-code",
+        "title": "Technical SEO",
+        "text": "Fix what stops Google and AI crawlers from finding, understanding and ranking your pages.",
+        "items": [
+          "Technical SEO audits",
+          "Crawlability & indexation fixes",
+          "Core Web Vitals & site speed",
+          "Schema markup & structured data"
+        ]
+      },
+      {
+        "tag": "02 // CONTENT",
+        "tone": "struct",
+        "icon": "i-edit",
+        "title": "Content & On-Page SEO",
+        "text": "Content that matches what your buyers search for and answers their questions better than competitors.",
+        "items": [
+          "Keyword & search intent research",
+          "Topic clusters & content strategy",
+          "On-page optimization",
+          "Content refreshes"
+        ]
+      },
+      {
+        "tag": "03 // AUTHORITY",
+        "tone": "struct",
+        "icon": "i-badge",
+        "title": "Authority & Link Building",
+        "text": "Earn the trust signals that help both Google and AI tools see you as a credible source.",
+        "items": [
+          "Digital PR & brand mentions",
+          "Quality link building",
+          "E-E-A-T & author profiles",
+          "Review strategy"
+        ]
+      },
+      {
+        "tag": "04 // LOCAL",
+        "tone": "rank",
+        "icon": "i-pin",
+        "title": "Local SEO",
+        "text": "Show up in the map pack and local AI answers when nearby customers search.",
+        "items": [
+          "Google Business Profile optimization",
+          "Local citations & listings",
+          "Location pages",
+          "Review management"
+        ]
+      },
+      {
+        "tag": "05 // ECOMMERCE",
+        "tone": "struct",
+        "icon": "i-bag",
+        "title": "Ecommerce SEO",
+        "text": "Rank products and categories, and get featured in Google Shopping and AI shopping results.",
+        "items": [
+          "Product & category optimization",
+          "Faceted navigation fixes",
+          "Product schema & feeds",
+          "Programmatic SEO at scale"
+        ]
+      },
+      {
+        "tag": "06 // MIGRATION",
+        "tone": "struct",
+        "icon": "i-swap",
+        "title": "SEO Website Migrations",
+        "text": "Redesigning or switching platforms? We protect the rankings and traffic you've already earned.",
+        "items": [
+          "URL mapping & redirects",
+          "Pre-launch SEO testing",
+          "Post-launch monitoring",
+          "Recovery for failed migrations"
+        ]
+      }
+    ]
+  },
+  "geo": {
+    "label": "",
+    "title": "Generative Engine Optimization (GEO): get cited by AI.",
+    "text": "Generative Engine Optimization (GEO) is the practice of making your brand visible and cited in AI-generated answers from ChatGPT, Google AI Overviews, AI Mode, Perplexity, Gemini, Claude and Copilot. When someone asks an AI tool \"What's the best [your service]?\", GEO helps make sure your business is part of the answer.",
+    "cards": [
+      {
+        "title": "AI Visibility Audit",
+        "text": "We test hundreds of real buyer questions across major AI platforms to see where your brand appears, where competitors appear instead and why."
+      },
+      {
+        "title": "Citation-Worthy Content",
+        "text": "We restructure your content with clear facts, original data, expert quotes and direct answers, the formats AI models prefer to cite."
+      },
+      {
+        "title": "Entity & Brand Optimization",
+        "text": "We strengthen how AI understands your brand, using consistent information across your website, Google Business Profile, LinkedIn, Wikipedia/Wikidata and industry directories."
+      },
+      {
+        "title": "Brand Mentions Across the Web",
+        "text": "AI models learn from the whole internet. We grow your mentions on trusted sites, review platforms, Reddit, YouTube and industry publications."
+      },
+      {
+        "title": "AI Crawler Access",
+        "text": "We make sure AI crawlers like GPTBot, ClaudeBot and PerplexityBot can reach your content, and that key pages render without relying on JavaScript."
+      },
+      {
+        "title": "AI Visibility Tracking",
+        "text": "Monthly reports showing how often your brand is mentioned and cited in AI answers, compared with competitors."
+      }
+    ],
+    "button": {
+      "label": "Get an AI Visibility Audit →",
+      "url": "/contact/"
+    }
+  },
+  "aeo": {
+    "label": "",
+    "title": "Answer Engine Optimization (AEO): be the answer.",
+    "text": "Answer Engine Optimization (AEO) makes your content the direct answer to your customers' questions, in featured snippets, People Also Ask boxes, voice assistants and AI answer boxes. Instead of just ranking, you become the source that gets quoted.",
+    "cards": [
+      {
+        "title": "Question Research",
+        "text": "We find the exact questions your buyers ask, from Google, Reddit, forums, sales calls and AI prompts."
+      },
+      {
+        "title": "Answer-First Content",
+        "text": "Clear, 40–60 word answers at the top of each section, followed by detail. That structure is easy for search engines and AI to lift and quote."
+      },
+      {
+        "title": "FAQ & HowTo Structure",
+        "text": "Well-organized FAQ sections, step-by-step guides, comparison tables and definitions that match how answers are displayed."
+      },
+      {
+        "title": "Schema Markup",
+        "text": "Structured data (FAQ, HowTo, Product, Organization, Article) that helps search engines understand your content and show it in rich results."
+      },
+      {
+        "title": "Voice Search Optimization",
+        "text": "Natural, conversational answers optimized for Siri, Alexa and Google Assistant queries."
+      }
+    ]
+  },
+  "compare": {
+    "title": "SEO, GEO and AEO: what's the difference?",
+    "text": "They work together. Strong SEO is the foundation, and GEO and AEO build on it for AI and answer-driven search.",
+    "columns": [
+      "Trait / Attribute",
+      "SEO (Search Engine Optimization)",
+      "AEO (Answer Engine Optimization)",
+      "GEO (Generative Engine Optimization)"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Goal",
+          "Rank in search results",
+          "Be the direct answer",
+          "Be cited in AI answers"
+        ]
+      },
+      {
+        "cells": [
+          "Where",
+          "Google, Bing",
+          "Featured snippets, PAA, voice",
+          "ChatGPT, AI Overviews, Perplexity, Gemini"
+        ]
+      },
+      {
+        "cells": [
+          "Focus",
+          "Keywords, links, technical health",
+          "Questions, answers, structure",
+          "Entities, authority, citations"
+        ]
+      },
+      {
+        "cells": [
+          "Success metric",
+          "Rankings & organic traffic",
+          "Snippets & answer placements",
+          "AI mentions & citations"
+        ]
+      }
+    ],
+    "note": {
+      "strong": "Bottom line:",
+      "text": "You need all three. We deliver them as one unified strategy.",
+      "link": {
+        "label": "Explore Integration",
+        "url": "/contact/"
+      }
+    }
+  },
+  "trends": {
+    "title": "The SEO trends shaping search in 2026",
+    "text": "Search is changing faster than ever. Here's what we're optimizing for right now, so you don't fall behind.",
+    "cards": [
+      {
+        "label": "01 // AI_OVERVIEWS",
+        "title": "Google AI Mode & AI Overviews",
+        "text": "Algorithmic syntheses appearing first on search results. We optimize content tokens to win source carousel inclusion and primary attribution."
+      },
+      {
+        "label": "02 // ZERO_CLICK",
+        "title": "Zero-Click Search",
+        "text": "Direct answers fulfilled in-SERP. We construct brand-embedded definitions that build recall even when users do not navigate off Google."
+      },
+      {
+        "label": "03 // MULTI_CHANNEL",
+        "title": "Search Everywhere Optimization",
+        "text": "Buyer discovery across TikTok, YouTube, Reddit, LinkedIn, and Amazon. We coordinate unified keyword and entity footprint across platforms."
+      },
+      {
+        "label": "04 // EEAT_PROVEN",
+        "title": "E-E-A-T & Real Expertise",
+        "text": "Experience, Expertise, Authoritativeness, and Trustworthiness. We wire verified practitioner credentials, author schemas, and transparent citations."
+      },
+      {
+        "label": "05 // KNOWLEDGE_GRAPH",
+        "title": "Entity-Based SEO",
+        "text": "Moving past static keywords to Knowledge Graph entities, Wikidata links, and topical authority vectors that AI models map conceptually."
+      },
+      {
+        "label": "06 // COMMUNITY_INDEX",
+        "title": "Reddit & Community Visibility",
+        "text": "Google's massive indexing preference for authentic human discourse. We guide genuine community contributions and authoritative discussions."
+      },
+      {
+        "label": "07 // MULTIMODAL_OPS",
+        "title": "Multimodal Search",
+        "text": "Optimizing for Google Lens, visual search, and audio queries through enriched metadata, structured image schemas, and contextual imagery."
+      },
+      {
+        "label": "08 // AI_QUALITY",
+        "title": "AI Content Quality",
+        "text": "Strict human-guided, fact-checked, and data-backed editorial standards that resist Helpful Content updates and algorithmic penalties."
+      },
+      {
+        "label": "09 // LLMS_TXT",
+        "title": "llms.txt & AI Readiness",
+        "text": "Deploying emerging markdown specifications and curated /llms.txt indexes to provide direct, clean ingestion paths for large language models."
+      }
+    ]
+  },
+  "industries": {
+    "title": "SEO services for your industry",
+    "text": "Every industry searches differently. We tailor SEO, GEO and AEO strategies to how your customers look for, compare and choose businesses like yours.",
+    "cards": [
+      {
+        "title": "B2B SaaS & Technology",
+        "text": "High-intent BOFU search, technical comparison grids, and software category capture.",
+        "icon": "i-cpu",
+        "link": {
+          "label": "SaaS SEO",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Ecommerce & Retail",
+        "text": "Catalog architecture, faceted indexing control, and Merchant Center feeds.",
+        "icon": "i-cart",
+        "link": {
+          "label": "Ecommerce SEO",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Legal Services",
+        "text": "High-value practice area silos, local pack dominance, and localized trust signals.",
+        "icon": "i-scale",
+        "link": {
+          "label": "Law Firm SEO",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Healthcare & Medical",
+        "text": "Strict YMYL compliance, verified physician bios, and symptom-to-care paths.",
+        "icon": "i-heart",
+        "link": {
+          "label": "Healthcare SEO",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Finance & Fintech",
+        "text": "Regulatory compliance frameworks, calculator pages, and entity authority.",
+        "icon": "i-dollar",
+        "link": {
+          "label": "Finance SEO",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Real Estate",
+        "text": "Hyperlocal neighborhood landing hubs, property schemas, and IDX feeds.",
+        "icon": "i-home",
+        "link": {
+          "label": "Real Estate SEO",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Home Services",
+        "text": "Service-area business setups, localized landing pages, and emergency search intent.",
+        "icon": "i-tool",
+        "link": {
+          "label": "Home Services SEO",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Professional Services",
+        "text": "Consultancy credentials, executive thought leadership, and RFP capture pipelines.",
+        "icon": "i-building",
+        "link": {
+          "label": "Professional Services SEO",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Hospitality & Travel",
+        "text": "Destination clusters, booking schema, and multi-language indexation rules.",
+        "icon": "i-globe",
+        "link": {
+          "label": "Hospitality SEO",
+          "url": "/contact/"
+        }
+      },
+      {
+        "title": "Education & E-Learning",
+        "text": "Course syllabus schemas, accreditation entity links, and skill intent hubs.",
+        "icon": "i-book",
+        "link": {
+          "label": "Education SEO",
+          "url": "/contact/"
+        }
+      }
+    ]
+  },
+  "process": {
+    "title": "Our SEO process",
+    "text": "A clear plan, fast fixes and steady, measurable growth.",
+    "steps": [
+      {
+        "label": "01 // AUDIT",
+        "title": "SEO & AI Audit",
+        "text": "Technical audit, competitor analysis and AI visibility check.",
+        "when": "WEEK 1",
+        "footer": "TELEMETRY_SCAN"
+      },
+      {
+        "label": "02 // STRATEGY",
+        "title": "Roadmap",
+        "text": "Prioritized plan with keywords, content and quick wins.",
+        "when": "WEEK 2",
+        "footer": "ACTION_MAPPING"
+      },
+      {
+        "label": "03 // FIX",
+        "title": "Technical Fixes",
+        "text": "Crawl, speed, schema and indexation issues first.",
+        "when": "WEEK 2–4",
+        "footer": "DEPLOY_PATCHES"
+      },
+      {
+        "label": "04 // CREATE",
+        "title": "Content & Authority",
+        "text": "New content, page updates, digital PR and brand mentions.",
+        "when": "MONTH 2+",
+        "footer": "BUILD_MOMENTUM"
+      },
+      {
+        "label": "05 // MEASURE",
+        "title": "Report & Improve",
+        "text": "Monthly reports on rankings, traffic, leads and AI citations.",
+        "when": "MONTHLY",
+        "footer": "ITERATIVE_LOOP"
+      }
+    ]
+  },
+  "reporting": {
+    "title": "Reporting that shows real results",
+    "text": "No vanity metrics. Every month, you get a clear report covering what we did and what it delivered.",
+    "cards": [
+      {
+        "title": "Organic traffic & leads",
+        "text": "Visits, conversions and revenue from search tracked with zero tracking fluff.",
+        "icon": "i-trend",
+        "tone": "green"
+      },
+      {
+        "title": "Keyword rankings",
+        "text": "Positions for your most valuable high-intent commercial terms.",
+        "icon": "i-list",
+        "tone": "indigo"
+      },
+      {
+        "title": "AI visibility",
+        "text": "Mentions and citations across ChatGPT, AI Overviews, Perplexity and Gemini.",
+        "icon": "i-sparkle",
+        "tone": "green"
+      },
+      {
+        "title": "SERP features",
+        "text": "Featured snippets, People Also Ask and rich results won across your target catalog.",
+        "icon": "i-layers",
+        "tone": "indigo"
+      },
+      {
+        "title": "Technical health",
+        "text": "Site speed, Core Web Vitals, crawl log trends, and indexation hygiene.",
+        "icon": "i-gauge",
+        "tone": "green"
+      },
+      {
+        "title": "Next steps",
+        "text": "What we're doing next month and why, mapped strictly to your commercial objectives.",
+        "icon": "i-arrow",
+        "tone": "indigo"
+      }
+    ]
+  },
+  "results": {
+    "label": "Proof of work",
+    "title": "SEO results",
+    "text": "",
+    "link": {
+      "label": "View all case studies",
+      "url": "/#cases"
+    },
+    "cards": [
+      {
+        "tag": "B2B SaaS",
+        "tone": "struct",
+        "side_label": "Migration_Guard",
+        "title": "SEO Migration of 42,000 URLs",
+        "text": "Moved 42,000 legacy URLs to a new platform with zero loss of organic rankings, consolidating technical equity and re-architecting entity relationships.",
+        "metric": "+185% Organic clicks (6 mo)",
+        "metric_label": "",
+        "rows": [],
+        "checks": [
+          "Zero 404 indexing errors"
+        ]
+      },
+      {
+        "tag": "GEO / AI Visibility",
+        "tone": "rank",
+        "side_label": "Synthetic_Search",
+        "title": "From Invisible to Cited in ChatGPT",
+        "text": "Structured entity schema and source PR for an enterprise AI analytics platform, establishing authoritative corpus citations.",
+        "metric": "+340% AI citations / mo",
+        "metric_label": "",
+        "rows": [],
+        "checks": [
+          "Featured in Perplexity & Gemini"
+        ]
+      },
+      {
+        "tag": "Ecommerce & Revenue",
+        "tone": "struct",
+        "side_label": "Crawl_Hygiene",
+        "title": "Faceted Crawl Optimization & Product Schema",
+        "text": "Refactored 120k SKU catalog, eliminating crawl bloat and unlocking rich organic Google Shopping snippets.",
+        "metric": "+92% Organic revenue",
+        "metric_label": "",
+        "rows": [],
+        "checks": [
+          "Top 3 for 1,400+ Head Terms"
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "label": "",
+    "title": "SEO FAQs",
+    "text": "Clear answers to how modern SEO, GEO, and AEO integrate.",
+    "numbered": true,
+    "items": [
+      {
+        "question": "What are SEO services?",
+        "answer": "SEO services improve your website's visibility in search engines so more of the right people find you. They include technical fixes, content, link building and local SEO. Our SEO services also cover AI search through GEO and AEO."
+      },
+      {
+        "question": "What is Generative Engine Optimization (GEO)?",
+        "answer": "GEO is the process of getting your brand mentioned and cited in AI-generated answers from tools like ChatGPT, Google AI Overviews, Perplexity and Gemini. It focuses on authority, clear facts, brand mentions and content that AI models trust."
+      },
+      {
+        "question": "What is Answer Engine Optimization (AEO)?",
+        "answer": "AEO optimizes your content to be the direct answer to a question, in featured snippets, People Also Ask boxes, voice assistants and AI answers. It uses clear, question-focused content and structured data."
+      },
+      {
+        "question": "Is SEO still worth it with AI search?",
+        "answer": "Yes. AI tools rely heavily on well-ranked, trusted web content to generate answers. Strong SEO is the foundation for AI visibility. Businesses that combine SEO with GEO and AEO are best placed to win."
+      },
+      {
+        "question": "How long does SEO take to work?",
+        "answer": "Technical fixes can show results within weeks. Content and authority usually take 3–6 months to build meaningful growth, depending on your competition and starting point."
+      },
+      {
+        "question": "Can you guarantee #1 rankings or AI citations?",
+        "answer": "No, and be wary of anyone who does. No one controls Google or AI models. We guarantee clear work, transparent reporting and proven methods that consistently grow visibility."
+      },
+      {
+        "question": "How do you measure AI visibility?",
+        "answer": "We regularly run a set of real buyer questions across major AI platforms and track how often your brand is mentioned, cited or recommended, compared with your competitors."
+      },
+      {
+        "question": "Do you offer local SEO?",
+        "answer": "Yes. We optimize your Google Business Profile, local listings, reviews and location pages to help you rank in the map pack and local AI answers."
+      }
+    ]
+  },
+  "audit": {
+    "label": "Direct audit dispatch",
+    "title": "Find out how visible you really are.",
+    "text": "Get a free SEO and AI visibility audit. Within 48 hours, you'll see where you rank on Google, whether AI tools mention your brand and the fastest wins available. No sales pitch.",
+    "button": "Get My Free Audit →",
+    "secondary": {
+      "label": "Book a Quick Chat",
+      "url": "/contact/"
+    },
+    "checks": [
+      "Reply within 24 hours",
+      "Google + AI search covered",
+      "No obligation"
+    ]
+  }
+}

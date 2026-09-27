@@ -1,0 +1,206 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Glow from '../../components/Glow.astro';
+import CoverArt from '../../components/CoverArt.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPosts, CATEGORY, postUrl, formatDate } from '../../lib/posts';
+import c from '../../content/pages/blog.json';
+
+const posts = await getPosts();
+const byCat = (cat: string) => posts.filter((p) => p.data.category === cat);
+const featured = posts.find((p) => p.data.featured) ?? posts[0];
+const others = posts.filter((p) => p !== featured);
+const mostRead = [...others.filter((p) => p.data.popular), ...others.filter((p) => !p.data.popular)].slice(0, 5);
+const counts = { seo: byCat('seo').length, web: byCat('web').length, automation: byCat('automation').length };
+const h = c.hero;
+---
+<Layout title={c.seo.title} description={c.seo.description} active="blog">
+  <!-- ============ HERO ============ -->
+  <section class="hero blog-hero">
+    <Glow color="indigo" style="width:560px;height:480px;top:-120px;right:18%;" />
+    <Glow color="green" drift="b" style="width:420px;height:420px;bottom:-160px;left:-160px;" />
+    <Glow color="violet" drift="c" style="width:320px;height:320px;top:40%;right:-120px;opacity:.6" />
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="crumb"><i class="live"></i>{h.label}</span>
+        <h1 class="h-xl" style="margin-top:14px">{h.title}<br /><span class="grad">{h.highlight}</span></h1>
+        <p class="lead">{h.text}</p>
+        <div class="hero-cta">
+          <a href={h.primary.url} class="btn btn-primary">{h.primary.label} <svg class="arrow"><use href="#i-arrow" /></svg></a>
+          <a href={h.secondary.url} class="btn btn-ghost"><svg><use href="#i-sparkle" /></svg> {h.secondary.label}</a>
+        </div>
+      </div>
+      <div class="hero-cards reveal">
+        <a href="#articles" class="card rank hc" data-go="seo">
+          <div class="hc-top"><span class="hc-tag" style="color:var(--emerald)"><i class="dot" style="background:var(--emerald)"></i>SEO</span><span class="chip plain" style="font-size:8px;padding:1px 6px">{counts.seo} articles</span></div>
+          <h4>{h.seo_card.title}</h4>
+          <p class="sub">{h.seo_card.text}</p>
+          <svg class="hc-chart" viewBox="0 0 200 70" preserveAspectRatio="none" width="100%">
+            <defs><linearGradient id="gAreaBlog" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10b981" stop-opacity=".45" /><stop offset="1" stop-color="#10b981" stop-opacity="0" /></linearGradient></defs>
+            <path d="M0 62 C30 60 50 56 80 50 S140 30 200 12 L200 70 L0 70Z" fill="url(#gAreaBlog)" />
+            <path class="line" d="M0 62 C30 60 50 56 80 50 S140 30 200 12" fill="none" stroke="#34d399" stroke-width="2" />
+          </svg>
+          <div class="hc-pills">{[...new Set(byCat('seo').flatMap((p) => p.data.tags))].slice(0, 3).map((t) => <span>#{t}</span>)}</div>
+        </a>
+        <a href="#articles" class="card struct hc" data-go="web">
+          <div class="hc-top"><span class="hc-tag" style="color:var(--indigo-l)"><i class="dot" style="background:var(--indigo-l)"></i>WEB</span><span class="chip plain" style="font-size:8px;padding:1px 6px">{counts.web} articles</span></div>
+          <h4>{h.web_card.title}</h4>
+          <p class="sub">{h.web_card.text}</p>
+          <ul class="hc-list">
+            {byCat('web').slice(0, 4).map((p) => <li><span class="tick"><svg><use href="#i-check" /></svg></span><span class="t">{p.data.title.split(':')[0]}</span><span class="v">{p.data.read_time} min</span></li>)}
+          </ul>
+        </a>
+        <a href="#articles" class="card automate hc wide" data-go="automation">
+          <div class="hc-top"><span class="hc-tag" style="color:var(--indigo-l)"><i class="dot" style="background:var(--indigo-l)"></i>Automation</span><span class="chip struct" style="font-size:8px;padding:1px 6px"><i class="dot" style="background:var(--indigo-l);width:5px;height:5px"></i>{counts.automation} articles</span></div>
+          <h4>{h.automation_card.title}</h4>
+          <p class="sub">{h.automation_card.text}</p>
+          <div class="flow">
+            <i class="pulse"></i>
+            <div class="flow-step"><div class="flow-ic" style="color:var(--emerald)"><svg><use href="#i-mail" /></svg></div><b>Webhooks</b><span>That don't drop</span></div>
+            <div class="flow-step"><div class="flow-ic" style="color:var(--indigo-l)"><svg><use href="#i-db" /></svg></div><b>CRM pipelines</b><span>Event-driven</span></div>
+            <div class="flow-step"><div class="flow-ic" style="color:var(--indigo-l)"><svg><use href="#i-shield" /></svg></div><b>AI agents</b><span>With guardrails</span></div>
+            <div class="flow-step"><div class="flow-ic" style="color:var(--violet-l)"><svg><use href="#i-bell" /></svg></div><b>Alerts</b><span>Ready to act on</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {featured && (
+    <section class="why sec-deep">
+      <Glow color="green" style="width:420px;height:420px;bottom:-120px;right:-140px;opacity:.55" />
+      <div class="container">
+        <div class="sec-head reveal"><h2 class="h-lg">{c.featured.title}</h2><p>{c.featured.text}</p></div>
+        <div class="lead-row" style={mostRead.length ? undefined : 'grid-template-columns:1fr'}>
+          <a href={postUrl(featured)} class={`card ${CATEGORY[featured.data.category].domain} featured reveal`} data-cat={featured.data.category}>
+            <CoverArt cover={featured.data.cover} image={featured.data.cover_image} readTime={`${featured.data.read_time} min read`} alt={featured.data.title} />
+            <div class="body">
+              <div class="tag-row"><span class={`chip ${CATEGORY[featured.data.category].domain}`}>{CATEGORY[featured.data.category].name}</span><span class="chip plain">Featured</span></div>
+              <h2>{featured.data.title}</h2>
+              <p>{featured.data.description}</p>
+              {featured.data.metric && <div class="metric"><span class="big" style={`color:${CATEGORY[featured.data.category].color}`}>{featured.data.metric}</span><span class="mono">{featured.data.metric_label}</span></div>}
+              <div class="foot"><b>✓</b> {formatDate(featured.data.date)} · {featured.data.author} · {featured.data.read_time} min read</div>
+              <span class="btn btn-primary">Read the Article <svg class="arrow"><use href="#i-arrow" /></svg></span>
+            </div>
+          </a>
+          {mostRead.length > 0 && (
+            <aside class="card struct most-read reveal" aria-label="Most read">
+              <div class="ix-top"><span class="mono">{c.featured.most_read_label}</span><svg style="width:16px;height:16px;color:var(--emerald)"><use href="#i-trend" /></svg></div>
+              <ol>
+                {mostRead.map((p, i) => (
+                  <li data-cat={p.data.category}><a href={postUrl(p)}><span class="rank-n">0{i + 1}</span><span><b>{p.data.title}</b><span class="meta"><span class="cat-chip">{CATEGORY[p.data.category].name}</span><span>{p.data.read_time} min read</span></span></span></a></li>
+                ))}
+              </ol>
+            </aside>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="services">
+    <Glow color="indigo" drift="c" style="width:520px;height:420px;top:10%;left:30%;opacity:.45" />
+    <div class="container">
+      <div class="sec-row reveal">
+        <div class="sec-head" style="max-width:900px"><h2 class="h-lg">{c.topics.title}</h2><p style="max-width:720px">{c.topics.text}</p></div>
+      </div>
+      <div class="svc-grid">
+        {c.topics.cards.map((t) => {
+          const cat = CATEGORY[t.category as keyof typeof CATEGORY];
+          const list = byCat(t.category).slice(0, 4);
+          return (
+            <article class={`card ${cat.domain} svc reveal`}>
+              <div class="svc-top"><span class={`chip ${cat.domain === 'rank' ? 'rank' : 'struct'}`}>{t.tag}</span><svg style={`color:${cat.domain === 'rank' ? 'var(--emerald)' : 'var(--indigo-l)'}`}><use href={`#${cat.icon}`} /></svg></div>
+              <h3>{t.title}</h3>
+              <p>{t.text}</p>
+              <ul>{list.length ? list.map((p) => <li class="row-pop"><a href={postUrl(p)}>{p.data.title}</a><svg><use href="#i-chev" /></svg></li>) : <li>New articles coming soon.</li>}</ul>
+              <a href="#articles" class="btn-explore" data-go={t.category}>{t.button} <svg><use href="#i-chev" /></svg></a>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="cases sec-deep" id="articles">
+    <Glow color="violet" style="width:500px;height:420px;top:25%;left:35%;opacity:.4" />
+    <div class="container">
+      <div class="sec-row reveal">
+        <div class="sec-head" style="max-width:560px"><h2 class="h-lg">{c.articles.title}</h2><p>{c.articles.text}</p></div>
+        <a href="#newsletter">{c.articles.link_label} <svg width="10" height="10"><use href="#i-arrow" /></svg></a>
+      </div>
+      <div class="toolbar reveal">
+        <div class="filters" role="group" aria-label="Filter articles by topic">
+          <button class="filter" aria-pressed="true" data-filter="all"><i class="dot"></i>All <span class="count">{posts.length}</span></button>
+          {(['seo', 'web', 'automation'] as const).map((k) => <button class="filter" aria-pressed="false" data-filter={k} data-cat={k}><i class="dot"></i>{CATEGORY[k].name} <span class="count">{counts[k]}</span></button>)}
+        </div>
+        <label class="search"><svg><use href="#i-search" /></svg><input type="search" id="q" placeholder="Search articles…" aria-label="Search articles" /></label>
+      </div>
+      <div class="case-grid" id="grid">{posts.map((p, i) => <PostCard post={p} index={i} />)}</div>
+      <div class="card empty" id="empty"><b>No articles match that search.</b>Try a different keyword or switch the topic filter back to All.</div>
+      <div class="more-row" id="moreRow"><button class="btn btn-ghost" id="more">Load More Articles</button></div>
+    </div>
+  </section>
+
+  <section class="cta" id="newsletter">
+    <div class="container">
+      <div class="cta-box card struct reveal">
+        <Glow color="indigo" style="width:420px;height:360px;bottom:-140px;right:-80px;opacity:.9" />
+        <div class="news-grid">
+          <div>
+            <h2>{c.newsletter.title}</h2>
+            <p>{c.newsletter.text}</p>
+            <form class="news-form" data-endpoint="/contact.php" data-kind="newsletter" data-success={c.newsletter.success}>
+              <input type="email" name="email" placeholder="you@company.com" aria-label="Email address" required />
+              <input type="text" name="company_website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <button type="submit" class="btn btn-primary">{c.newsletter.button} <svg class="arrow"><use href="#i-arrow" /></svg></button>
+            </form>
+            <span class="news-ok form-ok" role="status"></span>
+          </div>
+          <div class="mail" aria-hidden="true">
+            <div class="mail-top"><span class="avatar">R</span><div><b>RankStruct Dispatch</b><small>to you · Friday 8:00</small></div><span class="mono">#042</span></div>
+            <div class="mail-subject">{c.newsletter.mail_subject}</div>
+            <div class="mail-lines"><i style="width:92%"></i><i style="width:78%"></i><i style="width:85%"></i></div>
+            <div class="mail-code"><span class="k">SELECT</span> path, <span class="k">COUNT</span>(*) <span class="k">FROM</span> googlebot_hits …</div>
+            <div class="mail-lines"><i style="width:64%"></i></div>
+          </div>
+        </div>
+        <div class="cta-checks">{c.newsletter.checks.map((t) => <span><svg><use href="#i-check" /></svg>{t}</span>)}</div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Topic filter + search + "load more"
+  const PAGE = 6;
+  let shown = PAGE, active = 'all';
+  const posts = [...document.querySelectorAll<HTMLElement>('#grid .article')];
+  const q = document.getElementById('q') as HTMLInputElement;
+  const empty = document.getElementById('empty')!;
+  const moreRow = document.getElementById('moreRow')!;
+  const buttons = [...document.querySelectorAll<HTMLElement>('.filter')];
+  const matches = (el: HTMLElement) => (active === 'all' || el.dataset.cat === active) && el.textContent!.toLowerCase().includes(q.value.trim().toLowerCase());
+  function render() {
+    let n = 0;
+    posts.forEach((el) => {
+      const ok = matches(el);
+      if (ok) n++;
+      const show = ok && n <= shown;
+      el.classList.toggle('hide', !show);
+      if (show) el.classList.add('in');
+    });
+    empty.classList.toggle('show', n === 0);
+    moreRow.style.display = n > shown ? '' : 'none';
+  }
+  function setFilter(cat: string) {
+    active = cat; shown = PAGE;
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filter === cat)));
+    render();
+  }
+  buttons.forEach((b) => b.addEventListener('click', () => setFilter(b.dataset.filter!)));
+  q.addEventListener('input', () => { shown = PAGE; render(); });
+  document.getElementById('more')!.addEventListener('click', () => { shown += PAGE; render(); });
+  document.querySelectorAll<HTMLElement>('[data-go]').forEach((a) => a.addEventListener('click', () => { q.value = ''; setFilter(a.dataset.go!); }));
+  render();
+</script>

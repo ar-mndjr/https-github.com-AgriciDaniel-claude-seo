@@ -1,0 +1,13 @@
+---
+// Blog / case-study cover: an uploaded image if the post has one, otherwise
+// one of the built-in animated illustrations (chosen in the CMS).
+import covers from '../lib/covers.json';
+interface Props { cover?: string; image?: string; label?: string; readTime?: string; gx?: string; gy?: string; alt?: string }
+const { cover = 'migrate', image, label, readTime, gx = '70%', gy = '35%', alt = '' } = Astro.props;
+const art = (covers as Record<string, string>)[cover] ?? covers.migrate;
+---
+<div class:list={['cover', { 'has-art': !image }]} style={`--gx:${gx};--gy:${gy}`}>
+  {label && <span class="label">{label}</span>}
+  {image ? <img src={image} alt={alt} loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" /> : <Fragment set:html={art} />}
+  {readTime && <span class="rt"><svg><use href="#i-clock" /></svg>{readTime}</span>}
+</div>

@@ -1,0 +1,9 @@
+---
+interface Props { title: string; text?: string; label?: string; center?: boolean; labelClass?: string }
+const { title, text, label, center = false, labelClass = '' } = Astro.props;
+---
+<div class:list={['sec-head reveal', { center }]}>
+  {label && <span class={`label ${labelClass}`}>{label}</span>}
+  <h2 class="h-lg">{title}</h2>
+  {text && <p>{text}</p>}
+</div>
