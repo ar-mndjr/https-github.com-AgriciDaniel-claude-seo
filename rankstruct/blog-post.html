@@ -111,7 +111,7 @@
         </div>
       </div>
     </div>
-    <div class="post-cover reveal" data-cat="seo"><div class="cover" style="--gx:70%;--gy:40%"><svg class="mark" viewBox="0 0 24 24"><use href="#i-trend"/></svg></div></div>
+    <div class="post-cover reveal" data-cat="seo"><div class="cover has-art" style="--gx:70%;--gy:40%"><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><text x="26" y="26" font-family="JetBrains Mono, monospace" font-size="7" fill="#475569">OLD URL</text><text x="190" y="26" font-family="JetBrains Mono, monospace" font-size="7" fill="#475569">NEW URL · 301</text><rect x="22" y="36" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="48" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/blog/2021/03/crm-guide</text><path class="flow-line" style="--d:0.0s" d="M154 45 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 42 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="36" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="48" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/blog/crm-guide</text><rect x="22" y="62" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="74" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/docs/v1/api/auth</text><path class="flow-line" style="--d:0.2s" d="M154 71 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 68 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="62" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="74" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/docs/api/auth</text><rect x="22" y="88" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="100" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/resources/seo.pdf</text><path class="flow-line" style="--d:0.4s" d="M154 97 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 94 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="88" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="100" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/guides/seo</text><rect x="22" y="114" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="126" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/features?id=42</text><path class="flow-line" style="--d:0.6s" d="M154 123 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 120 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="114" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="126" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/features/sync</text><rect x="22" y="140" width="130" height="18" rx="3" fill="#151a2c" stroke="#334155"/><text x="28" y="152" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">/old-pricing</text><path class="flow-line" style="--d:0.8s" d="M154 149 H184" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M180 146 l4 3 l-4 3" fill="none" stroke="#10b981" stroke-width="1.5"/><rect x="188" y="140" width="110" height="18" rx="3" fill="#0f2a22" stroke="#10b981" stroke-opacity=".5"/><text x="194" y="152" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4edea3">/pricing</text></svg></div></div>
   </div>
 </section>
 
@@ -133,6 +133,15 @@
       </details>
 
       <div class="prose" id="prose">
+        <div class="card rank tldr">
+          <span class="mono" style="color:var(--mint)">// TL;DR</span>
+          <ul>
+            <li>Build the URL inventory from logs and backlinks, not just a crawl. Ours found 6,140 hidden URLs.</li>
+            <li>Keep redirects in version control and fail CI on chains or broken targets.</li>
+            <li>Replay every URL against staging before launch, then again in production.</li>
+          </ul>
+          <div class="tldr-stats"><div><b>42,318</b><span class="mono">URLs migrated</span></div><div><b>+185%</b><span class="mono">Organic clicks</span></div><div><b>40 min</b><span class="mono">Launch window</span></div></div>
+        </div>
         <p>When a B2B SaaS company asked us to move their marketing site, docs and blog onto a new platform, they had one condition: <strong>organic traffic could not drop</strong>. It was their largest acquisition channel, driving 61% of qualified pipeline.</p>
         <p>Most replatforms lose 10–40% of organic traffic for months. Ours grew 185% in six months. Nothing clever happened on launch day. We treated the migration as an engineering project with tests, not a marketing project with a checklist.</p>
 
@@ -248,6 +257,8 @@
           <li><a href="#results">Results after six months</a></li>
           <li><a href="#takeaways">Key takeaways</a></li>
       </ol>
+      <div class="toc-prog"><span class="mono">Read</span><b id="pct">0%</b><i><em id="pbar"></em></i></div>
+      <a href="index.html#contact" class="btn btn-primary toc-cta">Get a Migration Audit</a>
     </aside>
   </div>
 </section>
@@ -260,30 +271,30 @@
     <h2 class="h-lg reveal">Keep reading.</h2>
     <div class="post-grid">
       <a href="blog-post.html" class="card rank post reveal" data-cat="seo">
-        <div class="cover" style="--gx:30%;--gy:70%"><span class="label">SEO</span><svg class="mark" viewBox="0 0 24 24"><use href="#i-trend"/></svg></div>
+        <div class="cover has-art" style="--gx:30%;--gy:70%"><span class="label">SEO</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><line x1="30" y1="150" x2="296" y2="150" stroke="#334155"/><rect class="bar" style="--d:0.00s" x="34" y="120" width="7" height="30" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.05s" x="45" y="106" width="7" height="44" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.10s" x="56" y="112" width="7" height="38" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.15s" x="67" y="80" width="7" height="70" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.20s" x="78" y="98" width="7" height="52" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.25s" x="89" y="54" width="7" height="96" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.30s" x="100" y="62" width="7" height="88" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.35s" x="111" y="76" width="7" height="74" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.40s" x="122" y="46" width="7" height="104" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.45s" x="133" y="58" width="7" height="92" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.50s" x="144" y="90" width="7" height="60" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.55s" x="155" y="68" width="7" height="82" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.60s" x="166" y="40" width="7" height="110" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.65s" x="177" y="52" width="7" height="98" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.70s" x="188" y="84" width="7" height="66" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.75s" x="199" y="92" width="7" height="58" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.80s" x="210" y="60" width="7" height="90" rx="1.5" fill="#f59e0b" fill-opacity="0.85"/><rect class="bar" style="--d:0.85s" x="221" y="78" width="7" height="72" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.90s" x="232" y="102" width="7" height="48" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:0.95s" x="243" y="86" width="7" height="64" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:1.00s" x="254" y="110" width="7" height="40" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:1.05s" x="265" y="94" width="7" height="56" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:1.10s" x="276" y="116" width="7" height="34" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect class="bar" style="--d:1.15s" x="287" y="122" width="7" height="28" rx="1.5" fill="#10b981" fill-opacity="0.6"/><rect x="30" y="20" width="8" height="8" rx="2" fill="#f59e0b"/><text x="42" y="27" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">faceted URLs · 61% of hits</text><rect x="176" y="20" width="8" height="8" rx="2" fill="#10b981"/><text x="188" y="27" font-family="JetBrains Mono, monospace" font-size="7" fill="#94a3b8">money pages</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>12 min read</span></div>
         <div class="body">
           <span><span class="cat-chip">SEO</span></span>
           <h3>Crawl budget is real: a log-file audit of a 40k-URL SaaS site</h3>
           <p>Googlebot spent 61% of its visits on faceted URLs nobody searches for. What the server logs showed, and how we fixed it.</p>
-          <div class="meta"><span>Sep 4, 2026</span><span><svg><use href="#i-clock"/></svg>12 min read</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
+          <div class="meta"><span>Sep 4, 2026</span><span>Daniel Reyes</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
         </div>
       </a>
       <a href="blog-post.html" class="card rank post reveal" data-cat="seo">
-        <div class="cover" style="--gx:75%;--gy:75%"><span class="label">SEO</span><svg class="mark" viewBox="0 0 24 24"><use href="#i-trend"/></svg></div>
+        <div class="cover has-art" style="--gx:75%;--gy:75%"><span class="label">SEO</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><line x1="160" y1="92" x2="80" y2="50" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="240" y2="48" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="268" y2="118" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="200" y2="152" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="104" y2="150" stroke="#10b981" stroke-opacity=".4"/><line x1="160" y1="92" x2="56" y2="108" stroke="#10b981" stroke-opacity=".4"/><circle class="pulse-soft" style="--d:0.0s" cx="80" cy="50" r="6" fill="#151a2c" stroke="#4edea3"/><text x="80" y="39" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Founder</text><circle class="pulse-soft" style="--d:0.3s" cx="240" cy="48" r="6" fill="#151a2c" stroke="#4edea3"/><text x="240" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Product</text><circle class="pulse-soft" style="--d:0.6s" cx="268" cy="118" r="6" fill="#151a2c" stroke="#4edea3"/><text x="268" y="135" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Reviews</text><circle class="pulse-soft" style="--d:0.9s" cx="200" cy="152" r="6" fill="#151a2c" stroke="#4edea3"/><text x="200" y="169" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Location</text><circle class="pulse-soft" style="--d:1.2s" cx="104" cy="150" r="6" fill="#151a2c" stroke="#4edea3"/><text x="104" y="167" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Industry</text><circle class="pulse-soft" style="--d:1.5s" cx="56" cy="108" r="6" fill="#151a2c" stroke="#4edea3"/><text x="56" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">Awards</text><circle cx="160" cy="92" r="20" fill="#0f2a22" stroke="#10b981" stroke-width="1.5"/><text x="160" y="95" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="9" fill="#f8fafc">Brand</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>7 min read</span></div>
         <div class="body">
           <span><span class="cat-chip">SEO</span></span>
           <h3>Entity SEO: mapping your brand into Google&#x27;s Knowledge Graph</h3>
           <p>Schema markup is the start, not the strategy. How we build entity associations that survive algorithm updates.</p>
-          <div class="meta"><span>Aug 14, 2026</span><span><svg><use href="#i-clock"/></svg>7 min read</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
+          <div class="meta"><span>Aug 14, 2026</span><span>Daniel Reyes</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
         </div>
       </a>
       <a href="blog-post.html" class="card struct post reveal" data-cat="web">
-        <div class="cover" style="--gx:20%;--gy:30%"><span class="label">Web</span><svg class="mark" viewBox="0 0 24 24"><use href="#i-window"/></svg></div>
+        <div class="cover has-art" style="--gx:20%;--gy:30%"><span class="label">Web</span><svg class="art" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="30" y="26" width="170" height="128" rx="5" fill="#151a2c" stroke="#334155"/><circle cx="39" cy="34" r="2" fill="#f87171"/><circle cx="46" cy="34" r="2" fill="#f59e0b"/><circle cx="53" cy="34" r="2" fill="#4edea3"/><text x="62" y="36.5" font-family="JetBrains Mono, monospace" font-size="6" fill="#475569">store.com/checkout</text><line x1="30" y1="42" x2="200" y2="42" stroke="#334155"/><rect x="42" y="52" width="90" height="10" rx="2" fill="#334155"/><rect x="42" y="68" width="146" height="40" rx="3" fill="#1e2640"/><rect x="42" y="114" width="68" height="28" rx="3" fill="#1e2640"/><rect x="118" y="114" width="70" height="28" rx="3" fill="#1e2640"/><circle cx="252" cy="90" r="36" fill="none" stroke="#334155" stroke-width="7"/><circle class="gauge" cx="252" cy="90" r="36" fill="none" stroke="#818cf8" stroke-width="7" stroke-linecap="round" stroke-dasharray="226" stroke-dashoffset="40" transform="rotate(-90 252 90)"/><text x="252" y="92" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="17" fill="#f8fafc">90ms</text><text x="252" y="104" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#94a3b8">INP · GOOD</text><text x="252" y="146" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#475569">was 380ms</text></svg><span class="rt"><svg><use href="#i-clock"/></svg>9 min read</span></div>
         <div class="body">
           <span><span class="cat-chip">Web</span></span>
           <h3>Core Web Vitals in 2026: the INP fixes that actually moved revenue</h3>
           <p>Interaction to Next Paint is the metric most sites still fail. Here are the five fixes that took a Shopify store from 380ms to 90ms.</p>
-          <div class="meta"><span>Sep 18, 2026</span><span><svg><use href="#i-clock"/></svg>9 min read</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
+          <div class="meta"><span>Sep 18, 2026</span><span>Maya Okafor</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
         </div>
       </a>
     </div>
@@ -353,11 +364,13 @@
     const total = r.height - innerHeight * .6;
     const p = Math.min(1, Math.max(0, -r.top / total));
     bar.style.transform = `scaleX(${p})`;
+    document.getElementById('pct').textContent = Math.round(p * 100) + '%';
+    document.getElementById('pbar').style.transform = `scaleX(${p})`;
   }
   addEventListener('scroll', progress, { passive: true }); addEventListener('resize', progress); progress();
 
   // Highlight the table-of-contents entry for the section being read
-  const tocLinks = [...document.querySelectorAll('.toc a')];
+  const tocLinks = [...document.querySelectorAll('.toc ol a')];
   const heads = [...prose.querySelectorAll('h2[id]')];
   function spy() {
     let cur = heads[0];
