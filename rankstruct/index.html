@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>RankStruct — We solve digital problems</title>
 <meta name="description" content="Practical solutions in SEO, web, and automation. Built around your goals, budget, and timeline." />
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -205,7 +206,10 @@
   .nav.scrolled { border-bottom-color: var(--border); background: rgba(10,15,29,.85); }
   .nav-inner { display: flex; align-items: center; height: 72px; gap: 40px; }
   .logo { display: flex; align-items: center; gap: 10px; font-family: var(--f-head); font-weight: 700; font-size: 17px; letter-spacing: -.02em; }
-  .logo svg { width: 24px; height: 24px; }
+  .logo svg { width: 26px; height: 31px; transition: transform .3s var(--ease); }
+  .nav .logo { --logo-bg: #0e1321; }
+  footer .logo { --logo-bg: #0a0f1d; }
+  .logo:hover svg { transform: rotate(-6deg) scale(1.08); }
   .nav-links { display: flex; gap: 28px; font-size: 14px; color: #cbd5e1; }
   .nav-links a { display: inline-flex; align-items: center; gap: 4px; transition: color .2s; position: relative; }
   .nav-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px; background: var(--indigo-l); transform: scaleX(0); transition: transform .25s var(--ease); }
@@ -484,6 +488,15 @@
     <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4 18-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
     <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0112 0v5l2 2H4l2-2zM10 20a2 2 0 004 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="logo" viewBox="110 80 290 350">
+  <g fill="none" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="296" y="246" width="85" height="86" rx="30" stroke="#a78bfa" stroke-width="22" stroke-linecap="butt" stroke-dasharray="23 13.3" stroke-dashoffset="17"/>
+    <path d="M230 160a75 75 0 0 1 0 150" stroke="var(--logo-bg, #0f172a)" stroke-width="36"/>
+    <path d="M133 358V160H230a75 75 0 0 1 0 150H133" stroke="#38bdf8"/>
+    <path d="M230 310L331 408" stroke="#818cf8"/>
+    <path d="M328 155L372 111M306 103H378V180" stroke="#34d399"/>
+  </g>
+    </symbol>
   </defs>
 </svg>
 
@@ -492,7 +505,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="#" class="logo" aria-label="RankStruct home">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M5 20V5h6a4 4 0 010 8H5m6 0l5 7" stroke="#4edea3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="5" r="2" fill="#818cf8"/></svg>
+        <svg viewBox="0 0 290 350" aria-hidden="true"><use href="#logo"/></svg>
         RankStruct
       </a>
       <nav class="nav-links">
@@ -888,7 +901,7 @@
     <div class="f-grid">
       <div>
         <a href="#" class="logo">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 20V5h6a4 4 0 010 8H5m6 0l5 7" stroke="#4edea3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="5" r="2" fill="#818cf8"/></svg>
+          <svg viewBox="0 0 290 350" aria-hidden="true"><use href="#logo"/></svg>
           RankStruct
         </a>
         <p class="desc">Engineered discovery, resilient web systems, and autonomous digital operations built with mathematical precision.</p>
