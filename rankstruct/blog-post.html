@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Migrating 42,000 URLs without losing a single ranking — RankStruct Blog</title>
+<meta name="description" content="The exact redirect mapping, staging checks and launch-day runbook behind our +185% enterprise SEO migration." />
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<!-- SVG icon sprites -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M8 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-flow" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 8l8 8M18 4v6M15 7h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-block" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 6l12 12" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-okc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M5 19c0-3 1-5 3-6l3 3c-1 2-3 3-6 3zM9 13c2-5 6-9 12-9 0 6-4 10-9 12l-3-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="15" cy="9" r="1.5" fill="currentColor"/></symbol>
+    <symbol id="i-badge" viewBox="0 0 24 24"><path d="M5 4h14v11l-7 5-7-5V4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 016 0v2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 20V6l7-2v16M11 9h9v11M4 20h16M7 9h1M7 13h1M14 13h3M14 16h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 16a8 8 0 1116 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 16l4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="3" y="16" width="18" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 10h10M7 13h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 6v12c0 1.7 3 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3 3 7 3s7-1.3 7-3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4 18-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0112 0v5l2 2H4l2-2zM10 20a2 2 0 004 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="19" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.2 10.8l7.6-4.6M8.2 13.2l7.6 4.6" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="logo" viewBox="110 80 290 350">
+  <g fill="none" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="296" y="246" width="85" height="86" rx="30" stroke="#a78bfa" stroke-width="22" stroke-linecap="butt" stroke-dasharray="23 13.3" stroke-dashoffset="17"/>
+    <path d="M230 160a75 75 0 0 1 0 150" stroke="var(--logo-bg, #0f172a)" stroke-width="36"/>
+    <path d="M133 358V160H230a75 75 0 0 1 0 150H133" stroke="#38bdf8"/>
+    <path d="M230 310L331 408" stroke="#818cf8"/>
+    <path d="M328 155L372 111M306 103H378V180" stroke="#34d399"/>
+  </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="RankStruct home">
+        <svg viewBox="0 0 290 350" aria-hidden="true"><use href="#logo"/></svg>
+        RankStruct
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#services" >Services <svg width="12" height="12"><use href="#i-down"/></svg></a>
+        <a href="index.html#process">How We Work</a>
+        <a href="index.html#cases">Case Studies</a>
+        <a href="index.html#about">About</a>
+        <a href="blog.html" class="active" aria-current="page">Blogs</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg width="18" height="18"><use href="#i-menu"/></svg></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">How We Work</a>
+      <a href="index.html#cases">Case Studies</a>
+      <a href="index.html#about">About</a>
+      <a href="blog.html">Blogs</a>
+      <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<article>
+<!-- ============ ARTICLE HEADER ============ -->
+<section class="post-hero">
+  <div class="glow green drift-a" style="width:460px;height:420px;top:-160px;right:12%;"></div>
+  <div class="glow indigo drift-b" style="width:380px;height:380px;top:30%;left:-200px;opacity:.6"></div>
+  <div class="container">
+    <div class="reveal">
+      <a href="blog.html" class="back"><svg><use href="#i-back"/></svg> All articles</a>
+      <div class="tag-row" data-cat="seo"><span class="cat-chip">SEO</span><span class="chip plain">Case Study</span></div>
+      <h1 class="h-xl">Migrating 42,000 URLs without losing a single ranking</h1>
+      <p class="lead">The exact redirect mapping, staging checks and launch-day runbook behind our +185% enterprise migration. Copy it for your next replatform.</p>
+      <div class="byline">
+        <div class="author">
+          <span class="avatar">DR</span>
+          <div><b>Daniel Reyes</b><small>Principal Search Architect</small></div>
+        </div>
+        <div class="meta"><span>Aug 7, 2026</span><span><svg><use href="#i-clock"/></svg>15 min read</span></div>
+        <div class="share">
+          <button class="icon-btn" id="copyLink" aria-label="Copy link"><svg><use href="#i-link"/></svg><span class="tip">Link copied</span></button>
+          <button class="icon-btn" id="shareBtn" aria-label="Share"><svg><use href="#i-share"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="post-cover reveal" data-cat="seo"><div class="cover" style="--gx:70%;--gy:40%"><svg class="mark" viewBox="0 0 24 24"><use href="#i-trend"/></svg></div></div>
+  </div>
+</section>
+
+<!-- ============ ARTICLE BODY ============ -->
+<section style="overflow:visible">
+  <div class="container post-layout">
+    <div>
+      <details class="card toc-mobile">
+        <summary>On this page <svg><use href="#i-down"/></svg></summary>
+        <ol>
+          <li><a href="#why">Why migrations kill rankings</a></li>
+          <li><a href="#inventory">Build a complete URL inventory</a></li>
+          <li><a href="#map">Write the redirect map as code</a></li>
+          <li><a href="#staging">Validate on staging, not in production</a></li>
+          <li><a href="#launch">Launch day runbook</a></li>
+          <li><a href="#results">Results after six months</a></li>
+          <li><a href="#takeaways">Key takeaways</a></li>
+        </ol>
+      </details>
+
+      <div class="prose" id="prose">
+        <p>When a B2B SaaS company asked us to move their marketing site, docs and blog onto a new platform, they had one condition: <strong>organic traffic could not drop</strong>. It was their largest acquisition channel, driving 61% of qualified pipeline.</p>
+        <p>Most replatforms lose 10–40% of organic traffic for months. Ours grew 185% in six months. Nothing clever happened on launch day. We treated the migration as an engineering project with tests, not a marketing project with a checklist.</p>
+
+        <h2 id="why"><span class="n">01</span>Why migrations kill rankings</h2>
+        <p>Google doesn't rank "your site". It ranks individual URLs, each carrying years of links, click history and relevance signals. A migration breaks the link between those signals and the content unless every old URL points cleanly to its new equivalent.</p>
+        <p>In practice, rankings are lost in three ways:</p>
+        <ul>
+          <li><strong>Orphaned URLs</strong> that 404 because nobody knew they existed.</li>
+          <li><strong>Redirect chains</strong> (A → B → C) that leak authority and slow down crawling.</li>
+          <li><strong>Content drift</strong>, where the new page no longer matches the query the old one ranked for.</li>
+        </ul>
+
+        <h2 id="inventory"><span class="n">02</span>Build a complete URL inventory</h2>
+        <p>Your sitemap is not your inventory. We merged five sources and de-duplicated them into one list of <strong>42,318 URLs</strong>:</p>
+        <ol>
+          <li>A full crawl of the live site.</li>
+          <li>Twelve months of server logs (every URL Googlebot actually requested).</li>
+          <li>Search Console pages with at least one impression.</li>
+          <li>Every URL with an external backlink.</li>
+          <li>Analytics landing pages with at least one session.</li>
+        </ol>
+        <div class="callout"><svg><use href="#i-okc"/></svg><div><b>The logs found 6,140 URLs the crawler missed.</b> Old campaign pages and PDF guides, still linked from partner sites, still sending traffic.</div></div>
+
+        <h2 id="map"><span class="n">03</span>Write the redirect map as code</h2>
+        <p>Spreadsheets break at this scale. We kept the redirect map as a versioned file with rules for patterns and explicit entries for the exceptions, then generated edge redirects from it:</p>
+        <div class="codeblock">
+          <div class="bar"><i class="dot" style="background:#f87171"></i><i class="dot" style="background:#f59e0b"></i><i class="dot" style="background:#4edea3"></i><span style="margin-left:6px">redirects.config.ts</span><button class="copy" type="button">Copy</button></div>
+<pre><code><span class="c">// Pattern rules cover ~90% of URLs; explicit entries win on conflict</span>
+<span class="k">export const</span> rules = [
+  { from: <span class="s">"/blog/:year/:month/:slug"</span>, to: <span class="s">"/blog/:slug"</span> },
+  { from: <span class="s">"/docs/v1/:path*"</span>,         to: <span class="s">"/docs/:path*"</span> },
+  { from: <span class="s">"/resources/guides/:slug.pdf"</span>, to: <span class="s">"/guides/:slug"</span> },
+];
+
+<span class="k">export const</span> explicit = <span class="f">loadCsv</span>(<span class="s">"./redirects/explicit.csv"</span>); <span class="c">// 3,904 rows</span>
+
+<span class="c">// CI fails if any rule creates a chain or points to a non-200 page</span>
+<span class="f">assertNoChains</span>(rules, explicit);
+<span class="f">assertAllTargetsResolve</span>(rules, explicit);</code></pre>
+        </div>
+        <p>Because it's code, every change is reviewed, and the checks at the bottom run on every commit. A redirect chain can't reach production.</p>
+
+        <h2 id="staging"><span class="n">04</span>Validate on staging, not in production</h2>
+        <p>Before launch, we replayed all 42,318 URLs against staging and checked the status code, final destination, title and canonical for each one:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Check</th><th>URLs tested</th><th>Pass rate</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Single-hop 301 to a 200 page</td><td>42,318</td><td>100%</td><td class="ok">✓ PASS</td></tr>
+              <tr><td>Canonical matches final URL</td><td>38,412</td><td>100%</td><td class="ok">✓ PASS</td></tr>
+              <tr><td>Title similarity ≥ 80%</td><td>38,412</td><td>98.7%</td><td class="ok">✓ REVIEWED</td></tr>
+              <tr><td>Internal links point to final URLs</td><td>211,906</td><td>100%</td><td class="ok">✓ PASS</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote>A migration that hasn't been replayed against staging is a guess. We don't ship guesses to a channel that drives 61% of pipeline.<cite>// Daniel Reyes, Principal Search Architect</cite></blockquote>
+
+        <h2 id="launch"><span class="n">05</span>Launch day runbook</h2>
+        <p>Launch day itself should be boring. Ours took 40 minutes:</p>
+        <ol>
+          <li>Deploy the new site and edge redirects together, in a single release.</li>
+          <li>Re-run the staging replay against production. Any failure triggers an instant rollback.</li>
+          <li>Submit the new sitemaps and keep the old sitemap live for 30 days so Google re-crawls the redirects.</li>
+          <li>Watch 404s and crawl stats in real time for the first 72 hours.</li>
+        </ol>
+        <div class="callout warn"><svg><use href="#i-shield"/></svg><div><b>Don't remove the old sitemap on launch day.</b> Keeping it live is how you get Google to find your redirects fast instead of over several months.</div></div>
+
+        <h2 id="results"><span class="n">06</span>Results after six months</h2>
+        <div class="stat-row">
+          <div class="card rank stat"><span class="big" data-count="185" data-prefix="+" data-suffix="%">+185%</span><span class="mono">Organic clicks</span></div>
+          <div class="card rank stat"><span class="big" data-count="0">0</span><span class="mono">404 indexing errors</span></div>
+          <div class="card rank stat"><span class="big">0.71s</span><span class="mono">Median LCP</span></div>
+        </div>
+        <p>Traffic didn't just hold. It grew, because the new platform was faster, had cleaner internal linking and let us fix years of thin, duplicated pages at the same time.</p>
+
+        <h2 id="takeaways"><span class="n">07</span>Key takeaways</h2>
+        <ul>
+          <li>Build your inventory from logs and backlinks, not just a crawl.</li>
+          <li>Keep redirects in version control and test them in CI.</li>
+          <li>Replay every URL against staging before launch.</li>
+          <li>Keep the old sitemap live for 30 days after launch.</li>
+        </ul>
+        <p>Planning a replatform? <a href="index.html#contact">Send us your URL count</a> and we'll tell you where the risk is, free.</p>
+
+        <div class="tags">
+          <a href="blog.html">#migrations</a><a href="blog.html">#technical-seo</a><a href="blog.html">#redirects</a><a href="blog.html">#case-study</a>
+        </div>
+
+        <div class="card struct author-card">
+          <span class="avatar">DR</span>
+          <div>
+            <b>Daniel Reyes</b>
+            <span class="role">Principal Search Architect · RankStruct</span>
+            <p>Daniel leads technical SEO at RankStruct. He has run migrations for SaaS, commerce and media sites with up to 2 million URLs.</p>
+          </div>
+        </div>
+
+        <nav class="pager" aria-label="More articles">
+          <a href="blog-post.html" class="card struct"><span class="mono">← Previous</span><b>Headless Shopify: when it's worth it (and when it isn't)</b></a>
+          <a href="blog-post.html" class="card struct"><span class="mono">Next →</span><b>Entity SEO: mapping your brand into Google's Knowledge Graph</b></a>
+        </nav>
+      </div>
+    </div>
+
+    <aside class="card toc" aria-label="Table of contents">
+      <h5>On this page</h5>
+      <ol>
+          <li><a href="#why">Why migrations kill rankings</a></li>
+          <li><a href="#inventory">Build a complete URL inventory</a></li>
+          <li><a href="#map">Write the redirect map as code</a></li>
+          <li><a href="#staging">Validate on staging, not in production</a></li>
+          <li><a href="#launch">Launch day runbook</a></li>
+          <li><a href="#results">Results after six months</a></li>
+          <li><a href="#takeaways">Key takeaways</a></li>
+      </ol>
+    </aside>
+  </div>
+</section>
+</article>
+
+<!-- ============ RELATED ============ -->
+<section class="related sec-deep">
+  <div class="glow violet drift-a" style="width:460px;height:380px;top:20%;left:40%;opacity:.4"></div>
+  <div class="container" style="padding-top:60px;padding-bottom:40px">
+    <h2 class="h-lg reveal">Keep reading.</h2>
+    <div class="post-grid">
+      <a href="blog-post.html" class="card rank post reveal" data-cat="seo">
+        <div class="cover" style="--gx:30%;--gy:70%"><span class="label">SEO</span><svg class="mark" viewBox="0 0 24 24"><use href="#i-trend"/></svg></div>
+        <div class="body">
+          <span><span class="cat-chip">SEO</span></span>
+          <h3>Crawl budget is real: a log-file audit of a 40k-URL SaaS site</h3>
+          <p>Googlebot spent 61% of its visits on faceted URLs nobody searches for. What the server logs showed, and how we fixed it.</p>
+          <div class="meta"><span>Sep 4, 2026</span><span><svg><use href="#i-clock"/></svg>12 min read</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
+        </div>
+      </a>
+      <a href="blog-post.html" class="card rank post reveal" data-cat="seo">
+        <div class="cover" style="--gx:75%;--gy:75%"><span class="label">SEO</span><svg class="mark" viewBox="0 0 24 24"><use href="#i-trend"/></svg></div>
+        <div class="body">
+          <span><span class="cat-chip">SEO</span></span>
+          <h3>Entity SEO: mapping your brand into Google&#x27;s Knowledge Graph</h3>
+          <p>Schema markup is the start, not the strategy. How we build entity associations that survive algorithm updates.</p>
+          <div class="meta"><span>Aug 14, 2026</span><span><svg><use href="#i-clock"/></svg>7 min read</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
+        </div>
+      </a>
+      <a href="blog-post.html" class="card struct post reveal" data-cat="web">
+        <div class="cover" style="--gx:20%;--gy:30%"><span class="label">Web</span><svg class="mark" viewBox="0 0 24 24"><use href="#i-window"/></svg></div>
+        <div class="body">
+          <span><span class="cat-chip">Web</span></span>
+          <h3>Core Web Vitals in 2026: the INP fixes that actually moved revenue</h3>
+          <p>Interaction to Next Paint is the metric most sites still fail. Here are the five fixes that took a Shopify store from 380ms to 90ms.</p>
+          <div class="meta"><span>Sep 18, 2026</span><span><svg><use href="#i-clock"/></svg>9 min read</span><span class="read">Read <svg><use href="#i-arrow"/></svg></span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta sec-deep">
+  <div class="container">
+    <div class="cta-box card struct reveal">
+      <div class="glow indigo drift-a" style="width:420px;height:360px;bottom:-140px;right:-80px;opacity:.9"></div>
+      <div class="glow violet drift-b" style="width:280px;height:280px;top:-100px;right:25%;opacity:.35"></div>
+      <h2>Planning a migration or rebuild?</h2>
+      <p>Send us your current URL count and target platform. You'll get a written risk assessment within 48 hours. No sales pitch.</p>
+      <div class="cta-actions">
+        <a href="index.html#contact" class="btn btn-primary">Start an Assessment <svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <a href="index.html#contact" class="btn btn-dark"><svg class="chat"><use href="#i-chat"/></svg> Quick Chat</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="sec-deep">
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 290 350" aria-hidden="true"><use href="#logo"/></svg>
+          RankStruct
+        </a>
+        <p class="desc">Engineered discovery, resilient web systems, and autonomous digital operations built with mathematical precision.</p>
+      </div>
+      <div class="f-col">
+        <h5>Services</h5>
+        <a href="index.html#services">• SEO</a>
+        <a href="index.html#services">• Web Development</a>
+        <a href="index.html#services">• AI Automation</a>
+      </div>
+      <div class="f-col">
+        <h5>About</h5>
+        <a href="index.html#cases">Work &amp; Case Studies</a>
+        <a href="blog.html">Blogs</a>
+        <a href="index.html#about">About Us</a>
+      </div>
+      <div class="f-col">
+        <h5>Dispatch &amp; Inquiries</h5>
+        <p>Technical dispatches, architecture teardowns, and engineering availability.</p>
+        <form class="sub-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='Subscribed ✓';">
+          <input type="email" placeholder="technical@organization.com" aria-label="Email address" required />
+          <button type="submit" aria-label="Subscribe"><svg><use href="#i-arrow"/></svg></button>
+        </form>
+      </div>
+    </div>
+    <div class="f-bottom">© 2026 RankStruct LLC. High-craft digital systems.<span>|</span>EST. 2025</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  // Reading progress bar
+  const bar = document.getElementById('progress');
+  const prose = document.getElementById('prose');
+  function progress() {
+    const r = prose.getBoundingClientRect();
+    const total = r.height - innerHeight * .6;
+    const p = Math.min(1, Math.max(0, -r.top / total));
+    bar.style.transform = `scaleX(${p})`;
+  }
+  addEventListener('scroll', progress, { passive: true }); addEventListener('resize', progress); progress();
+
+  // Highlight the table-of-contents entry for the section being read
+  const tocLinks = [...document.querySelectorAll('.toc a')];
+  const heads = [...prose.querySelectorAll('h2[id]')];
+  function spy() {
+    let cur = heads[0];
+    heads.forEach(h => { if (h.getBoundingClientRect().top < innerHeight * .35) cur = h; });
+    tocLinks.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + cur.id));
+  }
+  addEventListener('scroll', spy, { passive: true }); spy();
+  document.querySelectorAll('.toc-mobile a').forEach(a => a.addEventListener('click', () => a.closest('details').open = false));
+
+  // Copy link / native share
+  const copyBtn = document.getElementById('copyLink');
+  copyBtn.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(location.href); } catch (e) {}
+    copyBtn.classList.add('copied');
+    setTimeout(() => copyBtn.classList.remove('copied'), 1600);
+  });
+  document.getElementById('shareBtn').addEventListener('click', () => {
+    if (navigator.share) navigator.share({ title: document.title, url: location.href }).catch(() => {});
+    else copyBtn.click();
+  });
+
+  // Copy buttons on code blocks
+  document.querySelectorAll('.codeblock .copy').forEach(btn => btn.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(btn.closest('.codeblock').querySelector('code').innerText); } catch (e) {}
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => btn.textContent = 'Copy', 1600);
+  }));
+</script>
+</body>
+</html>
