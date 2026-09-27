@@ -96,31 +96,47 @@
     will-change: transform;
   }
   .glow.indigo { background: radial-gradient(circle, rgba(79,70,229,.55), rgba(79,70,229,0) 70%); }
-  .glow.green  { background: radial-gradient(circle, rgba(16,185,129,.40), rgba(16,185,129,0) 70%); }
-  .glow.violet { background: radial-gradient(circle, rgba(139,92,246,.45), rgba(139,92,246,0) 70%); }
+  .glow.green  { background: radial-gradient(circle, rgba(16,185,129,.55), rgba(16,185,129,0) 70%); }
+  .glow.violet { background: radial-gradient(circle, rgba(139,92,246,.60), rgba(139,92,246,0) 70%); }
   .glow.cyan   { background: radial-gradient(circle, rgba(6,182,212,.30), rgba(6,182,212,0) 70%); }
 
+  /* Each glow wanders along its own path (distances are % of the glow's size)
+     and breathes in and out on a separate, out-of-sync cycle. */
+  .glow {
+    animation:
+      var(--drift, drift-a) var(--dur, 14s) ease-in-out infinite,
+      breathe var(--pulse, 7s) ease-in-out infinite alternate;
+  }
   @keyframes drift-a {
-    0%   { transform: translate(0,0) scale(1); }
-    25%  { transform: translate(80px,-50px) scale(1.12); }
-    50%  { transform: translate(-40px,60px) scale(.92); }
-    75%  { transform: translate(-90px,-30px) scale(1.06); }
-    100% { transform: translate(0,0) scale(1); }
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(55%, -35%); }
+    50%  { transform: translate(20%, 45%); }
+    75%  { transform: translate(-45%, 10%); }
+    100% { transform: translate(0, 0); }
   }
   @keyframes drift-b {
-    0%   { transform: translate(0,0) scale(1); }
-    33%  { transform: translate(-70px,40px) scale(1.15); }
-    66%  { transform: translate(60px,-60px) scale(.9); }
-    100% { transform: translate(0,0) scale(1); }
+    0%   { transform: translate(0, 0); }
+    30%  { transform: translate(-50%, 35%); }
+    60%  { transform: translate(40%, 50%); }
+    85%  { transform: translate(30%, -40%); }
+    100% { transform: translate(0, 0); }
   }
   @keyframes drift-c {
-    0%   { transform: translate(0,0) rotate(0deg) scale(1); }
-    50%  { transform: translate(100px,30px) rotate(40deg) scale(1.2); }
-    100% { transform: translate(0,0) rotate(0deg) scale(1); }
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    33%  { transform: translate(60%, 20%) rotate(60deg); }
+    66%  { transform: translate(-30%, -45%) rotate(140deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
   }
-  .drift-a { animation: drift-a 18s ease-in-out infinite; }
-  .drift-b { animation: drift-b 22s ease-in-out infinite; }
-  .drift-c { animation: drift-c 26s ease-in-out infinite; }
+  @keyframes breathe {
+    from { scale: .85; }
+    to   { scale: 1.3; }
+  }
+  .drift-a { --drift: drift-a; --dur: 12s; --pulse: 6s; }
+  .drift-b { --drift: drift-b; --dur: 15s; --pulse: 8s; }
+  .drift-c { --drift: drift-c; --dur: 18s; --pulse: 7s; }
+  /* the purple and green glows move a little faster than the rest */
+  .glow.green  { --dur: 10s; --pulse: 5s; }
+  .glow.violet { --dur: 11s; --pulse: 6s; }
 
   /* ---------- Cards: pop-up hover + cursor spotlight ---------- */
   .card {
