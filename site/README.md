@@ -42,3 +42,8 @@ Pages at `/seo/<name>/` (SaaS, Ecommerce, Law Firms, Healthcare, Finance) come f
 name becomes the address (e.g. `real-estate` → `/seo/real-estate/`). Leave **Callout** or
 **Table** empty to hide that section. The 4-step process strip is shared by all of them
 (**Industry pages: shared process strip**).
+
+## Flat HTML export
+`npm run export` builds the site and writes `../rankstruct-export/`: one folder of
+self-contained `.html` files (index.html, seo.html, seo-saas.html, blog.html…) that open
+by double-clicking and can be uploaded to any hosting as-is.
