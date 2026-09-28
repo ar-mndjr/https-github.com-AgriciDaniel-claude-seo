@@ -1,0 +1,175 @@
+{
+  "order": 1,
+  "seo": {
+    "title": "SaaS SEO Services: Grow Signups From Google & AI Search | RankStruct",
+    "description": "SaaS SEO that drives demos and signups, not just traffic. Bottom-funnel content, comparison pages, technical SEO and AI search visibility for software companies."
+  },
+  "name": "SaaS SEO",
+  "label": "SEO for SaaS",
+  "title": "SaaS SEO that drives signups, not just traffic.",
+  "highlight": "not just traffic.",
+  "text": "SaaS SEO for software companies that want more demos, trials and qualified pipeline from Google and AI search. We focus on the searches your buyers make when they're ready to choose a tool.",
+  "primary": {
+    "label": "Get a Free SaaS SEO Review →",
+    "url": "#review"
+  },
+  "secondary": {
+    "label": "See How It Works",
+    "url": "#process"
+  },
+  "answer": {
+    "question": "What is SaaS SEO?",
+    "text": "SaaS SEO is the process of improving a software company's visibility in search engines and AI tools so it attracts people actively looking for a solution. It focuses on high-intent searches like \"best [category] software\", \"[competitor] alternatives\" and \"[tool] vs [tool]\", plus the technical health of the marketing site and docs."
+  },
+  "why": {
+    "title": "Why does SaaS need a different SEO approach?",
+    "cards": [
+      {
+        "title": "Long, research-heavy buying journeys",
+        "text": "Buyers compare several tools, read reviews and ask AI assistants for shortlists before they book a demo.",
+        "icon": "i-search"
+      },
+      {
+        "title": "High-traffic, low-value content",
+        "text": "Many SaaS blogs rank for broad topics that never convert. Traffic grows while signups stay flat.",
+        "icon": "i-trend"
+      },
+      {
+        "title": "Competitors own the comparison searches",
+        "text": "If you don't have \"vs\" and \"alternatives\" pages, competitors and review sites control that conversation for you.",
+        "icon": "i-swap"
+      },
+      {
+        "title": "Complex sites",
+        "text": "Marketing pages, docs, help centers, changelogs and app subdomains can create crawl, duplication and indexation issues.",
+        "icon": "i-layers"
+      }
+    ]
+  },
+  "services": {
+    "title": "Our SaaS SEO services",
+    "cards": [
+      {
+        "title": "Bottom-of-funnel content",
+        "text": "Feature, use case and solution pages built around buying intent.",
+        "icon": "i-target"
+      },
+      {
+        "title": "Comparison & alternative pages",
+        "text": "Honest \"[You] vs [Competitor]\" and \"[Competitor] alternatives\" pages.",
+        "icon": "i-swap"
+      },
+      {
+        "title": "Integration pages",
+        "text": "A page for each integration, often built programmatically at scale.",
+        "icon": "i-plug"
+      },
+      {
+        "title": "Technical SEO",
+        "text": "Crawl budget, JavaScript rendering, docs and subdomain structure.",
+        "icon": "i-code"
+      },
+      {
+        "title": "Programmatic SEO",
+        "text": "Templated pages for use cases, industries or integrations, only where there's real search demand.",
+        "icon": "i-grid"
+      },
+      {
+        "title": "Conversion tracking",
+        "text": "Connecting organic traffic to trials, demos and revenue in GA4 and your CRM.",
+        "icon": "i-chart"
+      }
+    ]
+  },
+  "ai": {
+    "title": "How do AI tools recommend software?",
+    "text": "Buyers increasingly ask ChatGPT, Perplexity and Google AI Overviews questions like \"What's the best CRM for small agencies?\" The answers are built from review sites, comparison articles, community discussions and the tools' own websites.",
+    "prompts": [
+      "What's the best CRM for small agencies?"
+    ],
+    "list_title": "How we improve your AI visibility:",
+    "items": [
+      "Clear positioning statements: who you're for, what you do and how you're different",
+      "Consistent information across G2, Capterra, Product Hunt, LinkedIn and your site",
+      "Comparison and use case content AI tools can quote",
+      "Monitoring how often AI tools mention you versus competitors"
+    ]
+  },
+  "callout": null,
+  "table": {
+    "title": "What results can a SaaS company expect?",
+    "columns": [
+      "Timeframe",
+      "What typically happens"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Weeks 1–4",
+          "Technical fixes, tracking set up, quick wins on existing pages"
+        ]
+      },
+      {
+        "cells": [
+          "Months 2–4",
+          "New bottom-funnel and comparison pages start ranking"
+        ]
+      },
+      {
+        "cells": [
+          "Months 4–12",
+          "Compounding organic signups and stronger AI visibility"
+        ]
+      }
+    ],
+    "note": "Timelines depend on your domain's authority, competition and publishing pace."
+  },
+  "faq": {
+    "title": "SaaS SEO FAQs",
+    "items": [
+      {
+        "question": "How is SaaS SEO different from regular SEO?",
+        "answer": "SaaS SEO focuses on high-intent software searches, such as comparisons, alternatives, integrations and use cases, and measures success by trials, demos and revenue rather than traffic alone."
+      },
+      {
+        "question": "Should we create competitor comparison pages?",
+        "answer": "Yes, if they're fair and accurate. Buyers search for comparisons anyway, and if you don't create these pages, competitors and review sites will define the comparison for you."
+      },
+      {
+        "question": "Is programmatic SEO worth it for SaaS?",
+        "answer": "It can be, when each page targets a real search and offers genuine value, such as integration or use case pages. Thin, near-duplicate pages can hurt rankings, so we only build them where demand exists."
+      },
+      {
+        "question": "How long does SaaS SEO take to work?",
+        "answer": "Technical fixes can help within weeks. New content usually starts ranking in 2–4 months, with stronger results over 6–12 months."
+      },
+      {
+        "question": "Can you help us appear in ChatGPT recommendations?",
+        "answer": "We can improve the signals AI tools rely on, like clear positioning, review profiles, comparison content and brand mentions, but no one can guarantee AI citations."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Want more signups from search?",
+    "text": "Get a free SaaS SEO review showing your biggest gaps, competitor opportunities and how AI tools currently describe your product.",
+    "button": "Get My Free Review →"
+  },
+  "related": [
+    {
+      "label": "SEO Services",
+      "url": "/services/seo/"
+    },
+    {
+      "label": "Custom Web Development",
+      "url": "/services/web-development/#platforms"
+    },
+    {
+      "label": "Webflow Development",
+      "url": "/services/web-development/#platforms"
+    },
+    {
+      "label": "Blog: SEO vs. GEO vs. AEO",
+      "url": "/blog/"
+    }
+  ]
+}

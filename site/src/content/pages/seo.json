@@ -306,7 +306,7 @@
         "icon": "i-cpu",
         "link": {
           "label": "SaaS SEO",
-          "url": "/contact/"
+          "url": "/seo/saas/"
         }
       },
       {
@@ -315,7 +315,7 @@
         "icon": "i-cart",
         "link": {
           "label": "Ecommerce SEO",
-          "url": "/contact/"
+          "url": "/seo/ecommerce/"
         }
       },
       {
@@ -324,7 +324,7 @@
         "icon": "i-scale",
         "link": {
           "label": "Law Firm SEO",
-          "url": "/contact/"
+          "url": "/seo/law-firms/"
         }
       },
       {
@@ -333,7 +333,7 @@
         "icon": "i-heart",
         "link": {
           "label": "Healthcare SEO",
-          "url": "/contact/"
+          "url": "/seo/healthcare/"
         }
       },
       {
@@ -342,7 +342,7 @@
         "icon": "i-dollar",
         "link": {
           "label": "Finance SEO",
-          "url": "/contact/"
+          "url": "/seo/finance/"
         }
       },
       {

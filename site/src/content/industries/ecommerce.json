@@ -1,0 +1,180 @@
+{
+  "order": 2,
+  "seo": {
+    "title": "Ecommerce SEO Services: Rank Products & Categories | RankStruct",
+    "description": "Ecommerce SEO for Shopify, WooCommerce and custom stores. Product and category optimization, technical SEO, product schema and AI shopping visibility."
+  },
+  "name": "Ecommerce SEO",
+  "label": "SEO for Ecommerce",
+  "title": "Ecommerce SEO that turns searches into sales.",
+  "highlight": "into sales.",
+  "text": "Ecommerce SEO for online stores that want more organic revenue. We optimize products, categories and your store's technical foundation so shoppers find you on Google, Google Shopping and AI shopping results.",
+  "primary": {
+    "label": "Get a Free Store SEO Review →",
+    "url": "#review"
+  },
+  "secondary": {
+    "label": "See How It Works",
+    "url": "#process"
+  },
+  "answer": {
+    "question": "What is ecommerce SEO?",
+    "text": "Ecommerce SEO is the process of improving an online store's visibility in search engines so more shoppers find and buy its products. It covers product and category page optimization, site structure, product structured data, technical fixes like duplicate content and faceted navigation, and visibility in Google Shopping and AI shopping results."
+  },
+  "why": {
+    "title": "What makes ecommerce SEO challenging?",
+    "cards": [
+      {
+        "title": "Duplicate & thin product pages",
+        "text": "Manufacturer descriptions, product variants and similar products create duplicate content that weakens rankings.",
+        "icon": "i-layers"
+      },
+      {
+        "title": "Faceted navigation",
+        "text": "Filters for size, color and price can generate thousands of low-value URLs that waste crawl budget.",
+        "icon": "i-grid"
+      },
+      {
+        "title": "Out-of-stock & discontinued products",
+        "text": "Handled badly, they create broken pages and lose rankings you've earned.",
+        "icon": "i-alert"
+      },
+      {
+        "title": "Category pages that don't rank",
+        "text": "Category pages often target the most valuable searches but have no useful content.",
+        "icon": "i-bag"
+      }
+    ]
+  },
+  "services": {
+    "title": "Our ecommerce SEO services",
+    "cards": [
+      {
+        "title": "Category page optimization",
+        "text": "Helpful intro copy, internal links and structure built around search demand.",
+        "icon": "i-list"
+      },
+      {
+        "title": "Product page optimization",
+        "text": "Unique descriptions, titles, images and reviews.",
+        "icon": "i-cart"
+      },
+      {
+        "title": "Product structured data",
+        "text": "Price, availability, reviews and shipping details for rich results.",
+        "icon": "i-code"
+      },
+      {
+        "title": "Faceted navigation & crawl control",
+        "text": "Canonicals, noindex rules and clean filter URLs.",
+        "icon": "i-grid"
+      },
+      {
+        "title": "Google Merchant Center setup",
+        "text": "Free product listings in Google Shopping.",
+        "icon": "i-bag"
+      },
+      {
+        "title": "Platform SEO",
+        "text": "Shopify, WooCommerce, BigCommerce and headless stores.",
+        "icon": "i-window"
+      }
+    ]
+  },
+  "ai": {
+    "title": "How do AI shopping tools find products?",
+    "text": "Google AI Mode, ChatGPT shopping features and Perplexity increasingly recommend products directly. They rely on structured product data, merchant feeds, reviews and clear product information.",
+    "prompts": [],
+    "list_title": "How we improve your AI shopping visibility:",
+    "items": [
+      "Complete, accurate product data and feeds",
+      "Clear specs, sizing, materials and use cases on product pages",
+      "Review collection and display",
+      "Buying guides and comparison content AI tools can reference"
+    ]
+  },
+  "callout": null,
+  "table": {
+    "title": "Shopify vs. WooCommerce for SEO",
+    "columns": [
+      "",
+      "Shopify",
+      "WooCommerce"
+    ],
+    "rows": [
+      {
+        "cells": [
+          "Ease of SEO setup",
+          "Easy, good defaults",
+          "Flexible, needs configuration"
+        ]
+      },
+      {
+        "cells": [
+          "URL control",
+          "Fixed structure (/products/, /collections/)",
+          "Full control"
+        ]
+      },
+      {
+        "cells": [
+          "Speed",
+          "Fast hosting included",
+          "Depends on hosting and plugins"
+        ]
+      },
+      {
+        "cells": [
+          "Best for",
+          "Most growing stores",
+          "Content-heavy or highly custom stores"
+        ]
+      }
+    ],
+    "note": "Both can rank well. The right choice depends on your catalog, team and growth plans."
+  },
+  "faq": {
+    "title": "Ecommerce SEO FAQs",
+    "items": [
+      {
+        "question": "How long does ecommerce SEO take?",
+        "answer": "Technical fixes and product data improvements can show results within weeks. Category and content improvements usually take 3–6 months to build momentum."
+      },
+      {
+        "question": "Should I write unique product descriptions?",
+        "answer": "Yes, especially for your best-selling and highest-margin products. Manufacturer descriptions appear on many sites, so unique descriptions help you stand out in search."
+      },
+      {
+        "question": "What should I do with out-of-stock products?",
+        "answer": "Keep the page live if the product is coming back. If it's permanently discontinued, redirect it to the closest alternative or category."
+      },
+      {
+        "question": "Does Shopify have SEO limitations?",
+        "answer": "Shopify is SEO-friendly, but it has a fixed URL structure and can create duplicate collection URLs. These are manageable with the right setup."
+      },
+      {
+        "question": "Can you help my products appear in Google Shopping?",
+        "answer": "Yes. We set up and optimize Google Merchant Center so your products can appear in free Shopping listings."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Want more sales from organic search?",
+    "text": "Get a free store review covering technical issues, product data gaps and your biggest category opportunities.",
+    "button": "Get My Free Store Review →"
+  },
+  "related": [
+    {
+      "label": "Shopify Development",
+      "url": "/services/web-development/#platforms"
+    },
+    {
+      "label": "WordPress Development",
+      "url": "/services/web-development/#platforms"
+    },
+    {
+      "label": "SEO Services",
+      "url": "/services/seo/"
+    }
+  ]
+}

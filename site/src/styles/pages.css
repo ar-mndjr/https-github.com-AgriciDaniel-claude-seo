@@ -435,3 +435,96 @@
 /* Honeypot field on forms: hidden from people, visible to spam bots */
 .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
 .form-ok.error { color: var(--coral); }
+
+/* ==========================================================
+   Uniform tile grids (industry pages)
+   Every tile in a row has the same height; content is top-aligned.
+   Desktop 4 / 3 columns → tablet 2 → phone 1.
+   ========================================================== */
+.tiles { display: grid; gap: 20px; grid-auto-rows: 1fr; align-items: stretch; }
+.tiles.t4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tiles.t3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tiles > * { height: 100%; min-width: 0; }
+.tile { display: flex; flex-direction: column; padding: 24px; min-height: 220px; }
+.tile .itile { flex-shrink: 0; }
+.tile h3 { margin: 18px 0 8px; font-size: 17px; line-height: 24px; font-weight: 600; letter-spacing: -.01em; }
+.tile p { font-size: 13.5px; line-height: 21px; color: var(--text-2); }
+.tile-top { display: flex; justify-content: space-between; align-items: center; }
+.tile-top .mono { font-size: 11px; color: var(--mint); }
+.tiles.t3 .tile.wide { grid-column: 1 / -1; min-height: 0; }
+.tiles .step-card { min-height: 220px; }
+
+.ind-hero h1 { max-width: 880px; }
+.ind-hero h1 .hl { color: var(--mint); }
+.ind-hero .back { margin-bottom: 26px; }
+.ind-answer { padding: 0 0 96px; margin-top: -40px; }
+.answer-box { display: flex; gap: 20px; align-items: flex-start; max-width: 980px; margin: 0 auto; padding: 28px 30px; }
+.answer-box .mono { font-size: 10px; color: var(--mint); }
+.answer-box h2 { margin: 4px 0 10px; font-size: 22px; line-height: 30px; font-weight: 600; letter-spacing: -.015em; }
+.answer-box p { font-size: 15px; line-height: 25px; color: #cbd5e1; }
+
+.ai-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+.ai-text { margin-top: 14px; color: var(--text-2); font-size: 15px; line-height: 25px; }
+.ai-list-title { margin: 26px 0 12px; font-family: var(--f-head); font-size: 17px; font-weight: 600; }
+.ai-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.ai-list li { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 6px; background: #1a1f2e; border: 1px solid rgba(255,255,255,.04); font-size: 14px; line-height: 21px; color: #cbd5e1; }
+.ai-list .tick { width: 18px; height: 18px; border-radius: 4px; background: rgba(16,185,129,.12); display: grid; place-items: center; color: var(--emerald); flex-shrink: 0; margin-top: 1px; }
+.ai-list .tick svg { width: 11px; height: 11px; }
+.ai-panel { padding: 16px 22px 24px; }
+.ai-panel .code-top { display: flex; align-items: center; gap: 8px; padding-bottom: 14px; }
+.ai-panel .code-top .mono { margin-left: 8px; font-size: 10px; text-transform: none; }
+.ai-q { padding: 12px 14px; border-radius: 6px; background: #151a28; margin-bottom: 10px; }
+.ai-q .mono { font-size: 9.5px; color: var(--indigo-l); }
+.ai-q p { margin-top: 4px; font-family: var(--f-mono); font-size: 12.5px; line-height: 20px; color: #e2e8f0; }
+.ai-a { padding: 14px; border-radius: 6px; border: 1px solid rgba(16,185,129,.25); background: rgba(16,185,129,.05); }
+.ai-a .mono { font-size: 9.5px; color: var(--mint); }
+.ai-srcs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.ai-srcs span { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: 4px; background: #1e2332; font-family: var(--f-mono); font-size: 10px; color: var(--text-2); }
+.ai-srcs .dot { background: var(--emerald); width: 5px; height: 5px; }
+.ai-lines { display: grid; gap: 7px; margin-top: 14px; }
+.ai-lines i { height: 6px; border-radius: 3px; background: #222a3c; }
+.ai-grid + .note-bar { margin-top: 36px; }
+
+table.compact { min-width: 560px; }
+.table-note { margin-top: 14px; font-size: 11px; text-transform: none; letter-spacing: .02em; }
+
+.review-form { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 720px; margin: 0 auto; }
+.review-form input:not([type=hidden]):not(.hp) {
+  flex: 1 1 220px; min-width: 0; height: var(--btn-h); padding: 0 14px;
+  background: rgba(10,15,29,.7); color: var(--text); border: 1px solid var(--border-2); border-radius: var(--r);
+  font-family: var(--f-body); font-size: 14px; outline: none; transition: border-color .2s, box-shadow .2s;
+}
+.review-form input::placeholder { color: #64748b; }
+.review-form input:focus { border-color: var(--indigo); box-shadow: 0 0 0 3px rgba(79,70,229,.2); }
+.review-form .form-ok { flex-basis: 100%; text-align: center; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.related-links { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 10px; margin-top: 28px; }
+.related-links .mono { font-size: 10.5px; }
+.related-links a { padding: 7px 12px; border-radius: 4px; background: #161b2a; border: 1px solid rgba(255,255,255,.06); font-size: 13px; color: #cbd5e1; transition: color .2s, border-color .2s; }
+.related-links a:hover { color: var(--text); border-color: var(--border-2); }
+
+@media (max-width: 1199px) {
+  .tiles.t4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ai-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 991px) {
+  .tiles.t3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tiles.t3 .tile.wide { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .tiles.t4, .tiles.t3 { grid-template-columns: minmax(0, 1fr); }
+  .tile, .tiles .step-card { min-height: 0; padding: 20px 18px; }
+  .ind-answer { margin-top: -24px; padding-bottom: 64px; }
+  .answer-box { flex-direction: column; padding: 22px 18px; gap: 14px; }
+  .answer-box h2 { font-size: 20px; line-height: 28px; }
+  .review-form .btn { width: 100%; }
+}
+
+/* Consistent tile sizing site-wide: every tile in a grid is the same height
+   (the tallest one sets the size), at every breakpoint. */
+.g, .tiles, .svc-grid, .case-grid, .aud-grid, .pipe-grid, .compare { grid-auto-rows: 1fr; align-items: stretch; }
+.g > *, .svc-grid > *, .case-grid > *, .aud-grid > *, .pipe-grid > * { height: 100%; min-width: 0; }
+.case-grid { align-items: stretch !important; }
+.case { display: flex; flex-direction: column; }
+.case .metric { margin-top: auto; padding-top: 22px; }
+.aud, .step, .def-card, .wcard, .stat-card, .rc, .fc { height: 100%; }

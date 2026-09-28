@@ -2415,3 +2415,247 @@ content:
             type: string
             list: true
 
+
+  - name: industries
+    label: Industry SEO pages
+    type: collection
+    path: site/src/content/industries
+    format: json
+    filename: "{primary}.json"
+    view:
+      fields: [name, order, draft]
+      primary: name
+    fields:
+      - name: order
+        label: "Order"
+        type: number
+      - name: seo
+        label: "SEO (Google title & description)"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: description
+            label: "Description"
+            type: text
+      - name: name
+        label: "Name"
+        type: string
+      - name: label
+        label: "Label"
+        type: string
+      - name: title
+        label: "Title"
+        type: string
+      - name: highlight
+        label: "Highlight"
+        type: string
+      - name: text
+        label: "Text"
+        type: text
+      - name: primary
+        label: "Primary"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: url
+            label: "Link (URL)"
+            type: string
+      - name: secondary
+        label: "Secondary"
+        type: object
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: url
+            label: "Link (URL)"
+            type: string
+      - name: answer
+        label: "Answer"
+        type: object
+        fields:
+          - name: question
+            label: "Question"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+      - name: why
+        label: "Why section"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: text
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+      - name: services
+        label: "Services"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: cards
+            label: "Cards"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "Title"
+                type: string
+              - name: text
+                label: "Text"
+                type: string
+              - name: icon
+                label: "Icon"
+                type: select
+                options:
+                  values: ["i-alert", "i-arrow", "i-back", "i-badge", "i-bag", "i-bell", "i-block", "i-board", "i-book", "i-brain", "i-bug", "i-building", "i-cal", "i-cart", "i-chart", "i-chat", "i-check", "i-chev", "i-clip", "i-clock", "i-code", "i-cpu", "i-db", "i-doc", "i-dollar", "i-down", "i-edit", "i-ext", "i-eye", "i-flow", "i-gauge", "i-globe", "i-grid", "i-heart", "i-home", "i-inbox", "i-key", "i-layers", "i-link", "i-list", "i-lock", "i-mail", "i-menu", "i-mic", "i-mobile", "i-okc", "i-palette", "i-phone", "i-pin", "i-plug", "i-repeat", "i-rocket", "i-scale", "i-search", "i-send", "i-share", "i-shield", "i-sparkle", "i-star", "i-swap", "i-target", "i-tool", "i-trend", "i-users", "i-window", "i-zap"]
+      - name: ai
+        label: "AI section"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: prompts
+            label: "Prompts"
+            type: string
+            list: true
+          - name: list_title
+            label: "List title"
+            type: string
+          - name: items
+            label: "Items"
+            type: text
+            list: true
+      - name: callout
+        label: "Callout"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+      - name: table
+        label: "Table"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: columns
+            label: "Columns"
+            type: string
+            list: true
+          - name: rows
+            label: "Rows"
+            type: object
+            list: true
+            fields:
+              - name: cells
+                label: "Cells"
+                type: string
+                list: true
+          - name: note
+            label: "Note"
+            type: text
+      - name: faq
+        label: "FAQ"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: items
+            label: "Items"
+            type: object
+            list: true
+            fields:
+              - name: question
+                label: "Question"
+                type: string
+              - name: answer
+                label: "Answer"
+                type: text
+      - name: cta
+        label: "Call to action"
+        type: object
+        fields:
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: text
+          - name: button
+            label: "Button"
+            type: string
+      - name: related
+        label: "Related"
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: url
+            label: "Link (URL)"
+            type: string
+      - name: draft
+        label: "Draft"
+        type: boolean
+
+  - name: page-industry-process
+    label: "Industry pages: shared process strip"
+    type: file
+    path: site/src/content/pages/industry-process.json
+    format: json
+    fields:
+      - name: title
+        label: "Title"
+        type: string
+      - name: text
+        label: "Text"
+        type: string
+      - name: steps
+        label: "Steps"
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: "Label"
+            type: string
+          - name: title
+            label: "Title"
+            type: string
+          - name: text
+            label: "Text"
+            type: string
+          - name: when
+            label: "When"
+            type: string

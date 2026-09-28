@@ -1,0 +1,153 @@
+{
+  "order": 3,
+  "seo": {
+    "title": "Law Firm SEO Services: Get More Clients From Search | RankStruct",
+    "description": "Law firm SEO for attorneys and legal practices. Local SEO, practice area pages, E-E-A-T content and AI search visibility, built with legal advertising rules in mind."
+  },
+  "name": "Law Firm SEO",
+  "label": "SEO for Law Firms",
+  "title": "Law firm SEO that brings in the right clients.",
+  "highlight": "right clients",
+  "text": "SEO for lawyers and law firms that want more qualified consultations from Google, Maps and AI search, without spammy tactics that put your reputation at risk.",
+  "primary": {
+    "label": "Get a Free Law Firm SEO Review →",
+    "url": "#review"
+  },
+  "secondary": {
+    "label": "See How It Works",
+    "url": "#process"
+  },
+  "answer": {
+    "question": "What is law firm SEO?",
+    "text": "Law firm SEO is the process of improving a legal practice's visibility in search engines so potential clients find it when they need legal help. It includes local SEO and Google Business Profile optimization, practice area pages, trustworthy legal content, reviews and technical website improvements."
+  },
+  "why": {
+    "title": "Why is SEO for lawyers so competitive?",
+    "cards": [
+      {
+        "title": "High-value, high-competition searches",
+        "text": "Legal searches are among the most competitive and expensive in paid advertising, which makes organic visibility especially valuable.",
+        "icon": "i-dollar"
+      },
+      {
+        "title": "Local results decide most cases",
+        "text": "Most clients search for a lawyer nearby, so ranking in the Google Maps \"local pack\" is critical.",
+        "icon": "i-pin"
+      },
+      {
+        "title": "Higher content standards",
+        "text": "Legal content affects people's lives and money, so Google holds it to a higher standard of expertise and trust (E-E-A-T).",
+        "icon": "i-badge"
+      },
+      {
+        "title": "Advertising rules",
+        "text": "Law firm marketing must follow professional conduct and advertising rules, which vary by jurisdiction.",
+        "icon": "i-scale"
+      }
+    ]
+  },
+  "services": {
+    "title": "Our law firm SEO services",
+    "cards": [
+      {
+        "title": "Google Business Profile optimization",
+        "text": "For each office location.",
+        "icon": "i-pin"
+      },
+      {
+        "title": "Practice area pages",
+        "text": "A dedicated, detailed page for each legal service.",
+        "icon": "i-doc"
+      },
+      {
+        "title": "Location pages",
+        "text": "For the cities and areas you serve.",
+        "icon": "i-globe"
+      },
+      {
+        "title": "Attorney profiles",
+        "text": "Credentials, experience and bar admissions that build trust.",
+        "icon": "i-users"
+      },
+      {
+        "title": "Legal content",
+        "text": "Plain-English answers to clients' common questions, reviewed by your attorneys.",
+        "icon": "i-book"
+      },
+      {
+        "title": "Review strategy",
+        "text": "Ethical, compliant ways to earn more client reviews.",
+        "icon": "i-star"
+      },
+      {
+        "title": "Technical SEO",
+        "text": "Speed, mobile experience, structured data (LegalService, Attorney).",
+        "icon": "i-code"
+      }
+    ]
+  },
+  "ai": {
+    "title": "How do AI tools answer legal questions?",
+    "text": "People now ask AI tools things like \"Do I need a lawyer for a car accident?\" or \"Best family lawyer near me.\" AI answers draw on trusted legal content, reviews, directories and local business information.",
+    "prompts": [
+      "Do I need a lawyer for a car accident?",
+      "Best family lawyer near me."
+    ],
+    "list_title": "How we improve your AI visibility:",
+    "items": [
+      "Clear, accurate answers to common legal questions on your site",
+      "Consistent firm details across Google, Avvo, Justia, Martindale and your bar profile",
+      "Strong attorney bios that show real expertise",
+      "Monitoring how AI tools describe your firm and practice areas"
+    ]
+  },
+  "callout": {
+    "title": "A note on compliance",
+    "text": "We don't guarantee case outcomes, and we avoid claims like \"specialist\" or \"expert\" unless your jurisdiction permits them. All content should be reviewed by an attorney at your firm before publishing."
+  },
+  "table": null,
+  "faq": {
+    "title": "Law firm SEO FAQs",
+    "items": [
+      {
+        "question": "How long does SEO take for a law firm?",
+        "answer": "Local SEO improvements can show results within 1–3 months. Competitive practice areas in large cities often take 6–12 months to rank strongly."
+      },
+      {
+        "question": "Is SEO better than paid ads for lawyers?",
+        "answer": "They work best together. Ads bring immediate visibility, while SEO builds long-term visibility that doesn't stop when your ad budget does."
+      },
+      {
+        "question": "Do I need a separate page for each practice area?",
+        "answer": "Yes. Each practice area, such as personal injury, divorce or estate planning, should have its own detailed page so it can rank for its own searches."
+      },
+      {
+        "question": "Can you help with multiple office locations?",
+        "answer": "Yes. We optimize a Google Business Profile and a location page for each real office."
+      },
+      {
+        "question": "Is your SEO compliant with legal advertising rules?",
+        "answer": "We follow general best practices and avoid misleading claims, but rules vary by jurisdiction. Your firm should review content against your local bar's advertising rules."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Want more consultations from search?",
+    "text": "Get a free review of your firm's local rankings, website and how AI tools currently describe your practice.",
+    "button": "Get My Free Review →"
+  },
+  "related": [
+    {
+      "label": "Professional Services SEO",
+      "url": "/services/seo/#industries"
+    },
+    {
+      "label": "WordPress Development",
+      "url": "/services/web-development/#platforms"
+    },
+    {
+      "label": "GoHighLevel Services",
+      "url": "/services/ai-automation/#platforms"
+    }
+  ]
+}

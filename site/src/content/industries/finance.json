@@ -1,0 +1,148 @@
+{
+  "order": 5,
+  "seo": {
+    "title": "Finance SEO Services for Fintech & Financial Firms | RankStruct",
+    "description": "SEO for fintech companies, financial advisors and financial services. Trustworthy content, technical SEO and AI search visibility, built for a regulated industry."
+  },
+  "name": "Finance SEO",
+  "label": "SEO for Finance",
+  "title": "Finance SEO built on trust.",
+  "highlight": "trust.",
+  "text": "SEO for fintech companies, financial advisors and financial services firms. We build visibility through accurate, compliant content and a strong technical foundation, the signals Google and AI tools expect in finance.",
+  "primary": {
+    "label": "Get a Free Finance SEO Review →",
+    "url": "#review"
+  },
+  "secondary": {
+    "label": "See How It Works",
+    "url": "#process"
+  },
+  "answer": {
+    "question": "What is finance SEO?",
+    "text": "Finance SEO is the process of improving the search visibility of financial companies, such as fintechs, advisors, lenders and accounting firms, so they attract qualified clients. Because financial content affects people's money, it requires strong expertise, accuracy, trust signals and compliance-reviewed content."
+  },
+  "why": {
+    "title": "Why is finance SEO so demanding?",
+    "cards": [
+      {
+        "title": "\"Your Money or Your Life\" content",
+        "text": "Google applies its strictest quality standards to financial topics. Expertise and trust must be clear.",
+        "icon": "i-dollar"
+      },
+      {
+        "title": "Heavy competition",
+        "text": "Banks, publishers and comparison sites dominate many financial searches.",
+        "icon": "i-building"
+      },
+      {
+        "title": "Compliance requirements",
+        "text": "Financial marketing is regulated, so content often needs review before publishing.",
+        "icon": "i-scale"
+      },
+      {
+        "title": "Trust drives conversion",
+        "text": "Visitors need to trust you before sharing financial details or booking a call.",
+        "icon": "i-shield"
+      }
+    ]
+  },
+  "services": {
+    "title": "Our finance SEO services",
+    "cards": [
+      {
+        "title": "Service & product pages",
+        "text": "Clear, accurate pages for each financial product or service.",
+        "icon": "i-doc"
+      },
+      {
+        "title": "Expert content",
+        "text": "Educational content written with, or reviewed by, qualified professionals.",
+        "icon": "i-book"
+      },
+      {
+        "title": "Author & reviewer credentials",
+        "text": "Visible qualifications on every piece of content.",
+        "icon": "i-badge"
+      },
+      {
+        "title": "Trust signals",
+        "text": "Security, regulation details, reviews and clear company information.",
+        "icon": "i-shield"
+      },
+      {
+        "title": "Technical SEO",
+        "text": "Speed, security, structured data and app/web structure for fintechs.",
+        "icon": "i-code"
+      },
+      {
+        "title": "Local SEO",
+        "text": "For advisors, accountants and branch-based businesses.",
+        "icon": "i-pin"
+      }
+    ]
+  },
+  "ai": {
+    "title": "How do AI tools answer financial questions?",
+    "text": "People ask AI tools things like \"What's the best budgeting app?\" or \"Do I need a financial advisor?\" AI tools lean heavily on trusted, authoritative financial sources.",
+    "prompts": [
+      "What's the best budgeting app?",
+      "Do I need a financial advisor?"
+    ],
+    "list_title": "How we improve your AI visibility:",
+    "items": [
+      "Clear, factual explanations of your products and who they're for",
+      "Consistent company and regulatory information across the web",
+      "Mentions in reputable financial publications and review platforms",
+      "Monitoring how AI tools describe your company and products"
+    ]
+  },
+  "callout": {
+    "title": "Compliance note",
+    "text": "We write content to be accurate and balanced, and we build in time for your compliance team to review it. We don't make performance promises or claims your regulator wouldn't allow."
+  },
+  "table": null,
+  "faq": {
+    "title": "Finance SEO FAQs",
+    "items": [
+      {
+        "question": "Can SEO work in a regulated industry?",
+        "answer": "Yes. It just needs a careful process: accurate content, expert review and a compliance check before publishing."
+      },
+      {
+        "question": "How long does finance SEO take?",
+        "answer": "Finance is competitive. Technical and local improvements can help within months, while competitive national rankings often take 6–12 months or more."
+      },
+      {
+        "question": "Do you work with fintech startups?",
+        "answer": "Yes. We help fintechs with product pages, comparison content, technical SEO and AI visibility."
+      },
+      {
+        "question": "Do you work with accountants and financial advisors?",
+        "answer": "Yes. Local SEO, service pages and expert content work well for advisory and accounting firms."
+      },
+      {
+        "question": "Who reviews financial content?",
+        "answer": "Your qualified team members or compliance function should review all content. We build that step into the process."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Want more qualified clients from search?",
+    "text": "Get a free review of your visibility, trust signals and content gaps.",
+    "button": "Get My Free Review →"
+  },
+  "related": [
+    {
+      "label": "SaaS SEO",
+      "url": "/seo/saas/"
+    },
+    {
+      "label": "Professional Services SEO",
+      "url": "/services/seo/#industries"
+    },
+    {
+      "label": "Custom Web Development",
+      "url": "/services/web-development/#platforms"
+    }
+  ]
+}

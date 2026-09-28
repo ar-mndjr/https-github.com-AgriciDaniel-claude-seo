@@ -1,0 +1,153 @@
+{
+  "order": 4,
+  "seo": {
+    "title": "Healthcare SEO Services for Clinics & Practices | RankStruct",
+    "description": "Healthcare SEO for clinics, practices and medical providers. Local SEO, expert-reviewed content, patient-friendly websites and AI search visibility."
+  },
+  "name": "Healthcare SEO",
+  "label": "SEO for Healthcare",
+  "title": "Healthcare SEO that helps patients find you.",
+  "highlight": "patients find you.",
+  "text": "SEO for clinics, medical practices, dentists and healthcare providers. We help patients find accurate information and book with you, on Google, Maps and AI search.",
+  "primary": {
+    "label": "Get a Free Healthcare SEO Review →",
+    "url": "#review"
+  },
+  "secondary": {
+    "label": "See How It Works",
+    "url": "#process"
+  },
+  "answer": {
+    "question": "What is healthcare SEO?",
+    "text": "Healthcare SEO is the process of improving a medical provider's online visibility so patients can find it when searching for care or health information. It includes local SEO, expert-reviewed medical content, service and condition pages, patient reviews, and a fast, accessible website."
+  },
+  "why": {
+    "title": "Why does healthcare SEO need extra care?",
+    "cards": [
+      {
+        "title": "Google's highest quality standards",
+        "text": "Health content can affect people's wellbeing, so Google expects clear expertise, accuracy and trust.",
+        "icon": "i-badge"
+      },
+      {
+        "title": "Local search drives bookings",
+        "text": "Most patients search for providers near them, which makes Google Maps visibility essential.",
+        "icon": "i-pin"
+      },
+      {
+        "title": "Patient privacy",
+        "text": "Tracking and forms must be set up carefully to protect patient information.",
+        "icon": "i-lock"
+      },
+      {
+        "title": "Accessibility matters",
+        "text": "Patients of all ages and abilities need to be able to use your website easily.",
+        "icon": "i-users"
+      }
+    ]
+  },
+  "services": {
+    "title": "Our healthcare SEO services",
+    "cards": [
+      {
+        "title": "Google Business Profile optimization",
+        "text": "For each clinic location.",
+        "icon": "i-pin"
+      },
+      {
+        "title": "Service & condition pages",
+        "text": "Clear pages for each treatment and condition you handle.",
+        "icon": "i-doc"
+      },
+      {
+        "title": "Medically reviewed content",
+        "text": "Written in plain language and reviewed by your clinicians.",
+        "icon": "i-okc"
+      },
+      {
+        "title": "Provider profiles",
+        "text": "Credentials, specialties and experience for each practitioner.",
+        "icon": "i-users"
+      },
+      {
+        "title": "Review management",
+        "text": "Helping satisfied patients leave reviews.",
+        "icon": "i-star"
+      },
+      {
+        "title": "Technical & accessibility SEO",
+        "text": "Speed, mobile experience, accessibility and MedicalClinic / Physician schema.",
+        "icon": "i-code"
+      },
+      {
+        "title": "Privacy-conscious tracking",
+        "text": "Analytics set up without sending sensitive patient data to third parties.",
+        "icon": "i-lock"
+      }
+    ]
+  },
+  "ai": {
+    "title": "How do AI tools answer health questions?",
+    "text": "Patients ask AI tools questions like \"What does a physiotherapist do for back pain?\" or \"Best dentist near me open Saturday.\" AI tools prefer trustworthy, clearly written information from credible sources.",
+    "prompts": [
+      "What does a physiotherapist do for back pain?",
+      "Best dentist near me open Saturday."
+    ],
+    "list_title": "How we improve your AI visibility:",
+    "items": [
+      "Clear, accurate answers reviewed by qualified professionals",
+      "Visible author and reviewer credentials on every article",
+      "Consistent practice information across Google, Healthgrades, Zocdoc and directories",
+      "Up-to-date details like hours, services and insurance accepted"
+    ]
+  },
+  "callout": {
+    "title": "Privacy note",
+    "text": "We set up analytics and tracking so protected health information isn't shared with advertising or analytics tools. Your organization remains responsible for its own HIPAA (or local privacy law) compliance."
+  },
+  "table": null,
+  "faq": {
+    "title": "Healthcare SEO FAQs",
+    "items": [
+      {
+        "question": "How long does healthcare SEO take?",
+        "answer": "Local SEO improvements often show results within 1–3 months. Competitive specialties and regions can take 6–12 months."
+      },
+      {
+        "question": "Who should write medical content?",
+        "answer": "Content can be written by skilled writers, but it should always be reviewed and approved by a qualified healthcare professional, with their name and credentials shown."
+      },
+      {
+        "question": "Do you work with dental and specialty practices?",
+        "answer": "Yes. We work with dental, physiotherapy, chiropractic, aesthetics, mental health and other healthcare providers."
+      },
+      {
+        "question": "Is patient data safe with SEO tracking?",
+        "answer": "It can be, when tracking is set up correctly. We avoid sending sensitive patient information to analytics or advertising tools."
+      },
+      {
+        "question": "Should each treatment have its own page?",
+        "answer": "Yes. Separate pages for each service help patients find exactly what they need and help each page rank for its own searches."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Want more patients to find you?",
+    "text": "Get a free review of your local rankings, website and patient experience online.",
+    "button": "Get My Free Review →"
+  },
+  "related": [
+    {
+      "label": "GoHighLevel Services",
+      "url": "/services/ai-automation/#platforms"
+    },
+    {
+      "label": "WordPress Development",
+      "url": "/services/web-development/#platforms"
+    },
+    {
+      "label": "SEO Services",
+      "url": "/services/seo/"
+    }
+  ]
+}

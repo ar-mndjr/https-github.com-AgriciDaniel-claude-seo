@@ -1,0 +1,30 @@
+{
+  "title": "How we work",
+  "text": "A clear, four-phase process from first review to measurable growth.",
+  "steps": [
+    {
+      "label": "01 // AUDIT",
+      "title": "Audit & Positioning",
+      "text": "Technical audit, competitor review and an AI visibility check.",
+      "when": "Week 1–2"
+    },
+    {
+      "label": "02 // STRATEGY",
+      "title": "High-Intent Roadmap",
+      "text": "A prioritized plan built around the searches that bring in customers.",
+      "when": "Week 2–3"
+    },
+    {
+      "label": "03 // BUILD",
+      "title": "Build & Fix",
+      "text": "Technical fixes, new pages and content improvements, shipped in order of impact.",
+      "when": "Month 1–3"
+    },
+    {
+      "label": "04 // MEASURE",
+      "title": "Measure & Improve",
+      "text": "Monthly reporting on rankings, leads and AI mentions, then the next round of work.",
+      "when": "Ongoing"
+    }
+  ]
+}

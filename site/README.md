@@ -35,3 +35,10 @@ npm install
 npm run dev      # http://localhost:4321, shows drafts too
 npm run build    # output in site/dist
 ```
+
+## Industry SEO pages
+Pages at `/seo/<name>/` (SaaS, Ecommerce, Law Firms, Healthcare, Finance) come from
+**Industry SEO pages** in the CMS. Add an entry to create a new industry page; the file
+name becomes the address (e.g. `real-estate` → `/seo/real-estate/`). Leave **Callout** or
+**Table** empty to hide that section. The 4-step process strip is shared by all of them
+(**Industry pages: shared process strip**).
