@@ -654,36 +654,18 @@ def build_html(buckets: dict) -> str:
         )
     )
 
-    # Practitioners follow the team page: grouped by discipline, and in the
-    # page's own order within each group rather than alphabetically.
-    page_order = list(PRACTITIONER_PROFILES)
-
-    def team_order(item: dict) -> tuple:
-        slug = item["slug"]
-        return (page_order.index(slug) if slug in page_order else len(page_order),
-                item["label"].lower())
-
-    prac_groups = []
-    if practitioners.get("overview"):
-        prac_groups.append(
-            '  <div class="tnm-group">\n    <ul class="tnm-links">\n'
-            + render_list(practitioners["overview"], sort=False)
-            + "\n    </ul>\n  </div>"
-        )
-    for key, heading in PRACTITIONER_GROUPS:
-        members = practitioners.get(key)
-        if members:
-            prac_groups.append(
-                render_group(heading, sorted(members, key=team_order), sort=False)
-            )
+    # One flat A-Z list. The discipline from PRACTITIONER_PROFILES is kept in
+    # the data (and in the search text) but is not used as a heading here.
+    everyone = [item for group in practitioners.values() for item in group]
 
     sections.append(
         render_section(
             "practitioners",
             "Practitioners",
-            "Psychologists, speech pathologists, counsellors and behaviour "
-            "support practitioners, grouped as the team page groups them.",
-            "\n".join(prac_groups),
+            "Psychologists, counsellors and allied health practitioners.",
+            '  <div class="tnm-group">\n    <ul class="tnm-links">\n'
+            + render_list(everyone)
+            + "\n    </ul>\n  </div>",
             prac_total,
         )
     )
@@ -821,6 +803,7 @@ TEMPLATE = """<!-- Therapy Near Me - HTML sitemap
     /* Blog titles are long and often wrap, so tighten their rhythm a little. */
     #blogs .tnm-item{{margin-bottom:14px;}}
     .tnm-hint,.tnm-date,.tnm-note{{display:inline-block;margin-left:8px;font-size:12px;color:var(--tnm-muted);}}
+    .tnm-note{{white-space:nowrap;}}
         .tnm-sitemap [hidden]{{display:none !important;}}
     @media (max-width:900px){{.tnm-links{{columns:2;--tnm-gap:32px;}}}}
     @media (max-width:600px){{.tnm-links{{columns:1;}}}}

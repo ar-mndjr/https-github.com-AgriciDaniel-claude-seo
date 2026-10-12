@@ -8,7 +8,7 @@ Sections render in this order, with Blogs last:
 | --- | ---: | --- |
 | Services | 24 | the site's Services menu, in the site's own order |
 | Locations | 114 | by state / territory |
-| Practitioners | 22 | by discipline, in the team page's order |
+| Practitioners | 22 | one flat A–Z list |
 | Referrals | 2 | NDIS, then GP |
 | Resources | 9 | Guides & Information, About & Policies |
 | Reports | 6 | flat, A–Z |
@@ -125,11 +125,9 @@ next run.
   slugs disagree with the real role (`melissa-chrys-psychologist` is a
   *provisional* psychologist), and one name is shortened on the page
   (`reyxielle-tomas-dionisio-psychologist` → Reyxielle Dionisio). The section
-  is grouped by discipline in the page's order — Psychology, Speech Pathology,
-  Counselling & Social Work, Positive Behaviour Support, then Clinical Review
-  & Editorial Team, which the page states is distinct from the client-facing
-  roster. Members appear in the page's order within each group, not
-  alphabetically.
+  renders as one flat A–Z list. Each entry's discipline is kept in the data and
+  in the search text, but is not used as a heading — discipline grouping was
+  tried and dropped in favour of the original flat design.
 
   A profile not in that table still works: it is matched by
   `PRACTITIONER_SLUGS` or `PRACTITIONER_RE` (`firstname-lastname-role`), its
