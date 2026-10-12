@@ -31,6 +31,7 @@ SITE = "https://therapynearme.com.au"
 # the rest are landing pages that are not part of the site's Services menu.
 EXCLUDED_SLUGS = {
     "sitemap",
+    "team",  # the team index; the individual practitioner profiles are kept
     "authors",  # the authors index; individual /authors/* profiles are kept
     "therapy",
     "therapy-near-me",

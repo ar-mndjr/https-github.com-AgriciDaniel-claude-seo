@@ -1,6 +1,6 @@
 # Therapy Near Me — categorised HTML sitemap
 
-A single, self-contained HTML block listing 745 indexable URLs from
+A single, self-contained HTML block listing 744 indexable URLs from
 `post-sitemap.xml` and `page-sitemap.xml`, organised into seven categories.
 Sections render in this order, with Blogs last:
 
@@ -8,7 +8,7 @@ Sections render in this order, with Blogs last:
 | --- | ---: | --- |
 | Services | 24 | the site's Services menu, in the site's own order |
 | Locations | 114 | by state / territory |
-| Practitioners | 22 | one flat A–Z list |
+| Practitioners | 21 | one flat A–Z list |
 | Referrals | 2 | NDIS, then GP |
 | Resources | 9 | Guides & Information, About & Policies |
 | Reports | 6 | flat, A–Z |
@@ -196,8 +196,8 @@ so a future duplicate cannot slip through silently.
 **Other exclusions**, listed in `EXCLUDED_SLUGS`:
 
 - `/sitemap/` — this page, so it does not link to itself.
-- `/authors/` — the authors index. The individual `/authors/*` profiles are
-  kept, under Practitioners.
+- `/team/` and `/authors/` — the two index pages. The individual practitioner
+  and author profiles they link to are kept, under Practitioners.
 - `/therapy/`, `/therapy-near-me/` and `/therapist-near-me/` — landing pages
   that are not in the site's Services menu. Delete a slug from that set and add
   it to `SERVICE_ORDER` to bring it back.
@@ -225,7 +225,7 @@ Services menu.
 
 ## Behaviour
 
-- Every link is present in the static HTML, so crawlers see all 745 URLs
+- Every link is present in the static HTML, so crawlers see all 744 URLs
   without executing JavaScript.
 - The search box filters as you type across link text, role and slug, hides
   empty groups and sections, and live-updates every count. Escape clears it.
