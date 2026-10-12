@@ -8,7 +8,7 @@ Sections render in this order, with Blogs last:
 | --- | ---: | --- |
 | Services | 24 | the site's Services menu, in the site's own order |
 | Locations | 114 | by state / territory |
-| Practitioners | 21 | flat, with role labels |
+| Practitioners | 21 | by discipline, in the team page's order |
 | Referrals | 2 | NDIS, then GP |
 | Resources | 9 | Guides & Information, About & Policies |
 | Reports | 6 | flat, A–Z |
@@ -120,13 +120,24 @@ next run.
   `wa-`, `sa-`, `tas-`, `nt-`, `act-`), plus the unprefixed city pages listed
   in `BARE_CITIES`, which maps each to its state so it files under the right
   heading. New state-prefixed pages are picked up automatically.
-- **Practitioners** — the `PRACTITIONER_SLUGS` list, plus anything matching
-  `PRACTITIONER_RE` (`firstname-lastname-role`), plus `/authors/*`. The role
-  suffix is stripped from the link text and shown as a muted label, so
-  `alyson-dunn-psychologist` renders as **Alyson Dunn** · Psychologist.
-  `ROLE_SUFFIXES` is ordered longest-first so a qualified role wins over a bare
-  one — `eamon-cassidy-registered-psychologist` gives *Eamon Cassidy* ·
-  Registered Psychologist, not *Eamon Cassidy Registered* · Psychologist.
+- **Practitioners** — `PRACTITIONER_PROFILES` holds each person's name, role
+  and discipline transcribed from `/team/`, which is authoritative: several
+  slugs disagree with the real role (`melissa-chrys-psychologist` is a
+  *provisional* psychologist), and one name is shortened on the page
+  (`reyxielle-tomas-dionisio-psychologist` → Reyxielle Dionisio). The section
+  is grouped by discipline in the page's order — Psychology, Speech Pathology,
+  Counselling & Social Work, Positive Behaviour Support, then Clinical Review
+  & Editorial Team, which the page states is distinct from the client-facing
+  roster. Members appear in the page's order within each group, not
+  alphabetically.
+
+  A profile not in that table still works: it is matched by
+  `PRACTITIONER_SLUGS` or `PRACTITIONER_RE` (`firstname-lastname-role`), its
+  role read off the slug, and it files under Psychology. `ROLE_SUFFIXES` is
+  ordered longest-first so a qualified role wins over a bare one —
+  `eamon-cassidy-registered-psychologist` gives *Eamon Cassidy* · Registered
+  Psychologist, not *Eamon Cassidy Registered* · Psychologist. Add the person
+  to `PRACTITIONER_PROFILES` to correct the role or move them.
 - **Services** — `SERVICE_ORDER` holds the 24 pages in the site's Services
   menu, in the site's own order (not alphabetical); reorder that list to
   reorder the section. It is an explicit list because service slugs and

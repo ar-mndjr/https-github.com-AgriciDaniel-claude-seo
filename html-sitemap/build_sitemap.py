@@ -112,6 +112,72 @@ PRACTITIONER_RE = re.compile(
     r"occupational-therapist)$"
 )
 
+# The team page is authoritative for names, roles and discipline, so they are
+# transcribed from it rather than guessed from the URL slug -- several slugs
+# disagree with the real role (melissa-chrys-psychologist is a *provisional*
+# psychologist) and one name is shortened on the page.
+# slug -> (name, role, discipline). Order within each discipline follows the
+# order the team page lists them in.
+PRACTITIONER_PROFILES = {
+    "dr-ross-leembruggen-psychologist": (
+        "Dr Ross Leembruggen", "Registered Psychologist", "psychology"),
+    "nadia-sologuren-guevara-psychologist": (
+        "Nadia Sologuren Guevara", "Registered Psychologist", "psychology"),
+    "alyson-dunn-psychologist": (
+        "Alyson Dunn", "Registered Psychologist & Board-Approved Supervisor",
+        "psychology"),
+    "ana-turino-psychologist": (
+        "Ana Turino", "Registered Psychologist", "psychology"),
+    "eamon-cassidy-registered-psychologist": (
+        "Eamon Cassidy", "Registered Psychologist", "psychology"),
+    "bharanika-amaresan-psychologist": (
+        "Bharanika Amaresan", "Registered Psychologist", "psychology"),
+    "melissa-chrys-psychologist": (
+        "Melissa Chrys", "Provisional Psychologist", "psychology"),
+    "dante-martino-psychologist": (
+        "Dante Martino", "Provisional Psychologist", "psychology"),
+    "josefina-ewertz-falcone-psychologist": (
+        "Josefina Ewertz Falcone", "Provisional Psychologist", "psychology"),
+    "reyxielle-tomas-dionisio-psychologist": (
+        "Reyxielle Dionisio", "Provisional Psychologist", "psychology"),
+    "lauren-durbridge-psychologist": (
+        "Lauren Durbridge", "Provisional Psychologist", "psychology"),
+    "stephanie-favorito-provisional-psychologist": (
+        "Stephanie Favorito", "Provisional Psychologist", "psychology"),
+    "shine-yin-teoh-speech-pathologist": (
+        "Shine Yin Teoh", "Speech Pathologist", "speech"),
+    "jimmy-nweke-counsellor-social-worker": (
+        "Jimmy Nweke", "Counsellor & Social Worker", "counselling"),
+    "lidija-ivicevich-counsellor": (
+        "Lidija Ivicevich", "Counsellor & Community Services Practitioner",
+        "counselling"),
+    "mohamed-abdelsalam-behaviour-support-practitioner": (
+        "Mohamed Abdelsalam",
+        "Behaviour Analyst & Behaviour Support Practitioner", "pbs"),
+    "victoria-nguyen-behaviour-support-practitioner": (
+        "Victoria Nguyen", "Behaviour Support Practitioner", "pbs"),
+    # The team page states these roles are distinct from the client-facing
+    # roster, so they get their own heading rather than sitting among it.
+    "authors/julia-tilling-phd": (
+        "Dr Julia Tilling", "Content Reviewer & Registered Clinical Supervisor",
+        "editorial"),
+    "authors/chantal-santacaterina": (
+        "Chantal Santacaterina",
+        "Senior Consultant Psychologist & Clinical Content Reviewer",
+        "editorial"),
+    "authors/rona-castaneda": (
+        "Rona Castañeda", "Content Coordinator", "editorial"),
+}
+
+# Discipline headings, in the order the team page uses.
+PRACTITIONER_GROUPS = [
+    ("psychology", "Psychology"),
+    ("speech", "Speech Pathology"),
+    ("counselling", "Counselling & Social Work"),
+    ("pbs", "Positive Behaviour Support"),
+    ("editorial", "Clinical Review & Editorial Team"),
+]
+
 # The Services menu exactly as it appears on the site, in the site's own
 # order (not alphabetical). Reorder this list to reorder the Services section.
 SERVICE_ORDER = [
@@ -329,9 +395,9 @@ def classify_page(slug: str) -> tuple[str, str]:
     if slug in BARE_CITIES:
         return "locations", BARE_CITIES[slug]
     if slug in PRACTITIONER_SLUGS or slug.startswith("authors/"):
-        return "practitioners", ""
+        return "practitioners", practitioner_group(slug)
     if PRACTITIONER_RE.match(slug) and slug not in SERVICE_SLUGS:
-        return "practitioners", ""
+        return "practitioners", practitioner_group(slug)
     if slug in SERVICE_SLUGS:
         return "services", ""
     if slug in REFERRAL_ORDER:
@@ -354,7 +420,7 @@ def build_items() -> dict:
     buckets = {
         "services": [],
         "locations": defaultdict(list),
-        "practitioners": [],
+        "practitioners": defaultdict(list),
         "referrals": [],
         "resources": defaultdict(list),
         "reports": [],
@@ -383,7 +449,7 @@ def build_items() -> dict:
             "label": label,
             "note": note,
         }
-        if category in ("locations", "resources"):
+        if category in ("locations", "resources", "practitioners"):
             buckets[category][group].append(item)
         else:
             buckets[category].append(item)
@@ -412,7 +478,15 @@ HUB_LABELS = {"team": "Our Team"}
 
 
 def practitioner_label(slug: str) -> tuple[str, str]:
-    """'alyson-dunn-psychologist' -> ('Alyson Dunn', 'Psychologist')."""
+    """'alyson-dunn-psychologist' -> ('Alyson Dunn', 'Registered Psychologist').
+
+    The team page wins where it lists someone; otherwise the role is read off
+    the end of the slug, which is right for a profile published since the page
+    was last transcribed.
+    """
+    if slug in PRACTITIONER_PROFILES:
+        name, role, _ = PRACTITIONER_PROFILES[slug]
+        return name, role
     if slug in HUB_LABELS:
         return HUB_LABELS[slug], ""
     if slug.startswith("authors/"):
@@ -422,6 +496,15 @@ def practitioner_label(slug: str) -> tuple[str, str]:
             name = slug[: -(len(suffix) + 1)]
             return titleise(name), titleise(suffix).replace(" Social Worker", " / Social Worker")
     return titleise(slug), ""
+
+
+def practitioner_group(slug: str) -> str:
+    """Which discipline heading a profile sits under."""
+    if slug in PRACTITIONER_PROFILES:
+        return PRACTITIONER_PROFILES[slug][2]
+    if slug in HUB_LABELS:
+        return "overview"
+    return "psychology"  # a new profile defaults to the largest discipline
 
 
 def location_label(slug: str) -> str:
@@ -525,12 +608,13 @@ def build_html(buckets: dict) -> str:
     blogs = buckets["blogs"]
 
     loc_total = sum(len(v) for v in locations.values())
+    prac_total = sum(len(v) for v in practitioners.values())
     blog_total = sum(len(v) for v in blogs.values())
     res_total = sum(len(v) for v in resources.values())
     grand_total = (
         len(services)
         + loc_total
-        + len(practitioners)
+        + prac_total
         + len(referrals)
         + res_total
         + len(reports)
@@ -568,13 +652,37 @@ def build_html(buckets: dict) -> str:
         )
     )
 
+    # Practitioners follow the team page: grouped by discipline, and in the
+    # page's own order within each group rather than alphabetically.
+    page_order = list(PRACTITIONER_PROFILES)
+
+    def team_order(item: dict) -> tuple:
+        slug = item["slug"]
+        return (page_order.index(slug) if slug in page_order else len(page_order),
+                item["label"].lower())
+
+    prac_groups = []
+    if practitioners.get("overview"):
+        prac_groups.append(
+            '  <div class="tnm-group">\n    <ul class="tnm-links">\n'
+            + render_list(practitioners["overview"], sort=False)
+            + "\n    </ul>\n  </div>"
+        )
+    for key, heading in PRACTITIONER_GROUPS:
+        members = practitioners.get(key)
+        if members:
+            prac_groups.append(
+                render_group(heading, sorted(members, key=team_order), sort=False)
+            )
+
     sections.append(
         render_section(
             "practitioners",
             "Practitioners",
-            "Psychologists, counsellors and allied health practitioners.",
-            f'  <div class="tnm-group">\n    <ul class="tnm-links">\n{render_list(practitioners)}\n    </ul>\n  </div>',
-            len(practitioners),
+            "Psychologists, speech pathologists, counsellors and behaviour "
+            "support practitioners, grouped as the team page groups them.",
+            "\n".join(prac_groups),
+            prac_total,
         )
     )
 
@@ -635,7 +743,7 @@ def build_html(buckets: dict) -> str:
         for sid, name, count in [
             ("services", "Services", len(services)),
             ("locations", "Locations", loc_total),
-            ("practitioners", "Practitioners", len(practitioners)),
+            ("practitioners", "Practitioners", prac_total),
             ("referrals", "Referrals", len(referrals)),
             ("resources", "Resources", res_total),
             ("reports", "Reports", len(reports)),
@@ -711,8 +819,7 @@ TEMPLATE = """<!-- Therapy Near Me - HTML sitemap
     /* Blog titles are long and often wrap, so tighten their rhythm a little. */
     #blogs .tnm-item{{margin-bottom:14px;}}
     .tnm-hint,.tnm-date,.tnm-note{{display:inline-block;margin-left:8px;font-size:12px;color:var(--tnm-muted);}}
-    .tnm-note{{white-space:nowrap;}}
-    .tnm-sitemap [hidden]{{display:none !important;}}
+        .tnm-sitemap [hidden]{{display:none !important;}}
     @media (max-width:900px){{.tnm-links{{columns:2;--tnm-gap:32px;}}}}
     @media (max-width:600px){{.tnm-links{{columns:1;}}}}
     @media print{{.tnm-toolbar{{display:none;}}.tnm-links{{columns:2;}}}}
@@ -805,7 +912,7 @@ def main() -> int:
     counts = [
         ("services", len(buckets["services"])),
         ("locations", sum(len(v) for v in buckets["locations"].values())),
-        ("practitioners", len(buckets["practitioners"])),
+        ("practitioners", sum(len(v) for v in buckets["practitioners"].values())),
         ("referrals", len(buckets["referrals"])),
         ("resources", sum(len(v) for v in buckets["resources"].values())),
         ("reports", len(buckets["reports"])),
