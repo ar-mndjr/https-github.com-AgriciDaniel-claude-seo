@@ -125,9 +125,12 @@ next run.
   slugs disagree with the real role (`melissa-chrys-psychologist` is a
   *provisional* psychologist), and one name is shortened on the page
   (`reyxielle-tomas-dionisio-psychologist` → Reyxielle Dionisio). The section
-  renders as one flat A–Z list. Each entry's discipline is kept in the data and
-  in the search text, but is not used as a heading — discipline grouping was
-  tried and dropped in favour of the original flat design.
+  renders as one flat A–Z list, with the role read off the end of the slug.
+  `PRACTITIONER_PROFILES` records each person's name, role and discipline from
+  `/team/`, but is deliberately *not* used for link text: the team page's
+  fuller wording rewrote the labels of people already published and visibly
+  changed the section. Discipline grouping was tried and dropped for the same
+  reason.
 
   A profile not in that table still works: it is matched by
   `PRACTITIONER_SLUGS` or `PRACTITIONER_RE` (`firstname-lastname-role`), its

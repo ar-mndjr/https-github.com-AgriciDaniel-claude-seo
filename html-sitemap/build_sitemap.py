@@ -480,15 +480,13 @@ HUB_LABELS = {"team": "Our Team"}
 
 
 def practitioner_label(slug: str) -> tuple[str, str]:
-    """'alyson-dunn-psychologist' -> ('Alyson Dunn', 'Registered Psychologist').
+    """'alyson-dunn-psychologist' -> ('Alyson Dunn', 'Psychologist').
 
-    The team page wins where it lists someone; otherwise the role is read off
-    the end of the slug, which is right for a profile published since the page
-    was last transcribed.
+    The role is read off the end of the slug. PRACTITIONER_PROFILES is NOT
+    consulted here: using the team page's fuller wording rewrote the labels of
+    people already on the page and visibly changed the section, so the slug
+    stays the single source of link text.
     """
-    if slug in PRACTITIONER_PROFILES:
-        name, role, _ = PRACTITIONER_PROFILES[slug]
-        return name, role
     if slug in HUB_LABELS:
         return HUB_LABELS[slug], ""
     if slug.startswith("authors/"):
