@@ -1,0 +1,18 @@
+# Live pages not yet in the XML sitemap snapshot, one URL per line.
+# Classified by the same rules as the sitemap entries, so a practitioner
+# profile lands under Practitioners automatically. Once a refreshed
+# page-sitemap.xml contains them these lines become redundant (duplicates are
+# ignored), and the file can be emptied.
+#
+# Source: practitioner profiles linked from https://therapynearme.com.au/team/
+# supplied 12 Oct 2026. The other team members on that page are already in the
+# sitemap snapshot and are not repeated here.
+
+https://therapynearme.com.au/bharanika-amaresan-psychologist/
+https://therapynearme.com.au/dante-martino-psychologist/
+https://therapynearme.com.au/eamon-cassidy-registered-psychologist/
+https://therapynearme.com.au/josefina-ewertz-falcone-psychologist/
+https://therapynearme.com.au/lauren-durbridge-psychologist/
+https://therapynearme.com.au/melissa-chrys-psychologist/
+https://therapynearme.com.au/reyxielle-tomas-dionisio-psychologist/
+https://therapynearme.com.au/stephanie-favorito-provisional-psychologist/

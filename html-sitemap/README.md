@@ -1,6 +1,6 @@
 # Therapy Near Me — categorised HTML sitemap
 
-A single, self-contained HTML block listing 736 indexable URLs from
+A single, self-contained HTML block listing 744 indexable URLs from
 `post-sitemap.xml` and `page-sitemap.xml`, organised into seven categories.
 Sections render in this order, with Blogs last:
 
@@ -8,7 +8,7 @@ Sections render in this order, with Blogs last:
 | --- | ---: | --- |
 | Services | 24 | the site's Services menu, in the site's own order |
 | Locations | 114 | by state / territory |
-| Practitioners | 13 | flat, with role labels |
+| Practitioners | 21 | flat, with role labels |
 | Referrals | 2 | NDIS, then GP |
 | Resources | 9 | Guides & Information, About & Policies |
 | Reports | 6 | flat, A–Z |
@@ -22,6 +22,8 @@ Sections render in this order, with Blogs last:
 - `data/page-sitemap.xml`, `data/post-sitemap.xml` — the source sitemaps
   (snapshot: 12 Aug 2026).
 - `data/noindex-urls.txt` — the 466 noindexed URLs, excluded from the output.
+- `data/extra-pages.txt` — live pages not yet in the XML snapshot (see below).
+- `build_embed_page.py` — wraps the block in a copy-paste handoff page.
 
 ## Installing
 
@@ -122,6 +124,9 @@ next run.
   `PRACTITIONER_RE` (`firstname-lastname-role`), plus `/authors/*`. The role
   suffix is stripped from the link text and shown as a muted label, so
   `alyson-dunn-psychologist` renders as **Alyson Dunn** · Psychologist.
+  `ROLE_SUFFIXES` is ordered longest-first so a qualified role wins over a bare
+  one — `eamon-cassidy-registered-psychologist` gives *Eamon Cassidy* ·
+  Registered Psychologist, not *Eamon Cassidy Registered* · Psychologist.
 - **Services** — `SERVICE_ORDER` holds the 24 pages in the site's Services
   menu, in the site's own order (not alphabetical); reorder that list to
   reorder the section. It is an explicit list because service slugs and
@@ -143,6 +148,17 @@ next run.
   rendered as two sub-groups so the corporate pages stay out of the way. Any
   *new* page that no rule recognises also lands here, so nothing is ever
   silently dropped.
+
+## Pages newer than the sitemap snapshot
+
+`data/extra-pages.txt` lists live URLs that the XML snapshot predates, one per
+line. They go through exactly the same classification rules as sitemap entries,
+so a `firstname-lastname-role` profile files itself under Practitioners with no
+code change. Duplicates are ignored, so once a refreshed `page-sitemap.xml`
+contains them the lines are harmless and the file can be emptied.
+
+It currently holds the eight practitioner profiles linked from `/team/` that
+were published after the 12 Aug snapshot.
 
 ## Exclusions
 
@@ -197,7 +213,7 @@ Services menu.
 
 ## Behaviour
 
-- Every link is present in the static HTML, so crawlers see all 736 URLs
+- Every link is present in the static HTML, so crawlers see all 744 URLs
   without executing JavaScript.
 - The search box filters as you type across link text, role and slug, hides
   empty groups and sections, and live-updates every count. Escape clears it.

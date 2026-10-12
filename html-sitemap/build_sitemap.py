@@ -53,6 +53,11 @@ DUPLICATE_SLUGS = {
 # this script because the list is long and maintained elsewhere.
 NOINDEX_FILE = DATA / "noindex-urls.txt"
 
+# Live pages that are not in the XML sitemap snapshot yet (published after it
+# was taken). Classified by the same rules as everything else, and dropped
+# automatically once a refreshed sitemap includes them.
+EXTRA_FILE = DATA / "extra-pages.txt"
+
 # --------------------------------------------------------------------------
 # Classification tables
 # --------------------------------------------------------------------------
@@ -101,8 +106,10 @@ PRACTITIONER_SLUGS = {
 
 PRACTITIONER_RE = re.compile(
     r"^(dr-)?[a-z]+-[a-z]+(-[a-z]+)?-"
-    r"(psychologist|psychotherapist|counsellor|social-worker|"
-    r"speech-pathologist|behaviour-support-practitioner|occupational-therapist)$"
+    r"(provisional-psychologist|registered-psychologist|clinical-psychologist|"
+    r"psychologist|psychotherapist|counsellor-social-worker|counsellor|"
+    r"social-worker|speech-pathologist|behaviour-support-practitioner|"
+    r"occupational-therapist)$"
 )
 
 # The Services menu exactly as it appears on the site, in the site's own
@@ -206,10 +213,15 @@ CASE_FIXES = {
     "betterhelp": "BetterHelp", "headspace": "Headspace", "beyond": "Beyond",
 }
 
-# Role suffixes on individual practitioner profile URLs.
+# Role suffixes on individual practitioner profile URLs. Longest first, so
+# "registered-psychologist" wins over "psychologist" and the qualifier is not
+# left stranded on the end of the person's name.
 ROLE_SUFFIXES = [
     "counsellor-social-worker",
     "behaviour-support-practitioner",
+    "provisional-psychologist",
+    "registered-psychologist",
+    "clinical-psychologist",
     "occupational-therapist",
     "speech-pathologist",
     "psychotherapist",
@@ -286,6 +298,21 @@ def load_noindex() -> set[str]:
     return slugs
 
 
+def load_extra() -> list[dict]:
+    """Pages listed in data/extra-pages.txt, in sitemap-entry form.
+
+    They carry no lastmod, which only the Blogs section shows.
+    """
+    if not EXTRA_FILE.exists():
+        return []
+    entries = []
+    for line in EXTRA_FILE.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if line and not line.startswith("#"):
+            entries.append({"loc": line, "lastmod": ""})
+    return entries
+
+
 def slug_of(loc: str) -> str:
     return loc.replace(SITE, "").strip("/")
 
@@ -321,7 +348,7 @@ def classify_page(slug: str) -> tuple[str, str]:
 
 
 def build_items() -> dict:
-    pages = parse_sitemap(DATA / "page-sitemap.xml")
+    pages = parse_sitemap(DATA / "page-sitemap.xml") + load_extra()
     posts = parse_sitemap(DATA / "post-sitemap.xml")
 
     buckets = {
@@ -338,8 +365,8 @@ def build_items() -> dict:
 
     for entry in pages:
         slug = slug_of(entry["loc"])
-        if slug in skip:
-            continue
+        if slug in skip or slug in seen:
+            continue  # excluded, or already added from the other source
         seen.add(slug)
         category, group = classify_page(slug)
         note = ""
