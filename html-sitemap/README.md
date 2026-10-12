@@ -1,6 +1,6 @@
 # Therapy Near Me — categorised HTML sitemap
 
-A single, self-contained HTML block listing 744 indexable URLs from
+A single, self-contained HTML block listing 745 indexable URLs from
 `post-sitemap.xml` and `page-sitemap.xml`, organised into seven categories.
 Sections render in this order, with Blogs last:
 
@@ -8,7 +8,7 @@ Sections render in this order, with Blogs last:
 | --- | ---: | --- |
 | Services | 24 | the site's Services menu, in the site's own order |
 | Locations | 114 | by state / territory |
-| Practitioners | 21 | by discipline, in the team page's order |
+| Practitioners | 22 | by discipline, in the team page's order |
 | Referrals | 2 | NDIS, then GP |
 | Resources | 9 | Guides & Information, About & Policies |
 | Reports | 6 | flat, A–Z |
@@ -168,7 +168,7 @@ so a `firstname-lastname-role` profile files itself under Practitioners with no
 code change. Duplicates are ignored, so once a refreshed `page-sitemap.xml`
 contains them the lines are harmless and the file can be emptied.
 
-It currently holds the eight practitioner profiles linked from `/team/` that
+It currently holds the nine practitioner profiles linked from `/team/` that
 were published after the 12 Aug snapshot.
 
 ## Exclusions
@@ -224,7 +224,7 @@ Services menu.
 
 ## Behaviour
 
-- Every link is present in the static HTML, so crawlers see all 744 URLs
+- Every link is present in the static HTML, so crawlers see all 745 URLs
   without executing JavaScript.
 - The search box filters as you type across link text, role and slug, hides
   empty groups and sections, and live-updates every count. Escape clears it.

@@ -144,6 +144,8 @@ PRACTITIONER_PROFILES = {
         "Lauren Durbridge", "Provisional Psychologist", "psychology"),
     "stephanie-favorito-provisional-psychologist": (
         "Stephanie Favorito", "Provisional Psychologist", "psychology"),
+    "divya-sabu-provisional-psychologist": (
+        "Divya Sabu", "Provisional Psychologist", "psychology"),
     "shine-yin-teoh-speech-pathologist": (
         "Shine Yin Teoh", "Speech Pathologist", "speech"),
     "jimmy-nweke-counsellor-social-worker": (
