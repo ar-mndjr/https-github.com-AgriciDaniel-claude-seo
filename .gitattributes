@@ -1,0 +1,21 @@
+# Store text files with LF line endings, whatever the editor's OS.
+# Live servers run Linux, and this stops Windows CRLF noise in diffs.
+* text=auto eol=lf
+
+# Windows-only scripts keep CRLF.
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Binary files: never touch line endings or try to diff them.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.avif  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+*.zip   binary
+*.pdf   binary

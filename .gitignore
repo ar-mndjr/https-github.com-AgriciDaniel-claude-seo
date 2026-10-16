@@ -1,0 +1,48 @@
+# This repository's root is the Local site folder:
+#   C:\Users\<you>\Local Sites\seocampaign\
+#
+# Local puts WordPress core, the database config, uploads, logs and server
+# config in here too. None of that belongs in Git, so this file works as a
+# whitelist: ignore everything, then allow back only what we own.
+
+# 1. Ignore everything at the root...
+/*
+
+# ...except the project files we maintain.
+!/.gitignore
+!/.gitattributes
+!/.editorconfig
+!/README.md
+!/CLAUDE.md
+!/.claude/
+!/.vscode/
+!/design/
+!/docs/
+
+# 2. Inside WordPress, allow only our theme and our plugin.
+#    Each level has to be re-included before its children can be.
+!/app/
+/app/*
+!/app/public/
+/app/public/*
+!/app/public/wp-content/
+/app/public/wp-content/*
+!/app/public/wp-content/themes/
+/app/public/wp-content/themes/*
+!/app/public/wp-content/themes/seocampaign/
+!/app/public/wp-content/plugins/
+/app/public/wp-content/plugins/*
+!/app/public/wp-content/plugins/seocampaign-tools/
+
+# 3. Never commit these, even inside allowed folders.
+.claude/settings.local.json
+.env
+.env.*
+*.log
+*.sql
+*.sql.gz
+node_modules/
+vendor/
+.DS_Store
+Thumbs.db
+desktop.ini

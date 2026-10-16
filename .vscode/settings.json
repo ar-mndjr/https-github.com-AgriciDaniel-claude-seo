@@ -1,0 +1,25 @@
+{
+	// Intelephense indexes WordPress core in app/public, so every WordPress
+	// function autocompletes. Warn about PHP features newer than our minimum.
+	"intelephense.environment.phpVersion": "8.2.0",
+
+	// Intelephense handles PHP checks. VS Code's built-in ones need a PHP
+	// executable on the PATH and would only duplicate suggestions.
+	"php.validate.enable": false,
+	"php.suggest.basic": false,
+
+	"files.eol": "\n",
+
+	// Keep WordPress core and server files out of search results.
+	"search.exclude": {
+		"app/public/wp-admin": true,
+		"app/public/wp-includes": true,
+		"app/sql": true,
+		"conf": true,
+		"logs": true
+	},
+	"files.watcherExclude": {
+		"**/app/public/wp-content/uploads/**": true,
+		"**/logs/**": true
+	}
+}
